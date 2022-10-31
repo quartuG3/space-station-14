@@ -5,6 +5,6 @@ ui-escape-options = Настройки
 ui-escape-rules = Правила
 ui-escape-discord = Discord
 ui-escape-boosty = Boosty
-ui-escape-wiki = Wiki
+ui-escape-wiki = Wiki (от Corvax)
 ui-escape-disconnect = Отключиться
 ui-escape-quit = Выйти

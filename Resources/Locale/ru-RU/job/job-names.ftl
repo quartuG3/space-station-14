@@ -83,3 +83,6 @@ JobTechnicalAssistant = атмосферный техник
 JobWarden = смотритель
 JobBoxer = боксёр
 JobZookeeper = зоотехник
+
+job-name-iaa = агент внутренних дел
+JobIAA = агент внутренних дел
