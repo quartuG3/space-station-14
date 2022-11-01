@@ -2,7 +2,7 @@
 {
     public static class UILinks
     {
-        public const string GitHub = "https://github.com/Workbench-Team/space-station-14";
+        public const string GitHub = "https://github.com/Workbench-Team/space-station-14/tree/arumoon-server";
         public const string Patreon = "https://www.patreon.com/spacestation14";
 
         public const string Discord = "https://discord.com/invite/Dxqz5gy";

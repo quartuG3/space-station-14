@@ -5,3 +5,4 @@ server-info-wiki-button = Wiki (от Corvax)
 server-info-report-button = Сообщить об ошибке
 server-info-credits-button = Авторы
 server-info-boosty-button = Boosty
+server-info-github-button = GitHub сервера
