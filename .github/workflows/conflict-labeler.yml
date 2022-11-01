@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - master-ru
+      - arumoon-server
   pull_request_target:
 
 jobs:
