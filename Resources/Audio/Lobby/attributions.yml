@@ -82,24 +82,29 @@
 - files: ["midnight.ogg"]
   license: "CC-BY-3.0"
   copyright: "Midnight by Nomyn"
-  source: "https://youtu.be/KV9br__HJv0"
-
-- files: ["bone_theme.ogg"]
-  license: "Custom"
-  copyright: "Bone Theme (Boneworks OST) by Michael Wyckoff"
-  source: "https://youtu.be/snAWszNWhAc"
-
-- files: ["who_am_i.ogg"]
-  license: "Custom"
-  copyright: "Who Am I (Boneworks OST) by Michael Wyckoff"
-  source: "https://youtu.be/4cROKrDAguo"
+  source: "https://www.toneden.io/nomyn/post/nomyn-midnight"
 
 - files: ["synthesis_of_life.ogg"]
-  license: "Custom"
+  license: "CC-BY-NC-3.0"
   copyright: "Synthesis of Life (Lambda Wars OST) by YIA"
-  source: "https://youtu.be/jyLI2Hvq54o"
+  source: "https://store.steampowered.com/app/270370/Lambda_Wars/"
 
-- files: ["questionable_ethics_1.ogg"]
+- files: ["neutral03.ogg"]
   license: "Custom"
-  copyright: "Questionable Ethics Part 1 (Black Mesa OST) by JoelNielsenMusic"
-  source: "https://youtu.be/3C7TXzeMaBI"
+  copyright: "Lobotomy Corporation OST - Neutral 03"
+  source: "https://store.steampowered.com/app/568220"
+
+- files: ["we-are-finally-landing.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "We're finally landing by HOME"
+  source: "https://soundcloud.com/home-2001/home-before-the-night-01-were"
+
+- files: ["cascade.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Cascade by Kubbi"
+  source: "https://kubbi.bandcamp.com/album/ember"
+
+- files: ["shitsuboo-shita.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "失望した by EVA"
+  source: "https://joshlis.bandcamp.com/album/rear-view"
