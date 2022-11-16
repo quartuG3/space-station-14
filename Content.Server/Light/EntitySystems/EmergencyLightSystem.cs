@@ -123,6 +123,17 @@ namespace Content.Server.Light.EntitySystems
                     light.ForciblyEnabled = false;
                     UpdateState(light);
                 }
+
+                if (details.DisableEmergencyLightsSounds && !light.SoundsDisabled)
+                {
+                    light.SoundsDisabled = true;
+                    UpdateState(light);
+                }
+                else if (!details.DisableEmergencyLightsSounds && light.SoundsDisabled)
+                {
+                    light.SoundsDisabled = false;
+                    UpdateState(light);
+                }
             }
         }
 
@@ -182,6 +193,12 @@ namespace Content.Server.Light.EntitySystems
                 receiver.Load = (int) Math.Abs(component.Wattage);
                 TurnOff(component);
                 SetState(component, EmergencyLightState.Charging);
+            }
+            else if (receiver.Powered && component.ForciblyEnabled && component.SoundsDisabled)
+            {
+                TurnOn(component);
+                SetState(component, EmergencyLightState.On);
+                _ambient.SetAmbience(component.Owner, false);
             }
             else
             {
