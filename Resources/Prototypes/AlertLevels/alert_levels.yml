@@ -6,6 +6,8 @@
       announcement: alert-level-green-announcement
       color: Green
       shuttleTime: 600
+      forceEnableEmergencyLights: false
+      disableEmergencyLightsSounds: false
     blue:
       announcement: alert-level-blue-announcement
       sound: /Audio/Misc/bluealert.ogg
