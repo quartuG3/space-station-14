@@ -107630,18 +107630,6 @@ entities:
     type: Transform
   - powerLoad: 0
     type: ApcPowerReceiver
-- uid: 12994
-  type: TableReinforcedGlass
-  components:
-  - pos: 6.5,-92.5
-    parent: 9
-    type: Transform
-- uid: 12995
-  type: TableReinforcedGlass
-  components:
-  - pos: 6.5,-93.5
-    parent: 9
-    type: Transform
 - uid: 12996
   type: CableApcExtension
   components:
@@ -108991,24 +108979,6 @@ entities:
     pos: 7.787805,-96.43645
     parent: 9
     type: Transform
-- uid: 13202
-  type: Paper
-  components:
-  - desc: ''
-    name: Angle Atmos Briefing
-    type: MetaData
-  - pos: 6.34615,-92.5507
-    parent: 9
-    type: Transform
-  - content: >
-      Angle Atmos Briefing:
-
-      No O2 Miner, however the O2 chamber contains a large quantity of O2 in it.
-
-      Use the two "waste network connector ports" to add canisters to the distro.
-
-      Set up the recycler loop (green pipes) to convert CO2 to O2. Please don't fuck it up, it's perfectly fine the way it is.
-    type: Paper
 - uid: 13203
   type: CableApcExtension
   components:
@@ -110717,12 +110687,6 @@ entities:
   type: ExtinguisherCabinet
   components:
   - pos: 18.5,4.5
-    parent: 9
-    type: Transform
-- uid: 13461
-  type: Pen
-  components:
-  - pos: 6.710733,-92.507515
     parent: 9
     type: Transform
 - uid: 13462
@@ -124309,4 +124273,12 @@ entities:
   - pos: 47.6,-86.4
     parent: 9
     type: Transform
+- uid: 15549
+  type: GasMinerOxygen
+  components:
+  - pos: 3.5,-85.5
+    parent: 9
+    type: Transform
+  - canCollide: False
+    type: Physics
 ...
