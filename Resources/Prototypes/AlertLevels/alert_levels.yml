@@ -34,7 +34,6 @@
       sound: /Audio/Misc/redalert.ogg
       color: Red
       forceEnableEmergencyLights: true
-      disableEmergencyLightsSounds: true
     gamma:
       announcement: alert-level-gamma-announcement
       selectable: false
