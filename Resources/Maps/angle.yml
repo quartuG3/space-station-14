@@ -127582,4 +127582,10 @@ entities:
     type: Transform
   - canCollide: False
     type: Physics
+- uid: 30010
+  type: SheetPlasma
+  components:
+  - pos: 1.68,-21.4
+    parent: 9
+    type: Transform
 ...
