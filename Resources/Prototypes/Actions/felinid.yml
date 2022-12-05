@@ -1,0 +1,11 @@
+- type: entityTargetAction
+  id: WoundLicking
+  name: action-name-lick-wounds
+  description: action-desc-lick-wounds
+  priority: -1
+  whitelist:
+    components:
+    - Humanoid
+  interactOnMiss: false
+  icon: Mobs/Species/Human/organs.rsi/tongue.png
+  serverEvent: !type:WoundLickingTargetActionEvent
