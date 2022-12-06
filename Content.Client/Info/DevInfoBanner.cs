@@ -34,13 +34,21 @@ namespace Content.Client.Info
             creditsButton.OnPressed += args => new CreditsWindow().Open();
             buttons.AddChild(creditsButton);
 
-            var boostyButton = new Button {Text = Loc.GetString("server-info-boosty-button")};
-            boostyButton.OnPressed += args => uriOpener.OpenUri(UILinks.Boosty);
-            buttons.AddChild(boostyButton);
+            var Boosty = cfg.GetCVar(CCVars.InfoLinksBoosty);
+            if (Boosty != "")
+            {
+                var BoostyButton = new Button {Text = Loc.GetString("server-info-boosty-button")};
+                BoostyButton.OnPressed += args => uriOpener.OpenUri(Boosty);
+                buttons.AddChild(BoostyButton);
+            }
 
-            var gitHubButton = new Button {Text = Loc.GetString("server-info-github-button")};
-            gitHubButton.OnPressed += args => uriOpener.OpenUri(UILinks.GitHub);
-            buttons.AddChild(gitHubButton);
+            var GitHub = cfg.GetCVar(CCVars.InfoLinksGithub);
+            if (GitHub != "")
+            {
+               var GitHubButton = new Button {Text = Loc.GetString("server-info-github-button")};
+               GitHubButton.OnPressed += args => uriOpener.OpenUri(GitHub);
+               buttons.AddChild(GitHubButton);
+            }
         }
     }
 }
