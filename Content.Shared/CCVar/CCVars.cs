@@ -1167,6 +1167,12 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> AfkKickTime =
             CVarDef.Create("afk.kick_time", 600f, CVar.SERVERONLY);
 
+        /// <summary>
+        /// How long seconds a client with admin rights can go after being detected as AFK before being kicked.
+        /// </summary>
+        public static readonly CVarDef<float> AfkAdminKickTime =
+            CVarDef.Create("afk.admin_kick_time", 1800f, CVar.SERVERONLY);
+
         /*
          * IC
          */

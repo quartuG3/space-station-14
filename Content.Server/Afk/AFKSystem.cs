@@ -1,13 +1,16 @@
 using System.Linq;
+using Content.Server.Administration.Managers;
 using Content.Server.Afk.Events;
-using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
+using Content.Server.EUI;
 using Content.Shared.CCVar;
+using Content.Shared.Afk;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
+
 
 namespace Content.Server.Afk;
 
@@ -21,10 +24,12 @@ public sealed class AFKSystem : EntitySystem
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly GameTicker _ticker = default!;
-    [Dependency] private readonly IChatManager _chatManager = default!;
+    [Dependency] private readonly EuiManager _euiManager = null!;
+    [Dependency] private readonly IAdminManager _adminManager = default!;
 
     private float _checkDelay;
     private float _kickDelay;
+    private float _kickAdminDelay;
     private TimeSpan _checkTime;
 
     private readonly Dictionary<IPlayerSession, TimeSpan> _afkPlayers = new();
@@ -35,6 +40,7 @@ public sealed class AFKSystem : EntitySystem
         _playerManager.PlayerStatusChanged += OnPlayerChange;
         _configManager.OnValueChanged(CCVars.AfkTime, SetAfkDelay, true);
         _configManager.OnValueChanged(CCVars.AfkKickTime, SetAfkKickDelay, true);
+        _configManager.OnValueChanged(CCVars.AfkAdminKickTime, SetAfkAdminKickDelay, true);
     }
 
     private void SetAfkDelay(float obj)
@@ -44,7 +50,18 @@ public sealed class AFKSystem : EntitySystem
 
     private void SetAfkKickDelay(float obj)
     {
+        if(obj < 60.0f)
+            obj = 60.0f;
+
         _kickDelay = obj;
+    }
+
+    private void SetAfkAdminKickDelay(float obj)
+    {
+        if(obj < 60.0f)
+            obj = 60.0f;
+
+        _kickAdminDelay = obj;
     }
 
     private void OnPlayerChange(object? sender, SessionStatusEventArgs e)
@@ -64,6 +81,7 @@ public sealed class AFKSystem : EntitySystem
         _playerManager.PlayerStatusChanged -= OnPlayerChange;
         _configManager.UnsubValueChanged(CCVars.AfkTime, SetAfkDelay);
         _configManager.UnsubValueChanged(CCVars.AfkKickTime, SetAfkKickDelay);
+        _configManager.UnsubValueChanged(CCVars.AfkAdminKickTime, SetAfkAdminKickDelay);
     }
 
     public override void Update(float frameTime)
@@ -87,13 +105,12 @@ public sealed class AFKSystem : EntitySystem
         {
             var pSession = (IPlayerSession) session;
             var isAfk = _afkManager.IsAfk(pSession);
+            var isAdmin = _adminManager.IsAdmin(pSession);
 
             if (isAfk && _afkPlayers.TryAdd(pSession, _timing.CurTime))
             {
                 var ev = new AFKEvent(pSession);
                 RaiseLocalEvent(ref ev);
-                
-                _chatManager.DispatchServerMessage(pSession, Loc.GetString("afk-system-kick-warning"));
             }
 
             if (!isAfk && _afkPlayers.Remove(pSession))
@@ -102,11 +119,20 @@ public sealed class AFKSystem : EntitySystem
                 RaiseLocalEvent(ref ev);
             }
 
-            if (isAfk &&
-                _afkPlayers.TryGetValue(pSession, out var startAfkTime) &&
-                _timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickDelay))
+            if (isAfk && _afkPlayers.TryGetValue(pSession, out var startAfkTime))
             {
-                pSession.ConnectedClient.Disconnect( Loc.GetString("afk-system-kick-reason"));
+                if(((_timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickDelay - 60) && !isAdmin) ||
+                    (_timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickAdminDelay - 60) && isAdmin)))
+                {
+                    _euiManager.OpenEui(new AfkCheckEui(pSession), pSession);
+                    continue;
+                }
+
+                if (((_timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickDelay) && !isAdmin) ||
+                    (_timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickAdminDelay) && isAdmin)))
+                {
+                    pSession.ConnectedClient.Disconnect(Loc.GetString("afk-system-kick-reason"));
+                }
             }
         }
     }
