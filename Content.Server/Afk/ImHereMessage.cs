@@ -1,3 +1,4 @@
+using Content.Server.Afk;
 using Content.Server.EUI;
 using Content.Shared.Afk;
 using Content.Shared.Eui;
@@ -15,7 +16,7 @@ namespace Content.Server.Afk
             _player = player;
         }
 
-	public override void HandleMessage(EuiMessageBase msg)
+        public override void HandleMessage(EuiMessageBase msg)
         {
             base.HandleMessage(msg);
 

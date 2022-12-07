@@ -121,17 +121,17 @@ public sealed class AFKSystem : EntitySystem
 
             if (isAfk && _afkPlayers.TryGetValue(pSession, out var startAfkTime))
             {
-                if(((_timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickDelay - 60) && !isAdmin) ||
-                    (_timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickAdminDelay - 60) && isAdmin)))
-                {
-                    _euiManager.OpenEui(new AfkCheckEui(pSession), pSession);
-                    continue;
-                }
-
                 if (((_timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickDelay) && !isAdmin) ||
                     (_timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickAdminDelay) && isAdmin)))
                 {
                     pSession.ConnectedClient.Disconnect(Loc.GetString("afk-system-kick-reason"));
+                    continue;
+                }
+
+                if(((_timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickDelay - 60) && !isAdmin) ||
+                    (_timing.CurTime - startAfkTime >= TimeSpan.FromSeconds(_kickAdminDelay - 60) && isAdmin)))
+                {
+                    _euiManager.OpenEui(new AfkCheckEui(pSession), pSession);
                 }
             }
         }
