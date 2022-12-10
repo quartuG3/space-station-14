@@ -27,7 +27,7 @@
   - type: MobState
     thresholds:
       0: Alive
-      75: Critical
+      100: Critical
       150: Dead
   - type: Damageable
     damageContainer: Biological
@@ -101,6 +101,25 @@
       - map: [ "head" ]
       - map: [ "pocket1" ]
       - map: [ "pocket2" ]
+  - type: Reactive
+    groups:
+      Medicine: [ Ingestion, Touch, Injection ]
+      Botanical: [ Ingestion, Touch, Injection ]
+    reactions:
+    - reagents: [ PestKiller, PlantBGone ]
+      methods: [ Touch, Ingestion, Injection ]
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1.5
+    - reagents: [ Diethylamine ]
+      methods: [ Touch, Ingestion, Injection ]
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 0.25
 
 - type: entity
   save: false
