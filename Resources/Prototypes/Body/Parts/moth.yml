@@ -168,6 +168,9 @@
     symmetry: Left
 #    criticalThreshold: 45
 #    deadThreshold: 90
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 5.5
 
 - type: entity
   id: RightLegMoth
@@ -188,6 +191,9 @@
     symmetry: Right
 #    criticalThreshold: 45
 #    deadThreshold: 90
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 5.5
 
 - type: entity
   id: LeftFootMoth

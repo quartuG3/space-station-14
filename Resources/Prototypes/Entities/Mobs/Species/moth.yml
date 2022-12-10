@@ -15,6 +15,7 @@
   - type: Body
     template: HumanoidTemplate
     preset: MothPreset
+    requiredLegs: 2
   - type: DiseaseCarrier
     diseaseResist: 0.1
   - type: Flammable
