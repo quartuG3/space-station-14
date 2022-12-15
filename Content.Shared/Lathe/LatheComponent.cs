@@ -40,6 +40,12 @@ namespace Content.Shared.Lathe
         [DataField("producingSound")]
         public SoundSpecifier? ProducingSound;
 
+        /// <summary>
+        /// The sound that plays when a player trying to produce an item without access to the lathe
+        /// </summary>
+        [DataField("soundError")]
+        public SoundSpecifier? ErrorSound;
+
         #region Visualizer info
         [DataField("idleState", required: true)]
         public string IdleState = default!;

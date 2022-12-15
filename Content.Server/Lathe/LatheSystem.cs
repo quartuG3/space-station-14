@@ -1,8 +1,10 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared.Access.Systems;
 using Content.Server.Construction;
 using Content.Server.Lathe.Components;
 using Content.Server.Materials;
+using Content.Server.Popups;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Research;
@@ -15,8 +17,10 @@ using Content.Shared.Research.Prototypes;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
+using Robust.Shared.Players;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Robust.Shared.Player;
 
 namespace Content.Server.Lathe
 {
@@ -26,8 +30,10 @@ namespace Content.Server.Lathe
         [Dependency] private readonly IGameTiming _timing = default!;
         [Dependency] private readonly IPrototypeManager _proto = default!;
         [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+        [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
         [Dependency] private readonly UserInterfaceSystem _uiSys = default!;
+        [Dependency] private readonly PopupSystem _popup = default!;
         [Dependency] private readonly ResearchSystem _researchSys = default!;
         [Dependency] private readonly MaterialStorageSystem _materialStorage = default!;
 
@@ -152,7 +158,6 @@ namespace Content.Server.Lathe
                 return false;
             if (component.CurrentRecipe != null || component.Queue.Count <= 0 || !this.IsPowered(uid, EntityManager))
                 return false;
-
             var recipe = component.Queue.First();
             component.Queue.RemoveAt(0);
 
@@ -292,6 +297,15 @@ namespace Content.Server.Lathe
 
         private void OnLatheQueueRecipeMessage(EntityUid uid, LatheComponent component, LatheQueueRecipeMessage args)
         {
+            if (args.Session.AttachedEntity is not {Valid: true} player)
+                return;
+            if (!_accessReaderSystem.IsAllowed(player, uid))
+            {
+                ConsolePopup(args.Session, Loc.GetString("lathe-production-not-allowed"));
+                PlayDenySound(uid, component);
+                return;
+            }
+
             if (_proto.TryIndex(args.ID, out LatheRecipePrototype? recipe))
             {
                 for (var i = 0; i < args.Quantity; i++)
@@ -301,6 +315,19 @@ namespace Content.Server.Lathe
             }
             TryStartProducing(uid, component);
             UpdateUserInterfaceState(uid, component);
+        }
+
+        private void ConsolePopup(ICommonSession session, string text)
+        {
+            _popup.PopupCursor(text, Filter.SinglePlayer(session));
+        }
+
+        private void PlayDenySound(EntityUid uid, LatheComponent component)
+        {
+            if (component.ErrorSound != null)
+            {
+                _audio.Play(_audio.GetSound(component.ErrorSound), Filter.Pvs(uid, entityManager: EntityManager), uid, false);
+            }
         }
 
         private void OnLatheSyncRequestMessage(EntityUid uid, LatheComponent component, LatheSyncRequestMessage args)

@@ -248,6 +248,7 @@
     board: CircuitImprinterMachineCircuitboard
   - type: Lathe
     producingSound: /Audio/Machines/circuitprinter.ogg
+    errorSound: /Audio/Machines/custom_deny.ogg
     idleState: icon
     runningState: building
     dynamicRecipes:
@@ -306,6 +307,8 @@
       - ExosuitFabricatorMachineCircuitboard
       - ArtifactAnalyzerMachineCircuitboard
       - TraversalDistorterMachineCircuitboard
+      - SecurityTechFabCircuitboard
+      - WeaponTechFabCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -357,6 +360,8 @@
   name: security techfab
   description: Prints equipment for use by security crew.
   components:
+  - type: AccessReader
+    access: [["Brig"]]
   - type: Sprite
     netsync: false
     sprite: Structures/Machines/techfab.rsi
@@ -373,6 +378,8 @@
   - type: Machine
     board: SecurityTechFabCircuitboard
   - type: Lathe
+    producingSound: /Audio/Machines/circuitprinter.ogg
+    soundError: /Audio/Machines/custom_deny.ogg
     idleState: icon
     runningState: icon
     staticRecipes:
@@ -416,6 +423,68 @@
         - Sheet
         - RawMaterial
         - Ingot
+
+# Machine which makes weapons and ammunition
+- type: entity
+  parent: Protolathe
+  id: WeaponTechFab
+  name: Weapon techfab
+  description: Prints weapons for use by security crew.
+  components:
+  - type: AccessReader
+    access: [["Brig"]]
+  - type: Sprite
+    netsync: false
+    sprite: Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: weapon
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.LatheVisualLayers.IsInserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: WeaponTechFabCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/circuitprinter.ogg
+    soundError: /Audio/Machines/custom_deny.ogg
+    idleState: icon
+    runningState: icon
+    dynamicRecipes:
+      # Magazines
+      - MagazinePistolRubber
+      - MagazineMagnumRubber
+      - MagazineCaselessRifleRubber
+      - MagazineLightRifleRubber
+      - MagazineRifleRubber
+      - MagazinePistol
+      - MagazineMagnum
+      - MagazineCaselessRifle
+      - MagazineLightRifle
+      - MagazineRifle
+      # Weapons kinetic
+      - WeaponRevolverInspector
+      - WeaponSubMachineGunWt550
+      - WeaponRifleLecter
+      - WeaponShotgunDoubleBarreled
+      - WeaponRifleAk
+      - WeaponPistolMk58
+      - WeaponSubMachineGunVector
+      # Weapons energy
+      - WeaponDisabler
+      - WeaponDisablerPractice
+      - WeaponLaserCarbine
+
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+        - Wood
 
 - type: entity
   parent: Protolathe
