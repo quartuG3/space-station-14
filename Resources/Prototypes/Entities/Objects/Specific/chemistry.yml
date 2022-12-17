@@ -299,6 +299,7 @@
     state: pill_canister
   - type: Item
     sprite: Objects/Specific/Chemistry/pills_canister.rsi
+  - type: Dumpable
   - type: Tag
     tags:
       - PillCanister
