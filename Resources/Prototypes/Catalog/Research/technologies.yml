@@ -278,7 +278,7 @@
   - BasicResearch
   unlockedRecipes:
   - AppraisalTool
-#TODO- MiningDrill
+  - MiningDrill
   - OreProcessorMachineCircuitboard
 
 - type: technology
