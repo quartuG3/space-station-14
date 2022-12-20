@@ -167,8 +167,11 @@
       - CableStack
       - CableMVStack
       - CableHVStack
+      - PowerDrill
+      - MiningDrill
       - ConveyorBeltAssembly
       - AppraisalTool
+      - RCD
       - RCDAmmo
       - HydroponicsToolScythe
       - HydroponicsToolHatchet
@@ -226,6 +229,7 @@
       - PowerCellHigh
       - SynthesizerInstrument
       - RPED
+      - NodeScanner
       - HolofanProjector
 
 - type: entity
@@ -302,6 +306,8 @@
       - WallmountGeneratorAPUElectronics
       - WallmountSubstationElectronics
       - EmitterCircuitboard
+      - ThrusterMachineCircuitboard
+      - GyroscopeMachineCircuitboard
       - GasRecyclerMachineCircuitboard
       - SeedExtractorMachineCircuitboard
       - AnalysisComputerCircuitboard
