@@ -5,10 +5,10 @@
   description: So much meat
   components:
   - type: Sprite
-    sprite: Objects/Misc/toy_dumpling.rsi
+    sprite: Objects/Fun/toy_dumpling.rsi
     state: icon
   - type: Item
-    sprite: Objects/Misc/toy_dumpling.rsi
+    sprite: Objects/Fun/toy_dumpling.rsi
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Items/Toys/pelmeni1.ogg

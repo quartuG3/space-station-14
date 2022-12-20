@@ -5,10 +5,10 @@
   description: He loves dumplings so much
   components:
   - type: Sprite
-    sprite: Objects/Misc/toy_shlepa.rsi
+    sprite: Objects/Fun/toy_shlepa.rsi
     state: icon
   - type: Item
-    sprite: Objects/Misc/toy_shlepa.rsi
+    sprite: Objects/Fun/toy_shlepa.rsi
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Items/Toys/pelmeni.ogg
