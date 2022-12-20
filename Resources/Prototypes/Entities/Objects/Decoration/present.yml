@@ -331,6 +331,8 @@
       - id: WeaponPulseCarbine
         prob: .001
         orGroup: GiftPool
+      - id: ToyPadoru
+        orGroup: GiftPool
     sound:
       path: /Audio/Effects/unwrap.ogg
 
