@@ -46,6 +46,14 @@ jobs:
       run: |
         git submodule update --init --recursive
 
+    - name: Pull engine updates
+      uses: space-wizards/submodule-dependency@v0.1.5
+
+    - name: Update Engine Submodules
+      run: |
+        cd RobustToolbox/
+        git submodule update --init --recursive
+
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
@@ -61,8 +69,21 @@ jobs:
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v2
+    #- name: Autobuild
+    #  uses: github/codeql-action/autobuild@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Install dependencies
+      run: dotnet restore
+
+    - name: Build Project
+      run: dotnet build --configuration Release --no-restore /p:WarningsAsErrors=nullable /m
+
+    - name: Run Content.Tests
+      run: dotnet test --no-build Content.Tests/Content.Tests.csproj -- NUnit.ConsoleOut=0
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
@@ -77,4 +98,4 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
       with:
-        category: "/language:${{matrix.language}}"
+        category: "/language:csharp"
