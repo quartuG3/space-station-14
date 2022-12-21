@@ -1406,23 +1406,29 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> InfoLinksBugReport =
             CVarDef.Create("infolinks.bug_report", "", CVar.SERVER | CVar.REPLICATED);
 
-       /// <summary>
-       /// Link to wiki page with roles description in Rules menu.
-       /// </summary>
-       public static readonly CVarDef<string> InfoLinksRoles =
+        /// <summary>
+        /// Link to wiki page with roles description in Rules menu.
+        /// </summary>
+        public static readonly CVarDef<string> InfoLinksRoles =
             CVarDef.Create("infolinks.roles", "", CVar.SERVER | CVar.REPLICATED);
 
-       /// <summary>
-       /// Link to wiki page with space laws in Rules menu.
-       /// </summary>
-       public static readonly CVarDef<string> InfoLinksLaws =
+        /// <summary>
+        /// Link to wiki page with space laws in Rules menu.
+        /// </summary>
+        public static readonly CVarDef<string> InfoLinksLaws =
             CVarDef.Create("infolinks.laws", "", CVar.SERVER | CVar.REPLICATED);
 
-       /// <summary>
-       /// Link to Boosty.
-       /// </summary>
-       public static readonly CVarDef<string> InfoLinksBoosty =
+        /// <summary>
+        /// Link to Boosty.
+        /// </summary>
+        public static readonly CVarDef<string> InfoLinksBoosty =
             CVarDef.Create("infolinks.boosty", "", CVar.SERVER | CVar.REPLICATED);
+
+        /// <summary>
+        /// Link to Donation shop.
+        /// </summary>
+        public static readonly CVarDef<string> InfoLinksShop =
+            CVarDef.Create("infolinks.shop", "", CVar.SERVER | CVar.REPLICATED);
         /*
          * CONFIG
          */
