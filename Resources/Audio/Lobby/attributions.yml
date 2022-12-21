@@ -108,3 +108,8 @@
   license: "CC-BY-3.0"
   copyright: "失望した by EVA"
   source: "https://joshlis.bandcamp.com/album/rear-view"
+
+- files: ["insomnia.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "Insomnia by Nomyn"
+  source: "https://www.toneden.io/nomyn/post/nomyn-insomnia"
