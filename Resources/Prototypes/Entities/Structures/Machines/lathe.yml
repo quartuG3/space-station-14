@@ -463,6 +463,8 @@
     soundError: /Audio/Machines/custom_deny.ogg
     idleState: icon
     runningState: icon
+    staticRecipes:
+      - WeaponDisablerPractice
     dynamicRecipes:
       # Magazines
       - MagazinePistolRubber
@@ -485,8 +487,8 @@
       - WeaponSubMachineGunVector
       # Weapons energy
       - WeaponDisabler
-      - WeaponDisablerPractice
       - WeaponLaserCarbine
+      - WeaponAdvancedLaser
   - type: MaterialStorage
     whitelist:
       tags:
@@ -494,6 +496,8 @@
         - RawMaterial
         - Ingot
         - Wood
+        - Uranium
+        - Gold
 
 - type: entity
   parent: Protolathe
