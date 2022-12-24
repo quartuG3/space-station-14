@@ -115,7 +115,7 @@
     - pirates
   name: pirates-title
   description: pirates-description
-  showInVote: true
+  showInVote: false
   rules:
     - Pirates
     - BasicStationEventScheduler
