@@ -66,7 +66,7 @@ public sealed class ClimbSystem : SharedClimbSystem
         SubscribeLocalEvent<GlassTableComponent, ClimbedOnEvent>(OnGlassClimbed);
     }
 
-    protected override void OnCanDragDropOn(EntityUid uid, SharedClimbableComponent component, CanDragDropOnEvent args)
+    protected override void OnCanDragDropOn(EntityUid uid, ClimbableComponent component, CanDragDropOnEvent args)
     {
         base.OnCanDragDropOn(uid, component, args);
 
@@ -173,6 +173,7 @@ public sealed class ClimbSystem : SharedClimbSystem
             return;
 
         climbing.IsClimbing = true;
+        Dirty(climbing);
 
         MoveEntityToward(uid, climbable, physics, climbing);
         // we may potentially need additional logic since we're forcing a player onto a climbable
@@ -272,6 +273,7 @@ public sealed class ClimbSystem : SharedClimbSystem
 
         climbing.IsClimbing = false;
         climbing.OwnerIsTransitioning = false;
+        Dirty(climbing);
     }
 
     /// <summary>
@@ -282,7 +284,7 @@ public sealed class ClimbSystem : SharedClimbSystem
     /// <param name="target">The object that is being vaulted</param>
     /// <param name="reason">The reason why it cant be dropped</param>
     /// <returns></returns>
-    private bool CanVault(SharedClimbableComponent component, EntityUid user, EntityUid target, out string reason)
+    private bool CanVault(ClimbableComponent component, EntityUid user, EntityUid target, out string reason)
     {
         if (!_actionBlockerSystem.CanInteract(user, target))
         {
@@ -318,7 +320,7 @@ public sealed class ClimbSystem : SharedClimbSystem
     /// <param name="target">The object that is being vaulted onto</param>
     /// <param name="reason">The reason why it cant be dropped</param>
     /// <returns></returns>
-    private bool CanVault(SharedClimbableComponent component, EntityUid user, EntityUid dragged, EntityUid target,
+    private bool CanVault(ClimbableComponent component, EntityUid user, EntityUid dragged, EntityUid target,
         out string reason)
     {
         if (!_actionBlockerSystem.CanInteract(user, dragged) || !_actionBlockerSystem.CanInteract(user, target))
@@ -360,7 +362,7 @@ public sealed class ClimbSystem : SharedClimbSystem
 
     private static void OnClimbingGetState(EntityUid uid, ClimbingComponent component, ref ComponentGetState args)
     {
-        args.State = new SharedClimbingComponent.ClimbModeComponentState(component.IsClimbing, component.OwnerIsTransitioning);
+        args.State = new ClimbingComponent.ClimbModeComponentState(component.IsClimbing, component.OwnerIsTransitioning);
     }
 
     private void OnGlassClimbed(EntityUid uid, GlassTableComponent component, ClimbedOnEvent args)
@@ -408,7 +410,7 @@ public sealed class ClimbSystem : SharedClimbSystem
         _actionBlockerSystem.UpdateCanMove(uid);
 
         // Transition back to KinematicController after BufferTime
-        climbing.Owner.SpawnTimer((int) (SharedClimbingComponent.BufferTime * 1000), () =>
+        climbing.Owner.SpawnTimer((int) (ClimbingComponent.BufferTime * 1000), () =>
         {
             if (climbing.Deleted) return;
             physics.BodyType = BodyType.KinematicController;

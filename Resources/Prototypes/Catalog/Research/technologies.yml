@@ -103,6 +103,7 @@
   - Dropper
   - Syringe
   - ReagentGrinderMachineCircuitboard
+  - HotplateMachineCircuitboard
   - PillCanister
   - ChemistryEmptyBottle01
   - ChemicalPayload
@@ -159,6 +160,7 @@
   - MedicalScannerMachineCircuitboard
   - StasisBedMachineCircuitboard
   - CloningConsoleComputerCircuitboard
+  - CryoPodMachineCircuitboard
 
 # Security Technology Tree
 
