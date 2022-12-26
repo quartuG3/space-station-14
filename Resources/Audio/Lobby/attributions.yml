@@ -84,13 +84,8 @@
   copyright: "Midnight by Nomyn"
   source: "https://www.toneden.io/nomyn/post/nomyn-midnight"
 
-- files: ["synthesis_of_life.ogg"]
-  license: "CC-BY-NC-3.0"
-  copyright: "Synthesis of Life (Lambda Wars OST) by YIA"
-  source: "https://store.steampowered.com/app/270370/Lambda_Wars/"
-
 - files: ["neutral03.ogg"]
-  license: "Custom"
+  license: "None"
   copyright: "Lobotomy Corporation OST - Neutral 03. There is no any license found for that music or other content of this game"
   source: "https://store.steampowered.com/app/568220"
 
@@ -113,3 +108,8 @@
   license: "CC-BY-3.0"
   copyright: "Insomnia by Nomyn"
   source: "https://www.toneden.io/nomyn/post/nomyn-insomnia"
+
+- files: ["we_will_fly.ogg"]
+  license: "None"
+  copyright: "Песня Мы улетим из Космические рейнджеры 2 от Василий Шестовец и Ксения Ларионова. Лицензия для этой песни была не найдена или отсутствует"
+  source: "https://www.youtube.com/watch?v=CwlB5P-rMGc"
