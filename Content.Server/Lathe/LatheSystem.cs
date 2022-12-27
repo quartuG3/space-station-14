@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.Access.Systems;
+using Content.Server.Administration.Logs;
 using Content.Server.Construction;
 using Content.Server.Lathe.Components;
 using Content.Server.Materials;
@@ -8,6 +9,7 @@ using Content.Server.Popups;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.UserInterface;
+using Content.Shared.Database;
 using Content.Shared.Lathe;
 using Content.Shared.Materials;
 using Content.Shared.Research.Components;
@@ -26,6 +28,7 @@ namespace Content.Server.Lathe
     {
         [Dependency] private readonly IGameTiming _timing = default!;
         [Dependency] private readonly IPrototypeManager _proto = default!;
+        [Dependency] private readonly IAdminLogManager _adminLogger = default!;
         [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
         [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -301,10 +304,15 @@ namespace Content.Server.Lathe
 
             if (_proto.TryIndex(args.ID, out LatheRecipePrototype? recipe))
             {
+                var count = 0;
                 for (var i = 0; i < args.Quantity; i++)
                 {
-                    TryAddToQueue(uid, recipe, component);
+                    if (TryAddToQueue(uid, recipe, component))
+                        count++;
                 }
+                if (count > 0 && args.Session.AttachedEntity != null)
+                    _adminLogger.Add(LogType.Action, LogImpact.Low,
+                        $"{ToPrettyString(args.Session.AttachedEntity.Value):player} queued {count} {recipe.Name} at {ToPrettyString(uid):lathe}");
             }
             TryStartProducing(uid, component);
             UpdateUserInterfaceState(uid, component);

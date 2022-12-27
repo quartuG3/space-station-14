@@ -10,6 +10,7 @@ on:
 
 jobs:
   Label:
+    if: github.actor != 'PJBot'
     runs-on: ubuntu-latest
     steps:
       - name: Check for Merge Conflicts
