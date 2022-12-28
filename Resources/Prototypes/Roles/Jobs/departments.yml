@@ -19,6 +19,7 @@
   - Clown
   - HeadOfPersonnel
   - Janitor
+  - Lawyer
   - Librarian
   - MedicalIntern
   - Mime
@@ -36,7 +37,6 @@
   color: "#334E6D"
   roles:
   - Captain
-  - IAA
   - CentralCommandOfficial
   - ChiefEngineer
   - ChiefMedicalOfficer

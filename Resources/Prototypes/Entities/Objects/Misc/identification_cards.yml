@@ -536,7 +536,7 @@
     - state: idzookeeper
   - type: PresetIdCard
     job: Zookeeper
-    
+
 - type: entity
   parent: IDCardStandard
   id: DetectiveIDCard
@@ -560,16 +560,3 @@
     - state: idcentcom
   - type: Item
     heldPrefix: gold
-    
-- type: entity
-  parent: IDCardStandard
-  id: IAAIDCard
-  name: internal affairs agent ID card
-  components:
-    - type: Sprite
-      layers:
-        - state: silver
-        - state: idiaa
-    - type: PresetIdCard
-      job: IAA
-

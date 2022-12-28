@@ -211,7 +211,7 @@
   name: lawyer
   components:
   - type: SpawnPoint
-    job_id: IAA
+    job_id: Lawyer
   - type: Sprite
     layers:
       - state: green

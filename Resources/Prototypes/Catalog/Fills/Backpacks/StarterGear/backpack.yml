@@ -220,13 +220,3 @@
     - type: StorageFill
       contents:
         - id: BoxSurvival
-
-- type: entity
-  noSpawn: true
-  parent: ClothingBackpackIAA
-  id: ClothingBackpackIAAFilled
-  components:
-    - type: StorageFill
-      contents:
-        - id: BoxSurvival
-        - id: BriefcaseIAAFilled
