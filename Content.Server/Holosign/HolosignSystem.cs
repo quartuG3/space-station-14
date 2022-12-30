@@ -39,7 +39,7 @@ namespace Content.Server.Holosign
         {
             if (!args.CanReach)
             {
-                _popupSystem.PopupEntity(Loc.GetString("gas-analyzer-component-player-cannot-reach-message"), args.User, args.User);
+                _popupSystem.PopupEntity(Loc.GetString("holoprojector-component-player-cannot-reach-message"), args.User, args.User);
                 return;
             }
 
@@ -96,7 +96,7 @@ namespace Content.Server.Holosign
             // Should be cleared by OnChildRemove event?
             foreach (var child in component.Childs.ToArray())
             {
-                if(_entManager.EntityExists(child))
+                if(!_entManager.Deleted(child))
                 {
                     _entManager.DeleteEntity(child);
                 }
@@ -107,7 +107,7 @@ namespace Content.Server.Holosign
         {
             foreach (var child in component.Childs.ToArray())
             {
-                if(_entManager.EntityExists(child))
+                if(!_entManager.Deleted(child))
                 {
                     _entManager.DeleteEntity(child);
                 }
@@ -135,7 +135,7 @@ namespace Content.Server.Holosign
 
         private void OnChildRemove(EntityUid uid, HolosignBarrierComponent component, ComponentRemove args)
         {
-            if(!_entManager.EntityExists(component.Holoprojector))
+            if(!_entManager.Deleted(component.Holoprojector))
                 return;
 
             // Holoprojector without Holoprojector component. BRUH
@@ -147,7 +147,7 @@ namespace Content.Server.Holosign
 
         private void OnChildDestroyed(EntityUid uid, HolosignBarrierComponent component, DestructionEventArgs args)
         {
-            if(!_entManager.EntityExists(component.Holoprojector))
+            if(!_entManager.Deleted(component.Holoprojector))
                 return;
 
             // Holoprojector without Holoprojector component. BRUH
