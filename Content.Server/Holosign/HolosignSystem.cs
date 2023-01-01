@@ -135,7 +135,7 @@ namespace Content.Server.Holosign
 
         private void OnChildRemove(EntityUid uid, HolosignBarrierComponent component, ComponentRemove args)
         {
-            if(!_entManager.Deleted(component.Holoprojector))
+            if(_entManager.Deleted(component.Holoprojector))
                 return;
 
             // Holoprojector without Holoprojector component. BRUH
@@ -147,7 +147,7 @@ namespace Content.Server.Holosign
 
         private void OnChildDestroyed(EntityUid uid, HolosignBarrierComponent component, DestructionEventArgs args)
         {
-            if(!_entManager.Deleted(component.Holoprojector))
+            if(_entManager.Deleted(component.Holoprojector))
                 return;
 
             // Holoprojector without Holoprojector component. BRUH
