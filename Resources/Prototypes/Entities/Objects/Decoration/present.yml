@@ -353,6 +353,7 @@
         prob: .001
         orGroup: GiftPool
       - id: ToyPadoru
+      - id: RGBStaff
         orGroup: GiftPool
     sound:
       path: /Audio/Effects/unwrap.ogg
