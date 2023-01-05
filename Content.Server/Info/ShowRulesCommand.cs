@@ -26,9 +26,7 @@ public sealed class ShowRulesCommand : IConsoleCommand
             {
                 target = args[0];
                 var configurationManager = IoCManager.Resolve<IConfigurationManager>();
-//              FIXME: bug in engine. Should be fixen soon.
-//                seconds = configurationManager.GetCVar(CCVars.RulesWaitTime);
-                seconds = 45.0f;
+                seconds = configurationManager.GetCVar(CCVars.RulesWaitTime);
                 break;
             }
             case 2:

@@ -58,9 +58,7 @@ public sealed class RulesManager : SharedRulesManager
 
         _shouldShowRules = false;
 
-//      FIXME: bug in engine. Should be fixen soon.
-//        ShowRules(_configManager.GetCVar(CCVars.RulesWaitTime));
-        ShowRules(45.0f);
+        ShowRules(_configManager.GetCVar(CCVars.RulesWaitTime));
     }
 
     private void ShowRules(float time)
