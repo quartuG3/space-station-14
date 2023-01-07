@@ -113,3 +113,13 @@
   license: "Custom"
   copyright: "Песня Мы улетим из Космические рейнджеры 2 от Василий Шестовец и Ксения Ларионова. Лицензия для этой песни была не найдена или отсутствует"
   source: "https://www.youtube.com/watch?v=CwlB5P-rMGc"
+
+- files: ["clown.ogg"]
+  license: "Custom"
+  copyright: "Clown taken from tgstation, that was created specially for April Fools"
+  source: "https://github.com/tgstation/tgstation/commit/5dbd2d49a6e2c38e446db5e3051df2d0addc1390"
+
+- files: [""]
+  license: "CC-BY-3.0"
+  copyright: "Music for Manatees by Kevin MacLeod. Taken from tgstation Aurora Caelus event"
+  source: "https://github.com/tgstation/tgstation/commit/4a6e0c6b00a6e7a172637d93039ec9bef23caa5b"

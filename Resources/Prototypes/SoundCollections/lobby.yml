@@ -1,8 +1,9 @@
 - type: soundCollection
   id: LobbyMusic
   files:
-    - /Audio/Lobby/endless_space.ogg
-    - /Audio/Lobby/vibe_ace.ogg
+    - /Audio/Ambience/ambispace.ogg
+    - /Audio/Lobby/clown.ogg
+    - /Audio/Lobby/aurora_caelus.ogg
     - /Audio/Lobby/we_will_fly.ogg
     - /Audio/Lobby/midnight.ogg
     - /Audio/Lobby/neutral03.ogg
