@@ -93,7 +93,7 @@
     id: KudzuGrowth
     startAnnouncement: station-event-kudzu-growth-start-announcement
     startAudio:
-      path: /Audio/Announcements/announce.ogg
+      path: /Audio/Announcements/notice.ogg
     earliestStart: 15
     minimumPlayers: 15
     weight: 5
