@@ -33,6 +33,7 @@
         - RCDAmmo
         - Welder
         - PowerCell
+        - Geiger
   - type: ItemMapper
     mapLayers:
       cutters_red:
@@ -100,6 +101,7 @@
         - Flash
         - Handcuff
         - PowerCell
+        - Geiger
   - type: ItemMapper
     mapLayers:
       drill:
@@ -287,7 +289,6 @@
   - type: Storage
     whitelist:
       tags:
-        - BotanyHoe
         # - PlantAnalyzer
         - PlantSampleTaker
         - BotanyShovel
