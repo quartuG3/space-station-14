@@ -119,7 +119,7 @@
   copyright: "Clown taken from tgstation, that was created specially for April Fools"
   source: "https://github.com/tgstation/tgstation/commit/5dbd2d49a6e2c38e446db5e3051df2d0addc1390"
 
-- files: [""]
+- files: ["aurora_caelus.ogg"]
   license: "CC-BY-3.0"
   copyright: "Music for Manatees by Kevin MacLeod. Taken from tgstation Aurora Caelus event"
   source: "https://github.com/tgstation/tgstation/commit/4a6e0c6b00a6e7a172637d93039ec9bef23caa5b"
