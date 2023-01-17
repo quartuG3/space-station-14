@@ -10,6 +10,15 @@ namespace Content.Shared.APC
         /// </summary>
         ChargeState,
 
+        EquipmentChannelState,
+        LightingChannelState,
+        EnvironmentChannelState,
+
+        /// <summary>
+        ///     APC lock.
+        /// </summary>
+        LockState,
+
         /// <summary>
         ///     APC frame.
         /// </summary>
@@ -24,9 +33,17 @@ namespace Content.Shared.APC
         /// </summary>
         Closed,
         /// <summary>
-        ///     APC opened.
+        ///     APC wire panel opened.
         /// </summary>
-        Open
+        Open,
+        /// <summary>
+        ///     APC cover open. Allow for battery replace.
+        /// </summary>
+        Maintaince,
+        /// <summary>
+        /// APC is emagged (and not displaying other useful power colors at a glance)
+        /// </summary>
+        Emag
     }
 
     [Serializable, NetSerializable]
@@ -46,31 +63,76 @@ namespace Content.Shared.APC
         ///     APC battery is full and has enough power.
         /// </summary>
         Full,
+    }
+
+    [Serializable, NetSerializable]
+    public enum ApcLockState
+    {
+        /// <summary>
+        ///     APC fully locked.
+        /// </summary>
+        Locked,
 
         /// <summary>
-        /// APC is emagged (and not displaying other useful power colors at a glance)
+        ///     APC lock is unlocked.
         /// </summary>
-        Emag,
+        Unlocked
     }
 
     [Serializable, NetSerializable]
     public sealed class ApcBoundInterfaceState : BoundUserInterfaceState
     {
         public readonly bool MainBreaker;
+        public readonly bool CoverButton;
         public readonly ApcExternalPowerState ApcExternalPower;
         public readonly float Charge;
+        public readonly ApcPowerChannelMode Equipment;
+        public readonly ApcPowerChannelMode Lighting;
+        public readonly ApcPowerChannelMode Environment;
+        public readonly float EquipmentConsume;
+        public readonly float LightingConsume;
+        public readonly float EnvironmentConsume;
+        public readonly float TotalConsume;
 
-        public ApcBoundInterfaceState(bool mainBreaker, ApcExternalPowerState apcExternalPower, float charge)
+        public ApcBoundInterfaceState(bool mainBreaker, bool coverButton, ApcExternalPowerState apcExternalPower, float charge, ApcPowerChannelMode equipment, ApcPowerChannelMode lighting, ApcPowerChannelMode environment, float equipmentconsume, float lightingconsume, float environmentconsume, float totalconsume)
         {
             MainBreaker = mainBreaker;
+            CoverButton = coverButton;
             ApcExternalPower = apcExternalPower;
             Charge = charge;
+            Equipment = equipment;
+            Lighting = lighting;
+            Environment = environment;
+            EquipmentConsume = equipmentconsume;
+            LightingConsume = lightingconsume;
+            EnvironmentConsume = environmentconsume;
+            TotalConsume = totalconsume;
         }
     }
 
-    [Serializable, NetSerializable]
-    public sealed class ApcToggleMainBreakerMessage : BoundUserInterfaceMessage
+    [NetSerializable, Serializable]
+    public enum ApcPowerChannel
     {
+        Equipment,
+        Lighting,
+        Environment
+    }
+
+    [NetSerializable, Serializable]
+    public enum ApcPowerChannelState
+    {
+        Off,
+        OffAuto,
+        On,
+        OnAuto
+    }
+
+    [NetSerializable, Serializable]
+    public enum ApcPowerChannelMode
+    {
+        Off,
+        On,
+        OnAuto
     }
 
     public enum ApcExternalPowerState
@@ -84,5 +146,48 @@ namespace Content.Shared.APC
     public enum ApcUiKey
     {
         Key,
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class ApcToggleMainBreakerMessage : BoundUserInterfaceMessage
+    {
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class ApcToggleCoverMessage : BoundUserInterfaceMessage
+    {
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class ApcEquipmentChannelStateSetMessage : BoundUserInterfaceMessage
+    {
+        public ApcPowerChannelMode Mode { get; }
+
+        public ApcEquipmentChannelStateSetMessage(ApcPowerChannelMode mode)
+        {
+            Mode = mode;
+        }
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class ApcLightingChannelStateSetMessage : BoundUserInterfaceMessage
+    {
+        public ApcPowerChannelMode Mode { get; }
+
+        public ApcLightingChannelStateSetMessage(ApcPowerChannelMode mode)
+        {
+            Mode = mode;
+        }
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class ApcEnvironmentChannelStateSetMessage : BoundUserInterfaceMessage
+    {
+        public ApcPowerChannelMode Mode { get; }
+
+        public ApcEnvironmentChannelStateSetMessage(ApcPowerChannelMode mode)
+        {
+            Mode = mode;
+        }
     }
 }

@@ -32,9 +32,9 @@
   - type: Appearance
     visuals:
     - type: ApcVisualizer
-  - type: Battery
-    maxCharge: 50000
-    startingCharge: 0
+#  - type: Battery
+#    maxCharge: 50000
+#    startingCharge: 0
   - type: ExaminableBattery
   - type: NodeContainer
     examinable: true
@@ -91,6 +91,21 @@
             max: 1
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        locked: true
+        ejectOnInteract: true
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+        whitelist:
+          components:
+            - PowerCell
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
   - type: StationInfiniteBatteryTarget
   - type: StaticPrice
     price: 500
@@ -112,7 +127,7 @@
     drawdepth: WallMountedItems
     netsync: false
     sprite: Structures/Power/apc.rsi
-    state: apcframe
+    state: apcmaint
   - type: Construction
     graph: APC
     node: apcFrame
@@ -155,34 +170,34 @@
   parent: BaseAPC
   id: APCBasic
   suffix: Basic, 50kW
-  components:
-  - type: Battery
-    maxCharge: 50000
-    startingCharge: 50000
+#  components:
+#  - type: Battery
+#    maxCharge: 50000
+#    startingCharge: 50000
 
 - type: entity
   parent: BaseAPC
   id: APCHighCapacity
   suffix: High Capacity, 100kW
-  components:
-  - type: Battery
-    maxCharge: 100000
-    startingCharge: 100000
+#  components:
+#  - type: Battery
+#    maxCharge: 100000
+#    startingCharge: 100000
 
 - type: entity
   parent: BaseAPC
   id: APCSuperCapacity
   suffix: Super Capacity, 150kW
-  components:
-  - type: Battery
-    maxCharge: 150000
-    startingCharge: 150000
+#  components:
+#  - type: Battery
+#    maxCharge: 150000
+#    startingCharge: 150000
 
 - type: entity
   parent: BaseAPC
   id: APCHyperCapacity
   suffix: Hyper Capacity, 200kW
-  components:
-  - type: Battery
-    maxCharge: 200000
-    startingCharge: 200000
+#  components:
+#  - type: Battery
+#    maxCharge: 200000
+#    startingCharge: 200000

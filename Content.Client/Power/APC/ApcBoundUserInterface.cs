@@ -19,6 +19,10 @@ namespace Content.Client.Power.APC
             _menu = new ApcMenu(this);
             _menu.OnClose += Close;
             _menu.OpenCentered();
+
+            _menu.ApcEquipmentChannelStateChanged += OnApcEquipmentChannelStateChanged;
+            _menu.ApcLightingChannelStateChanged += OnApcLightingChannelStateChanged;
+            _menu.ApcEnvironmentChannelStateChanged += OnApcEnvironmentChannelStateChanged;
         }
 
         public ApcBoundUserInterface(ClientUserInterfaceComponent owner, Enum uiKey) : base(owner, uiKey)
@@ -36,6 +40,26 @@ namespace Content.Client.Power.APC
         public void BreakerPressed()
         {
             SendMessage(new ApcToggleMainBreakerMessage());
+        }
+
+        public void CoverPressed()
+        {
+            SendMessage(new ApcToggleCoverMessage());
+        }
+
+        private void OnApcEquipmentChannelStateChanged(ApcPowerChannelMode mode)
+        {
+            SendMessage(new ApcEquipmentChannelStateSetMessage(mode));
+        }
+
+        private void OnApcLightingChannelStateChanged(ApcPowerChannelMode mode)
+        {
+            SendMessage(new ApcLightingChannelStateSetMessage(mode));
+        }
+
+        private void OnApcEnvironmentChannelStateChanged(ApcPowerChannelMode mode)
+        {
+            SendMessage(new ApcEnvironmentChannelStateSetMessage(mode));
         }
 
         protected override void Dispose(bool disposing)

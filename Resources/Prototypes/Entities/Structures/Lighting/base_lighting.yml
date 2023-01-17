@@ -84,6 +84,7 @@
     containers:
       light_bulb: !type:ContainerSlot
   - type: ApcPowerReceiver
+    powerChannel: 1
   - type: ExtensionCableReceiver
   - type: DeviceNetwork
     deviceNetId: Apc
@@ -257,6 +258,7 @@
       types:
         Heat: 5
   - type: ApcPowerReceiver
+    powerChannel: 1
   - type: ExtensionCableReceiver
   - type: DeviceNetwork
     deviceNetId: Apc
@@ -300,6 +302,7 @@
     color: "#FF4020"
     mask: /Textures/Effects/LightMasks/cone.png
   - type: ApcPowerReceiver
+    powerChannel: 1
   - type: ExtensionCableReceiver
   - type: Battery
     maxCharge: 30000

@@ -5,6 +5,7 @@
   components:
   - type: WallMount
   - type: ApcPowerReceiver
+    powerChannel: 2
   - type: Electrified
     enabled: false
     usesApcPower: true

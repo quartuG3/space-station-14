@@ -100,7 +100,7 @@ namespace Content.Server.Power.Pow3r
             foreach (var batteryId in network.BatteryLoads)
             {
                 var battery = state.Batteries[batteryId];
-                if (!battery.Enabled || !battery.CanCharge || battery.Paused)
+                if (!battery.Enabled || battery.Capacity == 0 || !battery.CanCharge || battery.Paused)
                     continue;
 
                 var batterySpace = (battery.Capacity - battery.CurrentStorage) * (1 / battery.Efficiency);
@@ -153,7 +153,7 @@ namespace Content.Server.Power.Pow3r
                 foreach (var batteryId in network.BatterySupplies)
                 {
                     var battery = state.Batteries[batteryId];
-                    if (!battery.Enabled || !battery.CanDischarge || battery.Paused)
+                    if (!battery.Enabled || !battery.CanDischarge || battery.Paused || battery.Capacity == 0)
                         continue;
 
                     var scaledSpace = battery.CurrentStorage / frameTime;
@@ -164,7 +164,7 @@ namespace Content.Server.Power.Pow3r
                     battery.AvailableSupply = Math.Min(scaledSpace, supplyAndPassthrough);
                     battery.LoadingNetworkDemand = unmet;
 
-                    battery.MaxEffectiveSupply = Math.Min(battery.CurrentStorage / frameTime, battery.MaxSupply + battery.CurrentReceiving * battery.Efficiency); 
+                    battery.MaxEffectiveSupply = Math.Min(battery.CurrentStorage / frameTime, battery.MaxSupply + battery.CurrentReceiving * battery.Efficiency);
                     totalBatterySupply += battery.AvailableSupply;
                     totalMaxBatterySupply += battery.MaxEffectiveSupply;
                 }
@@ -174,7 +174,7 @@ namespace Content.Server.Power.Pow3r
             network.LastCombinedMaxSupply = totalMaxSupply + totalMaxBatterySupply;
 
             var met = Math.Min(demand, network.LastCombinedSupply);
-            if (met == 0) 
+            if (met == 0)
                 return;
 
             var supplyRatio = met / demand;
@@ -194,7 +194,7 @@ namespace Content.Server.Power.Pow3r
             foreach (var batteryId in network.BatteryLoads)
             {
                 var battery = state.Batteries[batteryId];
-                if (!battery.Enabled || battery.DesiredPower == 0 || battery.Paused)
+                if (!battery.Enabled || battery.DesiredPower == 0 || battery.Capacity == 0 || battery.Paused)
                     continue;
 
                 battery.LoadingMarked = true;
@@ -228,7 +228,7 @@ namespace Content.Server.Power.Pow3r
                     supply.SupplyRampTarget = supply.MaxSupply * targetRelativeSupplyOutput;
                 }
             }
-            
+
             if (unmet <= 0 || totalBatterySupply <= 0)
                 return;
 
@@ -240,7 +240,7 @@ namespace Content.Server.Power.Pow3r
             foreach (var batteryId in network.BatterySupplies)
             {
                 var battery = state.Batteries[batteryId];
-                if (!battery.Enabled || battery.Paused)
+                if (!battery.Enabled || battery.Capacity == 0 || battery.Paused)
                     continue;
 
                 battery.SupplyingMarked = true;

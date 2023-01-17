@@ -4,6 +4,7 @@ using Content.Server.NodeContainer.Nodes;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Power.Pow3r;
+using Content.Shared.APC;
 using JetBrains.Annotations;
 using Robust.Shared.Map;
 
@@ -20,6 +21,8 @@ namespace Content.Server.Power.NodeGroups
         void RemovePowerProvider(ApcPowerProviderComponent provider);
 
         void QueueNetworkReconnect();
+
+        bool IsChannelEnabled(ApcPowerChannel channel);
     }
 
     [NodeGroup(NodeGroupID.Apc)]
@@ -33,11 +36,19 @@ namespace Content.Server.Power.NodeGroups
         [ViewVariables] public readonly List<PowerConsumerComponent> Consumers = new();
 
         //Debug property
-        [ViewVariables] private int TotalReceivers => Providers.Sum(provider => provider.LinkedReceivers.Count);
+        [ViewVariables]
+        public int TotalReceivers => Providers.Sum(provider => provider.LinkedReceivers.Count);
 
         [ViewVariables]
-        private IEnumerable<ApcPowerReceiverComponent> AllReceivers =>
+        public IEnumerable<ApcPowerReceiverComponent> AllReceivers =>
             Providers.SelectMany(provider => provider.LinkedReceivers);
+
+        [ViewVariables]
+        public bool EquipmentEnabled = true;
+        [ViewVariables]
+        public bool LightingEnabled = true;
+        [ViewVariables]
+        public bool EnvironmentEnabled = true;
 
         [ViewVariables]
         public PowerState.Network NetworkNode { get; } = new();
@@ -78,14 +89,12 @@ namespace Content.Server.Power.NodeGroups
         public void AddPowerProvider(ApcPowerProviderComponent provider)
         {
             Providers.Add(provider);
-
             QueueNetworkReconnect();
         }
 
         public void RemovePowerProvider(ApcPowerProviderComponent provider)
         {
             Providers.Remove(provider);
-
             QueueNetworkReconnect();
         }
 
@@ -111,6 +120,17 @@ namespace Content.Server.Power.NodeGroups
         protected override void SetNetConnectorNet(IBaseNetConnectorComponent<IApcNet> netConnectorComponent)
         {
             netConnectorComponent.Net = this;
+        }
+
+        public bool IsChannelEnabled(ApcPowerChannel channel)
+        {
+            return channel switch
+            {
+                ApcPowerChannel.Equipment => EquipmentEnabled,
+                ApcPowerChannel.Lighting => LightingEnabled,
+                ApcPowerChannel.Environment => EnvironmentEnabled,
+                _ => false
+            };
         }
 
         public override string? GetDebugData()

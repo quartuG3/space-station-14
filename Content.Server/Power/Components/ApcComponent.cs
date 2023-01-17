@@ -27,6 +27,16 @@ public sealed class ApcComponent : BaseApcNetComponent
     [ViewVariables]
     public bool MainBreakerEnabled = true;
 
+    public bool MaintaincePanelUnlocked = false;
+    public bool MaintaincePanelOpened = false;
+
+    [ViewVariables(VVAccess.ReadWrite)]
+    public ApcPowerChannelState EquipmentChannelState = ApcPowerChannelState.OnAuto;
+    [ViewVariables(VVAccess.ReadWrite)]
+    public ApcPowerChannelState LightingChannelState = ApcPowerChannelState.OnAuto;
+    [ViewVariables(VVAccess.ReadWrite)]
+    public ApcPowerChannelState EnvironmentChannelState = ApcPowerChannelState.OnAuto;
+
     public bool Emagged = false;
 
     public const float HighPowerThreshold = 0.9f;

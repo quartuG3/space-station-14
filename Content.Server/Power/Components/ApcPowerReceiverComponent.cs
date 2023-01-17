@@ -1,5 +1,6 @@
 using Content.Server.Power.NodeGroups;
 using Content.Server.Power.Pow3r;
+using Content.Shared.APC;
 
 namespace Content.Server.Power.Components
 {
@@ -11,7 +12,7 @@ namespace Content.Server.Power.Components
     public sealed class ApcPowerReceiverComponent : Component
     {
         [ViewVariables]
-        public bool Powered => (MathHelper.CloseToPercent(NetworkLoad.ReceivingPower, Load) || !NeedsPower) && !PowerDisabled;
+        public bool Powered => (MathHelper.CloseToPercent(NetworkLoad.ReceivingPower, Load) || !NeedsPower) && !PowerDisabled && PowerChannelEnabled();
 
         /// <summary>
         ///     Amount of charge this needs from an APC per second to function.
@@ -20,6 +21,7 @@ namespace Content.Server.Power.Components
         [DataField("powerLoad")]
         public float Load { get => NetworkLoad.DesiredPower; set => NetworkLoad.DesiredPower = value; }
 
+        [ViewVariables(VVAccess.ReadWrite)]
         public ApcPowerProviderComponent? Provider = null;
 
         /// <summary>
@@ -51,6 +53,16 @@ namespace Content.Server.Power.Components
         }
 
         public bool? PoweredLastUpdate;
+        [ViewVariables(VVAccess.ReadWrite)]
+        [DataField("powerChannel")]
+        public ApcPowerChannel PowerChannel = ApcPowerChannel.Equipment;
+
+        public bool PowerChannelEnabled()
+        {
+            if(Provider != null)
+                return Provider.IsChannelEnabled(PowerChannel);
+            return false;
+        }
 
         [ViewVariables]
         public PowerState.Load NetworkLoad { get; } = new PowerState.Load

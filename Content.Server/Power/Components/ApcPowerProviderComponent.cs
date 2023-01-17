@@ -1,4 +1,5 @@
 using Content.Server.Power.NodeGroups;
+using Content.Shared.APC;
 
 namespace Content.Server.Power.Components
 {
@@ -6,12 +7,24 @@ namespace Content.Server.Power.Components
     [ComponentProtoName("PowerProvider")]
     public sealed class ApcPowerProviderComponent : BaseApcNetComponent
     {
-        [ViewVariables] public List<ApcPowerReceiverComponent> LinkedReceivers { get; } = new();
+        [ViewVariables(VVAccess.ReadWrite)]
+        public List<ApcPowerReceiverComponent> LinkedReceivers { get; } = new();
+
+        public bool IsChannelEnabled(ApcPowerChannel channel)
+        {
+            if(Net != null)
+                return Net.IsChannelEnabled(channel);
+            return false;
+        }
 
         public void AddReceiver(ApcPowerReceiverComponent receiver)
         {
             LinkedReceivers.Add(receiver);
             receiver.NetworkLoad.LinkedNetwork = default;
+            if( Net != null )
+            {
+                receiver.PowerDisabled = Net.IsChannelEnabled(receiver.PowerChannel);
+            }
 
             Net?.QueueNetworkReconnect();
         }
@@ -20,6 +33,7 @@ namespace Content.Server.Power.Components
         {
             LinkedReceivers.Remove(receiver);
             receiver.NetworkLoad.LinkedNetwork = default;
+            receiver.PowerDisabled = false;
 
             Net?.QueueNetworkReconnect();
         }

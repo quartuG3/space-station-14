@@ -48,20 +48,43 @@ namespace Content.Client.Power.APC
 
             var ent = IoCManager.Resolve<IEntityManager>();
             var sprite = ent.GetComponent<ISpriteComponent>(component.Owner);
-            if (component.TryGetData<ApcPanelState>(ApcVisuals.PanelState, out var panelState))
+            if (component.TryGetData<ApcPanelState>(ApcVisuals.PanelState, out var panelState)
+            && component.TryGetData<ApcChargeState>(ApcVisuals.ChargeState, out var chargeState)
+            && component.TryGetData<ApcLockState>(ApcVisuals.LockState, out var lockState)
+            && component.TryGetData<ApcPowerChannelState>(ApcVisuals.EquipmentChannelState, out var equipmentState)
+            && component.TryGetData<ApcPowerChannelState>(ApcVisuals.LightingChannelState, out var lightingState)
+            && component.TryGetData<ApcPowerChannelState>(ApcVisuals.EnvironmentChannelState, out var environmentState))
             {
+                sprite.LayerSetVisible(Layers.ChargeState, panelState < ApcPanelState.Maintaince);
+                sprite.LayerSetVisible(Layers.Lock, panelState != ApcPanelState.Emag);
+                sprite.LayerSetVisible(Layers.Equipment, panelState != ApcPanelState.Emag);
+                sprite.LayerSetVisible(Layers.Lighting, panelState != ApcPanelState.Emag);
+                sprite.LayerSetVisible(Layers.Environment, panelState != ApcPanelState.Emag);
+
                 switch (panelState)
                 {
                     case ApcPanelState.Closed:
                         sprite.LayerSetState(Layers.Panel, "apc0");
+//                        sprite.LayerSetVisible(Layers.ChargeState, true);
                         break;
                     case ApcPanelState.Open:
-                        sprite.LayerSetState(Layers.Panel, "apcframe");
+                        sprite.LayerSetState(Layers.Panel, "apcewires");
+//                        sprite.LayerSetVisible(Layers.ChargeState, true);
+                        break;
+                    case ApcPanelState.Maintaince:
+                        sprite.LayerSetState(Layers.Panel, "apc1");
+//                        sprite.LayerSetVisible(Layers.ChargeState, false);
+                        break;
+                    case ApcPanelState.Emag:
+                        sprite.LayerSetState(Layers.Panel, "apcemag");
                         break;
                 }
-            }
-            if (component.TryGetData<ApcChargeState>(ApcVisuals.ChargeState, out var chargeState))
-            {
+
+                sprite.LayerSetState(Layers.Equipment, $"apco0-{(int)equipmentState}");
+                sprite.LayerSetState(Layers.Lighting, $"apco1-{(int)lightingState}");
+                sprite.LayerSetState(Layers.Environment, $"apco2-{(int)environmentState}");
+                sprite.LayerSetState(Layers.Lock, lockState == ApcLockState.Unlocked ? "apcox-0" : "apcox-1");
+
                 switch (chargeState)
                 {
                     case ApcChargeState.Lack:
@@ -73,19 +96,21 @@ namespace Content.Client.Power.APC
                     case ApcChargeState.Full:
                         sprite.LayerSetState(Layers.ChargeState, "apco3-2");
                         break;
-                    case ApcChargeState.Emag:
-                        sprite.LayerSetState(Layers.ChargeState, "emag-unlit");
-                        break;
                 }
 
                 if (ent.TryGetComponent(component.Owner, out SharedPointLightComponent? light))
                 {
+                    if(panelState == ApcPanelState.Emag)
+                    {
+                        light.Color = EmagColor;
+                        return;
+                    }
+
                     light.Color = chargeState switch
                     {
                         ApcChargeState.Lack => LackColor,
                         ApcChargeState.Charging => ChargingColor,
                         ApcChargeState.Full => FullColor,
-                        ApcChargeState.Emag => EmagColor,
                         _ => LackColor
                     };
                 }

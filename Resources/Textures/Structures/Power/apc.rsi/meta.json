@@ -1,22 +1,51 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/9c7d509354ee030300f63c701da63c17928c3b3b and modified by Swept",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/38e73e729f43a3643fd6c8c9f7324e8c3544e8fa ",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "broken"
+      "name": "apc0"
     },
     {
-      "name": "apcframe"
-    },
-    {
-      "name": "sparks-unlit",
+      "name": "apco3-1",
       "delays": [
         [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "apco3-0",
+      "delays": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "apco3-2",
+      "delays": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "apc-spark",
+      "delays": [
+        [
+          0.1,
           0.1,
           0.1,
           0.1,
@@ -27,10 +56,10 @@
       ]
     },
     {
-      "name": "apc0"
+      "name": "apcewires"
     },
     {
-      "name": "emag-unlit",
+      "name": "apcemag",
       "delays": [
         [
           0.5,
@@ -39,7 +68,34 @@
       ]
     },
     {
-      "name": "panel"
+      "name": "apc1"
+    },
+    {
+      "name": "apc1-b-nocover"
+    },
+    {
+      "name": "apc1-nocover"
+    },
+    {
+      "name": "apc2"
+    },
+    {
+      "name": "apc2-b-nocover"
+    },
+    {
+      "name": "apc2-nocover"
+    },
+    {
+      "name": "apc-b"
+    },
+    {
+      "name": "apcmaint"
+    },
+    {
+      "name": "apcox-0"
+    },
+    {
+      "name": "apcox-1"
     },
     {
       "name": "apco0-0"
@@ -76,55 +132,6 @@
     },
     {
       "name": "apco2-3"
-    },
-    {
-      "name": "apco3-0",
-      "delays": [
-        [
-          1,
-          2
-        ]
-      ]
-    },
-    {
-      "name": "apco3-1",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.2
-        ]
-      ]
-    },
-    {
-      "name": "apco3-2",
-      "delays": [
-        [
-          1,
-          1
-        ]
-      ]
-    },
-    {
-      "name": "apco3-3",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ]
-      ]
-    },
-    {
-      "name": "apcox-0"
-    },
-    {
-      "name": "apcox-1"
     }
   ]
 }

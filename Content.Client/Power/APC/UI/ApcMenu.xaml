@@ -5,14 +5,6 @@
     <BoxContainer Orientation="Vertical"
                   SeparationOverride="4">
         <BoxContainer Orientation="Horizontal">
-            <Label Text="{Loc 'apc-menu-breaker-label'}"/>
-            <Button Name="BreakerButton" Text="{Loc 'apc-menu-breaker-button'}"></Button>
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
-            <Label Text="{Loc 'apc-menu-external-label'}"/>
-            <Label Name="ExternalPowerStateLabel" Text="{Loc 'apc-menu-power-state-good'}"/>
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
             <Label Text="{Loc 'apc-menu-charge-label'}"/>
             <ProgressBar Name="ChargeBar"
                          HorizontalExpand="True"
@@ -22,6 +14,33 @@
                          Value="0.5">
             </ProgressBar>
             <Label Name="ChargePercentage"/>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc 'apc-menu-breaker-label'}"/>
+            <Button Name="BreakerButton" Text="{Loc 'apc-menu-breaker-button-blank'}"></Button>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc 'apc-menu-external-label'}"/>
+            <Label Name="ExternalPowerStateLabel" Text="{Loc 'apc-menu-power-state-good'}"/>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc 'apc-menu-cover-label'}"/>
+            <Button Name="CoverButton" Text="{Loc 'apc-menu-cover-button-blank'}"></Button>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Label Name = "CEquipmentLabel" Text="{Loc 'apc-menu-equipment-blank'}" Margin="0 0 2 0" />
+            <OptionButton Name="CEquipmentButton" HorizontalExpand="True" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Label Name = "CLightingLabel" Text="{Loc 'apc-menu-lighting-blank'}" Margin="0 0 2 0" />
+            <OptionButton Name="CLightingButton" HorizontalExpand="True" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Label Name = "CEnvironmentLabel" Text="{Loc 'apc-menu-environment-blank'}" Margin="0 0 2 0" />
+            <OptionButton Name="CEnvironmentButton" HorizontalExpand="True" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal">
+            <Label Name = "CTotalLabel" Text="{Loc 'apc-menu-total-blank'}" Margin="0 0 2 0" />
         </BoxContainer>
     </BoxContainer>
 </DefaultWindow>

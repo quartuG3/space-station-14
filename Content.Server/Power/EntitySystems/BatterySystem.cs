@@ -1,6 +1,8 @@
 using Content.Server.Cargo.Systems;
 using Content.Server.Power.Components;
+using Content.Server.PowerCell;
 using Content.Shared.Examine;
+using Content.Shared.PowerCell.Components;
 using JetBrains.Annotations;
 
 namespace Content.Server.Power.EntitySystems
@@ -8,6 +10,8 @@ namespace Content.Server.Power.EntitySystems
     [UsedImplicitly]
     public sealed class BatterySystem : EntitySystem
     {
+        [Dependency] private readonly PowerCellSystem _cellSystem = default!;
+
         public override void Initialize()
         {
             base.Initialize();
@@ -21,8 +25,9 @@ namespace Content.Server.Power.EntitySystems
 
         private void OnExamine(EntityUid uid, ExaminableBatteryComponent component, ExaminedEvent args)
         {
-            if (!TryComp<BatteryComponent>(uid, out var batteryComponent))
+            if (!TryComp<BatteryComponent>(uid, out var batteryComponent) && !_cellSystem.TryGetBatteryFromSlot(uid, out batteryComponent))
                 return;
+
             if (args.IsInDetailsRange)
             {
                 var effectiveMax = batteryComponent.MaxCharge;
@@ -47,6 +52,22 @@ namespace Content.Server.Power.EntitySystems
                 netBat.NetworkBattery.Capacity = bat.MaxCharge;
                 netBat.NetworkBattery.CurrentStorage = bat.CurrentCharge;
             }
+
+            foreach (var (netBat, cell) in EntityManager.EntityQuery<PowerNetworkBatteryComponent, PowerCellSlotComponent>())
+            {
+                if(_cellSystem.TryGetBatteryFromSlot(netBat.Owner, out var bat, cell))
+                {
+                    netBat.NetworkBattery.Enabled = true;
+                    netBat.NetworkBattery.Capacity = bat.MaxCharge;
+                    netBat.NetworkBattery.CurrentStorage = bat.CurrentCharge;
+                }
+                else
+                {
+                    netBat.NetworkBattery.Enabled = false;
+                    netBat.NetworkBattery.Capacity = 0;
+                    netBat.NetworkBattery.CurrentStorage = 0;
+                }
+            }
         }
 
         private void PostSync(NetworkBatteryPostSync ev)
@@ -54,6 +75,14 @@ namespace Content.Server.Power.EntitySystems
             foreach (var (netBat, bat) in EntityManager.EntityQuery<PowerNetworkBatteryComponent, BatteryComponent>())
             {
                 bat.CurrentCharge = netBat.NetworkBattery.CurrentStorage;
+            }
+
+            foreach (var (netBat, cell) in EntityManager.EntityQuery<PowerNetworkBatteryComponent, PowerCellSlotComponent>())
+            {
+                if(_cellSystem.TryGetBatteryFromSlot(netBat.Owner, out var bat, cell))
+                {
+                    bat.CurrentCharge = netBat.NetworkBattery.CurrentStorage;
+                }
             }
         }
 
