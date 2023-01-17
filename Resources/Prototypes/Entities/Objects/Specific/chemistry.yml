@@ -316,3 +316,4 @@
     whitelist:
       tags:
         - Pill
+  - type: Dumpable

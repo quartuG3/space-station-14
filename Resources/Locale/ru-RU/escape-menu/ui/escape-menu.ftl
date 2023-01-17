@@ -6,6 +6,7 @@ ui-escape-rules = Правила
 ui-escape-discord = Discord
 ui-escape-boosty = Boosty
 ui-escape-shop = Донат-магазин
+ui-escape-guidebook = Учебник
 ui-escape-wiki = Wiki (от Corvax)
 ui-escape-disconnect = Отключиться
 ui-escape-quit = Выйти
