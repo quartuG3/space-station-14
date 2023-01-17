@@ -308,6 +308,11 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> DiscordAHelpAvatar =
             CVarDef.Create("discord.ahelp_avatar", string.Empty, CVar.SERVERONLY);
 
+        // <summary>
+        /// URL of the discord webhook which will relay all bans messages
+        // </summary>
+        public static readonly CVarDef<string> DiscordBanWebhook =
+            CVarDef.Create("discord.ban_webhook", string.Empty, CVar.SERVERONLY);
         /*
          * Suspicion
          */
