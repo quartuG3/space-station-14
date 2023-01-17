@@ -13,6 +13,7 @@
     clothingVisuals:
       neck:
       - state: lgbt-equipped
+  - type: Recyclable
 
 - type: entity
   parent: ClothingNeckBase
@@ -29,6 +30,7 @@
     clothingVisuals:
       neck:
       - state: aro-equipped
+  - type: Recyclable
 
 - type: entity
   parent: ClothingNeckBase
@@ -45,6 +47,7 @@
     clothingVisuals:
       neck:
       - state: asex-equipped
+  - type: Recyclable
 
 - type: entity
   parent: ClothingNeckBase
@@ -61,6 +64,7 @@
     clothingVisuals:
       neck:
       - state: bi-equipped
+  - type: Recyclable
 
 - type: entity
   parent: ClothingNeckBase
@@ -77,6 +81,7 @@
     clothingVisuals:
       neck:
       - state: inter-equipped
+  - type: Recyclable
 
 - type: entity
   parent: ClothingNeckBase
@@ -93,6 +98,7 @@
     clothingVisuals:
       neck:
       - state: les-equipped
+  - type: Recyclable
 
 - type: entity
   parent: ClothingNeckBase
@@ -109,6 +115,7 @@
     clothingVisuals:
       neck:
       - state: non-equipped
+  - type: Recyclable
 
 - type: entity
   parent: ClothingNeckBase
@@ -125,6 +132,7 @@
     clothingVisuals:
       neck:
       - state: pan-equipped
+  - type: Recyclable
 
 - type: entity
   parent: ClothingNeckBase
@@ -141,3 +149,4 @@
     clothingVisuals:
       neck:
       - state: trans-equipped
+  - type: Recyclable
