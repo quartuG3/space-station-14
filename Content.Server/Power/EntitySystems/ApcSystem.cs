@@ -498,6 +498,11 @@ namespace Content.Server.Power.EntitySystems
             {
                 _itemSlotsSystem.SetLock(uid, itemSlots.Slots["cell_slot"], !component.MaintaincePanelOpened);
             }
+
+            if (!EntityManager.TryGetComponent(uid, out AppearanceComponent? appearance))
+                return;
+
+            UpdatePanelAppearance(uid, appearance, component);
         }
 
         private void OnInteractUsing(EntityUid uid, ApcComponent component, InteractUsingEvent args)
