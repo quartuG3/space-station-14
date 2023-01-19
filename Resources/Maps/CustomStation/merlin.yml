@@ -46916,20 +46916,6 @@ entities:
     pos: 26.724924,-8.5023985
     parent: 1
     type: Transform
-- uid: 5846
-  type: PuddleGeneric
-  components:
-  - rot: -1.5707963267948966 rad
-    pos: -80.5,3.5
-    parent: 1
-    type: Transform
-- uid: 5847
-  type: PuddleGeneric
-  components:
-  - rot: -1.5707963267948966 rad
-    pos: -81.5,3.5
-    parent: 1
-    type: Transform
 - uid: 5848
   type: OrganVoxLungs
   components:
