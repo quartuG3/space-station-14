@@ -146,9 +146,6 @@
 
 - type: latheRecipe
   id: Holoprojector
-  icon:
-    sprite: Objects/Devices/Holoprojectors/custodial.rsi
-    state: icon
   result: Holoprojector
   completetime: 8
   materials:
@@ -158,9 +155,6 @@
 
 - type: latheRecipe
   id: HoloprojectorEngineering
-  icon:
-    sprite: Objects/Devices/Holoprojectors/engineer.rsi
-    state: icon
   result: HoloprojectorEngineering
   completetime: 8
   materials:
@@ -170,10 +164,7 @@
 
 - type: latheRecipe
   id: HoloprojectorSecurity
-  icon:
-    sprite: Objects/Devices/Holoprojectors/sec.rsi
-    state: icon
-  result: Holoprojector
+  result: HoloprojectorSecurity
   completetime: 8
   materials:
     Steel: 300
