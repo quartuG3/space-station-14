@@ -8,6 +8,7 @@ using Content.Server.Materials;
 using Content.Server.Popups;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
+using Content.Server.Stack;
 using Content.Server.UserInterface;
 using Content.Shared.Database;
 using Content.Shared.Lathe;
@@ -35,6 +36,7 @@ namespace Content.Server.Lathe
         [Dependency] private readonly UserInterfaceSystem _uiSys = default!;
         [Dependency] private readonly PopupSystem _popup = default!;
         [Dependency] private readonly MaterialStorageSystem _materialStorage = default!;
+        [Dependency] private readonly StackSystem _stack = default!;
 
         public override void Initialize()
         {
@@ -91,22 +93,22 @@ namespace Content.Server.Lathe
         }
 
         [PublicAPI]
-        public bool TryGetAvailableRecipes(EntityUid uid, [NotNullWhen(true)] out List<string>? recipes, LatheComponent? component = null)
+        public bool TryGetAvailableRecipes(EntityUid uid, [NotNullWhen(true)] out List<string>? recipes, [NotNullWhen(true)] LatheComponent? component = null)
         {
             recipes = null;
             if (!Resolve(uid, ref component))
                 return false;
-            recipes = GetAvailableRecipes(component);
+            recipes = GetAvailableRecipes(uid, component);
             return true;
         }
 
-        public List<string> GetAvailableRecipes(LatheComponent component)
+        public List<string> GetAvailableRecipes(EntityUid uid, LatheComponent component)
         {
-            var ev = new LatheGetRecipesEvent(component.Owner)
+            var ev = new LatheGetRecipesEvent(uid)
             {
                 Recipes = component.StaticRecipes
             };
-            RaiseLocalEvent(component.Owner, ev);
+            RaiseLocalEvent(uid, ev);
             return ev.Recipes;
         }
 
@@ -152,7 +154,7 @@ namespace Content.Server.Lathe
             lathe.ProductionLength = recipe.CompleteTime * component.TimeMultiplier;
             component.CurrentRecipe = recipe;
 
-            _audio.PlayPvs(component.ProducingSound, component.Owner);
+            _audio.PlayPvs(component.ProducingSound, uid);
             UpdateRunningAppearance(uid, true);
             UpdateUserInterfaceState(uid, component);
             return true;
@@ -164,13 +166,17 @@ namespace Content.Server.Lathe
                 return;
 
             if (comp.CurrentRecipe != null)
-                Spawn(comp.CurrentRecipe.Result, Transform(uid).Coordinates);
+            {
+                var result = Spawn(comp.CurrentRecipe.Result, Transform(uid).Coordinates);
+                _stack.TryMergeToContacts(result);
+            }
+
             comp.CurrentRecipe = null;
             prodComp.StartTime = _timing.CurTime;
 
             if (!TryStartProducing(uid, comp))
             {
-                RemCompDeferred(prodComp.Owner, prodComp);
+                RemCompDeferred(uid, prodComp);
                 UpdateUserInterfaceState(uid, comp);
                 UpdateRunningAppearance(uid, false);
             }
@@ -184,7 +190,7 @@ namespace Content.Server.Lathe
             var ui = _uiSys.GetUi(uid, LatheUiKey.Key);
             var producing = component.CurrentRecipe ?? component.Queue.FirstOrDefault();
 
-            var state = new LatheUpdateState(GetAvailableRecipes(component), component.Queue, producing);
+            var state = new LatheUpdateState(GetAvailableRecipes(uid, component), component.Queue, producing);
             _uiSys.SetUiState(ui, state);
         }
 
@@ -259,7 +265,7 @@ namespace Content.Server.Lathe
 
         protected override bool HasRecipe(EntityUid uid, LatheRecipePrototype recipe, LatheComponent component)
         {
-            return GetAvailableRecipes(component).Contains(recipe.ID);
+            return GetAvailableRecipes(uid, component).Contains(recipe.ID);
         }
 
         #region UI Messages
