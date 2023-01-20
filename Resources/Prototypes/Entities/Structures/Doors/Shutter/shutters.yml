@@ -132,6 +132,8 @@
     node: ShuttersRadiation
     containers:
     - board
+  - type: RadiationBlocker
+    resistance: 4
 
 - type: entity
   id: ShuttersRadiationOpen
