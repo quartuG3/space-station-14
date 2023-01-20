@@ -8,6 +8,7 @@
     sprite: Clothing/Eyes/Glasses/beergoggles.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/beergoggles.rsi
+  - type: ReagentVisor
 
 - type: entity
   parent: ClothingEyesBase
@@ -74,6 +75,18 @@
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/meson.rsi
   - type: EyeProtection
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesScience
+  name: science goggles
+  description: These glasses scan the contents of chemical containers and projects their contents to the user in an easy to read format.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Glasses/science.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Glasses/science.rsi
+  - type: ReagentVisor
 
 - type: entity
   parent: ClothingEyesBase
