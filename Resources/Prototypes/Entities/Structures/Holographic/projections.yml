@@ -63,7 +63,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: RadiationBlocker
-    resistance: 1000
+    resistance: 10
 
 - type: entity
   id: HoloFanTram
