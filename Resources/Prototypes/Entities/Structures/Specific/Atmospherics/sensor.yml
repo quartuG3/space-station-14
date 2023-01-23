@@ -33,7 +33,7 @@
     - type: Clickable
     - type: InteractionOutline
     - type: ApcPowerReceiver
-      powerChannel: 2
+      powerChannel: Environment
     - type: ExtensionCableReceiver
     - type: DeviceNetwork
       deviceNetId: AtmosDevices

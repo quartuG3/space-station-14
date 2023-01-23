@@ -1,6 +1,9 @@
 using Content.Server.Power.NodeGroups;
 using Content.Server.Power.Pow3r;
 using Content.Shared.APC;
+using Robust.Shared.Serialization;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Server.Power.Components
 {
@@ -54,8 +57,17 @@ namespace Content.Server.Power.Components
 
         public bool? PoweredLastUpdate;
         [ViewVariables(VVAccess.ReadWrite)]
-        [DataField("powerChannel")]
-        public ApcPowerChannel PowerChannel = ApcPowerChannel.Equipment;
+        [DataField("powerChannel", customTypeSerializer: typeof(ConstantSerializer<ApcPowerChannelComponentTag>))]
+        public int _PowerChannel = (int)ApcPowerChannel.Equipment;
+        [ViewVariables(VVAccess.ReadWrite)]
+        public ApcPowerChannel PowerChannel
+        {
+            get => (ApcPowerChannel)_PowerChannel;
+            set
+            {
+                _PowerChannel = (int)value;
+            }
+        }
 
         public bool PowerChannelEnabled()
         {

@@ -110,12 +110,17 @@ namespace Content.Shared.APC
         }
     }
 
-    [NetSerializable, Serializable]
+    public sealed class ApcPowerChannelComponentTag
+    {
+    public const int Default = 0;
+    }
+
+    [Serializable, ConstantsFor(typeof(ApcPowerChannelComponentTag))]
     public enum ApcPowerChannel
     {
-        Equipment,
-        Lighting,
-        Environment
+        Equipment = ApcPowerChannelComponentTag.Default,
+        Lighting = ApcPowerChannelComponentTag.Default + 1,
+        Environment = ApcPowerChannelComponentTag.Default + 2
     }
 
     [NetSerializable, Serializable]

@@ -82,7 +82,7 @@
     containers:
       light_bulb: !type:ContainerSlot
   - type: ApcPowerReceiver
-    powerChannel: 1
+    powerChannel: Lighting
   - type: ExtensionCableReceiver
   - type: DeviceNetwork
     deviceNetId: Apc

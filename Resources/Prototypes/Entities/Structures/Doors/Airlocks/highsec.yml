@@ -61,7 +61,7 @@
   - type: WiresVisuals
   - type: ApcPowerReceiver
     powerLoad: 20
-    powerChannel: 2
+    powerChannel: Environment
   - type: ExtensionCableReceiver
   - type: Electrified
     enabled: false

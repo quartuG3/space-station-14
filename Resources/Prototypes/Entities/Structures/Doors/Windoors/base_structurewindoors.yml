@@ -42,7 +42,7 @@
     - state: panel_open
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: ApcPowerReceiver
-    powerChannel: 2
+    powerChannel: Environment
   - type: ExtensionCableReceiver
   - type: DoorSignalControl
   - type: SignalReceiver

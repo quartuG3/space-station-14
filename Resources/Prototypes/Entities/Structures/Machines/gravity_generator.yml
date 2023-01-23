@@ -27,7 +27,7 @@
     anchored: true
   - type: ApcPowerReceiver
     powerLoad: 2500
-    powerChannel: 2
+    powerChannel: Environment
   - type: ExtensionCableReceiver
   - type: Physics
     bodyType: Static

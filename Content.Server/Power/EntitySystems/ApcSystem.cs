@@ -71,6 +71,45 @@ namespace Content.Server.Power.EntitySystems
 
         private void OnPowerCellChanged(EntityUid uid, ApcComponent component, PowerCellChangedEvent args)
         {
+            if(_cellSystem.TryGetBatteryFromSlot(uid, out var battery))
+            {
+                var battery_charge = (battery.CurrentCharge / battery.MaxCharge) * 100;
+
+                //FIXME: event proceed every pow3r simulation. Maybe somehow fix that?
+                if(battery_charge < 100)
+                {
+                    if(battery_charge < 75 && component.EquipmentChannelState == ApcPowerChannelState.OnAuto) // shutdown equipment in auto
+                    {
+                        ApcChangeEquipmentChannel(uid, ApcPowerChannelState.OffAuto);
+                    }
+
+                    if(battery_charge < 30 && component.LightingChannelState == ApcPowerChannelState.OnAuto) // shutdown light in auto
+                    {
+                        ApcChangeLightingChannel(uid, ApcPowerChannelState.OffAuto);
+                    }
+
+                    if(battery_charge < 15 && component.EnvironmentChannelState == ApcPowerChannelState.OnAuto) // shutdown enviroment in auto
+                    {
+                        ApcChangeEnvironmentChannel(uid, ApcPowerChannelState.OffAuto);
+                    }
+
+                    if(battery_charge > 85 && component.EquipmentChannelState == ApcPowerChannelState.OffAuto) // power on equipment in auto
+                    {
+                        ApcChangeEquipmentChannel(uid, ApcPowerChannelState.OnAuto);
+                    }
+
+                    if(battery_charge > 40 && component.LightingChannelState == ApcPowerChannelState.OffAuto) // power on light in auto
+                    {
+                        ApcChangeLightingChannel(uid, ApcPowerChannelState.OnAuto);
+                    }
+
+                    if(battery_charge > 25 && component.EnvironmentChannelState == ApcPowerChannelState.OffAuto) // power on enviroment auto
+                    {
+                        ApcChangeEnvironmentChannel(uid, ApcPowerChannelState.OnAuto);
+                    }
+                }
+            }
+
             UpdateApcState(uid, component);
         }
 
