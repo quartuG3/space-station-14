@@ -22,6 +22,8 @@
         amount: 1
       - id: PlushieVox
         amount: 1
+      - id: PlushieMoff
+        amount: 1
       - id: PlushieRouny
         amount: 1
       - id: PlushieRatvar

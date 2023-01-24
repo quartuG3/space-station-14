@@ -75,6 +75,8 @@
         orGroup: GiftPool
       - id: PlushieVox
         orGroup: GiftPool
+      - id: PlushieMoff
+        orGroup: GiftPool
       - id: PlushieRatvar
         orGroup: GiftPool
       - id: PlushieSpaceLizard
