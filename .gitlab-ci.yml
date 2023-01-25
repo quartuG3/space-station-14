@@ -6,7 +6,7 @@ stages:          # List of stages for jobs, and their order of execution
 build-debug:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - apt update
+    - apt update && apt upgrade
     - apt install -y python3
     - git submodule update --init --recursive
     - dotnet restore
