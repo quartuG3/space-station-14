@@ -1,5 +1,8 @@
 image: mcr.microsoft.com/dotnet/sdk:7.0
 
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
 stages:          # List of stages for jobs, and their order of execution
   - build
 
@@ -11,6 +14,6 @@ build-debug:       # This job runs in the build stage, which runs first.
     - git submodule update --init --recursive
     - dotnet restore
     - dotnet build --configuration Debug --no-restore /p:WarningsAsErrors=nullable /m
-    - dotnet test --no-build Content.Tests/Content.Tests.csproj -- NUnit.ConsoleOut=0
+    - dotnet test --no-build Content.Tests/Content.Tests.csproj
     - export DOTNET_gcServer=1
     - dotnet test --no-build Content.IntegrationTests/Content.IntegrationTests.csproj
