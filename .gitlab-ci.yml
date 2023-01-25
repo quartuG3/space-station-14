@@ -12,6 +12,7 @@ build-debug:       # This job runs in the build stage, which runs first.
     - apt update && apt upgrade
     - apt install -y python3
     - git submodule update --init --recursive
+    - mkdir .git/hooks -p
     - dotnet restore
     - dotnet build --configuration Debug --no-restore /p:WarningsAsErrors=nullable /m
     - dotnet test --no-build Content.Tests/Content.Tests.csproj
