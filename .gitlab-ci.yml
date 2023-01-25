@@ -3,33 +3,18 @@ image: mcr.microsoft.com/dotnet/sdk:7.0
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-stages:
-  - setup
+stages:          # List of stages for jobs, and their order of execution
   - build
-  - tests
-  - integrationtests
 
-setup-debug:
-  stage: setup
+build-debug:       # This job runs in the build stage, which runs first.
+  stage: build
   script:
     - apt update && apt upgrade
     - apt install -y python3 libfreetype6
     - git submodule update --init --recursive
     - mkdir .git/hooks -p
-
-build-debug:
-  stage: build
-  script:
     - dotnet restore
     - dotnet build --configuration Debug --no-restore /p:WarningsAsErrors=nullable /m
-
-tests-debug:
-  stage: tests
-  script:
     - dotnet test --no-build Content.Tests/Content.Tests.csproj
-
-integrationtests-debug:
-  stage: integrationtests
-  script:
     - export DOTNET_gcServer=1
     - dotnet test --no-build Content.IntegrationTests/Content.IntegrationTests.csproj
