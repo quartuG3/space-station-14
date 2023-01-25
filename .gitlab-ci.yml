@@ -10,7 +10,7 @@ build-debug:       # This job runs in the build stage, which runs first.
   stage: build
   script:
     - apt update && apt upgrade
-    - apt install -y python3
+    - apt install -y python3 libfreetype6
     - git submodule update --init --recursive
     - mkdir .git/hooks -p
     - dotnet restore
