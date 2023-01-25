@@ -2,6 +2,7 @@
   id: DefaultMapPool
   maps:
   - Bagel
+  - Barratry
   - Box
   - Cluster
   - Kettle
