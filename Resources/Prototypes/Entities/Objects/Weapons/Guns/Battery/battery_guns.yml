@@ -89,6 +89,7 @@
     fireCost: 62.5
   - type: Battery
     maxCharge: 500
+    chargeRate: 50
     startingCharge: 500
 
 - type: entity
@@ -152,6 +153,7 @@
     fireCost: 200
   - type: Battery
     maxCharge: 2000
+    chargeRate: 200
     startingCharge: 2000
 
 - type: entity
@@ -183,6 +185,7 @@
     fireCost: 200
   - type: Battery
     maxCharge: 5000
+    chargeRate: 500
     startingCharge: 5000
 
 - type: entity
@@ -210,6 +213,7 @@
     fireCost: 100
   - type: Battery
     maxCharge: 40000
+    chargeRate: 1500
     startingCharge: 40000
 
 - type: entity

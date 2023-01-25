@@ -55,11 +55,11 @@
       layers:
         - state: red
         - sprite: Objects/Power/power_cells.rsi
-          state: high
+          state: hpcell
     - type: RandomSpawner
       rarePrototypes:
         - lanternextrabright
-        - PowerCellHigh
+        - PowerCellSuper
         - NetProbeCartridge
       rareChance: 0.08
       prototypes:

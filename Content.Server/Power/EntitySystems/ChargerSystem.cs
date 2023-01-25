@@ -50,7 +50,7 @@ internal sealed class ChargerSystem : EntitySystem
             TransferPower(charger.Owner, slot.Item!.Value, charger, frameTime);
         }
     }
-    
+
     private void OnPowerChanged(EntityUid uid, ChargerComponent component, ref PowerChangedEvent args)
     {
         UpdateStatus(uid, component);
@@ -63,7 +63,7 @@ internal sealed class ChargerSystem : EntitySystem
 
         if (args.Container.ID != component.SlotId)
             return;
-        
+
         UpdateStatus(uid, component);
     }
 
@@ -121,18 +121,25 @@ internal sealed class ChargerSystem : EntitySystem
         switch (component.Status)
         {
             case CellChargerStatus.Off:
+                component.ChargeRate = 0;
                 receiver.Load = 0;
                 _sharedAppearanceSystem.SetData(uid, CellVisual.Light, CellChargerStatus.Off, appearance);
                 break;
             case CellChargerStatus.Empty:
+                component.ChargeRate = 0;
                 receiver.Load = 0;
                 _sharedAppearanceSystem.SetData(uid, CellVisual.Light, CellChargerStatus.Empty, appearance);
                 break;
             case CellChargerStatus.Charging:
-                receiver.Load = component.ChargeRate;
+                if (SearchForBattery(slot.Item!.Value, out BatteryComponent? heldBattery))
+                {
+                    component.ChargeRate = heldBattery.ChargeRate;
+                    receiver.Load = heldBattery.ChargeRate;
+                }
                 _sharedAppearanceSystem.SetData(uid, CellVisual.Light, CellChargerStatus.Charging, appearance);
                 break;
             case CellChargerStatus.Charged:
+                component.ChargeRate = 0;
                 receiver.Load = 0;
                 _sharedAppearanceSystem.SetData(uid, CellVisual.Light, CellChargerStatus.Charged, appearance);
                 break;
@@ -183,7 +190,7 @@ internal sealed class ChargerSystem : EntitySystem
         if (!SearchForBattery(targetEntity, out BatteryComponent? heldBattery))
             return;
 
-        heldBattery.CurrentCharge += component.ChargeRate * frameTime;
+        heldBattery.CurrentCharge += heldBattery.ChargeRate * frameTime;
         // Just so the sprite won't be set to 99.99999% visibility
         if (heldBattery.MaxCharge - heldBattery.CurrentCharge < 0.01)
         {

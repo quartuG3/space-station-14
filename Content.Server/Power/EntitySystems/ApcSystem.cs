@@ -75,7 +75,7 @@ namespace Content.Server.Power.EntitySystems
             {
                 var battery_charge = (battery.CurrentCharge / battery.MaxCharge) * 100;
 
-                //FIXME: event proceed every pow3r simulation. Maybe somehow fix that?
+                //NOTE: event proceed every pow3r simulation. Maybe somehow fix that?
                 if(battery_charge < 100)
                 {
                     if(battery_charge < 75 && component.EquipmentChannelState == ApcPowerChannelState.OnAuto) // shutdown equipment in auto
@@ -123,6 +123,7 @@ namespace Content.Server.Power.EntitySystems
         {
             UpdateApcState(uid, component);
         }
+
         private void OnToggleMainBreaker(EntityUid uid, ApcComponent component, ApcToggleMainBreakerMessage args)
         {
             TryComp<AccessReaderComponent>(uid, out var access);

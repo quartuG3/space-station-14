@@ -9,7 +9,7 @@ namespace Content.Server.Power.Components
         public CellChargerStatus Status;
 
         [DataField("chargeRate")]
-        public int ChargeRate = 20;
+        public float ChargeRate = 0;
 
         [DataField("slotId", required: true)]
         public string SlotId = string.Empty;

@@ -17,6 +17,13 @@ namespace Content.Server.Power.Components
         private float _maxCharge;
 
         /// <summary>
+        /// Сharge rate of the battery in joules (ie. watt seconds).
+        /// </summary>
+        [ViewVariables(VVAccess.ReadWrite)]
+        [DataField("chargeRate")]
+        public float ChargeRate = 100;
+
+        /// <summary>
         /// Current charge of the battery in joules (ie. watt seconds)
         /// </summary>
         [ViewVariables(VVAccess.ReadWrite)]

@@ -87,4 +87,3 @@
     sprite: Structures/Power/wall_recharger.rsi
   - type: WallMount
   - type: Charger
-    chargeRate: 25

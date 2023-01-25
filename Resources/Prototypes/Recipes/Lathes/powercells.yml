@@ -17,8 +17,8 @@
     Gold: 10
 
 - type: latheRecipe
-  id: PowerCellHigh
-  result: PowerCellHighPrinted
+  id: PowerCellSuper
+  result: PowerCellSuperPrinted
   completetime: 10
   materials:
     Steel: 300

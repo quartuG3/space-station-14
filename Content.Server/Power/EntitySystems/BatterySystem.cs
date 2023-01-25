@@ -59,12 +59,16 @@ namespace Content.Server.Power.EntitySystems
                 {
                     netBat.NetworkBattery.Enabled = true;
                     netBat.NetworkBattery.Capacity = bat.MaxCharge;
+                    netBat.NetworkBattery.MaxChargeRate = bat.ChargeRate;
+                    netBat.NetworkBattery.SupplyRampRate = bat.MaxCharge / 2;
                     netBat.NetworkBattery.CurrentStorage = bat.CurrentCharge;
                 }
                 else
                 {
                     netBat.NetworkBattery.Enabled = false;
                     netBat.NetworkBattery.Capacity = 0;
+                    netBat.NetworkBattery.MaxChargeRate = 0;
+                    netBat.NetworkBattery.SupplyRampRate = 0;
                     netBat.NetworkBattery.CurrentStorage = 0;
                 }
             }

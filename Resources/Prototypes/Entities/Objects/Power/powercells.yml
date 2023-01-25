@@ -38,13 +38,14 @@
   components:
   - type: Sprite
     layers:
-    - state: potato
+    - state: potato_battery
   - type: Battery
-    maxCharge: 200
-    startingCharge: 200
+    maxCharge: 300
+    chargeRate: 100
+    startingCharge: 300
 
 - type: entity
-  name: small-capacity power cell
+  name: power cell
   description: A rechargeable power cell. This is the cheapest kind you can find.
   id: PowerCellSmall
   suffix: Full
@@ -53,12 +54,13 @@
   - type: Sprite
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
-      state: small
+      state: cell
     - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       state: o2
       shader: unshaded
   - type: Battery
     maxCharge: 1000
+    chargeRate: 100
     startingCharge: 1000
 
 - type: entity
@@ -68,10 +70,11 @@
   components:
   - type: Battery
     maxCharge: 1000
+    chargeRate: 100
     startingCharge: 0
 
 - type: entity
-  name: medium-capacity power cell
+  name: high-capacity power cell
   description: A rechargeable power cell. This is the popular and reliable version.
   id: PowerCellMedium
   suffix: Full
@@ -80,12 +83,13 @@
   - type: Sprite
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
-      state: medium
+      state: hcell
     - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       state: o2
       shader: unshaded
   - type: Battery
     maxCharge: 10000
+    chargeRate: 1500
     startingCharge: 10000
 
 - type: entity
@@ -95,34 +99,49 @@
   components:
   - type: Battery
     maxCharge: 10000
+    chargeRate: 1500
     startingCharge: 0
 
 - type: entity
-  name: high-capacity power cell
+  name: super-capacity power cell
   description: A rechargeable standardized power cell. This premium brand stores up to 50% more energy than the competition.
-  id: PowerCellHigh
+  id: PowerCellSuper
   suffix: Full
   parent: BasePowerCell
   components:
   - type: Sprite
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
-      state: high
+      state: scell
     - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       state: o2
       shader: unshaded
   - type: Battery
-    maxCharge: 1080
-    startingCharge: 1080
+    maxCharge: 20000
+    chargeRate: 2000
+    startingCharge: 20000
+
+- type: entity
+  name: super-capacity power cell
+  description: A rechargeable standardized power cell. This premium brand stores up to 50% more energy than the competition.
+  id: PowerCellHigh
+  suffix: Obsolete
+  parent: PowerCellSuper
+
+- type: entity
+  id: PowerCellSuperPrinted
+  suffix: Empty
+  parent: PowerCellSuper
+  components:
+  - type: Battery
+    maxCharge: 20000
+    chargeRate: 2000
+    startingCharge: 0
 
 - type: entity
   id: PowerCellHighPrinted
-  suffix: Empty
-  parent: PowerCellHigh
-  components:
-  - type: Battery
-    maxCharge: 1080
-    startingCharge: 0
+  suffix: Obsolete
+  parent: PowerCellSuperPrinted
 
 - type: entity
   name: hyper-capacity power cell
@@ -134,13 +153,14 @@
   - type: Sprite
     layers:
     - map: [ "enum.PowerCellVisualLayers.Base" ]
-      state: hyper
+      state: hpcell
     - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       state: o2
       shader: unshaded
   - type: Battery
-    maxCharge: 1800
-    startingCharge: 1800
+    maxCharge: 30000
+    chargeRate: 3000
+    startingCharge: 30000
 
 - type: entity
   id: PowerCellHyperPrinted
@@ -148,7 +168,37 @@
   parent: PowerCellHyper
   components:
   - type: Battery
-    maxCharge: 1800
+    maxCharge: 30000
+    chargeRate: 3000
+    startingCharge: 0
+
+- type: entity
+  name: bluespace power cell
+  description: A rechargeable standardized power cell. This one looks like a rare and powerful prototype.
+  id: PowerCellBluespace
+  suffix: Full
+  parent: BasePowerCell
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: bscell
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: Battery
+    maxCharge: 40000
+    chargeRate: 4000
+    startingCharge: 40000
+
+- type: entity
+  id: PowerCellBluespacePrinted
+  suffix: Empty
+  parent: PowerCellBluespace
+  components:
+  - type: Battery
+    maxCharge: 40000
+    chargeRate: 4000
     startingCharge: 0
 
 - type: entity
@@ -161,12 +211,13 @@
     - type: Sprite
       layers:
       - map: [ "enum.PowerCellVisualLayers.Base" ]
-        state: microreactor
+        state: icell
       - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
         state: o2
         shader: unshaded
     - type: Battery
       maxCharge: 50
+      chargeRate: 0 # not rechargable because microreactor dude
       startingCharge: 50
     - type: BatterySelfRecharger
       autoRecharge: true
@@ -181,12 +232,13 @@
     - type: Sprite
       layers:
       - map: [ "enum.PowerCellVisualLayers.Base" ]
-        state: antique
+        state: icell
       - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
         state: o2
         shader: unshaded
     - type: Battery
       maxCharge: 1200
+      chargeRate: 120
       startingCharge: 1200
     - type: BatterySelfRecharger
       autoRecharge: true

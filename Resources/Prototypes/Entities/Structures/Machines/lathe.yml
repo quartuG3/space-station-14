@@ -226,7 +226,7 @@
       - VoiceTrigger
       - PowerCellSmall
       - PowerCellMedium
-      - PowerCellHigh
+      - PowerCellSuper
       - SynthesizerInstrument
       - RPED
       - NodeScanner

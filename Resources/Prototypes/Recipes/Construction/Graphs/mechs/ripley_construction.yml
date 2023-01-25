@@ -75,7 +75,7 @@
         store: battery-container
         icon:
           sprite: Objects/Power/power_cells.rsi
-          state: small
+          state: cell
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"

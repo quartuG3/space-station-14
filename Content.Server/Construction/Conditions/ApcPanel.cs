@@ -16,7 +16,7 @@ namespace Content.Server.Construction.Conditions
             if (!entityManager.TryGetComponent(uid, out ApcComponent? apc))
                 return true;
 
-            return apc.IsApcOpen == Open;
+            return apc.MaintaincePanelOpened == Open;
         }
 
         public bool DoExamine(ExaminedEvent args)
@@ -27,10 +27,10 @@ namespace Content.Server.Construction.Conditions
 
             switch (Open)
             {
-                case true when !apc.IsApcOpen:
+                case true when !apc.MaintaincePanelOpened:
                     args.PushMarkup(Loc.GetString("construction-examine-condition-apc-open"));
                     return true;
-                case false when apc.IsApcOpen:
+                case false when apc.MaintaincePanelOpened:
                     args.PushMarkup(Loc.GetString("construction-examine-condition-apc-close"));
                     return true;
             }

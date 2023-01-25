@@ -462,7 +462,7 @@
   description: technologies-basic-powercell-printing-description
   icon:
     sprite: Objects/Power/power_cells.rsi
-    state: small
+    state: cell
   requiredPoints: 2500
   requiredTechnologies:
   - ElectromagneticTheory
@@ -475,7 +475,7 @@
   description: technologies-advanced-powercell-printing-description
   icon:
     sprite: Objects/Power/power_cells.rsi
-    state: medium
+    state: hcell
   requiredPoints: 5000
   requiredTechnologies:
   - PowerCellBasic
@@ -488,12 +488,12 @@
   description: technologies-super-powercell-printing-description
   icon:
     sprite: Objects/Power/power_cells.rsi
-    state: high
+    state: scell
   requiredPoints: 7500
   requiredTechnologies:
   - PowerCellAdvanced
   unlockedRecipes:
-  - PowerCellHigh
+  - PowerCellSuper
 
 # Entertainment Technology Tree
 
