@@ -30,6 +30,16 @@
       path: /Audio/Animals/lizard_happy.ogg
 
 - type: emoteSounds
+  id: UnisexMoth
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/Voice/Moth/scream_moth.ogg
+    Laugh:
+      collection: FemaleLaugh
+
+- type: emoteSounds
   id: UnisexVox
   sound:
     path: /Audio/Voice/Vox/shriek1.ogg

@@ -16,6 +16,11 @@
     template: HumanoidTemplate
     preset: MothPreset
     requiredLegs: 2
+  - type: Vocal
+    sounds:
+      Male: UnisexMoth
+      Female: UnisexMoth
+      Unsexed: UnisexMoth
   - type: DiseaseCarrier
     diseaseResist: 0.1
   - type: Flammable
