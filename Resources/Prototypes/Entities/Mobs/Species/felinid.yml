@@ -5,7 +5,7 @@
   id: BaseMobFelinid
   abstract: true
   components:
-  - type: Humanoid
+  - type: HumanoidAppearance
     species: Felinid
   - type: Hunger
   - type: Thirst
@@ -33,5 +33,5 @@
   parent: BaseMobOrganicDummy
   noSpawn: true
   components:
-  - type: Humanoid
+  - type: HumanoidAppearance
     species: Felinid
