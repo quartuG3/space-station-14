@@ -140,6 +140,26 @@
     startAfter: 30
 
 - type: gameRule
+  id: MeteorSwarmSmall
+  config:
+    !type:StationEventRuleConfiguration
+    id: MeteorSwarmSmall
+    earliestStart: 30
+    weight: 5
+    minimumPlayers: 20
+    startAnnouncement: station-event-meteor-swarm-start-announcement
+    endAnnouncement: station-event-meteor-swarm-end-announcement
+    startAudio:
+      path: /Audio/Announcements/meteors_start.ogg
+      params:
+        volume: -4
+    endAudio:
+      path: /Audio/Announcements/meteors_end.ogg
+      params:
+        volume: -4
+    startAfter: 30
+
+- type: gameRule
   id: MouseMigration
   config:
     !type:StationEventRuleConfiguration
