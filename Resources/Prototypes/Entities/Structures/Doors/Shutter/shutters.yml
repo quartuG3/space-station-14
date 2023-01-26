@@ -86,6 +86,8 @@
     messagePerceivedByOthers: comp-window-knock
     interactSuccessSound:
       path: /Audio/Effects/glass_knock.ogg
+  - type: StaticPrice
+    price: 100
 
 - type: entity
   id: ShuttersNormal
