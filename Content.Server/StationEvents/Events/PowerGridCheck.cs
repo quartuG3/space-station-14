@@ -22,7 +22,7 @@ namespace Content.Server.StationEvents.Events
         private readonly List<EntityUid> _powered = new();
         private readonly List<EntityUid> _unpowered = new();
 
-        private const float SecondsUntilOff = 30.0f;
+        private const float SecondsUntilOff = 10.0f;
 
         private int _numberPerSecond = 0;
         private float UpdateRate => 1.0f / _numberPerSecond;
