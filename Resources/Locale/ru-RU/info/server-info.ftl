@@ -7,4 +7,4 @@ server-info-report-button = Сообщить об ошибке
 server-info-credits-button = Авторы
 server-info-boosty-button = Boosty
 server-info-shop-button = Донат-магазин
-server-info-github-button = GitLab сервера
+server-info-gitlab-button = Исходный код сборки

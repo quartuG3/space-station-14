@@ -2,6 +2,7 @@
 
 info-link-discord = Discord
 info-link-forum = Форум
-info-link-github = GitLab
+info-link-gitlab = GitLab
 info-link-website = Сайт
 info-link-wiki = Вики
+info-link-boosty = Boosty

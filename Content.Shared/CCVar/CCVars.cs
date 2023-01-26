@@ -1427,10 +1427,11 @@ namespace Content.Shared.CCVar
             CVarDef.Create("infolinks.forum", "", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
-        /// Link to GitHub page to show in the launcher.
+        /// Link to GitLab page to show in the launcher.
         /// </summary>
-        public static readonly CVarDef<string> InfoLinksGithub =
-            CVarDef.Create("infolinks.github", "", CVar.SERVER | CVar.REPLICATED);
+        public static readonly CVarDef<string> InfoLinksGitLab =
+            CVarDef.Create("infolinks.gitlab", "https://git.arumoon.ru/Workbench-Team/space-station-14/-/tree/arumoon-server", CVar.SERVER | CVar.REPLICATED);
+        // HARDCODE: Default value specified because DevInfoBanner window uses client side config instead of server's config
 
         /// <summary>
         /// Link to website to show in the launcher.
@@ -1454,7 +1455,8 @@ namespace Content.Shared.CCVar
         /// Link to the bug report form.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksBugReport =
-            CVarDef.Create("infolinks.bug_report", "", CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("infolinks.bug_report", "https://git.arumoon.ru/Workbench-Team/space-station-14/-/issues/new", CVar.SERVER | CVar.REPLICATED);
+        // HARDCODE: Default value specified because DevInfoBanner window uses client side config instead of server's config
 
         /// <summary>
         /// Link to wiki page with roles description in Rules menu.
@@ -1472,7 +1474,8 @@ namespace Content.Shared.CCVar
         /// Link to Boosty.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksBoosty =
-            CVarDef.Create("infolinks.boosty", "", CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("infolinks.boosty", "https://boosty.to/arumoon", CVar.SERVER | CVar.REPLICATED);
+        // HARDCODE: Default value specified because DevInfoBanner window uses client side config instead of server's config
 
         /// <summary>
         /// Link to Donation shop.

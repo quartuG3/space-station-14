@@ -158,12 +158,12 @@ namespace Content.Client.Credits
             AddSection(Loc.GetString("credits-window-original-remake-team-section-title"), "OriginalRemake.txt");
             AddSection(Loc.GetString("credits-window-special-thanks-section-title"), "SpecialThanks.txt", true);
 
-            var linkGithub = _cfg.GetCVar(CCVars.InfoLinksGithub);
+            var linkGitLab = _cfg.GetCVar(CCVars.InfoLinksGitLab);
 
             contributeButton.OnPressed += _ =>
-                IoCManager.Resolve<IUriOpener>().OpenUri(linkGithub);
+                IoCManager.Resolve<IUriOpener>().OpenUri(linkGitLab);
 
-            if (linkGithub == "")
+            if (linkGitLab == "")
                 contributeButton.Visible = false;
         }
 
