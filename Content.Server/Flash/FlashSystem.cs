@@ -104,24 +104,31 @@ namespace Content.Server.Flash
         {
             if (!Resolve(target, ref flashable, false)) return;
 
-            var attempt = new FlashAttemptEvent(target, user, used);
-            RaiseLocalEvent(target, attempt, true);
+            var ev = new FlashAttemptEvent(target, user, used);
+            RaiseLocalEvent(target, ev, true);
 
-            if (attempt.Cancelled)
-                return;
-            
-            float flashdur = flashDuration;
-
+            // flash system must be refactored. This looks very bad.
             flashable.LastFlash = _gameTiming.CurTime;
-            if (bang == true)
-            {
-                flashdur += flashDuration * flashable.BangAddMultiplier;
-            }
-            flashable.Duration = flashdur / 1000f; // TODO: Make this sane...
-            Dirty(flashable);
 
-            _stunSystem.TrySlowdown(target, TimeSpan.FromSeconds(flashdur/1000f), true,
-                slowTo, slowTo);
+            float flashdur = ev.AddBaseFlash ? flashDuration * flashable.DurationMultiplier : 0f;
+            float slowdur = flashdur;
+
+            if (bang && ev.AddBangFlash)
+            {
+                var debuffDur = flashDuration * flashable.BangAddMultiplier;
+                slowdur += debuffDur;
+                if (ev.AddBaseFlash || flashable.BangFlash) flashdur += debuffDur;
+            }
+
+            if (flashdur > 0f)
+            {
+                flashable.Duration = flashdur / 1000f; // TODO: Make this sane...
+                Dirty(flashable);
+            }
+
+            if (slowdur > 0f)
+                _stunSystem.TrySlowdown(target, TimeSpan.FromSeconds(slowdur/1000f), true,
+                    slowTo, slowTo);
 
             if (displayPopup && user != null && target != user && EntityManager.EntityExists(user.Value))
             {
@@ -184,7 +191,7 @@ namespace Content.Server.Flash
         {
             foreach (var slot in new[] { "head", "eyes", "mask" })
             {
-                if (args.Cancelled)
+                if (!args.AddBaseFlash)
                     break;
                 if (_inventorySystem.TryGetSlotEntity(uid, slot, out var item, component))
                     RaiseLocalEvent(item.Value, args, true);
@@ -193,16 +200,21 @@ namespace Content.Server.Flash
 
         private void OnFlashImmunityFlashAttempt(EntityUid uid, FlashImmunityComponent component, FlashAttemptEvent args)
         {
-            if(component.Enabled)
-                args.Cancel();
+            if(component.Enabled) {
+                args.AddBaseFlash = false;
+                if (component.ProtectFromBangs) args.AddBangFlash = false;
+            }
+                
         }
     }
 
-    public sealed class FlashAttemptEvent : CancellableEntityEventArgs
+    public sealed class FlashAttemptEvent : HandledEntityEventArgs
     {
         public readonly EntityUid Target;
         public readonly EntityUid? User;
         public readonly EntityUid? Used;
+        public bool AddBangFlash = true;
+        public bool AddBaseFlash = true;
 
         public FlashAttemptEvent(EntityUid target, EntityUid? user, EntityUid? used)
         {
