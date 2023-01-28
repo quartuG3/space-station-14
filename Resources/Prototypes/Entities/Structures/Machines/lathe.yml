@@ -421,12 +421,20 @@
       - ShellShotgunFlare
       - ShellTranquilizer
       - CartridgeLightRifle
-      - CartridgeCaselessRifleRubber
+      - CartridgeRifle
       - CartridgeLightRifleRubber
       - CartridgeRifleRubber
       - TargetHuman
       - TargetSyndicate
       - TargetClown
+      - MagazineBoxPistol
+      - MagazineBoxPistolRubber
+      - MagazineBoxMagnum
+      - MagazineBoxMagnumRubber
+      - MagazineBoxRifle
+      - MagazineBoxRifleRubber
+      - MagazineBoxLightRifle
+      - MagazineBoxLightRifleRubber
       # Magazines
       - MagazinePistolRubber
       - MagazineMagnumRubber
