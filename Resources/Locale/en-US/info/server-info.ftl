@@ -5,3 +5,6 @@ server-info-wiki-button = Wiki
 server-info-forum-button = Forum
 server-info-report-button = Report Bugs
 server-info-credits-button = Credits
+server-info-boosty-button = Boosty
+server-info-shop-button = Donate shop
+server-info-gitlab-button = Fork source code
