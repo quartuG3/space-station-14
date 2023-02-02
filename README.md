@@ -2,9 +2,9 @@
 
 Space Station 14 это ремейк SS13, который работает на собственном движке [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), написанном на C#.
 
-Это репозиторий русскоязычной версии Space Station 14 основной целью которого является перевод и только перевод игры на русский язык. Если вы хотите использовать наши (от Workbench Team) наработки для игры, перейдите в [arumoon-server ветку](https://git.arumoon.ru/Workbench-Team/space-station-14/-/tree/arumoon-server).
+Это репозиторий форка Space Station 14 от Workbench Team который используется на нашем основном сервере Космическая станция им. Aru Moon, и его также можете использовать и вы для получения эксклюзивных фишек форка. Если вам нужен только русский перевод для игры без наших фишек, перейдите в [master-ru ветку](https://git.arumoon.ru/Workbench-Team/space-station-14/-/tree/master-ru).
 
-Если вам нужно захостить русскоязычный сервер для SS14, этот репозиторий это то что вам нужно. Если вы хотите делать нововведения для основной версии игры, перейдите в [репозиторий официальной версии игры](https://github.com/space-wizards/space-station-14).
+Вы можете использовать эту ветку как для создания собственного сервера, так и для контрибьюта в работу нашего сервера.
 
 ## Ссылки
 
@@ -16,13 +16,14 @@ Space Station 14 это ремейк SS13, который работает на 
 
 ## Вклад
 
-Если вы хотите предложить перевод или редактирование уже переведённого контента, мы с радостью ждём ваши изменения на нашем [основном репозитории GitLab](https://git.arumoon.ru/Workbench-Team/space-station-14) (рекомендуется) или [зеркале GitHub](https://github.com/Workbench-Team/space-station-14). Если вам нужна помощь, посмотрите текущие [обсуждения в GitLab](https://git.arumoon.ru/Workbench-Team/space-station-14/-/issues) или лучше перейдите на Discord или Revolt сервер Workbench Team для более удобной коммуникации.
+Если вы хотите предложить добавление нового контента или редактирование существующего, мы с радостью ждём ваши изменения на нашем [основном репозитории GitLab](https://git.arumoon.ru/Workbench-Team/space-station-14/-/tree/arumoon-server) (рекомендуется) или [зеркале GitHub](https://github.com/Workbench-Team/space-station-14/tree/arumoon-server). Если вам нужна помощь, посмотрите текущие [обсуждения в GitLab](https://git.arumoon.ru/Workbench-Team/space-station-14/-/issues) или лучше перейдите на Discord или Revolt сервер Workbench Team для более удобной коммуникации.
 
 ## Сборка
 
 1. Склонируйте этот репозиторий.
-2. Запустите скрипт `RUN_THIS.py` для инициализации субмодулей и скачивания движка.
-3. Соберите решение через Visual Studio или dotnet в терминале.
+2. Переключитесь на ветку arumoon-server
+3. Запустите скрипт `RUN_THIS.py` для инициализации субмодулей и скачивания движка.
+4. Соберите решение через Visual Studio или dotnet в терминале.
 
 [Более детальная инструкция для сборки.](https://docs.spacestation14.io/getting-started/dev-setup)
 
