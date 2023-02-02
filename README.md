@@ -20,9 +20,9 @@ Space Station 14 это ремейк SS13, который работает на 
 
 ## Готовая сборка
 
-Статус сборки: [![pipeline status](https://git.arumoon.ru/Workbench-Team/space-station-14/badges/master-ru/pipeline.svg)](https://git.arumoon.ru/Workbench-Team/space-station-14/-/commits/master-ru)
+Статус сборки: [![pipeline status](https://git.arumoon.ru/Workbench-Team/space-station-14/badges/arumoon-server/pipeline.svg)](https://git.arumoon.ru/Workbench-Team/space-station-14/-/commits/arumoon-server)
 
-Готовые билды сборки вы можете скачать из [CDN хостинга (быстро)](https://ss14.arumoon.ru/builds/master-ru-builds.html) или [артефактов CI/CD (медленно)](https://git.arumoon.ru/Workbench-Team/space-station-14/-/pipelines?page=1&scope=all&ref=master-ru&status=success)
+Готовые билды сборки вы можете скачать из [CDN хостинга (быстро)](https://ss14.arumoon.ru/builds/arumoon-server-builds.html) или [артефактов CI/CD (медленно)](https://git.arumoon.ru/Workbench-Team/space-station-14/-/pipelines?page=1&scope=all&ref=arumoon-server&status=success)
 
 ## Самостоятельная сборка
 
