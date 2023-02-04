@@ -34,7 +34,6 @@ namespace Content.Server.Doors.Systems
             if (TryComp<ApcPowerReceiverComponent>(uid, out var receiverComponent))
             {
                 Appearance.SetData(uid, DoorVisuals.Powered, receiverComponent.Powered);
-                Appearance.SetData(uid, DoorVisuals.ClosedLights, true);
             }
         }
 
