@@ -88,6 +88,9 @@ technologies-ripley-technology-description = The latest and greatest in mechaniz
 technologies-adv-parts-technology-description = Like the previous ones, but better!
 technologies-adv-parts-technology = Advanced parts technology
 
+technologies-super-parts-technology = Super parts technology
+technologies-super-parts-technology-description = New heights of machine performance.
+
 technologies-weapon-machinery = Weapon's machinery
 technologies-weapon-machinery-description = Machines for producing weaponry.
 
