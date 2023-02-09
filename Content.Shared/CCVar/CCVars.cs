@@ -1486,8 +1486,7 @@ namespace Content.Shared.CCVar
         /// Link to Boosty.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksBoosty =
-            CVarDef.Create("infolinks.boosty", "https://boosty.to/arumoon", CVar.SERVER | CVar.REPLICATED);
-        // HARDCODE: Default value specified because DevInfoBanner window uses client side config instead of server's config
+            CVarDef.Create("infolinks.boosty", "", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// Link to Donation shop.
