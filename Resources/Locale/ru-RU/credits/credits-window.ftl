@@ -10,3 +10,4 @@ credits-window-codebases-section-title = Код Space Station 13
 credits-window-original-remake-team-section-title = Команда ремейка оригинальной Space Station 13
 credits-window-special-thanks-section-title = Особая благодарность
 credits-window-workbench-contributors-section-title = Контрибьюторы сборки Workbench Team
+credits-window-translators-section-title = Переводчики на Русский язык
