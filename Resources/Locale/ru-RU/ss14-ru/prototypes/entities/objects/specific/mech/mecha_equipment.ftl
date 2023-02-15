@@ -4,3 +4,6 @@ ent-BaseMechEquipment = { ent-BaseItem }
 ent-MechEquipmentGrabber = гидравлический зажим
     .desc = Даёт мехам возможность хватать и перетаскивать предметы.
     .suffix = { "" }
+ent-MechEquipmentDrill = дрель
+    .desc = Дает мехе возможность сверлить
+    .suffix = { "" }

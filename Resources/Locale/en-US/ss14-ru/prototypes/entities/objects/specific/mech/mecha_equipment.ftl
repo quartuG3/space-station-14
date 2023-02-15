@@ -4,3 +4,6 @@ ent-BaseMechEquipment = { ent-BaseItem }
 ent-MechEquipmentGrabber = hydraulic clamp
     .desc = Gives the mech the ability to grab things and drag them around.
     .suffix = { "" }
+ent-MechEquipmentDrill = drill
+    .desc = Gives the mech the ability to drill
+    .suffix = { "" }
