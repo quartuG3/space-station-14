@@ -85,7 +85,8 @@ public sealed class MechDrillSystem : EntitySystem
         if (!_mech.TryChangeEnergy(equipmentComponent.EquipmentOwner.Value, component.DrillEnergyDelta))
             return;
 
-        _destructible.DestroyEntity(args.Resource);
+        RaiseLocalEvent(args.Resource, new GatheringDoafterSuccess { Tool = uid, Resource = args.Resource, Player = args.Player }, true);
+
         _mech.UpdateUserInterface(equipmentComponent.EquipmentOwner.Value);
     }
 
