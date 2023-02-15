@@ -1,6 +1,8 @@
 using System.Threading;
+using Content.Server.Destructible;
 using Content.Server.DoAfter;
 using Content.Server.Gatherable.Components;
+using Content.Shared.Destructible;
 using Content.Server.Interaction;
 using Content.Server.Mech.Components;
 using Content.Server.Mech.Equipment.Components;
@@ -19,6 +21,7 @@ public sealed class MechDrillSystem : EntitySystem
     [Dependency] private readonly MechSystem _mech = default!;
     [Dependency] private readonly DoAfterSystem _doAfter = default!;
     [Dependency] private readonly InteractionSystem _interaction = default!;
+    [Dependency] private readonly DestructibleSystem _destructible = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -51,8 +54,12 @@ public sealed class MechDrillSystem : EntitySystem
         args.Handled = true;
         component.Token = new();
 
+        var damageRequired = _destructible.DestroyedAt(args.Target.Value);
+        var damageTime = (damageRequired / gatheringTool.Damage.Total).Float();
+        damageTime = Math.Max(1f, damageTime);
+
         var cancelToken = new CancellationTokenSource();
-        var doAfter = new DoAfterEventArgs(args.User, gatheringTool.GatheringTime, cancelToken.Token, component.Owner)
+        var doAfter = new DoAfterEventArgs(args.User, damageTime, cancelToken.Token, component.Owner)
         {
             BreakOnDamage = true,
             BreakOnStun = true,
@@ -78,7 +85,7 @@ public sealed class MechDrillSystem : EntitySystem
         if (!_mech.TryChangeEnergy(equipmentComponent.EquipmentOwner.Value, component.DrillEnergyDelta))
             return;
 
-        RaiseLocalEvent(args.Resource, new GatheringDoafterSuccess { Tool = uid, Resource = args.Resource, Player = args.Player }, true);
+        _destructible.DestroyEntity(args.Resource);
         _mech.UpdateUserInterface(equipmentComponent.EquipmentOwner.Value);
     }
 
