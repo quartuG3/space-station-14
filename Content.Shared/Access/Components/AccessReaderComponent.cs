@@ -25,5 +25,12 @@ namespace Content.Shared.Access.Components
         /// </summary>
         [DataField("access")]
         public List<HashSet<string>> AccessLists = new();
+
+        /// <summary>
+        ///     Inverts access list.
+        /// </summary>
+        [DataField("inverted")]
+        public bool InvertedAccess = false;
+
     }
 }
