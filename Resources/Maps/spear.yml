@@ -41334,8 +41334,6 @@ entities:
   - pos: -21.5,6.5
     parent: 1
     type: Transform
-  missingComponents:
-  - AccessReader
 - uid: 1495
   type: RandomDrinkGlass
   components:
@@ -68508,8 +68506,6 @@ entities:
   - pos: -159.5,48.5
     parent: 1
     type: Transform
-  missingComponents:
-  - AccessReader
 - uid: 5492
   type: WallReinforced
   components:
@@ -68523,8 +68519,6 @@ entities:
   - pos: -159.5,49.5
     parent: 1
     type: Transform
-  missingComponents:
-  - AccessReader
 - uid: 5494
   type: ReinforcedWindow
   components:
@@ -84782,8 +84776,6 @@ entities:
   - pos: -159.5,50.5
     parent: 1
     type: Transform
-  missingComponents:
-  - AccessReader
 - uid: 7933
   type: WallReinforced
   components:
@@ -85519,21 +85511,21 @@ entities:
   - content: >
       Как варить метамфетамин как белый человек (химик)
 
-      1) Набираем 5 сварочного топлива в мензурку. 
+      1) Набираем 5 сварочного топлива в мензурку.
 
-      2) в раздатчике добавляем 2 углерода 2 водорода, получаем масло. 
+      2) в раздатчике добавляем 2 углерода 2 водорода, получаем масло.
 
       3) В раздатчике добавляем 1 азот 3 водорода, получаем аммиак.
 
       4) Добавляем 3 этанола, из аммиака получаем диэтиламин.
 
-      5) Убираем излишки в химмастере, оставляем 6 масла и 6 диэтиламина. 
+      5) Убираем излишки в химмастере, оставляем 6 масла и 6 диэтиламина.
 
-      6) Добавляем 6 сахара и 6 водорода - получаем 24 эфедрина. 
+      6) Добавляем 6 сахара и 6 водорода - получаем 24 эфедрина.
 
       7) Добавляем по 24: фосфор, йод, углерод.
 
-      8) Греем в микроволновке пока состав не поменяет цвет на белый (примерно 80 секунд). 
+      8) Греем в микроволновке пока состав не поменяет цвет на белый (примерно 80 секунд).
 
       9) На выходе получаем 96u чистейшего белого метамфетамина.
     type: Paper
@@ -85547,7 +85539,7 @@ entities:
     parent: 1
     type: Transform
   - content: >
-      Таблетка "огненное дыхание" или ИНЖЕНЕРЫ ГДЕ СВЕТ (взорвали провод). 
+      Таблетка "огненное дыхание" или ИНЖЕНЕРЫ ГДЕ СВЕТ (взорвали провод).
 
       Во время одной смены я решил распространить такую особенную таблетку, которая заставляла людей рыгать и взрываться, ну и конечно провода, трубы и пол это повреждало.
 
@@ -90677,8 +90669,6 @@ entities:
   - pos: -113.5,48.5
     parent: 1
     type: Transform
-  missingComponents:
-  - AccessReader
 - uid: 8754
   type: VendingMachineNutri
   components:
@@ -90687,8 +90677,6 @@ entities:
   - pos: -113.5,47.5
     parent: 1
     type: Transform
-  missingComponents:
-  - AccessReader
 - uid: 8755
   type: WallReinforced
   components:
@@ -93878,8 +93866,6 @@ entities:
         - 9211
         - 9212
     type: ContainerContainer
-  missingComponents:
-  - AccessReader
 - uid: 9210
   type: FoodBurgerSuper
   components:
@@ -147917,9 +147903,6 @@ entities:
     type: Transform
   - containers: {}
     type: ContainerContainer
-  missingComponents:
-  - FaxMachine
-  - ItemSlots
 - uid: 17617
   type: GlowstickYellow
   components:
@@ -148459,8 +148442,6 @@ entities:
   - pos: -141.5,-22.5
     parent: 1
     type: Transform
-  missingComponents:
-  - AccessReader
 - uid: 17694
   type: PlushieNar
   components:
@@ -148479,24 +148460,18 @@ entities:
   - pos: -147.5,-22.5
     parent: 1
     type: Transform
-  missingComponents:
-  - AccessReader
 - uid: 17697
   type: StorageCanister
   components:
   - pos: -148.5,-22.5
     parent: 1
     type: Transform
-  missingComponents:
-  - AccessReader
 - uid: 17698
   type: NitrousOxideCanister
   components:
   - pos: -147.5,-24.5
     parent: 1
     type: Transform
-  missingComponents:
-  - AccessReader
 - uid: 17699
   type: TableWood
   components:
@@ -193524,13 +193499,13 @@ entities:
     parent: 1
     type: Transform
   - content: >
-      Руководство по ботанике для химиков (то есть какие растения вам очень помогут и помогут медблоку) 
+      Руководство по ботанике для химиков (то есть какие растения вам очень помогут и помогут медблоку)
 
       Хоть медблок может и производить лекарства, все же ботаники могут облегчить или подогнать то, что вы создать не в состоянии или занимает мноого времени
 
       Так вот,
 
-      2 растения которые желательны для медблока: 
+      2 растения которые желательны для медблока:
 
       Галакточертополох и линчжа
 
@@ -195228,8 +195203,6 @@ entities:
   - pos: 0.5,3.5
     parent: 23509
     type: Transform
-  missingComponents:
-  - Pullable
 - uid: 23558
   type: Thruster
   components:
@@ -195676,8 +195649,6 @@ entities:
   - pos: 0.5,3.5
     parent: 23560
     type: Transform
-  missingComponents:
-  - Pullable
 - uid: 23609
   type: Thruster
   components:
@@ -196136,8 +196107,6 @@ entities:
   - pos: 0.5,3.5
     parent: 23611
     type: Transform
-  missingComponents:
-  - Pullable
 - uid: 23660
   type: Thruster
   components:
@@ -196596,8 +196565,6 @@ entities:
   - pos: 0.5,3.5
     parent: 23662
     type: Transform
-  missingComponents:
-  - Pullable
 - uid: 23711
   type: Thruster
   components:
@@ -196911,8 +196878,6 @@ entities:
   - pos: 2.5,-1.5
     parent: 23713
     type: Transform
-  missingComponents:
-  - Pullable
 - uid: 23740
   type: ComfyChair
   components:
