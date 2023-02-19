@@ -199980,12 +199980,6 @@ entities:
   - pos: -224.5,-7.5
     parent: 1
     type: Transform
-- uid: 24223
-  type: DrinkCarafe
-  components:
-  - pos: -224.24619,-7.067671
-    parent: 1
-    type: Transform
 - uid: 24224
   type: DrinkWineBottleFull
   components:
