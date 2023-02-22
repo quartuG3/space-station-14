@@ -60,7 +60,7 @@ namespace Content.Server.Power.EntitySystems
                     netBat.NetworkBattery.Enabled = true;
                     netBat.NetworkBattery.Capacity = bat.MaxCharge;
                     netBat.NetworkBattery.MaxChargeRate = bat.ChargeRate;
-                    netBat.NetworkBattery.SupplyRampRate = bat.MaxCharge / 2;
+                    netBat.NetworkBattery.SupplyRampTolerance = bat.MaxCharge / 2; // FIXME: allow supply up to 50% procents
                     netBat.NetworkBattery.CurrentStorage = bat.CurrentCharge;
                 }
                 else
@@ -68,7 +68,7 @@ namespace Content.Server.Power.EntitySystems
                     netBat.NetworkBattery.Enabled = false;
                     netBat.NetworkBattery.Capacity = 0;
                     netBat.NetworkBattery.MaxChargeRate = 0;
-                    netBat.NetworkBattery.SupplyRampRate = 0;
+                    netBat.NetworkBattery.SupplyRampTolerance = 0;
                     netBat.NetworkBattery.CurrentStorage = 0;
                 }
             }

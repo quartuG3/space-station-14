@@ -76,8 +76,40 @@ namespace Content.Server.Power.EntitySystems
                 var battery_charge = (battery.CurrentCharge / battery.MaxCharge) * 100;
 
                 //NOTE: event proceed every pow3r simulation. Maybe somehow fix that?
-                if(battery_charge < 100)
+                if(battery_charge <= 0)
                 {
+                    if(component.LightingChannelState == ApcPowerChannelState.OnAuto)
+                        ApcChangeLightingChannel(uid, ApcPowerChannelState.OffAuto);
+                    if(component.EnvironmentChannelState == ApcPowerChannelState.OnAuto)
+                        ApcChangeEnvironmentChannel(uid, ApcPowerChannelState.OffAuto);
+                    if(component.EquipmentChannelState == ApcPowerChannelState.OnAuto)
+                        ApcChangeEquipmentChannel(uid, ApcPowerChannelState.OffAuto);
+                }
+                else if(battery_charge < 15)
+                {
+                    if(component.LightingChannelState == ApcPowerChannelState.OnAuto)
+                        ApcChangeLightingChannel(uid, ApcPowerChannelState.OffAuto);
+                    if(component.EnvironmentChannelState == ApcPowerChannelState.OnAuto)
+                        ApcChangeEnvironmentChannel(uid, ApcPowerChannelState.OffAuto);
+                }
+                else if(battery_charge < 50)
+                {
+                    if(component.EquipmentChannelState == ApcPowerChannelState.OnAuto)
+                        ApcChangeEquipmentChannel(uid, ApcPowerChannelState.OffAuto);
+                }
+                else
+                {
+                    if(TryComp<PowerNetworkBatteryComponent>(uid, out var NetworkBattery) && MathHelper.CloseToPercent(NetworkBattery.CurrentReceiving, NetworkBattery.CurrentSupply))
+                    {
+                        if(component.EquipmentChannelState == ApcPowerChannelState.OffAuto)
+                            ApcChangeEquipmentChannel(uid, ApcPowerChannelState.OnAuto);
+                        if(component.LightingChannelState == ApcPowerChannelState.OffAuto)
+                            ApcChangeLightingChannel(uid, ApcPowerChannelState.OnAuto);
+                        if(component.EnvironmentChannelState == ApcPowerChannelState.OffAuto)
+                            ApcChangeEnvironmentChannel(uid, ApcPowerChannelState.OnAuto);
+                    }
+                }
+/*
                     if(battery_charge < 75 && component.EquipmentChannelState == ApcPowerChannelState.OnAuto) // shutdown equipment in auto
                     {
                         ApcChangeEquipmentChannel(uid, ApcPowerChannelState.OffAuto);
@@ -108,6 +140,7 @@ namespace Content.Server.Power.EntitySystems
                         ApcChangeEnvironmentChannel(uid, ApcPowerChannelState.OnAuto);
                     }
                 }
+*/
             }
 
             UpdateApcState(uid, component);
