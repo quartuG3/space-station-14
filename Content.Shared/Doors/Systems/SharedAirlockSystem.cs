@@ -1,5 +1,6 @@
 using Content.Shared.Doors.Components;
 using Content.Shared.Popups;
+using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Doors.Systems;
@@ -7,6 +8,7 @@ namespace Content.Shared.Doors.Systems;
 public abstract class SharedAirlockSystem : EntitySystem
 {
     [Dependency] protected readonly SharedAppearanceSystem Appearance = default!;
+    [Dependency] protected readonly SharedContainerSystem _container = default!;
     [Dependency] protected readonly SharedAudioSystem Audio = default!;
     [Dependency] protected readonly SharedDoorSystem DoorSystem = default!;
     [Dependency] protected readonly SharedPopupSystem Popup = default!;
@@ -15,9 +17,15 @@ public abstract class SharedAirlockSystem : EntitySystem
     {
         base.Initialize();
 
+        SubscribeLocalEvent<AirlockComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<AirlockComponent, ComponentGetState>(OnGetState);
         SubscribeLocalEvent<AirlockComponent, ComponentHandleState>(OnHandleState);
         SubscribeLocalEvent<AirlockComponent, BeforeDoorClosedEvent>(OnBeforeDoorClosed);
+    }
+
+    private void OnStartup(EntityUid uid, AirlockComponent component, ComponentStartup args)
+    {
+        component.BoardContainer = _container.EnsureContainer<Container>(uid, component.BoardContainerId);
     }
 
     private void OnGetState(EntityUid uid, AirlockComponent airlock, ref ComponentGetState args)

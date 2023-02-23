@@ -1,3 +1,6 @@
+using Robust.Shared.Serialization;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;
+
 namespace Content.Shared.Access.Components
 {
     /// <summary>
@@ -32,5 +35,37 @@ namespace Content.Shared.Access.Components
         [DataField("inverted")]
         public bool InvertedAccess = false;
 
+        [DataField("accessLevels", customTypeSerializer: typeof(PrototypeIdListSerializer<AccessLevelPrototype>))]
+        public List<string> AccessLevels = new()
+        {
+            "Armory",
+            "Atmospherics",
+            "Bar",
+            "Brig",
+            // "Detective",
+            "Captain",
+            "Cargo",
+            "Chapel",
+            "Chemistry",
+            "ChiefEngineer",
+            "ChiefMedicalOfficer",
+            "Command",
+            "Engineering",
+            "External",
+            "HeadOfPersonnel",
+            "HeadOfSecurity",
+            "Hydroponics",
+            "Janitor",
+            "Kitchen",
+            "Maintenance",
+            "Medical",
+            "Quartermaster",
+            "Research",
+            "ResearchDirector",
+            "Salvage",
+            "Security",
+            "Service",
+            "Theatre",
+        };
     }
 }
