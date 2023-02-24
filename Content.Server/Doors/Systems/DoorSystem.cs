@@ -283,6 +283,9 @@ public sealed class DoorSystem : SharedDoorSystem
             if (airlockComponent.BoltsDown || !this.IsPowered(uid, EntityManager))
                 return;
 
+            if(TryComp<AccessReaderComponent>(airlockComponent.BoardContainer.ContainedEntities[0], out var access))
+                access.Enabled = false;
+
             if (door.State == DoorState.Closed)
             {
                 SetState(uid, DoorState.Emagging, door);
