@@ -7,3 +7,6 @@ ent-MobHumanSyndicateAgent = Syndicate Agent
 ent-MobHumanNukeOp = Nuclear Operative
     .desc = { ent-MobHuman.desc }
     .suffix = { "" }
+ent-MobHumanArrivingAss = Arriving Assistant
+    .desc = { ent-MobHuman.desc }
+    .suffix = { "" }

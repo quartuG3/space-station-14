@@ -7,3 +7,6 @@ ent-MobHumanSyndicateAgent = Агент Синдиката
 ent-MobHumanNukeOp = Ядерный оперативник
     .desc = { ent-MobHuman.desc }
     .suffix = { "" }
+ent-MobHumanArrivingAss = Прибывающий Ассистент
+    .desc = { ent-MobHuman.desc }
+    .suffix = { "" }
