@@ -23,6 +23,14 @@ namespace Content.Shared.Access.Systems
             SubscribeLocalEvent<AccessReaderComponent, ComponentInit>(OnInit);
             SubscribeLocalEvent<AccessReaderComponent, GotEmaggedEvent>(OnEmagged);
             SubscribeLocalEvent<AccessReaderComponent, LinkAttemptEvent>(OnLinkAttempt);
+            SubscribeLocalEvent<AccessReaderComponent, WriteToTargetAccessReaderMessage>(OnTargetWriteMessage);
+        }
+
+        private void OnTargetWriteMessage(EntityUid uid, AccessReaderComponent component, WriteToTargetAccessReaderMessage args)
+        {
+            component.InvertedAccess = args.Inverted;
+            component.AccessLists.Clear();
+            component.AccessLists.Add(new HashSet<string>(args.AccessList.ToArray()));
         }
 
         private void OnLinkAttempt(EntityUid uid, AccessReaderComponent component, LinkAttemptEvent args)
@@ -101,7 +109,7 @@ namespace Content.Shared.Access.Systems
                 return false;
             }
 
-            return reader.AccessLists.Count == 0 || reader.AccessLists.Any(a => a.IsSubsetOf(accessTags));
+            return reader.AccessLists.Count == 0 || (reader.AccessLists.Any(a => a.IsSubsetOf(accessTags) && !reader.InvertedAccess));
         }
 
         /// <summary>

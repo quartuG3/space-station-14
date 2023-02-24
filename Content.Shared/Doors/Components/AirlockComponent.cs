@@ -1,6 +1,7 @@
 using System.Threading;
 using Content.Shared.Doors.Systems;
 using Robust.Shared.Audio;
+using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
@@ -20,6 +21,15 @@ public sealed class AirlockComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("emergencyAccess")]
     public bool EmergencyAccess = false;
+
+    /// <summary>
+    /// The slot the board is stored in.
+    /// </summary>
+    [ViewVariables]
+    public Container BoardContainer = default!;
+
+    [ViewVariables]
+    public readonly string BoardContainerId = "board";
 
     /// <summary>
     /// Sound to play when the bolts on the airlock go up.

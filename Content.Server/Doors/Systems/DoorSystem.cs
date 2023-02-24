@@ -13,6 +13,7 @@ using Content.Shared.Doors.Components;
 using Content.Shared.Doors.Systems;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Interaction;
+using Robust.Shared.Containers;
 using Content.Shared.Tools.Components;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio;
@@ -234,8 +235,16 @@ public sealed class DoorSystem : SharedDoorSystem
         if (TryComp<AirlockComponent>(uid, out var airlock) && airlock.EmergencyAccess)
             return true;
 
-        if (!Resolve(uid, ref access, false))
-            return true;
+        if (airlock != null)
+        {
+            if(!TryComp(airlock.BoardContainer.ContainedEntities[0], out access))
+                return true;
+        }
+        else
+        {
+            if (!Resolve(uid, ref access, false))
+                return true;
+        }
 
         var isExternal = access.AccessLists.Any(list => list.Contains("External"));
 
@@ -273,6 +282,9 @@ public sealed class DoorSystem : SharedDoorSystem
         {
             if (airlockComponent.BoltsDown || !this.IsPowered(uid, EntityManager))
                 return;
+
+            if(TryComp<AccessReaderComponent>(airlockComponent.BoardContainer.ContainedEntities[0], out var access))
+                access.Enabled = false;
 
             if (door.State == DoorState.Closed)
             {
