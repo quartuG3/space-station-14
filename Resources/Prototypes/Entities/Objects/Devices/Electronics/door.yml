@@ -253,6 +253,14 @@
     access: [["Security"]]
 
 - type: entity
+  id: DoorElectronicsSecurityCommand
+  parent: DoorElectronics
+  suffix: Security
+  components:
+  - type: AccessReader
+    access: [["Security", "Command"]]
+
+- type: entity
   id: DoorElectronicsBrig
   parent: DoorElectronics
   suffix: Brig
