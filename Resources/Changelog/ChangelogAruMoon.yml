@@ -32,3 +32,14 @@ Entries:
     type: Add
   id: 4
   time: '2023-02-21T13:09:59.0000000+00:00'
+- author: Mr0maks
+  changes:
+  - message: Added programming feature to door electronics.
+    type: Add
+  - message: AccessReaderComponent moved to electronic board instead of hardcoded
+      in door prototype (legacy method saved).
+    type: Tweak
+  - message: Fixed engineer gaming.
+    type: Fix
+  id: 5
+  time: '2023-02-24T13:40:15.0000000+00:00'
