@@ -11,6 +11,7 @@ using Content.Shared.Database;
 using Content.Shared.Doors;
 using Content.Shared.Doors.Components;
 using Content.Shared.Doors.Systems;
+using Content.Shared.Emag.Components;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Interaction;
 using Robust.Shared.Containers;
@@ -284,7 +285,7 @@ public sealed class DoorSystem : SharedDoorSystem
                 return;
 
             if(TryComp<AccessReaderComponent>(airlockComponent.BoardContainer.ContainedEntities[0], out var access))
-                access.Enabled = false;
+                EntityManager.AddComponent<EmaggedComponent>(airlockComponent.BoardContainer.ContainedEntities[0]);
 
             if (door.State == DoorState.Closed)
             {
