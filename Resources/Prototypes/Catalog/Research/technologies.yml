@@ -345,7 +345,7 @@
   - RipleyCentralElectronics
   - RipleyPeripheralsElectronics
   - MechEquipmentGrabber
-  - MechEquipmentDrill
+  # - MechEquipmentDrill
   - RipleyHarness
   - RipleyLArm
   - RipleyRArm
