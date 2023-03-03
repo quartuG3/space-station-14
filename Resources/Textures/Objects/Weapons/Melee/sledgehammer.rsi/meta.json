@@ -8,19 +8,22 @@
   },
   "states": [
     {
-      "name": "inhand_left"
+      "name": "weilded-inhand-right"
     },
     {
-      "name": "sledgehammer_weilded_inhand_right"
-    },
-    {
-      "name": "sledgehammer_weilded_inhand_left"
-    },
-    {
-      "name": "inhand_right"
+      "name": "equipped-BACKPACK"
     },
     {
       "name": "icon"
+    },
+    {
+      "name": "inhand-left"
+    },
+    {
+      "name": "inhand-right"
+    },
+    {
+      "name": "weilded-inhand-left"
     }
   ]
 }
