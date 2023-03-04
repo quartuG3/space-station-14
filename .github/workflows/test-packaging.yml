@@ -2,7 +2,7 @@
 
 on:
   push:
-    branches: [ master, master-ru, arumoon-server ]
+    branches: [ master, staging, trying, master-ru, arumoon-server ]
     paths:
       - '**.cs'
       - '**.csproj'
