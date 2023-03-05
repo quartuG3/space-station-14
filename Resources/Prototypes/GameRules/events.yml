@@ -164,6 +164,7 @@
   config:
     !type:StationEventRuleConfiguration
     id: MouseMigration
+    startAnnouncement: station-event-mouse-migration-announcement
     earliestStart: 30
     minimumPlayers: 35
     weight: 5
