@@ -174,3 +174,10 @@ Entries:
     type: Tweak
   id: 15
   time: '2023-03-05T03:36:37.0000000+00:00'
+- author: MilenVolf
+  changes:
+  - message: "\u041A\u0440\u0438\u043E\u043A\u0430\u043F\u0441\u0443\u043B\u044B \u0441\
+      \u043D\u043E\u0432\u0430 \u0440\u0430\u0431\u043E\u0442\u0430\u044E\u0442."
+    type: Fix
+  id: 16
+  time: '2023-03-05T04:01:09.0000000+00:00'
