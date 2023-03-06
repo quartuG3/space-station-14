@@ -73,6 +73,3 @@ ent-ClothingBackpackERTJanitorFilled = { ent-ClothingBackpackERTJanitor }
 ent-ClothingBackpackSalvageFilled = { ent-ClothingBackpackSalvage }
     .desc = { ent-ClothingBackpackSalvage.desc }
     .suffix = { "" }
-ent-ClothingBackpackIAAFilled = { ent-ClothingBackpack }
-    .desc = { ent-ClothingBackpack.desc }
-    .suffix = { "" }
