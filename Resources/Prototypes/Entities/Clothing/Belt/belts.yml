@@ -25,6 +25,7 @@
         - CigPack
         - Radio
         - HolofanProjector
+        - AppraisalTool
         - HolosignProjector
       components:
         - AirlockPainter
@@ -91,6 +92,7 @@
         - CigPack
         - Radio
         - HolofanProjector
+        - AppraisalTool
         - HolosignProjector
       components:
         - AirlockPainter

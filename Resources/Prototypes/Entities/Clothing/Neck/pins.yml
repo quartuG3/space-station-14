@@ -1,5 +1,15 @@
 - type: entity
   parent: ClothingNeckBase
+  id: ClothingNeckPinBase
+  abstract: true
+  name: pin
+  description: be nothing do crime
+  components:
+  - type: Item
+    size: 1
+
+- type: entity
+  parent: ClothingNeckPinBase
   id: ClothingNeckLGBTPin
   name: LGBT pin
   description: be gay do crime
@@ -16,7 +26,7 @@
   - type: Recyclable
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckPinBase
   id: ClothingNeckAromanticPin
   name: aromantic pin
   description: be aro do crime
@@ -33,7 +43,7 @@
   - type: Recyclable
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckPinBase
   id: ClothingNeckAsexualPin
   name: asexual pin
   description: be ace do crime
@@ -50,7 +60,7 @@
   - type: Recyclable
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckPinBase
   id: ClothingNeckBisexualPin
   name: bisexual pin
   description: be bi do crime
@@ -67,7 +77,7 @@
   - type: Recyclable
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckPinBase
   id: ClothingNeckIntersexPin
   name: intersex pin
   description: be intersex do crime
@@ -84,7 +94,7 @@
   - type: Recyclable
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckPinBase
   id: ClothingNeckLesbianPin
   name: lesbian pin
   description: be lesbian do crime
@@ -101,7 +111,7 @@
   - type: Recyclable
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckPinBase
   id: ClothingNeckNonBinaryPin
   name: non-binary pin
   description: "01100010 01100101 00100000 01100101 01101110 01100010 01111001 00100000 01100100 01101111 00100000 01100011 01110010 01101001 01101101 01100101"
@@ -118,7 +128,7 @@
   - type: Recyclable
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckPinBase
   id: ClothingNeckPansexualPin
   name: pansexual pin
   description: be pan do crime
@@ -135,7 +145,7 @@
   - type: Recyclable
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckPinBase
   id: ClothingNeckTransPin
   name: transgender pin
   description: be trans do crime
