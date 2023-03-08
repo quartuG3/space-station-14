@@ -1,6 +1,8 @@
+using Content.Server.Emp;
 using Content.Server.Popups;
 using Content.Server.Storage.Components;
 using Content.Server.Power.Components;
+/*
 using Content.Server.Tools;
 using Content.Server.Wires;
 using Content.Server.Lock;
@@ -8,15 +10,20 @@ using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.APC;
 using Content.Shared.Containers.ItemSlots;
+*/
+using Content.Shared.Access.Components;
+using Content.Shared.Access.Systems;
+using Content.Shared.APC;
+using Content.Shared.Emag.Components;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Popups;
+using Content.Shared.Tools;
 using Content.Shared.Tools.Components;
 using Content.Shared.Wires;
 using Content.Shared.Verbs;
 using Content.Shared.Power;
-using Content.Server.Power.Components;
 using Content.Server.PowerCell;
 using Content.Shared.PowerCell.Components;
 using Content.Server.NodeContainer;
@@ -39,10 +46,11 @@ namespace Content.Server.Power.EntitySystems
         [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
-        [Dependency] private readonly ToolSystem _toolSystem = default!;
         [Dependency] private readonly IEntityManager _entManager = default!;
         [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
         [Dependency] private readonly PowerCellSystem _cellSystem = default!;
+        [Dependency] private readonly SharedToolSystem _toolSystem = default!;
+        [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
 
         private const float ScrewTime = 2f;
 
@@ -53,7 +61,7 @@ namespace Content.Server.Power.EntitySystems
             UpdatesAfter.Add(typeof(PowerNetSystem));
 
             SubscribeLocalEvent<ApcComponent, GetVerbsEvent<AlternativeVerb>>(OnApcAltVerb);
-
+            SubscribeLocalEvent<ApcComponent, BoundUIOpenedEvent>(OnBoundUiOpen);
             SubscribeLocalEvent<ApcComponent, MapInitEvent>(OnApcInit);
             SubscribeLocalEvent<ApcComponent, PowerCellChangedEvent>(OnPowerCellChanged);
 //            SubscribeLocalEvent<ApcComponent, ChargeChangedEvent>(OnBatteryChargeChanged);
@@ -67,6 +75,8 @@ namespace Content.Server.Power.EntitySystems
             SubscribeLocalEvent<ApcToolFinishedEvent>(OnToolFinished);
             SubscribeLocalEvent<ApcComponent, InteractUsingEvent>(OnInteractUsing);
             SubscribeLocalEvent<ApcComponent, ExaminedEvent>(OnExamine);
+
+            SubscribeLocalEvent<ApcComponent, EmpPulseEvent>(OnEmpPulse);
         }
 
         private void OnPowerCellChanged(EntityUid uid, ApcComponent component, PowerCellChangedEvent args)
@@ -155,6 +165,23 @@ namespace Content.Server.Power.EntitySystems
         private void OnApcInit(EntityUid uid, ApcComponent component, MapInitEvent args)
         {
             UpdateApcState(uid, component);
+        }
+
+        //Update the HasAccess var for UI to read
+        private void OnBoundUiOpen(EntityUid uid, ApcComponent component, BoundUIOpenedEvent args)
+        {
+            TryComp<AccessReaderComponent>(uid, out var access);
+            if (args.Session.AttachedEntity == null)
+                return;
+
+            if (access == null || _accessReader.IsAllowed(args.Session.AttachedEntity.Value, access))
+            {
+                component.HasAccess = true;
+            }
+            else
+            {
+                component.HasAccess = false;
+            }
         }
 
         private void OnToggleMainBreaker(EntityUid uid, ApcComponent component, ApcToggleMainBreakerMessage args)
@@ -374,12 +401,10 @@ namespace Content.Server.Power.EntitySystems
         }
 
         private void OnEmagged(EntityUid uid, ApcComponent comp, GotEmaggedEvent args)
+        private void OnEmagged(EntityUid uid, ApcComponent comp, ref GotEmaggedEvent args)
         {
-            if(!comp.Emagged)
-            {
-                comp.Emagged = true;
-                args.Handled = true;
-            }
+            // no fancy conditions
+            args.Handled = true;
         }
 
         public void UpdateApcState(EntityUid uid,
@@ -404,7 +429,7 @@ namespace Content.Server.Power.EntitySystems
 
                 if (appearance != null)
                 {
-                    appearance.SetData(ApcVisuals.ChargeState, newState);
+                    _appearance.SetData(uid, ApcVisuals.ChargeState, newState, appearance);
                 }
             }
 
@@ -474,9 +499,12 @@ namespace Content.Server.Power.EntitySystems
 
             totalconsume += equipmentconsume + lightingconsume + environmentconsume;
 
+            var netBattery = Comp<PowerNetworkBatteryComponent>(uid);
+            float power = netBattery is not null ? netBattery.CurrentSupply : 0f;
+
             if (_userInterfaceSystem.GetUiOrNull(uid, ApcUiKey.Key, ui) is { } bui)
             {
-                bui.SetState(new ApcBoundInterfaceState(apc.MainBreakerEnabled, apc.MaintaincePanelUnlocked, apc.LastExternalState, battery == null ? 0 : battery.CurrentCharge / battery.MaxCharge, ApcPowerChannelStateToMode(apc.EquipmentChannelState), ApcPowerChannelStateToMode(apc.LightingChannelState), ApcPowerChannelStateToMode(apc.EnvironmentChannelState), equipmentconsume, lightingconsume, environmentconsume, totalconsume));
+                bui.SetState(new ApcBoundInterfaceState(apc.MainBreakerEnabled, apc.MaintaincePanelUnlocked, apc.HasAccess, (int)MathF.Ceiling(power), apc.LastExternalState, battery == null ? 0 : battery.CurrentCharge / battery.MaxCharge, ApcPowerChannelStateToMode(apc.EquipmentChannelState), ApcPowerChannelStateToMode(apc.LightingChannelState), ApcPowerChannelStateToMode(apc.EnvironmentChannelState), equipmentconsume, lightingconsume, environmentconsume, totalconsume));
             }
         }
 
@@ -486,6 +514,9 @@ namespace Content.Server.Power.EntitySystems
         {
             if (!Resolve(uid, ref apc))
                 return ApcChargeState.Lack;
+
+            if (apc != null && HasComp<EmaggedComponent>(uid))
+                return ApcChargeState.Emag;
 
             if(!_cellSystem.TryGetBatteryFromSlot(uid, out battery))
                 return ApcChargeState.Lack;
@@ -582,10 +613,11 @@ namespace Content.Server.Power.EntitySystems
         {
             if (!EntityManager.TryGetComponent(args.Used, out ToolComponent? tool))
                 return;
-            if (_toolSystem.UseTool(args.Used, args.User, uid, 0f, ScrewTime, new string[] { "Screwing" }, doAfterCompleteEvent: new ApcToolFinishedEvent(uid), toolComponent: tool))
-            {
+
+            var toolEvData = new ToolEventData(new ApcToolFinishedEvent(uid), fuel: 0f);
+
+            if (_toolSystem.UseTool(args.Used, args.User, uid, ScrewTime, new [] { "Screwing" }, toolEvData, toolComponent:tool))
                 args.Handled = true;
-            }
         }
 
         private void OnToolFinished(ApcToolFinishedEvent args)
@@ -600,13 +632,9 @@ namespace Content.Server.Power.EntitySystems
             }
 
             if (component.IsApcOpen)
-            {
                 SoundSystem.Play(component.ScrewdriverOpenSound.GetSound(), Filter.Pvs(args.Target), args.Target);
-            }
             else
-            {
                 SoundSystem.Play(component.ScrewdriverCloseSound.GetSound(), Filter.Pvs(args.Target), args.Target);
-            }
         }
 
         private void UpdatePanelAppearance(EntityUid uid, AppearanceComponent? appearance = null, ApcComponent? apc = null)
@@ -614,11 +642,11 @@ namespace Content.Server.Power.EntitySystems
             if (!Resolve(uid, ref appearance, ref apc, false))
                 return;
 
-            appearance.SetData(ApcVisuals.PanelState, GetPanelState(apc));
-            appearance.SetData(ApcVisuals.EquipmentChannelState, apc.EquipmentChannelState);
-            appearance.SetData(ApcVisuals.LightingChannelState, apc.LightingChannelState);
-            appearance.SetData(ApcVisuals.EnvironmentChannelState, apc.EnvironmentChannelState);
-            appearance.SetData(ApcVisuals.LockState, GetLockState(apc));
+            _appearance.SetData(uid, ApcVisuals.PanelState, GetPanelState(apc));
+            _appearance.SetData(uid, ApcVisuals.EquipmentChannelState, apc.EquipmentChannelState);
+            _appearance.SetData(uid, ApcVisuals.LightingChannelState, apc.LightingChannelState);
+            _appearance.SetData(uid, ApcVisuals.EnvironmentChannelState, apc.EnvironmentChannelState);
+            _appearance.SetData(uid, ApcVisuals.LockState, GetLockState(apc));
         }
 
         private sealed class ApcToolFinishedEvent : EntityEventArgs
@@ -636,6 +664,15 @@ namespace Content.Server.Power.EntitySystems
             args.PushMarkup(Loc.GetString(component.IsApcOpen
                 ? "apc-component-on-examine-panel-open"
                 : "apc-component-on-examine-panel-closed"));
+        }
+
+        private void OnEmpPulse(EntityUid uid, ApcComponent component, ref EmpPulseEvent args)
+        {
+            if (component.MainBreakerEnabled)
+            {
+                args.Affected = true;
+                ApcToggleBreaker(uid, component);
+            }
         }
     }
 }

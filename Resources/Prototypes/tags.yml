@@ -10,6 +10,9 @@
   id: AirSensor
 
 - type: Tag
+  id: AppraisalTool
+
+- type: Tag
   id: ATVKeys
 
 - type: Tag
@@ -107,6 +110,10 @@
 
 - type: Tag
   id: CartridgeRocket
+
+# Allows you to walk over tile entities such as lava without steptrigger
+- type: Tag
+  id: Catwalk
 
 - type: Tag
   id: Cigarette
@@ -217,6 +224,9 @@
   id: FireAxe
 
 - type: Tag
+  id: Flesh
+
+- type: Tag
   id: WhitelistChameleon
 
 - type: Tag
@@ -263,6 +273,9 @@
 
 - type: Tag
   id: Grenade
+
+- type: Tag
+  id: GuideEmbeded
 
 - type: Tag
   id: GunsDisabled # Allow certain entities to not use guns without complicating the system with an event
@@ -456,7 +469,7 @@
   id: ProximitySensor
 
 - type: Tag
-  id: PussyWagonKeys
+  id: JanicartKeys
 
 - type: Tag
   id: Radio
@@ -560,6 +573,9 @@
 
 - type: Tag
   id: SyndicateSegwayKeys
+
+- type: Tag
+  id: Syringe
 
 - type: Tag
   id: Taser

@@ -30,6 +30,25 @@
   - SprayBottle
   - BodyBag
 
+# Food/Bev Service Technology Tree
+
+- type: technology
+  name: technologies-foodbev-technology
+  id: FoodBevTechnology
+  description: technologies-food-and-beverage-technology-description
+  icon:
+    sprite: Objects/Weapons/Melee/cleaver.rsi
+    state: butch
+  requiredPoints: 5000
+  requiredTechnologies:
+  - BasicResearch
+  unlockedRecipes:
+  - ButchCleaver
+  - KitchenKnife
+  - MicrowaveMachineCircuitboard
+  - BoozeDispenserMachineCircuitboard
+  - SodaDispenserMachineCircuitboard
+
 # Biological Technology Tree
 
 - type: technology
@@ -46,9 +65,20 @@
   - HydroponicsToolScythe
   - HydroponicsToolHatchet
   - Shovel
+  - MiniHoe
+  - Spade
+  - Clippers
   - ButchCleaver
   - KitchenKnife
   - MicrowaveMachineCircuitboard
+  - Medkit
+  - MedkitBurn
+  - MedkitToxin
+  - MedkitO2
+  - MedkitBrute
+  - MedkitAdvanced
+  - MedkitRadiation
+  - MedkitCombat
 
 - type: technology
   name: technologies-advanced-botany
@@ -99,9 +129,12 @@
   unlockedRecipes:
   - Beaker
   - LargeBeaker
+  - LargeBottle
+  - SmallBottle
   - CryostasisBeaker
   - Dropper
   - Syringe
+  - ClothingEyesGlassesScience
   - ReagentGrinderMachineCircuitboard
   - HotplateMachineCircuitboard
   - PillCanister
@@ -183,21 +216,6 @@
   - SurveillanceWirelessCameraMonitorCircuitboard
   - ComputerTelevisionCircuitboard
 
-##  Technology for a weapon production
-- type: technology
-  name: technologies-weapon-machinery
-  id: WeaponMachinery
-  description: technologies-weapon-machinery-description
-  icon:
-    sprite: Structures/Machines/techfab.rsi
-    state: icon
-  requiredPoints: 10000
-  requiredTechnologies:
-  - IndustrialEngineering
-  unlockedRecipes:
-  - WeaponTechFabCircuitboard
-  - SecurityTechFabCircuitboard
-
 - type: technology
   name: technologies-ballistic
   id: BallisticTechnology
@@ -224,7 +242,6 @@
     - WeaponSubMachineGunWt550
     - WeaponRifleLecter
     - WeaponShotgunDoubleBarreled
-    - WeaponRifleAk
     - WeaponPistolMk58
     - WeaponSubMachineGunVector
 
@@ -242,7 +259,6 @@
   unlockedRecipes:
     - WeaponDisabler
     - WeaponLaserCarbine
-    - WeaponAdvancedLaser
 #
 # - type: technology
 #   name: "explosives technology"
@@ -314,7 +330,7 @@
   - RipleyCentralElectronics
   - RipleyPeripheralsElectronics
   - MechEquipmentGrabber
-  - MechEquipmentDrill
+  # - MechEquipmentDrill
   - RipleyHarness
   - RipleyLArm
   - RipleyRArm
@@ -389,6 +405,7 @@
   - SignalTrigger
   - VoiceTrigger
   - TimerTrigger
+  - TelecomServerCircuitboard
 
 - type: technology
   name: technologies-electrical-engineering
@@ -531,6 +548,21 @@
   - MicroManipulatorStockPart
   - ScanningModuleStockPart
   - NodeScanner
+  - AnomalyScanner
+
+- type: technology
+  name: technologies-anomaly-technology
+  id: AnomalyTechnology
+  description: technologies-anomaly-technology-description
+  icon:
+    sprite: Structures/Machines/Anomaly/ape.rsi
+    state: base
+  requiredPoints: 10000
+  requiredTechnologies:
+  - ScientificTechnology
+  unlockedRecipes:
+  - AnomalyVesselCircuitboard
+  - APECircuitboard
 
 - type: technology
   name: technologies-robotics-technology
@@ -574,10 +606,27 @@
   requiredPoints: 15000
   requiredTechnologies:
   - ScientificTechnology
-  - CompactPowerTechnology
   unlockedRecipes:
   - AdvancedCapacitorStockPart
   - AdvancedMatterBinStockPart
   - HighPowerMicroLaserStockPart
   - NanoManipulatorStockPart
   - AdvancedScanningModuleStockPart
+
+- type: technology
+  name: technologies-super-parts-technology
+  id: SuperPartsTechnology
+  description: technologies-super-parts-technology-description
+  icon:
+    sprite: Objects/Misc/stock_parts.rsi
+    state: super_capacitor
+  requiredPoints: 20000
+  requiredTechnologies:
+  - AdvancedPartsTechnology
+  - CompactPowerTechnology
+  unlockedRecipes:
+  - SuperCapacitorStockPart
+  - SuperMatterBinStockPart
+  - UltraHighPowerMicroLaserStockPart
+  - PicoManipulatorStockPart
+  - PhasicScanningModuleStockPart

@@ -121,6 +121,88 @@
     fillBaseName: beakerlarge
   - type: StaticPrice
     price: 40
+  
+- type: entity
+  name: small bottle
+  parent: BaseBeaker
+  description: Used to contain a moderate amount of chemicals or solutions.
+  id: SmallBottle
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/bottle_small.rsi
+    layers:
+      - state: bottlesmall
+      - state: bottlesmall1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    size: 5
+    sprite: Objects/Specific/Chemistry/bottle_small.rsi
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 50
+        canMix: true
+  - type: Appearance
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Inflatable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:SpillBehavior
+        solution: beaker
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: bottlesmall
+  - type: StaticPrice
+    price: 30
+  
+- type: entity
+  name: large bottle
+  parent: BaseBeaker
+  description: Used to contain a large amount of chemicals or solutions.
+  id: LargeBottle
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/bottle_large.rsi
+    layers:
+      - state: bottlelarge
+      - state: bottlelarge1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    size: 5
+    sprite: Objects/Specific/Chemistry/bottle_large.rsi
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 100
+        canMix: true
+  - type: Appearance
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Inflatable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:SpillBehavior
+        solution: beaker
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: bottlelarge
+  - type: StaticPrice
+    price: 40
 
 - type: entity
   name: cryostasis beaker
@@ -231,6 +313,9 @@
         visible: false
       - state: syringe_base0
         map: ["enum.SolutionContainerLayers.Base"]
+  - type: Icon
+    sprite: Objects/Specific/Chemistry/syringe.rsi
+    state: "syringe_base0"
   - type: Item
     sprite: Objects/Specific/Chemistry/syringe.rsi
     heldPrefix: 0
@@ -248,6 +333,9 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 4
     fillBaseName: syringe
+  - type: Tag
+    tags:
+    - Syringe
 
 - type: entity
   parent: BaseSyringe
@@ -255,6 +343,7 @@
   components:
   - type: Tag
     tags:
+    - Syringe
     - Trash
 
 - type: entity
@@ -295,19 +384,18 @@
   name: pill canister
   id: PillCanister
   parent: BaseStorageItem
-  description: Holds up to 9 pills.
+  description: Holds up to 12 pills.
   components:
   - type: Sprite
     sprite: Objects/Specific/Chemistry/pills_canister.rsi
     state: pill_canister
   - type: Item
     sprite: Objects/Specific/Chemistry/pills_canister.rsi
-  - type: Dumpable
   - type: Tag
     tags:
       - PillCanister
   - type: Storage
-    capacity: 9
+    capacity: 12
     quickInsert: true
     areaInsert: true
     areaInsertRadius: 1
@@ -316,3 +404,4 @@
     whitelist:
       tags:
         - Pill
+  - type: Dumpable

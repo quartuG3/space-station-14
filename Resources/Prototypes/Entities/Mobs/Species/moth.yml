@@ -5,7 +5,7 @@
   id: BaseMobMoth
   abstract: true
   components:
-  - type: Humanoid
+  - type: HumanoidAppearance
     species: Moth
   - type: Hunger
   - type: Thirst
@@ -13,9 +13,13 @@
     sprite: Mobs/Species/Moth/parts.rsi
     state: full
   - type: Body
-    template: HumanoidTemplate
-    preset: MothPreset
+    prototype: Moth
     requiredLegs: 2
+  - type: Vocal
+    sounds:
+      Male: UnisexMoth
+      Female: UnisexMoth
+      Unsexed: UnisexMoth
   - type: DiseaseCarrier
     diseaseResist: 0.1
   - type: Flammable
@@ -48,9 +52,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.5
     baseSprintSpeed: 5.5
-    weightlessAcceleration: 0.5
-    weightlessFriction: 0.75
-    weightlessModifier: 0.6
+    weightlessAcceleration: 1.6
+    weightlessModifier: 0.4
   - type: Sprite # sprite again because we want different layer ordering
     netsync: false
     noRot: true
@@ -130,7 +133,7 @@
   noSpawn: true
   description: A dummy moth meant to be used in character setup.
   components:
-  - type: Humanoid
+  - type: HumanoidAppearance
     species: Moth
 
 #Weh

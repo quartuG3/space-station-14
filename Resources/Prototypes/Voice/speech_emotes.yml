@@ -1,0 +1,112 @@
+# vocal emotes
+- type: emote
+  id: Scream
+  category: Vocal
+  chatMessages: [кричит, орёт]
+  chatTriggers:
+    - scream
+    - screams
+    - screams.
+    - screams!
+    - screaming
+    - screamed
+    - shriek
+    - shrieks
+    - shrieks.
+    - shrieks!
+    - shrieking
+    - shrieked
+    - screech
+    - screeches
+    - screeches.
+    - screeches!
+    - screeching
+    - screeched
+    - yell
+    - yells
+    - yells.
+    - yells!
+    - yelled
+    - yelling
+    - крик
+    - кричит
+    - ор
+    - орёт
+    - визг
+    - визжит
+
+- type: emote
+  id: Laugh
+  category: Vocal
+  chatMessages: [смеётся]
+  chatTriggers:
+    - laugh
+    - laughs
+    - laughs.
+    - laughs!
+    - laughing
+    - laughed
+    - chuckle
+    - chuckles
+    - chuckles.
+    - chuckles!
+    - chuckled
+    - chuckling
+    - giggle
+    - giggles
+    - giggles.
+    - giggles!
+    - giggling
+    - giggled
+    - смех
+    - смеётся
+    - хохот
+    - хохочет
+    - хихикает
+    - хихикнул
+    - ржёт
+
+# hand emotes
+- type: emote
+  id: Clap
+  category: Hands
+  chatMessages: [claps!]
+  chatTriggers:
+    - clap
+    - claps
+    - claps.
+    - claps!
+    - clapping
+    - clapped
+    - хлопает
+    - хлопнул
+    - хлопает в ладоши
+    - хлопнул в ладоши
+    - апплодирует
+
+- type: emote
+  id: Snap
+  category: Hands
+  chatMessages: [щёлкает пальцами]
+  chatTriggers:
+    - snap
+    - snaps
+    - snapping
+    - snapped
+    - snap fingers
+    - snaps fingers
+    - snaps fingers.
+    - snaps fingers!
+    - snaps their fingers
+    - snaps their fingers.
+    - snaps their fingers!
+    - snapping fingers
+    - snapped fingers
+    - щелкает
+    - щелкнул
+    - щёлкает
+    - щёлкнул
+    - щелкает пальцами
+    - щелкнул пальцами
+    - щёлкает пальцами
+    - щёлкнул пальцами

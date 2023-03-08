@@ -1,37 +1,44 @@
+<h1 align="center"> [GitLab](https://git.arumoon.ru/Workbench-Team/space-station-14) | [GitHub](https://github.com/Workbench-Team/space-station-14) </h1>
+
 <p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
 
-Space Station 14 is a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), our homegrown engine written in C#.
+Space Station 14 это ремейк SS13, который работает на собственном движке [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), написанном на C#.
 
-This is the primary repo for Space Station 14. To prevent people forking RobustToolbox, a "content" pack is loaded by the client and server. This content pack contains everything needed to play the game on one specific server.
+Это репозиторий форка Space Station 14 от Workbench Team который используется на нашем основном сервере Космическая станция им. Aru Moon, и его также можете использовать и вы для получения эксклюзивных фишек форка. Если вам нужен только русский перевод для игры без наших фишек, перейдите в [master-ru ветку](https://git.arumoon.ru/Workbench-Team/space-station-14/-/tree/master-ru).
 
-If you want to host or create content for SS14, this is the repo you need. It contains both RobustToolbox and the content pack for development of new content packs.
+Вы можете использовать эту ветку как для создания собственного сервера, так и для контрибьюта в работу нашего сервера.
 
-## Links
+## Ссылки
 
-[Website](https://spacestation14.io/) | [Discord](https://discord.ss14.io/) | [Forum](https://forum.spacestation14.io/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download](https://spacestation14.io/about/nightlies/)
+[Сайт игры](https://spacestation14.io/) | [Workbench Discord](https://discord.com/servers/workbench-team-727015266642296924) | [Workbench Revolt](https://rvlt.gg/wcYASVKF) | [Steam игры](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Скачать лаунчер](https://spacestation14.io/about/nightlies/)
 
-## Documentation/Wiki
+## Документация
 
-Our [docs site](https://docs.spacestation14.io/) has documentation on SS14s content, engine, game design and more. We also have lots of resources for new contributors to the project.
+На официальном сайте с [документацией](https://docs.spacestation14.io/) имеется вся необходимая информация о контенте SS14, движке, дизайне игры и многом другом. Также имеется много информации для начинающих разработчиков.
 
-## Contributing
+## Вклад
 
-We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of issues](https://github.com/space-wizards/space-station-14-content/issues) that need to be done and anybody can pick them up. Don't be afraid to ask for help either!
+Если вы хотите предложить добавление нового контента или редактирование существующего, мы с радостью ждём ваши изменения на нашем [основном репозитории GitLab](https://git.arumoon.ru/Workbench-Team/space-station-14/-/tree/arumoon-server) (рекомендуется) или [зеркале GitHub](https://github.com/Workbench-Team/space-station-14/tree/arumoon-server). Если вам нужна помощь, посмотрите текущие [обсуждения в GitLab](https://git.arumoon.ru/Workbench-Team/space-station-14/-/issues) или лучше перейдите на Discord или Revolt сервер Workbench Team для более удобной коммуникации.
 
-We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language consider creating a fork or contributing to a fork.
+## Готовая сборка
 
-## Building
+Статус сборки: [![pipeline status](https://git.arumoon.ru/Workbench-Team/space-station-14/badges/arumoon-server/pipeline.svg)](https://git.arumoon.ru/Workbench-Team/space-station-14/-/commits/arumoon-server)
 
-1. Clone this repo.
-2. Run `RUN_THIS.py` to init submodules and download the engine.
-3. Compile the solution.
+Готовые билды сборки вы можете скачать из [CDN хостинга (быстро)](https://ss14.lolicon.monster/builds/arumoon-server-builds.html) или [артефактов CI/CD (медленно)](https://git.arumoon.ru/Workbench-Team/space-station-14/-/pipelines?page=1&scope=all&ref=arumoon-server&status=success)
 
-[More detailed instructions on building the project.](https://docs.spacestation14.io/getting-started/dev-setup)
+## Самостоятельная сборка
 
-## License
+1. Склонируйте этот репозиторий.
+2. Переключитесь на ветку arumoon-server
+3. Запустите скрипт `RUN_THIS.py` для инициализации субмодулей и скачивания движка.
+4. Соберите решение через Visual Studio или dotnet в терминале.
 
-All code for the content repository is licensed under [MIT](https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT).
+[Более детальная инструкция для сборки.](https://docs.spacestation14.io/getting-started/dev-setup)
 
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and the copyright in the metadata file. [Example](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
+## Лицензия
 
-Note that some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
+Весь код репозитория лицензирован под [MIT](https://git.arumoon.ru/Workbench-Team/space-station-14/blob/master-ru/LICENSE.TXT).
+
+Большинство ассетов лицензированы под [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) если не имеют иное. Ассеты имеют свою лицензию и авторские права в файле метаданных. [Пример](https://git.arumoon.ru/Workbench-Team/space-station-14/blob/master-ru/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
+
+Обратите внимание, что некоторые ассеты лицензированы на некоммерческой основе [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) или аналогичной некоммерческой лицензией, и их необходимо удалить, если вы хотите использовать этот проект в коммерческих целях.

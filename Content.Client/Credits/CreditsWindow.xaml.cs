@@ -153,17 +153,19 @@ namespace Content.Client.Credits
                 ss14ContributorsContainer.AddChild(label);
             }
 
+            AddSection(Loc.GetString("credits-window-workbench-contributors-section-title"), "Workbench.txt");
+            AddSection(Loc.GetString("credits-window-translators-section-title"), "Translators.txt");
             AddSection(Loc.GetString("credits-window-contributors-section-title"), "GitHub.txt");
             AddSection(Loc.GetString("credits-window-codebases-section-title"), "SpaceStation13.txt");
             AddSection(Loc.GetString("credits-window-original-remake-team-section-title"), "OriginalRemake.txt");
             AddSection(Loc.GetString("credits-window-special-thanks-section-title"), "SpecialThanks.txt", true);
 
-            var linkGithub = _cfg.GetCVar(CCVars.InfoLinksGithub);
+            var linkGitLab = _cfg.GetCVar(CCVars.InfoLinksGitLab);
 
             contributeButton.OnPressed += _ =>
-                IoCManager.Resolve<IUriOpener>().OpenUri(linkGithub);
+                IoCManager.Resolve<IUriOpener>().OpenUri(linkGitLab);
 
-            if (linkGithub == "")
+            if (linkGitLab == "")
                 contributeButton.Visible = false;
         }
 

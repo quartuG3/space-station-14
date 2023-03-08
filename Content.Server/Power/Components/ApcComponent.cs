@@ -37,7 +37,7 @@ public sealed class ApcComponent : BaseApcNetComponent
     [ViewVariables(VVAccess.ReadWrite)]
     public ApcPowerChannelState EnvironmentChannelState = ApcPowerChannelState.OnAuto;
 
-    public bool Emagged = false;
+    public bool HasAccess = false;
 
     public const float HighPowerThreshold = 0.9f;
     public static TimeSpan VisualsChangeDelay = TimeSpan.FromSeconds(1);

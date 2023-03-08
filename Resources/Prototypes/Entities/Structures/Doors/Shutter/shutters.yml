@@ -86,6 +86,8 @@
     messagePerceivedByOthers: comp-window-knock
     interactSuccessSound:
       path: /Audio/Effects/glass_knock.ogg
+  - type: StaticPrice
+    price: 100
 
 - type: entity
   id: ShuttersNormal
@@ -132,6 +134,8 @@
     node: ShuttersRadiation
     containers:
     - board
+  - type: RadiationBlocker
+    resistance: 4
 
 - type: entity
   id: ShuttersRadiationOpen

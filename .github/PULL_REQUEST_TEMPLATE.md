@@ -1,39 +1,35 @@
-<!-- The text between the arrows are comments - they will not be visible on your PR. -->
-<!-- Please read these guidelines before opening your PR: https://docs.spacestation14.io/en/getting-started/pr-guideline -->
+## О запросе слияния
+<!-- Что изменено? На какие вещи это может повлиять? -->
 
-## About the PR <!-- Describe the Pull Request here. What does it change? What other things could this impact? -->
 
-**Media**
+**Медиа**
 <!-- 
-If applicable, add screenshots or videos to showcase your PR. Small fixes/refactors are exempt, but all PRs which make ingame changes 
-(adding clothing, items, new features, etc) must include ingame media or the PR will not be merged, in accordance with our PR guidelines.
-This makes it much easier for us to merge PRs and find media for progress reports. If you include media in your pull request, we 
-may potentially use it in the SS14 progress reports, with clear credit given.
+Запросы слияния, которые вносят внутриигровые изменения (добавление одежды, предметов, новых возможностей и т.д.), должны содержать медиа, демонстрирующие изменения.
+Небольшие исправления/рефакторы не требуют медиа.
 
-Use screenshot software like Window's built in snipping tool, ShareX, Lightshot, or recording software like ShareX (gif), ScreenToGif, or Open Broadcaster Software (cross platform).
-If you're unsure whether your PR will require media, ask a maintainer.
+Если вы не уверены в том, что ваш запрос слияния требует медиа, спросите мейнтейнера.
 
-Check one of the boxes below to confirm that you have in fact seen this (put an X in the brackets, like [X]):
+Отметьте поле ниже, чтобы подтвердить, что вы действительно видели это (поставьте X в скобках, например [X]):
 -->
 
-- [ ] I have added screenshots/videos to this PR showcasing its changes ingame, **or** this PR does not require an ingame showcase
+- [ ] Я добавил скриншоты/видео к этому запросу слияния, демонстрирующие его изменения в игре, **или** этот запрос слияния не требует демонстрации в игре
 
-**Changelog**
+**Чейнджлог**
 <!--
-Here you can fill out a changelog that will automatically be added to the game when your PR is merged
-There are 4 icons for changelog entries: add, remove, tweak, fix. I trust you can figure out the rest.
+Здесь вы можете заполнить журнал изменений, который будет автоматически добавлен в игру при слиянии вашего запроса на слияние.
 
-You can put your name after the :cl: symbol to change the name that shows in the changelog (otherwise it takes your GitHub username)
-Like so: :cl: PJB
+Вносите в журнал изменений только те изменения, которые заметны и важны для игрока.
 
-Generally, only put things in changelogs that players actually care about. Stuff like "Refactored X system, no changes should be visible" shouldn't be on a changelog.
+Не считайте суффикс типа записи (например, add) "частью" предложения:
+плохо: - add: новый инструмент для инженеров
+хорошо: - add: добавлен новый инструмент для инженеров
 
-For writing actual entries, don't consider the entry type suffix (e.g. add) to be "part" of the sentence:
-bad: - add: a new tool for engineers
-good: - add: added a new tool for engineers
+Помещение имени после символа :cl: изменит имя, которое будет отображаться в журнале изменений (в противном случае будет использоваться ваше имя пользователя GitHub).
+Например: :cl: AruMoon
 -->
 
 :cl:
-- add: Added fun!
-- remove: Removed fun!
-
+- add: Добавлено веселье!
+- remove: Удалено веселье!
+- tweak: Изменено веселье!
+- fix: Исправлено веселье!

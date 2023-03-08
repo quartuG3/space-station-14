@@ -22,12 +22,17 @@
         amount: 1
       - id: PlushieVox
         amount: 1
+      - id: PlushieMoff
+        amount: 1
       - id: PlushieRouny
         amount: 1
       - id: PlushieRatvar
         amount: 1
       - id: PlushieSharkBlue
         amount: 1
+      - id: PlushieAtmosian
+        amount: 1
+
 
 - type: entity
   id: CrateFunInstruments
@@ -158,7 +163,7 @@
         amount: 4
       - id: KnifePlastic
         amount: 1
-        
+
 - type: entity
   id: CrateFunSyndicateSegway
   parent: CrateLivestock

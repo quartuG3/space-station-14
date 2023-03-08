@@ -80,7 +80,7 @@
 - type: entity
   id: SpawnPointAssistant # TODO rename, but requires map changes.
   parent: SpawnPointJobBase
-  name: passenger
+  name: assistant
   components:
   - type: SpawnPoint
     job_id: Passenger
@@ -112,6 +112,14 @@
   components:
   - type: SpawnPoint
     job_id: SecurityCadet
+
+- type: entity
+  id: SpawnPointResearchAssistant
+  parent: SpawnPointAssistant
+  name: research assistant
+  components:
+  - type: SpawnPoint
+    job_id: ResearchAssistant
 
 - type: entity
   id: SpawnPointServiceWorker

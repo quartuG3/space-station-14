@@ -5,6 +5,7 @@ using Content.Client.UserInterface.Screens;
 using Content.Client.UserInterface.Systems.Actions;
 using Content.Client.UserInterface.Systems.Alerts;
 using Content.Client.UserInterface.Systems.Chat;
+using Content.Client.UserInterface.Systems.Chat.Widgets;
 using Content.Client.UserInterface.Systems.Ghost;
 using Content.Client.UserInterface.Systems.Hands;
 using Content.Client.UserInterface.Systems.Hotbar;
@@ -31,10 +32,8 @@ namespace Content.Client.Gameplay
         [Dependency] private readonly IEyeManager _eyeManager = default!;
         [Dependency] private readonly IOverlayManager _overlayManager = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
-        [Dependency] private readonly IPlayerManager _playerMan = default!;
         [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
-        [Dependency] private readonly IEntityManager _entMan = default!;
 
         private FpsCounter _fpsCounter = default!;
 
@@ -129,6 +128,7 @@ namespace Content.Client.Gameplay
             {
                 case ScreenType.Default:
                     _uiManager.LoadScreen<DefaultGameScreen>();
+
                     break;
                 case ScreenType.Separated:
                     _uiManager.LoadScreen<SeparatedChatGameScreen>();

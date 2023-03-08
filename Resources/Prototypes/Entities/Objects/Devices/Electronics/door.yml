@@ -7,8 +7,295 @@
     - type: Sprite
       sprite: Objects/Misc/module.rsi
       state: door_electronics
+    - type: ActivatableUI
+      key: enum.AccessReaderUiKey.Key
+      closeOnHandDeselect: true
+    - type: UserInterface
+      interfaces:
+        - key: enum.AccessReaderUiKey.Key
+          type: AccessReaderBoundUserInterface
     - type: AccessReader
     - type: Tag
       tags:
         - DoorElectronics
         - DroneUsable
+
+- type: entity
+  id: DoorElectronicsService
+  parent: DoorElectronics
+  suffix: Service
+  components:
+  - type: AccessReader
+    access: [["Service"]]
+
+- type: entity
+  id: DoorElectronicsTheatre
+  parent: DoorElectronics
+  suffix: Theatre
+  components:
+  - type: AccessReader
+    access: [["Theatre"]]
+
+- type: entity
+  id: DoorElectronicsChapel
+  parent: DoorElectronics
+  suffix: Chapel
+  components:
+  - type: AccessReader
+    access: [["Chapel"]]
+
+- type: entity
+  id: DoorElectronicsJanitor
+  parent: DoorElectronics
+  suffix: Janitor
+  components:
+  - type: AccessReader
+    access: [["Janitor"]]
+
+- type: entity
+  id: DoorElectronicsKitchen
+  parent: DoorElectronics
+  suffix: Kitchen
+  components:
+  - type: AccessReader
+    access: [["Kitchen"]]
+
+- type: entity
+  id: DoorElectronicsBar
+  parent: DoorElectronics
+  suffix: Bar
+  components:
+  - type: AccessReader
+    access: [["Bar"]]
+
+- type: entity
+  id: DoorElectronicsBarKitchen
+  parent: DoorElectronics
+  suffix: Bar
+  components:
+  - type: AccessReader
+    access: [["Bar"], ["Kitchen"]]
+
+- type: entity
+  id: DoorElectronicsHydroponics
+  parent: DoorElectronics
+  suffix: Hydroponics
+  components:
+  - type: AccessReader
+    access: [["Hydroponics"]]
+
+- type: entity
+  id: DoorElectronicsExternal
+  parent: DoorElectronics
+  suffix: External
+  components:
+  - type: AccessReader
+    access: [["External"]]
+
+- type: entity
+  id: DoorElectronicsCargo
+  parent: DoorElectronics
+  suffix: Cargo
+  components:
+  - type: AccessReader
+    access: [["Cargo"]]
+
+- type: entity
+  id: DoorElectronicsExternalEngineering
+  parent: DoorElectronics
+  suffix: External, Engineering
+  components:
+  - type: AccessReader
+    access: [["Engineering"]]
+
+- type: entity
+  id: DoorElectronicsExternalAtmospherics
+  parent: DoorElectronics
+  suffix: External, Atmospherics
+  components:
+  - type: AccessReader
+    access: [["Atmospherics"]]
+
+- type: entity
+  id: DoorElectronicsKitchenHydroponics
+  parent: DoorElectronics
+  suffix: Kitchen/Hydroponics
+  components:
+  - type: AccessReader
+    access: [["Kitchen"], ["Hydroponics"]]
+
+- type: entity
+  id: DoorElectronicsEngineering
+  parent: DoorElectronics
+  suffix: Engineering
+  components:
+  - type: AccessReader
+    access: [["Engineering"]]
+
+- type: entity
+  id: DoorElectronicsAtmospherics
+  parent: DoorElectronics
+  suffix: Atmospherics
+  components:
+  - type: AccessReader
+    access: [["Atmospherics"]]
+
+- type: entity
+  id: DoorElectronicsSalvage
+  parent: DoorElectronics
+  suffix: Salvage
+  components:
+  - type: AccessReader
+    access: [["Salvage"]]
+
+- type: entity
+  id: DoorElectronicsQuartermaster
+  parent: DoorElectronics
+  suffix: Quartermaster
+  components:
+  - type: AccessReader
+    access: [["Quartermaster"]]
+
+- type: entity
+  id: DoorElectronicsMedical
+  parent: DoorElectronics
+  suffix: Medical
+  components:
+  - type: AccessReader
+    access: [["Medical"]]
+
+- type: entity
+  id: DoorElectronicsVirology
+  parent: DoorElectronics
+  suffix: Virology
+  components:
+  - type: AccessReader
+    access: [["Medical"]]
+
+- type: entity
+  id: DoorElectronicsScience
+  parent: DoorElectronics
+  suffix: Science
+  components:
+  - type: AccessReader
+    access: [["Research"]]
+
+- type: entity
+  id: DoorElectronicsMedicalScience
+  parent: DoorElectronics
+  suffix: Medical/Science
+  components:
+  - type: AccessReader
+    access: [["Research"], ["Medical"]]
+
+- type: entity
+  id: DoorElectronicsCommand
+  parent: DoorElectronics
+  suffix: Command
+  components:
+  - type: AccessReader
+    access: [["Command"]]
+
+- type: entity
+  id: DoorElectronicsCaptain
+  parent: DoorElectronics
+  suffix: Captain
+  components:
+  - type: AccessReader
+    access: [["Captain"]]
+
+- type: entity
+  id: DoorElectronicsChiefMedicalOfficer
+  parent: DoorElectronics
+  suffix: ChiefMedicalOfficer
+  components:
+  - type: AccessReader
+    access: [["ChiefMedicalOfficer"]]
+
+- type: entity
+  id: DoorElectronicsChiefEngineer
+  parent: DoorElectronics
+  suffix: ChiefEngineer
+  components:
+  - type: AccessReader
+    access: [["ChiefEngineer"]]
+
+- type: entity
+  id: DoorElectronicsHeadOfSecurity
+  parent: DoorElectronics
+  suffix: HeadOfSecurity
+  components:
+  - type: AccessReader
+    access: [["HeadOfSecurity"]]
+
+- type: entity
+  id: DoorElectronicsResearchDirector
+  parent: DoorElectronics
+  suffix: ResearchDirector
+  components:
+  - type: AccessReader
+    access: [["ResearchDirector"]]
+
+- type: entity
+  id: DoorElectronicsHeadOfPersonnel
+  parent: DoorElectronics
+  suffix: HeadOfPersonnel
+  components:
+  - type: AccessReader
+    access: [["HeadOfPersonnel"]]
+
+- type: entity
+  id: DoorElectronicsSecurity
+  parent: DoorElectronics
+  suffix: Security
+  components:
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  id: DoorElectronicsSecurityCommand
+  parent: DoorElectronics
+  suffix: Security
+  components:
+  - type: AccessReader
+    access: [["Security", "Command"]]
+
+- type: entity
+  id: DoorElectronicsBrig
+  parent: DoorElectronics
+  suffix: Brig
+  components:
+  - type: AccessReader
+    access: [["Brig"]]
+
+- type: entity
+  id: DoorElectronicsArmory
+  parent: DoorElectronics
+  suffix: Armory
+  components:
+  - type: AccessReader
+    access: [["Armory"]]
+
+- type: entity
+  id: DoorElectronicsEVA
+  parent: DoorElectronics
+  suffix: EVA
+  components:
+  - type: AccessReader
+    access: [["External"]]
+
+- type: entity
+  id: DoorElectronicsMaintenance
+  parent: DoorElectronics
+  suffix: HeadOfSecurity
+  components:
+  - type: AccessReader
+    access: [["Maintenance"]]
+
+- type: entity
+  id: DoorElectronicsChemistry
+  parent: DoorElectronics
+  suffix: Chemistry
+  components:
+  - type: AccessReader
+    access: [["Chemistry"]]

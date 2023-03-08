@@ -49,12 +49,12 @@ ui-options-hud-theme-modernized = Модернизированный
 ui-options-hud-theme-classic = Классический
 ui-options-vp-stretch = Растянуть изображение для соответствия окну игры
 ui-options-vp-scale = Фиксированный масштаб окна игры: x{ $scale }
-ui-options-vp-integer-scaling = Prefer integer scaling (might cause black bars/clipping)
+ui-options-vp-integer-scaling = Предпочитать масштабирование (может вызвать появление чёрных полос/обрезание)
 ui-options-vp-integer-scaling-tooltip =
-    If this option is enabled, the viewport will be scaled using an integer value
-    at specific resolutions. While this results in crisp textures, it also often
-    means that black bars appear at the top/bottom of the screen or that part
-    of the viewport is not visible.
+    Когда эта опция включена, окно игры будет масштабировано используя значение ширины
+    при специальных разрешениях экрана. Это приводит к чёткости видимости текстур, а также это
+    обычно значит что сверху/снизу экрана появятся чёрные полосы или эта часть
+    окна игры будет не видима.
 ui-options-vp-low-res = Изображение низкого разрешения
 ui-options-parallax-low-quality = Низкокачественный параллакс (фон)
 ui-options-fps-counter = Показать счетчик FPS
@@ -127,6 +127,7 @@ ui-options-function-open-sandbox-window = Открыть меню песочни
 ui-options-function-open-tile-spawn-window = Открыть меню спавна тайлов
 ui-options-function-open-decal-spawn-window = Открыть меню спавна декалей
 ui-options-function-open-admin-menu = Открыть админ меню
+ui-options-function-open-guidebook = Открыть учебник
 ui-options-function-take-screenshot = Сделать скриншот
 ui-options-function-take-screenshot-no-ui = Сделать скриншот (без интерфейса)
 ui-options-function-editor-place-object = Разместить объект
@@ -175,23 +176,25 @@ ui-options-net-interp-ratio-tooltip =
     требует от клиента предсказывать больше будущих тиков.
 ui-options-net-predict-tick-bias = Погрешность тиков предугадывания
 ui-options-net-predict-tick-bias-tooltip =
-    Увеличение этого параметра, как правило, делает игру более устойчивой 
-    к потере пакетов между клиентом и сервером, однако при этом 
+    Увеличение этого параметра, как правило, делает игру более устойчивой
+    к потере пакетов между клиентом и сервером, однако при этом
     немного возрастает задержка, и клиенту требуется предугадывать
     больше будущих тиков
 ui-options-net-pvs-spawn = Лимит появления PVS сущностей
 ui-options-net-pvs-spawn-tooltip =
-    Ограничение частоты отправки новых появившихся сущностей сервером на клиент. 
+    Ограничение частоты отправки новых появившихся сущностей сервером на клиент.
     Снижение этого параметра может помочь уменьшить "захлебывания",
     вызываемые спавном сущностей, но может привести к их резкому появлению.
 ui-options-net-pvs-entry = Лимит PVS сущностей
 ui-options-net-pvs-entry-tooltip =
-    Ограничение частоты отправки новых видимых сущностей сервером на клиент. 
+    Ограничение частоты отправки новых видимых сущностей сервером на клиент.
     Снижение этого параметра может помочь уменьшить "захлебывания",
     вызываемые спавном сущностей, но может привести к их резкому появлению.
 ui-options-net-pvs-leave = Частота удаления PVS
 ui-options-net-pvs-leave-tooltip =
-    Ограничение частоты, с которой клиент будет удалять 
+    Ограничение частоты, с которой клиент будет удалять
     сущности вне поля зрения. Снижение этого параметра может помочь
-    уменьшить "захлебывания" при ходьбе, но иногда может 
+    уменьшить "захлебывания" при ходьбе, но иногда может
     привести к неправильным предугадываниям и другим проблемам.
+cmd-options-desc = Открывает меню настроек, опционально с выбранной вкладкой
+cmd-options-help = Использование: options [tab]

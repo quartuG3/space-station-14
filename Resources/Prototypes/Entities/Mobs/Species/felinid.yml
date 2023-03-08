@@ -5,16 +5,17 @@
   id: BaseMobFelinid
   abstract: true
   components:
-  - type: Humanoid
+  - type: HumanoidAppearance
     species: Felinid
   - type: Hunger
   - type: Thirst
   - type: Perishable
   - type: Climbing
-    tableClimbMultiplier: 0.8
+    tableClimbMultiplier: 0.9
   - type: Flashable   # Felinids get longer flashes from flashbangs because of their sensetive ears
     durationMultiplier: 1
-    bangAddMultiplier: 0.5
+    bangAddMultiplier: 0.65
+    bangFlash: false
   - type: WoundLicking
   - type: Reactive
     groups:
@@ -33,5 +34,5 @@
   parent: BaseMobOrganicDummy
   noSpawn: true
   components:
-  - type: Humanoid
+  - type: HumanoidAppearance
     species: Felinid

@@ -45,6 +45,9 @@
       prototypes: [SyndicateOperativeGearExtremelyBasic]
     - type: RandomMetadata
       nameSegments: [names_death_commando]
+    - type: Faction
+      factions:
+      - Syndicate
 
 # Nuclear Operative
 - type: entity
@@ -55,3 +58,20 @@
   components:
     - type: NukeOperative
     - type: RandomHumanoidAppearance
+    - type: Faction
+      factions:
+      - Syndicate
+
+- type: entity
+  noSpawn: true
+  name: Arriving Assistant
+  parent: MobHuman
+  id: MobHumanArrivingAss
+  components:
+    - type: RandomHumanoidAppearance
+    - type: GhostTakeoverAvailable
+      name: Arriving Assistant
+      description: You are one of assistants arriving or already arrived assistans.
+      rules: You don't know anything about what happened previously on this shift. You are not an antagonist.
+    - type: Loadout
+      prototypes: [ PassengerGear ]

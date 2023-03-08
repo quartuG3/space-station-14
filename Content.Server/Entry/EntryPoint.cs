@@ -72,6 +72,7 @@ namespace Content.Server.Entry
             }
 
             prototypes.RegisterIgnore("parallax");
+            prototypes.RegisterIgnore("guideEntry");
 
             ServerContentIoC.Register();
 
@@ -198,7 +199,7 @@ namespace Content.Server.Entry
 
         private static void LoadBuildConfigPresets(IConfigurationManager cfg, IResourceManager res, ISawmill sawmill)
         {
-#if !FULL_RELEASE
+#if TOOLS
             Load(CCVars.ConfigPresetDevelopment, "development");
 #endif
 #if DEBUG

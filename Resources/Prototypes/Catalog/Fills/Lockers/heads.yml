@@ -24,6 +24,7 @@
       - id: DoorRemoteCargo
       - id: RubberStampQm
       - id: ClothingHeadsetAltCargo
+      - id: BoxEncryptionKeyCargo
 
 - type: entity
   id: LockerCaptainFilled
@@ -87,6 +88,8 @@
       - id: DoorRemoteService
       - id: ClothingNeckGoldmedal
       - id: RubberStampHop
+      - id: BoxEncryptionKeyPassenger
+      - id: BoxEncryptionKeyService
 
 - type: entity
   id: LockerChiefEngineerFilled
@@ -104,15 +107,17 @@
       - id: ClothingBeltChiefEngineerFilled
       - id: ClothingHeadHatBeretEngineering
       - id: ClothingShoesBootsMagAdv
-      - id: ClothingHandsGlovesColorYellow
+#      - id: ClothingHandsGlovesColorYellow
       - id: CigarCase
         prob: 0.15
       - id: DoorRemoteEngineering
       - id: RubberStampCE
       - id: JetpackVoidFilled
       - id: ClothingHeadsetAltEngineering
+      - id: BoxEncryptionKeyEngineering
       - id: HolofanProjector
       - id: HoloprojectorEngineering
+      - id: ClothingHandsGlovesCE
 
 - type: entity
   id: LockerChiefMedicalOfficerFilled
@@ -129,6 +134,7 @@
       - id: ClothingBackpackDuffelSurgeryFilled
       - id: ClothingOuterCoatLabCmo
       - id: ClothingMaskSterile
+      - id: ClothingHeadHatBeretCmo
       - id: ClothingOuterHardsuitMedical
       - id: DiagnoserMachineCircuitboard
       - id: VaccinatorMachineCircuitboard
@@ -140,6 +146,7 @@
       - id: MedicalTechFabCircuitboard
       - id: MaterialBiomass
         amount: 3
+      - id: BoxEncryptionKeyMedical
 
 - type: entity
   id: LockerResearchDirectorFilled
@@ -160,6 +167,8 @@
       - id: DoorRemoteResearch
       - id: RubberStampRd
       - id: ClothingHeadsetAltScience
+      - id: BoxEncryptionKeyScience
+      - id: BoxEncryptionKeyRobo
 
 - type: entity
   id: LockerHeadOfSecurityFilled
@@ -203,3 +212,5 @@
       - id: RubberStampHos
       - id: SecurityTechFabCircuitboard
       - id: JetpackSecurityFilled
+      - id: BoxEncryptionKeySecurity
+      - id: WeaponTechFabCircuitboard

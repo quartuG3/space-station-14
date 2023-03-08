@@ -1,7 +1,6 @@
 using System.Linq;
 using Content.Server.Cargo.Components;
 using Content.Server.Labels.Components;
-using Content.Server.MobState;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.UserInterface;
@@ -16,7 +15,8 @@ using Content.Shared.Cargo.Prototypes;
 using Content.Shared.CCVar;
 using Content.Shared.Dataset;
 using Content.Shared.GameTicking;
-using Content.Shared.MobState.Components;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs.Systems;
 using Robust.Server.GameObjects;
 using Robust.Server.Maps;
 using Robust.Shared.Audio;
@@ -209,34 +209,27 @@ public sealed partial class CargoSystem
         if (component == null || shuttle == null || component.Orders.Count == 0)
             return orders;
 
-        var space = GetCargoSpace(shuttle);
-
-        if (space == 0) return orders;
-
-        var indices = component.Orders.Keys.ToList();
-        indices.Sort();
-        var amount = 0;
-
-        foreach (var index in indices)
+        var spaceRemaining = GetCargoSpace(shuttle);
+        for( var i = 0; i < component.Orders.Count && spaceRemaining > 0; i++)
         {
-            var order = component.Orders[index];
-            if (!order.Approved) continue;
-
-            var cappedAmount = Math.Min(space - amount, order.Amount);
-            amount += cappedAmount;
-            DebugTools.Assert(amount <= space);
-
-            if (cappedAmount < order.Amount)
+            var order = component.Orders[i];
+            if(order.Approved)
             {
-                var reducedOrder = new CargoOrderData(order.OrderNumber, order.ProductId, cappedAmount, order.Requester, order.Reason);
-
-                orders.Add(reducedOrder);
-                break;
+                var numToShip = order.OrderQuantity - order.NumDispatched;
+                if (numToShip > spaceRemaining)
+                {
+                    // We won't be able to fit the whole oder on, so make one
+                    // which represents the space we do have left:
+                    var reducedOrder = new CargoOrderData(order.OrderId,
+                            order.ProductId, spaceRemaining, order.Requester, order.Reason);
+                    orders.Add(reducedOrder);
+                }
+                else
+                {
+                    orders.Add(order);
+                }
+                spaceRemaining -= numToShip;
             }
-
-            orders.Add(order);
-
-            if (amount == space) break;
         }
 
         return orders;
@@ -288,13 +281,18 @@ public sealed partial class CargoSystem
         var possibleNames = _protoMan.Index<DatasetPrototype>(prototype.NameDataset).Values;
         var name = _random.Pick(possibleNames);
 
-        var shuttleUid = _map.LoadGrid(CargoMap.Value, prototype.Path.ToString());
-        var xform = Transform(shuttleUid!.Value);
-        MetaData(shuttleUid!.Value).EntityName = name;
+        if (!_map.TryLoad(CargoMap.Value, prototype.Path.ToString(), out var gridList))
+        {
+            _sawmill.Error($"Could not load the cargo shuttle!");
+            return;
+        }
+        var shuttleUid = gridList[0];
+        var xform = Transform(shuttleUid);
+        MetaData(shuttleUid).EntityName = name;
 
         // TODO: Something better like a bounds check.
         xform.LocalPosition += 100 * _index;
-        var comp = EnsureComp<CargoShuttleComponent>(shuttleUid!.Value);
+        var comp = EnsureComp<CargoShuttleComponent>(shuttleUid);
         comp.Station = component.Owner;
         comp.Coordinates = xform.Coordinates;
 
@@ -302,7 +300,7 @@ public sealed partial class CargoSystem
         comp.NextCall = _timing.CurTime + TimeSpan.FromSeconds(comp.Cooldown);
         UpdateShuttleCargoConsoles(comp);
         _index++;
-        _sawmill.Info($"Added cargo shuttle to {ToPrettyString(shuttleUid!.Value)}");
+        _sawmill.Info($"Added cargo shuttle to {ToPrettyString(shuttleUid)}");
     }
 
     private void SellPallets(CargoShuttleComponent component, StationBankAccountComponent bank)
@@ -419,70 +417,18 @@ public sealed partial class CargoSystem
         _sawmill.Info($"Retrieved cargo shuttle {ToPrettyString(shuttle.Owner)} from {ToPrettyString(orderDatabase.Owner)}");
     }
 
-    private void AddCargoContents(CargoShuttleComponent component, StationCargoOrderDatabaseComponent orderDatabase)
+    private void AddCargoContents(CargoShuttleComponent shuttle, StationCargoOrderDatabaseComponent orderDatabase)
     {
         var xformQuery = GetEntityQuery<TransformComponent>();
-        var orders = GetProjectedOrders(orderDatabase, component);
 
-        var pads = GetCargoPallets(component);
-        DebugTools.Assert(orders.Sum(o => o.Amount) <= pads.Count);
-
-        for (var i = 0; i < pads.Count; i++)
+        var pads = GetCargoPallets(shuttle);
+        while (pads.Count > 0)
         {
-            if (orders.Count == 0)
+            var coordinates = new EntityCoordinates(shuttle.Owner, xformQuery.GetComponent(_random.PickAndTake(pads).Owner).LocalPosition);
+            if(!FulfillOrder(orderDatabase, coordinates, shuttle.PrinterOutput))
+            {
                 break;
-
-            var order = orders[0];
-            var coordinates = new EntityCoordinates(component.Owner, xformQuery.GetComponent(_random.PickAndTake(pads).Owner).LocalPosition);
-            var item = Spawn(_protoMan.Index<CargoProductPrototype>(order.ProductId).Product, coordinates);
-            SpawnAndAttachOrderManifest(item, order, coordinates, component);
-            order.Amount--;
-
-            if (order.Amount == 0)
-            {
-                // Yes this is functioning as a stack, I was too lazy to re-jig the shuttle state event.
-                orders.RemoveSwap(0);
-                orderDatabase.Orders.Remove(order.OrderNumber);
             }
-            else
-            {
-                orderDatabase.Orders[order.OrderNumber] = order;
-            }
-        }
-    }
-
-    /// <summary>
-    /// In this method we are printing and attaching order manifests to the orders.
-    /// </summary>
-    private void SpawnAndAttachOrderManifest(EntityUid item, CargoOrderData order, EntityCoordinates coordinates, CargoShuttleComponent component)
-    {
-        if (!_protoMan.TryIndex(order.ProductId, out CargoProductPrototype? prototype))
-            return;
-
-        // spawn a piece of paper.
-        var printed = EntityManager.SpawnEntity("Paper", coordinates);
-
-        if (!TryComp<PaperComponent>(printed, out var paper))
-            return;
-
-        // fill in the order data
-        var val = Loc.GetString("cargo-console-paper-print-name", ("orderNumber", order.OrderNumber));
-
-        MetaData(printed).EntityName = val;
-
-        _paperSystem.SetContent(printed, Loc.GetString(
-            "cargo-console-paper-print-text",
-            ("orderNumber", order.OrderNumber),
-            ("itemName", prototype.Name),
-            ("requester", order.Requester),
-            ("reason", order.Reason),
-            ("approver", order.Approver ?? string.Empty)),
-            paper);
-
-        // attempt to attach the label
-        if (TryComp<PaperLabelComponent>(item, out var label))
-        {
-            _slots.TryInsert(item, label.LabelSlot, printed, null);
         }
     }
 
@@ -512,9 +458,9 @@ public sealed partial class CargoSystem
         if (IsBlocked(shuttle))
         {
             _popup.PopupEntity(Loc.GetString("cargo-shuttle-console-organics"), player.Value, player.Value);
-            SoundSystem.Play(component.DenySound.GetSound(), Filter.Pvs(uid, entityManager: EntityManager), uid);
+            _audio.PlayPvs(_audio.GetSound(component.DenySound), uid);
             return;
-        };
+        }
 
         SellPallets(shuttle, bank);
         _console.RefreshShuttleConsoles();

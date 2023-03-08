@@ -42,12 +42,12 @@ namespace Content.Client.Info
                 buttons.AddChild(BoostyButton);
             }
 
-            var GitHub = cfg.GetCVar(CCVars.InfoLinksGithub);
-            if (GitHub != "")
+            var GitLab = cfg.GetCVar(CCVars.InfoLinksGitLab);
+            if (GitLab != "")
             {
-               var GitHubButton = new Button {Text = Loc.GetString("server-info-github-button")};
-               GitHubButton.OnPressed += args => uriOpener.OpenUri(GitHub);
-               buttons.AddChild(GitHubButton);
+               var GitLabButton = new Button {Text = Loc.GetString("server-info-gitlab-button")};
+               GitLabButton.OnPressed += args => uriOpener.OpenUri(GitLab);
+               buttons.AddChild(GitLabButton);
             }
         }
     }

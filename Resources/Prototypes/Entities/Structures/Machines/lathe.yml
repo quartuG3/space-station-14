@@ -15,7 +15,7 @@
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
     - state: inserting
-      map: ["enum.LatheVisualLayers.IsInserting"]
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Appearance
@@ -74,14 +74,12 @@
       - Crowbar
       - Multitool
       - AirlockPainter
-      - MiniHoe
-      - Shovel
-      - Spade
       - CableStack
       - HandheldGPSBasic
       - TRayScanner
       - GasAnalyzer
       - UtilityBelt
+      - Pickaxe
   - type: StaticPrice
     price: 800
 
@@ -102,7 +100,7 @@
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
     - state: inserting
-      map: ["enum.LatheVisualLayers.IsInserting"]
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Appearance
@@ -171,11 +169,15 @@
       - MiningDrill
       - ConveyorBeltAssembly
       - AppraisalTool
+      - AnomalyScanner
       - RCD
       - RCDAmmo
       - HydroponicsToolScythe
       - HydroponicsToolHatchet
+      - Clippers
+      - MiniHoe
       - Shovel
+      - Spade
       - HandheldCrewMonitor
       - Scalpel
       - Retractor
@@ -185,7 +187,10 @@
       - Hemostat
       - Beaker
       - LargeBeaker
+      - LargeBottle
+      - SmallBottle
       - CryostasisBeaker
+      - ClothingEyesGlassesScience
       - Dropper
       - Syringe
       - MiningDrill
@@ -204,6 +209,11 @@
       - HighPowerMicroLaserStockPart
       - NanoManipulatorStockPart
       - AdvancedScanningModuleStockPart
+      - SuperCapacitorStockPart
+      - SuperMatterBinStockPart
+      - UltraHighPowerMicroLaserStockPart
+      - PicoManipulatorStockPart
+      - PhasicScanningModuleStockPart
       - FirelockElectronics
       - DoorElectronics
       - APCElectronics
@@ -318,10 +328,13 @@
       - SeedExtractorMachineCircuitboard
       - AnalysisComputerCircuitboard
       - ExosuitFabricatorMachineCircuitboard
+      - AnomalyVesselCircuitboard
+      - APECircuitboard
       - ArtifactAnalyzerMachineCircuitboard
       - TraversalDistorterMachineCircuitboard
-      - SecurityTechFabCircuitboard
-      - WeaponTechFabCircuitboard
+      - BoozeDispenserMachineCircuitboard
+      - SodaDispenserMachineCircuitboard
+      - TelecomServerCircuitboard
   - type: MaterialStorage
     whitelist:
       tags:
@@ -342,7 +355,7 @@
     - state: fab-idle
       map: ["enum.LatheVisualLayers.IsRunning"]
     - state: fab-load
-      map: ["enum.LatheVisualLayers.IsInserting"]
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: fab-o
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Machine
@@ -360,7 +373,7 @@
     - RipleyLLeg
     - RipleyRLeg
     - MechEquipmentGrabber
-    - MechEquipmentDrill
+    # - MechEquipmentDrill
   - type: MaterialStorage
     whitelist:
       tags:
@@ -386,7 +399,7 @@
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
     - state: inserting
-      map: ["enum.LatheVisualLayers.IsInserting"]
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Machine
@@ -414,12 +427,20 @@
       - ShellShotgunFlare
       - ShellTranquilizer
       - CartridgeLightRifle
-      - CartridgeCaselessRifleRubber
+      - CartridgeRifle
       - CartridgeLightRifleRubber
       - CartridgeRifleRubber
       - TargetHuman
       - TargetSyndicate
       - TargetClown
+      - MagazineBoxPistol
+      - MagazineBoxPistolRubber
+      - MagazineBoxMagnum
+      - MagazineBoxMagnumRubber
+      - MagazineBoxRifle
+      - MagazineBoxRifleRubber
+      - MagazineBoxLightRifle
+      - MagazineBoxLightRifleRubber
       # Magazines
       - MagazinePistolRubber
       - MagazineMagnumRubber
@@ -458,7 +479,7 @@
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
     - state: inserting
-      map: ["enum.LatheVisualLayers.IsInserting"]
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Machine
@@ -487,13 +508,11 @@
       - WeaponSubMachineGunWt550
       - WeaponRifleLecter
       - WeaponShotgunDoubleBarreled
-      - WeaponRifleAk
       - WeaponPistolMk58
       - WeaponSubMachineGunVector
       # Weapons energy
       - WeaponDisabler
       - WeaponLaserCarbine
-      - WeaponAdvancedLaser
   - type: MaterialStorage
     whitelist:
       tags:
@@ -521,7 +540,7 @@
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
     - state: inserting
-      map: ["enum.LatheVisualLayers.IsInserting"]
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Lathe
@@ -543,13 +562,24 @@
       - Hemostat
       - Beaker
       - LargeBeaker
+      - LargeBottle
+      - SmallBottle
       - CryostasisBeaker
+      - ClothingEyesGlassesScience
       - Dropper
       - Syringe
       - Implanter
       - PillCanister
       - BodyBag
       - ChemistryEmptyBottle01
+      - Medkit
+      - MedkitBurn
+      - MedkitToxin
+      - MedkitO2
+      - MedkitBrute
+      - MedkitAdvanced
+      - MedkitRadiation
+      - MedkitCombat
   - type: Machine
     board: MedicalTechFabCircuitboard
 
@@ -668,17 +698,18 @@
           shader: unshaded
           map: ["enum.PowerDeviceVisualLayers.Powered"]
         - state: inserting
-          map: ["enum.LatheVisualLayers.IsInserting"]
+          map: ["enum.MaterialStorageVisualLayers.Inserting"]
         - state: panel
           map: ["enum.WiresVisualLayers.MaintenancePanel"]
     - type: Machine
       board: OreProcessorMachineCircuitboard
     - type: MaterialStorage
+      dropOnDeconstruct: false #should drop ores instead of ingots/sheets
+      ignoreColor: true
       whitelist:
         tags:
           - Ore
     - type: Lathe
-      ignoreColor: true
       staticRecipes:
         - SheetSteel30
         - SheetGlass30

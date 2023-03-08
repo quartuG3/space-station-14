@@ -13,12 +13,34 @@
     Glass: 200
 
 - type: latheRecipe
+  id: LargeBottle
+  result: LargeBottle
+  completetime: 2
+  materials:
+    Plastic: 200
+
+- type: latheRecipe
+  id: SmallBottle
+  result: SmallBottle
+  completetime: 2
+  materials:
+    Plastic: 100
+
+- type: latheRecipe
   id: CryostasisBeaker
   result: CryostasisBeaker
   completetime: 2
   materials:
     Steel: 250
     Plastic: 50
+
+- type: latheRecipe
+  id: ClothingEyesGlassesScience
+  result: ClothingEyesGlassesScience
+  completetime: 2
+  materials:
+    Glass: 250
+    Steel: 250
 
 - type: latheRecipe
   id: Dropper

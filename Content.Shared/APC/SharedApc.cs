@@ -84,6 +84,8 @@ namespace Content.Shared.APC
     {
         public readonly bool MainBreaker;
         public readonly bool CoverButton;
+        public readonly bool HasAccess;
+        public readonly int Power;
         public readonly ApcExternalPowerState ApcExternalPower;
         public readonly float Charge;
         public readonly ApcPowerChannelMode Equipment;
@@ -94,10 +96,14 @@ namespace Content.Shared.APC
         public readonly float EnvironmentConsume;
         public readonly float TotalConsume;
 
-        public ApcBoundInterfaceState(bool mainBreaker, bool coverButton, ApcExternalPowerState apcExternalPower, float charge, ApcPowerChannelMode equipment, ApcPowerChannelMode lighting, ApcPowerChannelMode environment, float equipmentconsume, float lightingconsume, float environmentconsume, float totalconsume)
+        public ApcBoundInterfaceState(bool mainBreaker bool coverButton, bool hasAccess, int power, ApcExternalPowerState apcExternalPower, float charge,
+        ApcPowerChannelMode equipment, ApcPowerChannelMode lighting, ApcPowerChannelMode environment,
+        float equipmentconsume, float lightingconsume, float environmentconsume, float totalconsume)
         {
             MainBreaker = mainBreaker;
             CoverButton = coverButton;
+            HasAccess = hasAccess;
+            Power = power;
             ApcExternalPower = apcExternalPower;
             Charge = charge;
             Equipment = equipment;

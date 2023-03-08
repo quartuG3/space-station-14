@@ -69,6 +69,7 @@
     - dm
   name: death-match-title
   description: death-match-description
+  showInVote: true
   rules:
     - DeathMatch
 
@@ -79,6 +80,7 @@
     - traitordeathmatch
   name: traitor-death-match-title
   description: traitor-death-match-description
+  showInVote: true
   rules:
     - TraitorDeathMatch
     - MaxTimeRestart

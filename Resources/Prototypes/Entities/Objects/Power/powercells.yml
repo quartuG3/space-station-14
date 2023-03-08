@@ -8,6 +8,8 @@
   - type: PowerCell
   - type: Explosive
     explosionType: Default
+    maxIntensity: 200
+    intensitySlope: 1.5
   - type: Sprite
     sprite: Objects/Power/power_cells.rsi
     netsync: false
@@ -68,6 +70,14 @@
   suffix: Empty
   parent: PowerCellSmall
   components:
+  - type: Sprite
+    layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: small
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+        visible: false
   - type: Battery
     maxCharge: 1000
     chargeRate: 100
@@ -97,6 +107,14 @@
   suffix: Empty
   parent: PowerCellMedium
   components:
+  - type: Sprite
+    layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: medium
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+        visible: false
   - type: Battery
     maxCharge: 10000
     chargeRate: 1500
@@ -133,6 +151,14 @@
   suffix: Empty
   parent: PowerCellSuper
   components:
+  - type: Sprite
+    layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: high
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+        visible: false
   - type: Battery
     maxCharge: 20000
     chargeRate: 2000
@@ -167,6 +193,14 @@
   suffix: Empty
   parent: PowerCellHyper
   components:
+  - type: Sprite
+    layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: hyper
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+        visible: false
   - type: Battery
     maxCharge: 30000
     chargeRate: 3000

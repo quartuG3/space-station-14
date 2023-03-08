@@ -25,6 +25,7 @@
         - CigPack
         - Radio
         - HolofanProjector
+        - AppraisalTool
         - HolosignProjector
       components:
         - AirlockPainter
@@ -33,6 +34,7 @@
         - RCDAmmo
         - Welder
         - PowerCell
+        - Geiger
   - type: ItemMapper
     mapLayers:
       cutters_red:
@@ -90,6 +92,7 @@
         - CigPack
         - Radio
         - HolofanProjector
+        - AppraisalTool
         - HolosignProjector
       components:
         - AirlockPainter
@@ -100,6 +103,7 @@
         - Flash
         - Handcuff
         - PowerCell
+        - Geiger
   - type: ItemMapper
     mapLayers:
       drill:
@@ -287,7 +291,6 @@
   - type: Storage
     whitelist:
       tags:
-        - BotanyHoe
         # - PlantAnalyzer
         - PlantSampleTaker
         - BotanyShovel
