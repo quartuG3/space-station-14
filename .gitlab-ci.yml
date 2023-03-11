@@ -32,7 +32,7 @@ test:debug:
     - export DOTNET_gcServer=1
     - pwsh -Command "dotnet test --configuration DebugOpt --no-build Content.IntegrationTests/Content.IntegrationTests.csproj -- NUnit.ConsoleOut=0"
   dependencies: 
-    - build
+    - build:debug
 
 test:release:
   stage: test
@@ -41,7 +41,7 @@ test:release:
     - export DOTNET_gcServer=1
     - pwsh -Command "dotnet test --configuration Tools --no-build Content.IntegrationTests/Content.IntegrationTests.csproj -- NUnit.ConsoleOut=0"
   dependencies: 
-    - build
+    - build:release
 
 #test-debug:
 #  stage: test
