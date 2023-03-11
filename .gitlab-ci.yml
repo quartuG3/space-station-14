@@ -28,6 +28,7 @@ build:release:
 test:debug:
   stage: test
   script:
+    - dotnet restore
     - pwsh -Command "dotnet test --configuration DebugOpt --no-build Content.Tests/Content.Tests.csproj -- NUnit.ConsoleOut=0"
     - export DOTNET_gcServer=1
     - pwsh -Command "dotnet test --configuration DebugOpt --no-build Content.IntegrationTests/Content.IntegrationTests.csproj -- NUnit.ConsoleOut=0"
@@ -37,6 +38,7 @@ test:debug:
 test:release:
   stage: test
   script:
+    - dotnet restore
     - pwsh -Command "dotnet test --configuration Tools --no-build Content.Tests/Content.Tests.csproj -- NUnit.ConsoleOut=0"
     - export DOTNET_gcServer=1
     - pwsh -Command "dotnet test --configuration Tools --no-build Content.IntegrationTests/Content.IntegrationTests.csproj -- NUnit.ConsoleOut=0"
