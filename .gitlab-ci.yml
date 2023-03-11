@@ -15,16 +15,6 @@ build:debug:
     - dotnet restore
     - dotnet build --configuration DebugOpt --no-restore /p:WarningsAsErrors=nullable /m
 
-build:release:
-  stage: build
-  script:
-    - apt update && apt upgrade -y
-    - apt install -y python3 libfreetype6
-    - mkdir .git/hooks -p
-    - python3 RUN_THIS.py
-    - dotnet restore
-    - dotnet build --configuration Tools --no-restore /p:WarningsAsErrors=nullable /m
-
 test:debug:
   stage: test
   script:
@@ -34,6 +24,16 @@ test:debug:
     - pwsh -Command "dotnet test --configuration DebugOpt --no-build Content.IntegrationTests/Content.IntegrationTests.csproj -- NUnit.ConsoleOut=0"
   dependencies: 
     - build:debug
+
+build:release:
+  stage: build
+  script:
+    - apt update && apt upgrade -y
+    - apt install -y python3 libfreetype6
+    - mkdir .git/hooks -p
+    - python3 RUN_THIS.py
+    - dotnet restore
+    - dotnet build --configuration Tools --no-restore /p:WarningsAsErrors=nullable /m
 
 test:release:
   stage: test
