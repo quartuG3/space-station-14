@@ -210,7 +210,7 @@ namespace Content.Server.Flash
                 args.AddBaseFlash = false;
                 if (component.ProtectFromBangs) args.AddBangFlash = false;
             }
-                
+
         }
 
         private void OnPermanentBlindnessFlashAttempt(EntityUid uid, PermanentBlindnessComponent component, FlashAttemptEvent args)
@@ -224,7 +224,7 @@ namespace Content.Server.Flash
         }
     }
 
-    public sealed class FlashAttemptEvent : HandledEntityEventArgs
+    public sealed class FlashAttemptEvent : CancellableEntityEventArgs
     {
         public readonly EntityUid Target;
         public readonly EntityUid? User;
