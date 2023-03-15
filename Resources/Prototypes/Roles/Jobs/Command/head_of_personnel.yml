@@ -39,11 +39,11 @@
   id: HoPGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitHoP
-    back: ClothingBackpackHeadOfPersonnelFilled
+    back: ClothingBackpackHOPFilled
     shoes: ClothingShoesColorBrown
     head: ClothingHeadHatHopcap
     id: HoPPDA
     ears: ClothingHeadsetAltCommand
   innerclothingskirt: ClothingUniformJumpskirtHoP
-  satchel: ClothingBackpackSatchelHeadOfPersonnelFilled
-  duffelbag: ClothingBackpackDuffelHeadOfPersonnelFilled
+  satchel: ClothingBackpackSatchelHOPFilled
+  duffelbag: ClothingBackpackDuffelHOPFilled
