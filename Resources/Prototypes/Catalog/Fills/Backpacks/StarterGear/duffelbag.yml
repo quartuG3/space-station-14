@@ -6,7 +6,7 @@
   - type: StorageFill
     contents:
       - id: BoxSurvival
-      
+
 - type: entity
   noSpawn: true
   parent: ClothingBackpackDuffel
@@ -15,8 +15,9 @@
   - type: StorageFill
     contents:
       - id: BoxSurvival
+      - id: Flash
       - id: TelescopicBaton
-      
+
 - type: entity
   noSpawn: true
   parent: ClothingBackpackDuffel
@@ -55,7 +56,7 @@
   - type: StorageFill
     contents:
       - id: BoxSurvivalMedical
-      
+
 - type: entity
   noSpawn: true
   parent: ClothingBackpackDuffelMedical
@@ -64,6 +65,7 @@
   - type: StorageFill
     contents:
       - id: BoxSurvivalMedical
+      - id: Flash
       - id: TelescopicBaton
 
 - type: entity
@@ -74,6 +76,7 @@
   - type: StorageFill
     contents:
       - id: BoxSurvival
+      - id: Flash
       #- name: StationCharter
       - id: TelescopicBaton
 
@@ -86,6 +89,70 @@
     contents:
       - id: BoxSurvivalEngineering
       - id: TelescopicBaton
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackDuffelEngineering
+  id: ClothingBackpackDuffelChiefEngineerFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvivalEngineering
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackDuffelScience
+  id: ClothingBackpackDuffelResearchDirectorFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelHOPFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackDuffelMedical
+  id: ClothingBackpackDuffelCMOFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelQuartermasterFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackDuffelSecurity
+  id: ClothingBackpackDuffelHOSFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Flash
 
 - type: entity
   noSpawn: true

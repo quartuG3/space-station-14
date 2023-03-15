@@ -36,6 +36,7 @@
   - type: StorageFill
     contents:
       - id: BoxSurvivalMedical
+      - id: Flash
       - id: TelescopicBaton
 
 - type: entity
@@ -55,9 +56,10 @@
   - type: StorageFill
     contents:
       - id: BoxSurvival
+      - id: Flash
       #- name: StationCharter
       - id: TelescopicBaton
-      
+
 - type: entity
   noSpawn: true
   parent: ClothingBackpack
@@ -67,7 +69,7 @@
     contents:
       - id: BoxSurvivalMedical
       - id: TelescopicBaton
-      
+
 - type: entity
   noSpawn: true
   parent: ClothingBackpackEngineering
@@ -77,6 +79,70 @@
     contents:
       - id: BoxSurvivalEngineering
       - id: TelescopicBaton
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackEngineering
+  id: ClothingBackpackChiefEngineerFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvivalEngineering
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackScience
+  id: ClothingBackpackResearchDirectorFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpack
+  id: ClothingBackpackHOPFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackMedical
+  id: ClothingBackpackCMOFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpack
+  id: ClothingBackpackQuartermasterFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackSecurity
+  id: ClothingBackpackHOSFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: Flash
 
 - type: entity
   noSpawn: true
@@ -86,7 +152,7 @@
   - type: StorageFill
     contents:
       - id: BoxSurvivalEngineering
-      
+
 - type: entity
   parent: ClothingBackpack
   id: ClothingBackpackHeadOfPersonnelFilled
@@ -95,6 +161,7 @@
   - type: StorageFill
     contents:
       - id: BoxSurvival
+      - id: Flash
       - id: TelescopicBaton
 
 - type: entity
