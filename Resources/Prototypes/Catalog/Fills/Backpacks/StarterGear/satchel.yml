@@ -101,17 +101,6 @@
 
 - type: entity
   noSpawn: true
-  parent: ClothingBackpackSatchelScience
-  id: ClothingBackpackSatchelResearchDirectorFilled
-  components:
-  - type: StorageFill
-    contents:
-      - id: BoxSurvival
-      - id: Flash
-      #- id: TelescopicBaton
-
-- type: entity
-  noSpawn: true
   parent: ClothingBackpackSatchel
   id: ClothingBackpackSatchelHOPFilled
   components:
@@ -170,6 +159,7 @@
   - type: StorageFill
     contents:
       - id: BoxSurvival
+      - id: Flash
       - id: TelescopicBaton
 
 - type: entity
