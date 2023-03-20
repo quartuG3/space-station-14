@@ -1,5 +1,11 @@
+using Content.Shared.Access.Components;
+using Content.Shared.Access.Systems;
 using Content.Shared.Doors.Components;
+using Content.Shared.Doors.Systems;
+using Content.Shared.Emag.Components;
+using Content.Shared.Emag.Systems;
 using Content.Shared.Popups;
+using Content.Shared.MachineLinking.Events;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 
@@ -7,6 +13,7 @@ namespace Content.Shared.Doors.Systems;
 
 public abstract class SharedAirlockSystem : EntitySystem
 {
+    [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
     [Dependency] protected readonly SharedAppearanceSystem Appearance = default!;
     [Dependency] protected readonly SharedContainerSystem _container = default!;
     [Dependency] protected readonly SharedAudioSystem Audio = default!;
@@ -21,6 +28,7 @@ public abstract class SharedAirlockSystem : EntitySystem
         SubscribeLocalEvent<AirlockComponent, ComponentGetState>(OnGetState);
         SubscribeLocalEvent<AirlockComponent, ComponentHandleState>(OnHandleState);
         SubscribeLocalEvent<AirlockComponent, BeforeDoorClosedEvent>(OnBeforeDoorClosed);
+        SubscribeLocalEvent<AirlockComponent, LinkAttemptEvent>(OnLinkAttempt);
     }
 
     private void OnStartup(EntityUid uid, AirlockComponent component, ComponentStartup args)
@@ -47,7 +55,18 @@ public abstract class SharedAirlockSystem : EntitySystem
         if (!airlock.Safety)
             args.PerformCollisionCheck = false;
     }
-
+    
+    private void OnLinkAttempt(EntityUid uid, AirlockComponent component, LinkAttemptEvent args)
+    {
+        if (args.User == null) // AutoLink (and presumably future external linkers) have no user.
+            return;
+        
+        if(!HasComp<EmaggedComponent>(component.BoardContainer.ContainedEntities[0]) && TryComp<AccessReaderComponent>(component.BoardContainer.ContainedEntities[0], out var access))
+        {
+        	if(!_accessReaderSystem.IsAllowed(args.User.Value, access))
+        	    args.Cancel();
+        }
+    }
 
     public void UpdateEmergencyLightStatus(EntityUid uid, AirlockComponent component)
     {

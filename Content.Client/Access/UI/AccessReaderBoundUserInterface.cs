@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Robust.Client.GameObjects;
@@ -19,19 +20,24 @@ namespace Content.Client.Access.UI
         protected override void Open()
         {
             base.Open();
+
             List<string> accessLevels;
+            List<string> denyTags;
 
             if (_entityManager.TryGetComponent<AccessReaderComponent>(Owner.Owner, out var accessreader))
             {
                 accessLevels = accessreader.AccessLevels;
                 accessLevels.Sort();
+                denyTags = accessreader.DenyTags.ToList();
+                denyTags.Sort();
             }
             else
             {
                 accessLevels = new List<string>();
+                denyTags = new List<string>();
             }
 
-            _window = new AccessReaderWindow(this, _prototypeManager, accessLevels) {Title = _entityManager.GetComponent<MetaDataComponent>(Owner.Owner).EntityName};
+            _window = new AccessReaderWindow(this, _prototypeManager, accessLevels, denyTags) {Title = _entityManager.GetComponent<MetaDataComponent>(Owner.Owner).EntityName};
 
             _window.OnClose += Close;
             _window.OpenCentered();
@@ -51,9 +57,9 @@ namespace Content.Client.Access.UI
             _window?.UpdateState(castState);
         }
 
-        public void SubmitData(List<string> newAccessList, bool inverted)
+        public void SubmitData(List<string> newAccessList, List<string> newDenyTags)
         {
-            SendMessage(new WriteToTargetAccessReaderMessage(newAccessList, inverted));
+            SendMessage(new WriteToTargetAccessReaderMessage(newAccessList, newDenyTags));
         }
     }
 }

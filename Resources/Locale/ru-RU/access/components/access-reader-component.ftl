@@ -1,2 +1,2 @@
-acccess-reader-component-inverted-label = Инвертировать доступ
-acccess-reader-component-inverted = Инвертировать
+access-reader-component-access-list = Список доступов
+access-reader-component-deny-tags = Заблокированые теги

@@ -39,12 +39,6 @@ public sealed class AccessReaderComponent : Component
     /// </summary>
     [DataField("accessKeys")]
     public HashSet<StationRecordKey> AccessKeys = new();
-    
-    /// <summary>
-    ///     Inverts access list.
-    /// </summary>
-    [DataField("inverted")]
-    public bool InvertedAccess = false;
 
     [DataField("accessLevels", customTypeSerializer: typeof(PrototypeIdListSerializer<AccessLevelPrototype>))]
     public List<string> AccessLevels = new()

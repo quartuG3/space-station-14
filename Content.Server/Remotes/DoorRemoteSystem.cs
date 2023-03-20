@@ -74,7 +74,7 @@ namespace Content.Server.Remotes
                 return;
             }
 
-            if (TryComp<AccessReaderComponent>(args.Target, out var accessComponent) &&
+            if (TryComp<AccessReaderComponent>(airlockComp.BoardContainer.ContainedEntities[0], out var accessComponent) &&
                 !_doorSystem.HasAccess(args.Target.Value, args.Used, accessComponent))
             {
                 _doorSystem.Deny(args.Target.Value, doorComp, args.User);

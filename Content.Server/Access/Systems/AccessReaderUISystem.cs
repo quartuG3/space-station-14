@@ -26,8 +26,7 @@ namespace Content.Server.Access.Systems;
             if(component.AccessLists.Count > 0)
                 access =  component.AccessLists[0].ToArray<string>();
 
-            AccessReaderBoundUserInterfaceState newState = new(access, component.InvertedAccess);
+            AccessReaderBoundUserInterfaceState newState = new(access, component.DenyTags.ToArray());
             _userInterfaceSystem.TrySetUiState(uid, AccessReaderUiKey.Key, newState);
         }
-        
     }
