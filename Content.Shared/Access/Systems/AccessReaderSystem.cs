@@ -32,12 +32,16 @@ namespace Content.Shared.Access.Systems
 
         private void OnTargetWriteMessage(EntityUid uid, AccessReaderComponent component, WriteToTargetAccessReaderMessage args)
         {
-            component.InvertedAccess = args.Inverted;
             component.AccessLists.Clear();
+            component.DenyTags.Clear();
             //TODO: clean this mess?
             foreach(var substr in args.AccessList.ToArray())
             {
                   component.AccessLists.Add(new HashSet<string> { substr });
+            }
+            foreach(var substr in args.DenyTags.ToArray())
+            {
+                  component.DenyTags.Add(substr);
             }
         }
 
@@ -138,7 +142,7 @@ namespace Content.Shared.Access.Systems
                 return false;
             }
 
-            return reader.AccessLists.Count == 0 || (reader.AccessLists.Any(a => a.IsSubsetOf(accessTags)) ^ reader.InvertedAccess);
+            return reader.AccessLists.Count == 0 || (reader.AccessLists.Any(a => a.IsSubsetOf(accessTags)));
         }
 
         /// <summary>

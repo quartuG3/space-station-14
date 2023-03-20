@@ -19,12 +19,12 @@ namespace Content.Shared.Access.Systems
     public sealed class AccessReaderBoundUserInterfaceState : BoundUserInterfaceState
     {
         public readonly string[]? AccessList;
-        public readonly bool Inverted;
+        public readonly string[]? DenyTags;
 
-        public AccessReaderBoundUserInterfaceState(string[]? accessList,bool inverted)
+        public AccessReaderBoundUserInterfaceState(string[]? accessList, string[]? denyTags)
         {
             AccessList = accessList;
-            Inverted = inverted;
+            DenyTags = denyTags;
         }
     }
 
@@ -32,12 +32,12 @@ namespace Content.Shared.Access.Systems
     public sealed class WriteToTargetAccessReaderMessage : BoundUserInterfaceMessage
     {
         public readonly List<string> AccessList;
-        public readonly bool Inverted;
+        public readonly List<string> DenyTags;
 
-        public WriteToTargetAccessReaderMessage(List<string> accessList, bool inverted)
+        public WriteToTargetAccessReaderMessage(List<string> accessList, List<string> denyTags)
         {
             AccessList = accessList;
-            Inverted = inverted;
+            DenyTags = denyTags;
         }
     }
 }

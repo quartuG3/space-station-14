@@ -21,21 +21,15 @@ namespace Content.Client.Access.UI
         private readonly AccessReaderBoundUserInterface _owner;
 
         private readonly Dictionary<string, Button> _accessButtons = new();
-        private readonly List<string> _jobPrototypeIds = new();
-
-        private string? _lastFullName;
-        private string? _lastJobTitle;
-        private string? _lastJobProto;
+        private readonly Dictionary<string, Button> _denyButtons = new();
 
         public AccessReaderWindow(AccessReaderBoundUserInterface owner, IPrototypeManager prototypeManager,
-            List<string> accessLevels)
+            List<string> accessLevels, List<string> denyTags)
         {
             RobustXamlLoader.Load(this);
             IoCManager.InjectDependencies(this);
 
             _owner = owner;
-
-            InvertedAccessButton.OnPressed += _ => SubmitData();
 
             foreach (var access in accessLevels)
             {
@@ -52,6 +46,23 @@ namespace Content.Client.Access.UI
                 };
                 AccessLevelGrid.AddChild(newButton);
                 _accessButtons.Add(accessLevel.ID, newButton);
+                newButton.OnPressed += _ => SubmitData();
+            }
+            foreach (var access in accessLevels)
+            {
+                if (!prototypeManager.TryIndex<AccessLevelPrototype>(access, out var accessLevel))
+                {
+                    Logger.Error($"Unable to find accesslevel for {access}");
+                    continue;
+                }
+
+                var newButton = new Button
+                {
+                    Text = GetAccessLevelName(accessLevel),
+                    ToggleMode = true,
+                };
+                DenyTagsGrid.AddChild(newButton);
+                _denyButtons.Add(accessLevel.ID, newButton);
                 newButton.OnPressed += _ => SubmitData();
             }
         }
@@ -73,23 +84,33 @@ namespace Content.Client.Access.UI
                     button.Pressed = false;
                 }
             }
+            foreach (var button in _denyButtons.Values)
+            {
+                if (button.Pressed)
+                {
+                    button.Pressed = false;
+                }
+            }
         }
 
         public void UpdateState(AccessReaderBoundUserInterfaceState state)
         {
-            InvertedAccessButton.Pressed = state.Inverted;
-
             foreach (var (accessName, button) in _accessButtons)
             {
                 button.Disabled = false;
                 button.Pressed = state.AccessList?.Contains(accessName) ?? false;
+            }
+            foreach (var (accessName, button) in _denyButtons)
+            {
+                button.Disabled = false;
+                button.Pressed = state.DenyTags?.Contains(accessName) ?? false;
             }
         }
 
         private void SubmitData()
         {
         	// Iterate over the buttons dictionary, filter by `Pressed`, only get key from the key/value pair
-            _owner.SubmitData(_accessButtons.Where(x => x.Value.Pressed).Select(x => x.Key).ToList(), InvertedAccessButton.Pressed);
+            _owner.SubmitData(_accessButtons.Where(x => x.Value.Pressed).Select(x => x.Key).ToList(), _denyButtons.Where(x => x.Value.Pressed).Select(x => x.Key).ToList());
         }
     }
 }
