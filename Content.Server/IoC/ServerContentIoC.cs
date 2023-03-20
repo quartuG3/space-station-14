@@ -2,6 +2,7 @@ using Content.Server.Administration;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Notes;
+using Content.Server.Arumoon.BansNotifications;
 using Content.Server.Afk;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
@@ -31,6 +32,7 @@ namespace Content.Server.IoC
     {
         public static void Register()
         {
+            IoCManager.Register<IBansNotificationsSystem, BansNotificationsSystem>();
             IoCManager.Register<IChatManager, ChatManager>();
             IoCManager.Register<IChatSanitizationManager, ChatSanitizationManager>();
             IoCManager.Register<IMoMMILink, MoMMILink>();

@@ -7,13 +7,17 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text;
 
-namespace Content.Server.Arumoon.BansNotifications;
+namespace Content.Server.Arumoon.BansNotifications {
 
 /// <summary>
 /// Listen game events and send notifications to Discord
 /// </summary>
 
-public sealed class BansNotificationsSystem : EntitySystem {
+public interface IBansNotificationsSystem {
+    void RaiseLocalBanEvent(string username, DateTimeOffset? expires, string reason);
+}
+
+public sealed class BansNotificationsSystem : EntitySystem, IBansNotificationsSystem {
 
     [Dependency] private readonly IConfigurationManager _config = default!;
 
@@ -77,4 +81,5 @@ public sealed class BansNotificationsSystem : EntitySystem {
         {
         }
     }
+}
 }

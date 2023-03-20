@@ -19,7 +19,7 @@ namespace Content.Server.Administration.Commands
     public sealed class BanCommand : LocalizedCommands
     {
         [Dependency] private readonly IConfigurationManager _cfg = default!;
-        [Dependency] private readonly BansNotificationsSystem _arumoonBans = default!;
+        [Dependency] private readonly IBansNotificationsSystem _arumoonBans = default!;
 
         public override string Command => "ban";
 
