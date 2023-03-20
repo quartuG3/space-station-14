@@ -2,6 +2,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using Content.Server.Arumoon.BansNotifications;
 using Content.Server.Construction.Completions;
 using Content.Server.Database;
 using Content.Server.StationEvents;
@@ -15,9 +16,10 @@ using Robust.Shared.Console;
 namespace Content.Server.Administration.Commands
 {
     [AdminCommand(AdminFlags.Ban)]
-    public sealed class BanCommand : EntitySystem, LocalizedCommands
+    public sealed class BanCommand : LocalizedCommands
     {
         [Dependency] private readonly IConfigurationManager _cfg = default!;
+        [Dependency] private readonly BansNotificationsSystem _arumoonBans = default!;
 
         public override string Command => "ban";
 
@@ -114,7 +116,7 @@ namespace Content.Server.Administration.Commands
                 targetPlayer.ConnectedClient.Disconnect(message);
             }
 
-            RaiseLocalEvent(new BanEvent(target, expires, reason));
+            _arumoonBans.RaiseLocalBanEvent(target, expires, reason);
         }
 
         public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)

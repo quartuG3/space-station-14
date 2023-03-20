@@ -7,7 +7,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text;
 
-namespace Content.Server.Asshole.BansNotifications;
+namespace Content.Server.Arumoon.BansNotifications;
 
 /// <summary>
 /// Listen game events and send notifications to Discord
@@ -27,6 +27,11 @@ public sealed class BansNotificationsSystem : EntitySystem {
         SubscribeLocalEvent<BanEvent>(OnBan);
 
         _config.OnValueChanged(CCVars.DiscordBanWebhook, value => _webhookUrl = value, true);
+    }
+
+    public void RaiseLocalBanEvent(string username, DateTimeOffset? expires, string reason)
+    {
+        RaiseLocalEvent(new BanEvent(username, expires, reason));
     }
 
     private async void SendDiscordMessage(WebhookPayload payload)
