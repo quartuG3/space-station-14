@@ -1517,6 +1517,12 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<string> InfoLinksShop =
             CVarDef.Create("infolinks.shop", "", CVar.SERVER | CVar.REPLICATED);
+
+        /// Link to site handling ban appeals. Shown in ban disconnect messages.
+        /// </summary>
+        public static readonly CVarDef<string> InfoLinksAppeal =
+            CVarDef.Create("infolinks.appeal", "", CVar.SERVER | CVar.REPLICATED);
+
         /*
          * CONFIG
          */
