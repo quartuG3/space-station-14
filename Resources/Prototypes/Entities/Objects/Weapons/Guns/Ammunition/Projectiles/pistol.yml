@@ -29,8 +29,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 17
-        Radiation: 2
+        Piercing: 4
+        Radiation: 12
 
 - type: entity
   id: BulletPistolPractice
