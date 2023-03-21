@@ -41,7 +41,7 @@ namespace Content.Server.Doors.Systems
         {
             if (TryComp<AppearanceComponent>(uid, out var appearanceComponent))
             {
-                Appearance.SetData(uid, DoorVisuals.Powered, args.Powered, appearanceComponent);
+                Appearance.SetData(uid, DoorVisuals.Powered, args.Powered);
             }
 
             if (!TryComp(uid, out DoorComponent? door))
