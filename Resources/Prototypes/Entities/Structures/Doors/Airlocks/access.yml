@@ -92,8 +92,8 @@
   id: AirlockExternalLocked
   suffix: External, Locked
   components:
-#  - type: AccessReader
-#    access: [["External"]]
+  - type: AccessReader
+    access: [["External"]]
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsExternal ]
@@ -103,8 +103,8 @@
   id: AirlockExternalCargoLocked
   suffix: External, Cargo, Locked
   components:
-#  - type: AccessReader
-#    access: [["Cargo"]]
+  - type: AccessReader
+    access: [["Cargo"]]
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCargo ]
@@ -125,8 +125,8 @@
   id: AirlockExternalAtmosphericsLocked
   suffix: External, Atmospherics, Locked
   components:
-#  - type: AccessReader
-#    access: [["Atmospherics"]]
+  - type: AccessReader
+    access: [["Atmospherics"]]
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsAtmospherics ]
@@ -442,8 +442,8 @@
   id: AirlockExternalGlassCargoLocked
   suffix: External, Glass, Cargo, Locked
   components:
-#  - type: AccessReader
-#    access: [["Cargo"]]
+  - type: AccessReader
+    access: [["Cargo"]]
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCargo ]
@@ -453,8 +453,8 @@
   id: AirlockExternalGlassEngineeringLocked
   suffix: External, Glass, Engineering, Locked
   components:
-#  - type: AccessReader
-#    access: [["Engineering"]]
+  - type: AccessReader
+    access: [["Engineering"]]
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsEngineering ]
@@ -464,8 +464,8 @@
   id: AirlockExternalGlassAtmosphericsLocked
   suffix: External, Glass, Atmospherics, Locked
   components:
-#  - type: AccessReader
-#    access: [["Atmospherics"]]
+  - type: AccessReader
+    access: [["Atmospherics"]]
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsAtmospherics ]
@@ -994,12 +994,22 @@
   id: AirlockExternalGlassShuttleEmergencyLocked
   suffix: External, Emergency, Glass, Docking, Locked
   components:
-  - type: EmergencyDock
-#    - type: AccessReader
-#      access: [["External"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsExternal ]
+    - type: PriorityDock
+      tag: DockEmergency
+    - type: AccessReader
+      access: [["External"]]
+    - type: EmergencyDock
+    - type: ContainerFill
+      containers:
+        board: [ DoorElectronicsExternal ]
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleArrivals
+  suffix: External, Arrivals, Glass, Docking
+  components:
+    - type: PriorityDock
+      tag: DockArrivals
 
 #HighSecDoors
 - type: entity
