@@ -998,7 +998,6 @@
       tag: DockEmergency
     - type: AccessReader
       access: [["External"]]
-    - type: EmergencyDock
     - type: ContainerFill
       containers:
         board: [ DoorElectronicsExternal ]
