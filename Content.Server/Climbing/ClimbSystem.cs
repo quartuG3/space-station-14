@@ -129,8 +129,8 @@ public sealed class ClimbSystem : SharedClimbSystem
             BreakOnUserMove = true,
             BreakOnDamage = true,
             BreakOnStun = true,
-            RaiseOnUser = user == entityToMove,
-            RaiseOnTarget = user != entityToMove,
+            RaiseOnUser = false,
+            RaiseOnTarget = false,
             RaiseOnUsed = true
         };
 
