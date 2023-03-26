@@ -10,6 +10,7 @@ whitelist-playercount-invalid =
             }
     }
 whitelist-not-whitelisted-rp = Вас нет в вайтлисте. Чтобы попасть в вайтлист, посетите наш Discord.
+whitelist-no-reserve-slot = У вас отсутствует резервный слот. Вы можете его приобрести через донат-магазин перейдя в Discord.
 command-whitelistadd-description = Добавить игрока с указанным юзернеймом в вайтлист.
 command-whitelistadd-help = whitelistadd <username>
 command-whitelistadd-existing = { $username } уже в вайтлисте!
