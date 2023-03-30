@@ -20,7 +20,4 @@ jobs:
         submodules: 'recursive'
 
     - name: Publish changelog
-      run: Tools/actions_changelogs_since_last_run.py
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+      run: echo test
