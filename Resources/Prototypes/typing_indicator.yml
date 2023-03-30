@@ -1,23 +1,83 @@
 ﻿- type: typingIndicator
   id: default
   typingState: default0
+  questionState: default1
+  actionState: default2
+  thinkState: default3
 
 - type: typingIndicator
   id: robot
   typingState: robot0
+  questionState: robot1
+  actionState: robot2
+  thinkState: robot3
+
+- type: typingIndicator
+  id: machine
+  typingState: machine0
+  questionState: machine1
+  actionState: machine2
+  thinkState: machine3
+
+- type: typingIndicator
+  id: syndibot
+  typingState: syndibot0
+  questionState: syndibot1
+  actionState: syndibot2
+  thinkState: syndibot3
 
 - type: typingIndicator
   id: alien
   typingState: alien0
+  questionState: alien1
+  actionState: alien2
+  thinkState: alien3
+
+- type: typingIndicator
+  id: alienroyal
+  typingState: alienroyal0
+  questionState: alienroyal1
+  actionState: alienroyal2
+  thinkState: alienroyal3
 
 - type: typingIndicator
   id: guardian
   typingState: guardian0
+  questionState: guardian1
+  actionState: guardian2
+  thinkState: guardian3
 
 - type: typingIndicator
   id: holo
   typingState: holo0
+  questionState: holo1
+  actionState: holo2
+  thinkState: holo3
+
+- type: typingIndicator
+  id: blob
+  typingState: blob0
+  questionState: blob1
+  actionState: blob2
+  thinkState: blob3
+
+- type: typingIndicator
+  id: slime
+  typingState: slime0
+  questionState: slime1
+  actionState: slime2
+  thinkState: slime3
 
 - type: typingIndicator
   id: lawyer
   typingState: lawyer0
+  questionState: lawyer1
+  actionState: lawyer2
+  thinkState: lawyer3
+
+- type: typingIndicator
+  id: signlang
+  typingState: signlang0
+  questionState: signlang1
+  actionState: signlang2
+  thinkState: signlang3
