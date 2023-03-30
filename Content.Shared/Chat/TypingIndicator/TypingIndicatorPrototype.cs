@@ -18,6 +18,15 @@ public sealed class TypingIndicatorPrototype : IPrototype
     [DataField("typingState", required: true)]
     public string TypingState = default!;
 
+    [DataField("questionState", required: true)]
+    public string QuestionState = default!;
+
+    [DataField("actionState", required: true)]
+    public string ActionState = default!;
+
+    [DataField("thinkState", required: true)]
+    public string ThinkState = default!;
+
     [DataField("offset")]
     public Vector2 Offset = new(0.5f, 0.5f);
 
