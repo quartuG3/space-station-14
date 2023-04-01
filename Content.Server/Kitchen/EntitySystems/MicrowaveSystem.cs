@@ -3,9 +3,6 @@ using Content.Server.Body.Systems;
 using Content.Server.Chemistry.Components.SolutionManager;
 using Content.Server.Chemistry.EntitySystems;
 using Content.Server.Construction;
-using Content.Server.Damage.Systems;
-using Content.Server.Explosion.Components;
-using Content.Server.Explosion.EntitySystems;
 using Content.Server.Hands.Systems;
 using Content.Server.Kitchen.Components;
 using Content.Server.Power.Components;
@@ -23,13 +20,11 @@ using Content.Shared.Kitchen.Components;
 using Content.Shared.Popups;
 using Content.Shared.Power;
 using Content.Shared.Tag;
-using Content.Shared.Throwing;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
-using Robust.Shared.Random;
 
 namespace Content.Server.Kitchen.EntitySystems
 {
@@ -47,8 +42,6 @@ namespace Content.Server.Kitchen.EntitySystems
         [Dependency] private readonly TemperatureSystem _temperature = default!;
         [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
         [Dependency] private readonly HandsSystem _handsSystem = default!;
-        [Dependency] private readonly ExplosionSystem _explosionSystem = default!;
-        [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
 
         public override void Initialize()
         {
@@ -262,30 +255,7 @@ namespace Content.Server.Kitchen.EntitySystems
         {
             component.Broken = true;
             SetAppearance(component, MicrowaveVisualState.Broken);
-
-           if (TryComp<ActiveMicrowaveComponent>(uid, out var activeMicrowareComponent))
-            {
-                if (activeMicrowareComponent.Haywire)
-                {
-                    _audio.PlayPvs(component.FoodDoneSound, component.Owner, AudioParams.Default.WithVolume(-1));
-                    var random = new RobustRandom();
-
-                    // Make it look like the microwave exploded
-                    var machineFrame = Spawn("MachineFrameDestroyed", Transform(uid).Coordinates);
-                    Comp<TransformComponent>(machineFrame).Anchored = false;
-                    _throwingSystem.TryThrow(machineFrame, new Vector2(random.NextFloat()*20-10, random.NextFloat()*20-10), 10);
-
-                    var board = Spawn("MicrowaveMachineCircuitboard", Transform(uid).Coordinates);
-                    _throwingSystem.TryThrow(board, new Vector2(random.NextFloat()*20-10, random.NextFloat()*20-10), 10);
-
-                    _explosionSystem.QueueExplosion(component.Owner, "Default", 5, 0.5f, 10, canCreateVacuum: false);
-
-                    EntityManager.QueueDeleteEntity(uid);
-                }
-            }
-
             RemComp<ActiveMicrowaveComponent>(uid);
-
             _sharedContainer.EmptyContainer(component.Storage);
             UpdateUserInterfaceState(uid, component);
         }
@@ -295,13 +265,7 @@ namespace Content.Server.Kitchen.EntitySystems
             if (!args.Powered)
             {
                 SetAppearance(component, MicrowaveVisualState.Idle);
-
-                if (TryComp<ActiveMicrowaveComponent>(uid, out var activeMicrowareComponent))
-                {
-                    if (!activeMicrowareComponent.Haywire) // haywire microwaves don't need power!  They're *very* haywire.
-                        RemComp<ActiveMicrowaveComponent>(uid);
-                }
-
+                RemComp<ActiveMicrowaveComponent>(uid);
                 _sharedContainer.EmptyContainer(component.Storage);
             }
             UpdateUserInterfaceState(uid, component);
@@ -357,7 +321,6 @@ namespace Content.Server.Kitchen.EntitySystems
 
             var solidsDict = new Dictionary<string, int>();
             var reagentDict = new Dictionary<string, FixedPoint2>();
-            bool beginHaywire = false;
             foreach (var item in component.Storage.ContainedEntities)
             {
                 // special behavior when being microwaved ;)
@@ -375,7 +338,8 @@ namespace Content.Server.Kitchen.EntitySystems
                 {
                     component.Broken = true;
                     SetAppearance(component, MicrowaveVisualState.Broken);
-                    beginHaywire = true;
+                    _audio.PlayPvs(component.ItemBreakSound, uid);
+                    return;
                 }
 
                 if (_tag.HasTag(item, "MicrowaveSelfUnsafe") || _tag.HasTag(item, "Plastic"))
@@ -422,21 +386,6 @@ namespace Content.Server.Kitchen.EntitySystems
             activeComp.CookTimeRemaining = component.CurrentCookTimerTime * component.CookTimeMultiplier;
             activeComp.TotalTime = component.CurrentCookTimerTime; //this doesn't scale so that we can have the "actual" time
             activeComp.PortionedRecipe = portionedRecipe;
-            if (beginHaywire)
-            {
-                activeComp.Haywire = true;
-                activeComp.HaywireTimeRemaining = 2;
-
-                // unanchor from floor so it can fly
-                Comp<TransformComponent>(activeComp.Owner).Anchored = false;
-
-                // Don't explode itself
-                // (Ideally microwave would only be invulnerable to explosions while in haywire mode, but I wasn't sure
-                // how to do this as ExplosionResistanceComponent has access permissions, so I just set it to always be
-                // invulnerable via the yml.)
-                //var explodeResist = AddComp<ExplosionResistanceComponent>(activeComp.Owner);
-                //explodeResist.DamageCoefficient = 0f;
-            }
             UpdateUserInterfaceState(uid, component);
         }
 
@@ -485,45 +434,6 @@ namespace Content.Server.Kitchen.EntitySystems
             base.Update(frameTime);
             foreach (var (active, microwave) in EntityManager.EntityQuery<ActiveMicrowaveComponent, MicrowaveComponent>())
             {
-                // Haywire microwaves bounce around a bit
-                if (active.Haywire)
-                {
-                    active.HaywireTimeRemaining -= frameTime;
-                    if (active.HaywireTimeRemaining < 0)
-                    {
-                        // If interested in using this post-april fools, this might potentially be a way to
-                        // nerf the microwave a bit -- could have a random chance of ending early/continuing
-                        // instead of going until attacked.
-                        bool completeEarly = false;
-
-                        if (completeEarly)
-                        {
-                            /* (Post april fools?)
-                            // Finish haywire mode with a bang
-                            // (Re-use/call code from OnBreak)
-                            */
-                        }
-                        else
-                        {
-                            // not complete, going for another round
-                            _audio.PlayPvs(microwave.ItemBreakSound, microwave.Owner);
-                            _audio.PlayPvs(microwave.StartCookingSound, microwave.Owner);
-
-                            // Small explosion
-                            _explosionSystem.QueueExplosion(microwave.Owner, "Default", 5, 0.5f, 10, canCreateVacuum: false);
-
-                            // Go flying in a random direction
-                            // (Sometimes this happens to be in the direction of a player and that is Very Exciting.)
-                            var random = new RobustRandom();
-                            _throwingSystem.TryThrow(microwave.Owner, new Vector2(random.NextFloat()*20-10, random.NextFloat()*20-10), 10);
-
-                            active.HaywireTimeRemaining = .2f + random.NextFloat() * 4.8f; // Next event in .2~5 sec
-                        }
-                    }
-
-                    continue;
-                }
-
                 //check if there's still cook time left
                 active.CookTimeRemaining -= frameTime;
                 if (active.CookTimeRemaining > 0)
