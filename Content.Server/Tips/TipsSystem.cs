@@ -150,7 +150,7 @@ public sealed class TipsSystem : EntitySystem
             return;
 
         var tip = _random.Pick(tips.Values);
-        var msg = $"Tippy the Clown says:\n\n{tip}";
+        var msg = $"Советчик клоун говорит:\n\n{tip}";
 
         var ev = new ClippyEvent(msg);
         ev.SpeakTime = 1 + tip.Length * 0.05f;

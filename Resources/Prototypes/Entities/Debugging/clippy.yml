@@ -4,7 +4,7 @@
   - type: Sprite
     netsync: false
     noRot: false
-    scale: 4,4
+    scale: 2,2
     layers:
     - sprite: Tips/tippy.rsi
       state: left
@@ -16,7 +16,7 @@
       state: down
       visible: false
       map: [ "speaking" ]
-  # footstep sounds wile waddling onto the screen. 
+  # footstep sounds wile waddling onto the screen.
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepClown
