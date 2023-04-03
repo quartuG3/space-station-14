@@ -16,6 +16,7 @@ public sealed class TypingIndicatorSystem : SharedTypingIndicatorSystem
     private readonly TimeSpan _typingTimeout = TimeSpan.FromSeconds(2);
     private TimeSpan _lastTextChange;
     private TypingIndicatorState State;
+    private bool isChatBoxActive;
 
     public override void Initialize()
     {
@@ -29,17 +30,19 @@ public sealed class TypingIndicatorSystem : SharedTypingIndicatorSystem
         if (!_cfg.GetCVar(CCVars.ChatShowTypingIndicator))
             return;
 
+        isChatBoxActive = true;
+
         // client typed something - show typing indicator
         ClientUpdateTyping(TypingIndicatorState.Thinking);
         _lastTextChange = _time.CurTime;
     }
-    
+
     public void ClientUnFocusChat()
     {
-        // client typed something - show typing indicator
+        isChatBoxActive = false;
+
         ClientUpdateTyping(TypingIndicatorState.None);
     }
-    
 
     public void ClientChangedChatText()
     {
@@ -88,14 +91,17 @@ public sealed class TypingIndicatorSystem : SharedTypingIndicatorSystem
     {
         base.Update(frameTime);
 
-        // check if client didn't changed chat text box for a long time
+        // check if client didn't changed chat text box for a long time and still chatbox is open
         if (State != TypingIndicatorState.None)
         {
             var dif = _time.CurTime - _lastTextChange;
             if (dif > _typingTimeout)
             {
-                // client didn't typed anything for a long time - hide indicator
-                ClientUpdateTyping(TypingIndicatorState.None);
+                if(isChatBoxActive)
+                {
+                    // client didn't typed anything for a long time - change state to thinking
+                    ClientUpdateTyping(TypingIndicatorState.Thinking);
+                }
             }
         }
     }
