@@ -28,7 +28,6 @@
   - Bucket
   - MopItem
   - SprayBottle
-  - BodyBag
 - type: technology
   name: technologies-advanced-cleaning-technology
   id: AdvancedCleaningTechnology
@@ -107,8 +106,6 @@
   unlockedRecipes:
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
-  - HandheldHealthAnalyzer
-  - Implanter
 
 - type: technology
   name: technologies-virology
@@ -121,10 +118,6 @@
   requiredTechnologies:
   - BiologicalTechnology
   unlockedRecipes:
-  - ClothingHandsGlovesLatex
-  - ClothingHandsGlovesNitrile
-  - ClothingMaskSterile
-  - DiseaseSwab
   - VaccinatorMachineCircuitboard
   - DiagnoserMachineCircuitboard
 
@@ -411,6 +404,7 @@
   - SheetPlastic
   - SheetRGlass
   - SheetGlass1
+  - MaterialReclaimerMachineCircuitboard
 
 # Electromagnetic Theory Technology Tree
 

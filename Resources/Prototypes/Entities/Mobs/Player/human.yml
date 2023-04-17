@@ -5,7 +5,6 @@
   id: MobHuman
   components:
   - type: CombatMode
-    disarm: null
   - type: InteractionPopup
     successChance: 1
     interactSuccessString: hugging-success-generic
@@ -64,6 +63,26 @@
 
 - type: entity
   noSpawn: true
+  parent: MobHuman
+  id: MobHumanLoneNuclearOperative
+  name: Lone Operative
+  components:
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NukeOperative
+    - type: Loadout
+      prototype: SyndicateOperativeGearFull
+      prototypes: [SyndicateOperativeGearFull]
+    - type: RandomMetadata
+      nameSegments:
+      - SyndicateNamesPrefix
+      - SyndicateNamesNormal
+    - type: Faction
+      factions:
+      - Syndicate
+
+- type: entity
+  noSpawn: true
   name: Arriving Assistant
   parent: MobHuman
   id: MobHumanArrivingAss
@@ -75,3 +94,26 @@
       rules: You don't know anything about what happened previously on this shift. You are not an antagonist.
     - type: Loadout
       prototypes: [ PassengerGear ]
+
+# Space Ninja
+- type: entity
+  noSpawn: true
+  name: Space Ninja
+  parent: MobHuman
+  id: MobHumanSpaceNinja
+  components:
+  - type: Loadout
+    prototype: SpaceNinjaGear
+    prototypes: [SpaceNinjaGear]
+  - type: Faction
+    factions:
+    - Syndicate
+  - type: Ninja
+  - type: RandomMetadata
+    nameSegments:
+    - names_ninja_title
+    - names_ninja
+  - type: Tag
+    tags:
+    # fight with honor!
+    - GunsDisabled
