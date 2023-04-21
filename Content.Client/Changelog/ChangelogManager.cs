@@ -87,11 +87,11 @@ namespace Content.Client.Changelog
             return result.OrderBy(x => x.Time).ToList();
         }
 
-        private Task<List<ChangelogEntry>> LoadChangelogFile(ResourcePath path)
+        private Task<List<ChangelogEntry>> LoadChangelogFile(ResPath path)
         {
             return Task.Run(() =>
             {
-                var yamlData = _resource.ContentFileReadYaml(path));
+                var yamlData = _resource.ContentFileReadYaml(path);
 
                 if (yamlData.Documents.Count == 0)
                     return new List<ChangelogEntry>();
