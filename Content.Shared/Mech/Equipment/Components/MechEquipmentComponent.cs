@@ -47,6 +47,11 @@ public sealed class GrabberDoAfterEvent : SimpleDoAfterEvent
 }
 
 [Serializable, NetSerializable]
+public sealed class MechDrillDoAfterEvent : SimpleDoAfterEvent
+{
+}
+
+[Serializable, NetSerializable]
 public sealed class InsertEquipmentEvent : SimpleDoAfterEvent
 {
 }
