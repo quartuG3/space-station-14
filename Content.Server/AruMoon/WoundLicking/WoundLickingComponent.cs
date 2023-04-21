@@ -1,5 +1,5 @@
 using System.Threading;
-
+/*
 namespace Content.Server.Felinid
 {
     [RegisterComponent]
@@ -63,3 +63,4 @@ namespace Content.Server.Felinid
         public CancellationTokenSource? CancelToken;
     }
 }
+*/

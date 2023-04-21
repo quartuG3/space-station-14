@@ -17,6 +17,7 @@ using System.Linq;
 
 namespace Content.Server.Felinid
 {
+/*
     /// <summary>
     /// "Lick your or other felinid wounds. Reduce bleeding, but unsanitary and can cause diseases."
     /// </summary>
@@ -115,8 +116,7 @@ namespace Content.Server.Felinid
             {
                 BreakOnTargetMove = true,
                 BreakOnUserMove = true,
-                BreakOnDamage = true,
-                BreakOnStun = true
+                BreakOnDamage = true
             };
 
             _doAfterSystem.DoAfter(doAfterEventArgs, WoundLickData);
@@ -176,4 +176,6 @@ namespace Content.Server.Felinid
     }
 
     public sealed class WoundLickingTargetActionEvent : EntityTargetActionEvent {}
+*/
 }
+

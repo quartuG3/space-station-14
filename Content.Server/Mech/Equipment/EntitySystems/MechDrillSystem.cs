@@ -22,6 +22,7 @@ namespace Content.Server.Mech.Equipment.EntitySystems;
 /// </summary>
 public sealed class MechDrillSystem : EntitySystem
 {
+/*
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly MechSystem _mech = default!;
@@ -68,7 +69,6 @@ public sealed class MechDrillSystem : EntitySystem
         var doAfter = new DoAfterEventArgs(args.User, damageTime, target: component.Owner, used: uid)
         {
             BreakOnDamage = true,
-            BreakOnStun = true,
             BreakOnTargetMove = true,
             BreakOnUserMove = true,
             MovementThreshold = 0.25f
@@ -90,4 +90,5 @@ public sealed class MechDrillSystem : EntitySystem
 
         _mech.UpdateUserInterface(equipmentComponent.EquipmentOwner.Value);
     }
+*/
 }
