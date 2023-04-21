@@ -83,14 +83,6 @@
   - ButchCleaver
   - KitchenKnife
   - MicrowaveMachineCircuitboard
-  - Medkit
-  - MedkitBurn
-  - MedkitToxin
-  - MedkitO2
-  - MedkitBrute
-  - MedkitAdvanced
-  - MedkitRadiation
-  - MedkitCombat
   - ClothingEyesHudMedical
 
 - type: technology
@@ -237,7 +229,7 @@
   unlockedRecipes:
   - WeaponTechFabCircuitboard
   - SecurityTechFabCircuitboard
-  
+
 - type: technology
   name: technologies-ballistic
   id: BallisticTechnology
