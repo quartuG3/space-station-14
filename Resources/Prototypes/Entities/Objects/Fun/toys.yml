@@ -418,7 +418,7 @@
     state: nuketoy
 
 - type: entity
-  parent: BaseFigure
+  parent: BaseFigurine
   id: ToyAssistant
   name: assistant toy
   description: Grey tide world wide!
