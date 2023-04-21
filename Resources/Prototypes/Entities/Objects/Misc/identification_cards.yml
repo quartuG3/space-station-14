@@ -589,7 +589,7 @@
   - type: Item
     heldPrefix: gold
 
-type: entity
+- type: entity
   parent: IDCardStandard
   id: CluwneIDCard
   name: cluwne ID card
