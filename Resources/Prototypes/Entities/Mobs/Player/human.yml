@@ -94,26 +94,3 @@
       rules: You don't know anything about what happened previously on this shift. You are not an antagonist.
     - type: Loadout
       prototypes: [ PassengerGear ]
-
-# Space Ninja
-- type: entity
-  noSpawn: true
-  name: Space Ninja
-  parent: MobHuman
-  id: MobHumanSpaceNinja
-  components:
-  - type: Loadout
-    prototype: SpaceNinjaGear
-    prototypes: [SpaceNinjaGear]
-  - type: Faction
-    factions:
-    - Syndicate
-  - type: Ninja
-  - type: RandomMetadata
-    nameSegments:
-    - names_ninja_title
-    - names_ninja
-  - type: Tag
-    tags:
-    # fight with honor!
-    - GunsDisabled
