@@ -43,7 +43,7 @@ namespace Content.Client.Changelog
             NewChangelogEntries = false;
             NewChangelogEntriesChanged?.Invoke();
 
-            using var sw = _resource.UserData.OpenWriteText(new ResourcePath($"/changelog_last_seen_{_configManager.GetCVar(CCVars.ServerId)}"));
+            using var sw = _resource.UserData.OpenWriteText(new ($"/changelog_last_seen_{_configManager.GetCVar(CCVars.ServerId)}"));
 
             sw.Write(MaxId.ToString());
         }
@@ -60,7 +60,7 @@ namespace Content.Client.Changelog
 
             MaxId = changelog.Max(c => c.Id);
 
-            var path = new ResourcePath($"/changelog_last_seen_{_configManager.GetCVar(CCVars.ServerId)}");
+            var path = new ResPath($"/changelog_last_seen_{_configManager.GetCVar(CCVars.ServerId)}");
             if(_resource.UserData.TryReadAllText(path, out var lastReadIdText))
             {
                 LastReadId = int.Parse(lastReadIdText);
@@ -91,7 +91,7 @@ namespace Content.Client.Changelog
         {
             return Task.Run(() =>
             {
-                var yamlData = _resource.ContentFileReadYaml(path);
+                var yamlData = _resource.ContentFileReadYaml(path));
 
                 if (yamlData.Documents.Count == 0)
                     return new List<ChangelogEntry>();
