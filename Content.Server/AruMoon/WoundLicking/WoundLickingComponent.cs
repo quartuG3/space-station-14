@@ -1,5 +1,5 @@
 using System.Threading;
-/*
+
 namespace Content.Server.Felinid
 {
     [RegisterComponent]
@@ -18,7 +18,7 @@ namespace Content.Server.Felinid
         /// </summary>
         [DataField("maxHeal")]
         [ViewVariables(VVAccess.ReadWrite)]
-        public float MaxHeal { get; set; } = 10f;
+        public float MaxHeal { get; set; } = 15f;
 
         /// <summary>
         /// How long it requires to lick wounds
@@ -63,4 +63,3 @@ namespace Content.Server.Felinid
         public CancellationTokenSource? CancelToken;
     }
 }
-*/
