@@ -14,17 +14,17 @@ using Robust.Shared.Prototypes;
 namespace Content.Client.Access.UI
 {
     [GenerateTypedNameReferences]
-    public sealed partial class AccessReaderWindow : DefaultWindow
+    public sealed partial class AccessStorageWindow : DefaultWindow
     {
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
-        private readonly AccessReaderBoundUserInterface _owner;
+        private readonly AccessStorageBoundUserInterface _owner;
 
         private readonly Dictionary<string, Button> _accessButtons = new();
         private readonly Dictionary<string, Button> _denyButtons = new();
 
-        public AccessReaderWindow(AccessReaderBoundUserInterface owner, IPrototypeManager prototypeManager,
-            List<string> accessLevels, List<string> denyTags)
+        public AccessStorageWindow(AccessStorageBoundUserInterface owner, IPrototypeManager prototypeManager,
+            List<string> accessLevels)
         {
             RobustXamlLoader.Load(this);
             IoCManager.InjectDependencies(this);
@@ -93,7 +93,7 @@ namespace Content.Client.Access.UI
             }
         }
 
-        public void UpdateState(AccessReaderBoundUserInterfaceState state)
+        public void UpdateState(AccessStorageBoundUserInterfaceState state)
         {
             foreach (var (accessName, button) in _accessButtons)
             {
@@ -109,7 +109,7 @@ namespace Content.Client.Access.UI
 
         private void SubmitData()
         {
-        	// Iterate over the buttons dictionary, filter by `Pressed`, only get key from the key/value pair
+            // Iterate over the buttons dictionary, filter by `Pressed`, only get key from the key/value pair
             _owner.SubmitData(_accessButtons.Where(x => x.Value.Pressed).Select(x => x.Key).ToList(), _denyButtons.Where(x => x.Value.Pressed).Select(x => x.Key).ToList());
         }
     }

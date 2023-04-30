@@ -16,17 +16,17 @@ namespace Content.Server.Access.Systems;
         public override void Initialize()
         {
             base.Initialize();
-            SubscribeLocalEvent<AccessReaderComponent, UseInHandEvent>(OnUseInHand);
+            SubscribeLocalEvent<AccessStorageComponent, UseInHandEvent>(OnUseInHand);
         }
 
-        private void OnUseInHand(EntityUid uid, AccessReaderComponent component, UseInHandEvent args)
+        private void OnUseInHand(EntityUid uid, AccessStorageComponent component, UseInHandEvent args)
         {
             string [] access = {""};
 
             if(component.AccessLists.Count > 0)
                 access =  component.AccessLists[0].ToArray<string>();
 
-            AccessReaderBoundUserInterfaceState newState = new(access, component.DenyTags.ToArray());
-            _userInterfaceSystem.TrySetUiState(uid, AccessReaderUiKey.Key, newState);
+            AccessStorageBoundUserInterfaceState newState = new(access, component.DenyTags.ToArray());
+            _userInterfaceSystem.TrySetUiState(uid, AccessStorageUiKey.Key, newState);
         }
     }

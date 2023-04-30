@@ -469,7 +469,7 @@ public abstract class SharedDoorSystem : EntitySystem
     #endregion
 
     #region Access
-    public virtual bool HasAccess(EntityUid uid, EntityUid? user = null, AccessReaderComponent? access = null)
+    public virtual bool HasAccess(EntityUid uid, EntityUid? user = null, AccessReaderBoardComponent? access = null, AccessStorageComponent? storage = null)
     {
         // TODO network AccessComponent for predicting doors
 

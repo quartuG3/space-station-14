@@ -9,12 +9,14 @@ using Robust.Shared.Prototypes;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.MachineLinking.Events;
 using Content.Shared.StationRecords;
+using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Access.Systems
 {
-    public sealed class AccessReaderSystem : EntitySystem
+    public sealed class AccessReaderBoardSystem : EntitySystem
     {
+        [Dependency] protected readonly SharedContainerSystem _container = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly InventorySystem _inventorySystem = default!;
         [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
@@ -22,56 +24,76 @@ namespace Content.Shared.Access.Systems
         public override void Initialize()
         {
             base.Initialize();
-            SubscribeLocalEvent<AccessReaderComponent, ComponentInit>(OnInit);
-            SubscribeLocalEvent<AccessReaderComponent, GotEmaggedEvent>(OnEmagged);
-            SubscribeLocalEvent<AccessReaderComponent, LinkAttemptEvent>(OnLinkAttempt);
-//            SubscribeLocalEvent<AccessReaderComponent, WriteToTargetAccessReaderMessage>(OnTargetWriteMessage);
-            SubscribeLocalEvent<AccessReaderComponent, ComponentGetState>(OnGetState);
-            SubscribeLocalEvent<AccessReaderComponent, ComponentHandleState>(OnHandleState);
+            SubscribeLocalEvent<AccessReaderBoardComponent, ComponentInit>(OnInit);
+            SubscribeLocalEvent<AccessReaderBoardComponent, GotEmaggedEvent>(OnEmagged);
+            SubscribeLocalEvent<AccessReaderBoardComponent, LinkAttemptEvent>(OnLinkAttempt);
+            SubscribeLocalEvent<AccessStorageComponent, WriteToTargetAccessStorageMessage>(OnTargetWriteMessage);
+            SubscribeLocalEvent<AccessReaderBoardComponent, ComponentGetState>(OnGetState);
+            SubscribeLocalEvent<AccessReaderBoardComponent, ComponentHandleState>(OnHandleState);
+            SubscribeLocalEvent<AccessStorageComponent, ComponentGetState>(OnGetStateStorage);
+            SubscribeLocalEvent<AccessStorageComponent, ComponentHandleState>(OnHandleStateStorage);
         }
-/*
-        private void OnTargetWriteMessage(EntityUid uid, AccessReaderComponent component, WriteToTargetAccessReaderMessage args)
+
+        private void OnTargetWriteMessage(EntityUid uid, AccessStorageComponent component, WriteToTargetAccessStorageMessage args)
         {
             component.AccessLists.Clear();
             component.DenyTags.Clear();
+            //FIXME: Half broken
             //TODO: clean this mess?
             foreach(var substr in args.AccessList.ToArray())
             {
                   component.AccessLists.Add(new HashSet<string> { substr });
             }
+
             foreach(var substr in args.DenyTags.ToArray())
             {
                   component.DenyTags.Add(substr);
             }
         }
-*/
-        private void OnGetState(EntityUid uid, AccessReaderComponent component, ref ComponentGetState args)
+
+        private void OnGetState(EntityUid uid, AccessReaderBoardComponent component, ref ComponentGetState args)
         {
-            args.State = new AccessReaderComponentState(component.Enabled, component.DenyTags, component.AccessLists,
+            args.State = new AccessReaderBoardComponentState(component.Enabled);
+        }
+
+        private void OnHandleState(EntityUid uid, AccessReaderBoardComponent component, ref ComponentHandleState args)
+        {
+            if (args.Current is not AccessReaderBoardComponentState state)
+                return;
+            component.Enabled = state.Enabled;
+        }
+
+        private void OnGetStateStorage(EntityUid uid, AccessStorageComponent component, ref ComponentGetState args)
+        {
+            args.State = new AccessStorageComponentState(component.DenyTags, component.AccessLists,
                 component.AccessKeys);
         }
 
-        private void OnHandleState(EntityUid uid, AccessReaderComponent component, ref ComponentHandleState args)
+        private void OnHandleStateStorage(EntityUid uid, AccessStorageComponent component, ref ComponentHandleState args)
         {
-            if (args.Current is not AccessReaderComponentState state)
+            if (args.Current is not AccessStorageComponentState state)
                 return;
-            component.Enabled = state.Enabled;
             component.AccessKeys = new (state.AccessKeys);
             component.AccessLists = new (state.AccessLists);
             component.DenyTags = new (state.DenyTags);
         }
 
-        private void OnLinkAttempt(EntityUid uid, AccessReaderComponent component, LinkAttemptEvent args)
+        private void OnLinkAttempt(EntityUid uid, AccessReaderBoardComponent component, LinkAttemptEvent args)
         {
             if (args.User == null) // AutoLink (and presumably future external linkers) have no user.
                 return;
-            if (!HasComp<EmaggedComponent>(uid) && !IsAllowed(args.User.Value, component))
+            if (!HasComp<EmaggedComponent>(uid) && !IsAllowed(args.User.Value, uid))
                 args.Cancel();
         }
 
-        private void OnInit(EntityUid uid, AccessReaderComponent reader, ComponentInit args)
+        private void OnInit(EntityUid uid, AccessReaderBoardComponent component, ComponentInit args)
         {
-            var allTags = reader.AccessLists.SelectMany(c => c).Union(reader.DenyTags);
+            component.BoardContainer = _container.EnsureContainer<Container>(uid, component.BoardContainerId);
+        }
+        
+        private void OnStorageInit(EntityUid uid, AccessStorageComponent storage, ComponentInit args)
+        {
+            var allTags = storage.AccessLists.SelectMany(c => c).Union(storage.DenyTags);
             foreach (var level in allTags)
             {
                 if (!_prototypeManager.HasIndex<AccessLevelPrototype>(level))
@@ -81,9 +103,10 @@ namespace Content.Shared.Access.Systems
             }
         }
 
-        private void OnEmagged(EntityUid uid, AccessReaderComponent reader, ref GotEmaggedEvent args)
+        private void OnEmagged(EntityUid uid, AccessReaderBoardComponent reader, ref GotEmaggedEvent args)
         {
             args.Handled = true;
+            EnsureComp<EmaggedComponent>(reader.BoardContainer.ContainedEntities[0]);
             reader.Enabled = false;
             Dirty(reader);
         }
@@ -95,11 +118,15 @@ namespace Content.Shared.Access.Systems
         /// <param name="source">The entity that wants access.</param>
         /// <param name="target">The entity to search for an access reader</param>
         /// <param name="reader">Optional reader from the target entity</param>
-        public bool IsAllowed(EntityUid source, EntityUid target, AccessReaderComponent? reader = null)
+        public bool IsAllowed(EntityUid source, EntityUid target, AccessReaderBoardComponent? reader = null, AccessStorageComponent? storage = null)
         {
             if (!Resolve(target, ref reader, false))
                 return true;
-            return IsAllowed(source, reader);
+            if (!Resolve(reader.BoardContainer.ContainedEntities[0], ref storage, false))
+                return true;
+            if (HasComp<EmaggedComponent>(reader.BoardContainer.ContainedEntities[0]))
+                return true;
+            return IsAllowed(source, reader, storage);
         }
 
         /// <summary>
@@ -108,7 +135,7 @@ namespace Content.Shared.Access.Systems
         /// </summary>
         /// <param name="entity">The entity that wants access.</param>
         /// <param name="reader">A reader from a different entity</param>
-        public bool IsAllowed(EntityUid entity, AccessReaderComponent reader)
+        public bool IsAllowed(EntityUid entity, AccessReaderBoardComponent reader, AccessStorageComponent storage)
         {
             var allEnts = FindPotentialAccessItems(entity);
 
@@ -116,10 +143,10 @@ namespace Content.Shared.Access.Systems
             if (!reader.Enabled)
                 return true;
 
-            if (AreAccessTagsAllowed(FindAccessTags(entity, allEnts), reader))
+            if (AreAccessTagsAllowed(FindAccessTags(entity, allEnts), storage))
                 return true;
 
-            if (AreStationRecordKeysAllowed(FindStationRecordKeys(entity, allEnts), reader))
+            if (AreStationRecordKeysAllowed(FindStationRecordKeys(entity, allEnts), storage))
                 return true;
 
             return false;
@@ -130,9 +157,9 @@ namespace Content.Shared.Access.Systems
         /// </summary>
         /// <param name="accessTags">A list of access tags</param>
         /// <param name="reader">An access reader to check against</param>
-        public bool AreAccessTagsAllowed(ICollection<string> accessTags, AccessReaderComponent reader)
+        public bool AreAccessTagsAllowed(ICollection<string> accessTags, AccessStorageComponent storage)
         {
-            if (reader.DenyTags.Overlaps(accessTags))
+            if (storage.DenyTags.Overlaps(accessTags))
             {
                 // Sec owned by cargo.
 
@@ -142,15 +169,15 @@ namespace Content.Shared.Access.Systems
                 return false;
             }
 
-            return reader.AccessLists.Count == 0 || (reader.AccessLists.Any(a => a.IsSubsetOf(accessTags)));
+            return storage.AccessLists.Count == 0 || (storage.AccessLists.Any(a => a.IsSubsetOf(accessTags)));
         }
 
         /// <summary>
         /// Compares the given stationrecordkeys with the accessreader to see if it is allowed.
         /// </summary>
-        public bool AreStationRecordKeysAllowed(ICollection<StationRecordKey> keys, AccessReaderComponent reader)
+        public bool AreStationRecordKeysAllowed(ICollection<StationRecordKey> keys, AccessStorageComponent storage)
         {
-            return keys.Any() && reader.AccessKeys.Any(keys.Contains);
+            return keys.Any() && storage.AccessKeys.Any(keys.Contains);
         }
 
         /// <summary>

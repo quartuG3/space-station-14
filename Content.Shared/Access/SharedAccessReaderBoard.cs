@@ -7,7 +7,7 @@ namespace Content.Shared.Access.Systems
     /// Useful when there are multiple UI for an object. Here it's future-proofing only.
     /// </summary>
     [Serializable, NetSerializable]
-    public enum AccessReaderUiKey : byte
+    public enum AccessStorageUiKey : byte
     {
         Key,
     }
@@ -16,12 +16,12 @@ namespace Content.Shared.Access.Systems
     /// Represents an <see cref="AgentIDCardComponent"/> state that can be sent to the client
     /// </summary>
     [Serializable, NetSerializable]
-    public sealed class AccessReaderBoundUserInterfaceState : BoundUserInterfaceState
+    public sealed class AccessStorageBoundUserInterfaceState : BoundUserInterfaceState
     {
         public readonly string[]? AccessList;
         public readonly string[]? DenyTags;
 
-        public AccessReaderBoundUserInterfaceState(string[]? accessList, string[]? denyTags)
+        public AccessStorageBoundUserInterfaceState(string[]? accessList, string[]? denyTags)
         {
             AccessList = accessList;
             DenyTags = denyTags;
@@ -29,12 +29,12 @@ namespace Content.Shared.Access.Systems
     }
 
     [Serializable, NetSerializable]
-    public sealed class WriteToTargetAccessReaderMessage : BoundUserInterfaceMessage
+    public sealed class WriteToTargetAccessStorageMessage : BoundUserInterfaceMessage
     {
         public readonly List<string> AccessList;
         public readonly List<string> DenyTags;
 
-        public WriteToTargetAccessReaderMessage(List<string> accessList, List<string> denyTags)
+        public WriteToTargetAccessStorageMessage(List<string> accessList, List<string> denyTags)
         {
             AccessList = accessList;
             DenyTags = denyTags;
