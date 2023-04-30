@@ -81088,7 +81088,6 @@ entities:
     - 9837
     - 9836
     - 9847
-    - invalid
     - 9842
     - 5238
     - 10590
@@ -81108,7 +81107,6 @@ entities:
     - 9837
     - 9836
     - 9847
-    - invalid
     - 8528
     - 8523
     - 8524
@@ -81222,7 +81220,6 @@ entities:
     parent: 1
     type: Transform
   - devices:
-    - invalid
     - 9887
     - 9880
     - 9885
@@ -81327,7 +81324,6 @@ entities:
     parent: 1
     type: Transform
   - devices:
-    - invalid
     - 9887
     - 9880
     - 9885
