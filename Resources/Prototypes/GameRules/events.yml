@@ -183,7 +183,9 @@
       path: /Audio/Announcements/meteors_end.ogg
       params:
         volume: -4
+    duration: null #ending is handled by MeteorSwarmSmallRule
     startAfter: 30
+  - type: MeteorSwarmSmallRule
 
 - type: entity
   id: MouseMigration
