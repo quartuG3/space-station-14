@@ -42,8 +42,6 @@
       requirements:
         MatterBin: 1
         Manipulator: 1
-        Laser: 1
-        ScanningModule: 1
 - type: entity
   id: WeaponTechFabCircuitboard
   parent: BaseMachineCircuitboard
@@ -57,8 +55,6 @@
       requirements:
         MatterBin: 2
         Manipulator: 2
-        Laser: 2
-        ScanningModule: 2
 - type: entity
   id: MedicalTechFabCircuitboard
   parent: BaseMachineCircuitboard
