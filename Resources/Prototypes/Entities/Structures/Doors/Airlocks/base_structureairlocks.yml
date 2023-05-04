@@ -118,5 +118,6 @@
     group: Standard
   - type: StaticPrice
     price: 150
+  - type: AccessReaderBoard
   placement:
     mode: SnapgridCenter

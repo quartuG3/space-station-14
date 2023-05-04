@@ -127,6 +127,7 @@
     - board
   - type: StaticPrice
     price: 100
+  - type: AccessReaderBoard
 
 - type: entity
   id: BaseSecureWindoor
