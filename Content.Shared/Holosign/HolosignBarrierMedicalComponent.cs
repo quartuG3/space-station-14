@@ -1,9 +1,10 @@
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+using Robust.Shared.GameStates;
 
-namespace Content.Server.Holosign
+namespace Content.Shared.Holosign
 {
-    [RegisterComponent]
+    [RegisterComponent, NetworkedComponent]
     public sealed class HolosignBarrierMedicalComponent : Component
     {
         /// <summary>
