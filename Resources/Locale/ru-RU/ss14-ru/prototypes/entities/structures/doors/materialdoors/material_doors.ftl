@@ -19,3 +19,6 @@ ent-GoldDoor = золотая дверь
 ent-SilverDoor = серебряная дверь
     .desc = Дверь, куда она ведет?
     .suffix = { "" }
+ent-BananiumDoor = бананиумовая дверь
+    .desc = Дверь, куда она ведет?
+    .suffix = { "" }
