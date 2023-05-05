@@ -1,0 +1,12 @@
+ent-DefibrillatorCabinet = шкаф для дефибриллятора
+    .desc = Небольшой настенный шкаф, предназначенный для хранения дефибриллятора.
+    .suffix = { "" }
+ent-DefibrillatorCabinetOpen = { ent-DefibrillatorCabinet }
+    .suffix = Открытый
+    .desc = { ent-DefibrillatorCabinet.desc }
+ent-DefibrillatorCabinetFilled = { ent-DefibrillatorCabinet }
+    .suffix = Наполненный
+    .desc = { ent-DefibrillatorCabinet.desc }
+ent-DefibrillatorCabinetFilledOpen = { ent-DefibrillatorCabinetFilled }
+    .suffix = Наполненный, Открытый
+    .desc = { ent-DefibrillatorCabinetFilled.desc }

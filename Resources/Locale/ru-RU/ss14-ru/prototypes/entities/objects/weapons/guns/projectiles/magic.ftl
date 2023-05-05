@@ -22,3 +22,6 @@ ent-BulletInstakillMagic = волшебный свинцовый цилиндр
 ent-ProjectilePolyboltCluwne = полиболт клувна
     .desc = кноХ КноХ!
     .suffix = { "" }
+ent-ProjectileIcicle = Сосулька
+    .desc = Бр-р-р.
+    .suffix = { "" }
