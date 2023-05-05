@@ -73,7 +73,7 @@ namespace Content.MapRenderer.Painters
 
             foreach (var entity in _sEntityManager.GetEntities())
             {
-                if (!_sEntityManager.HasComponent<SpriteComponent>(entity))
+                if (!_cEntityManager.HasComponent<SpriteComponent>(entity))
                 {
                     continue;
                 }
