@@ -13,11 +13,6 @@
   copyright: "Midnight by Nomyn"
   source: "https://www.toneden.io/nomyn/post/nomyn-midnight"
 
-- files: ["neutral03.ogg"]
-  license: "Custom"
-  copyright: "Lobotomy Corporation OST - Neutral 03. There is no any license found for that music or other content of this game"
-  source: "https://store.steampowered.com/app/568220"
-
 - files: ["we-are-finally-landing.ogg"]
   license: "CC-BY-3.0"
   copyright: "We're finally landing by HOME"
@@ -37,11 +32,6 @@
   license: "CC-BY-3.0"
   copyright: "Insomnia by Nomyn"
   source: "https://www.toneden.io/nomyn/post/nomyn-insomnia"
-
-- files: ["мы-улетим.ogg"]
-  license: "Custom"
-  copyright: "Песня Мы улетим из Космические рейнджеры 2 от Василий Шестовец и Ксения Ларионова. Лицензия для этой песни была не найдена или отсутствует"
-  source: "https://www.youtube.com/watch?v=CwlB5P-rMGc"
 
 - files: ["clown.ogg"]
   license: "Custom"
