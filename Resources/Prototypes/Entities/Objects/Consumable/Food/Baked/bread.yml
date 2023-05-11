@@ -519,7 +519,7 @@
 - type: entity
   name: butter dog
   parent: FoodBreadBase
-  id: FoodButterDog
+  id: FoodBreadButterDog
   description: A very strange hot... butter dog?!
   components:
   - type: FlavorProfile
