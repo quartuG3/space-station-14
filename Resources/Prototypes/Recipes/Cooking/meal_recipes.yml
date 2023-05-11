@@ -367,7 +367,7 @@
 - type: microwaveMealRecipe
   id: RecipeButterDog
   name: butter dog recipe
-  result: FoodButterDog
+  result: FoodBreadButterDog
   time: 10
   solids:
     FoodBreadPlain: 1
