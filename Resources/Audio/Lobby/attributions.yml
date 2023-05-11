@@ -68,20 +68,10 @@
   copyright: "every light is blinking at once by Alexander Divine."
   source: "https://soundcloud.com/alexanderdivine/every-light-is-blinking-at-once"
 
-- files: ["midnight.ogg"]
-  license: "CC-BY-3.0"
-  copyright: "Midnight by Nomyn"
-  source: "https://www.toneden.io/nomyn/post/nomyn-midnight"
-
 - files: ["we-are-finally-landing.ogg"]
   license: "CC-BY-3.0"
   copyright: "We're finally landing by HOME"
   source: "https://soundcloud.com/home-2001/home-before-the-night-01-were"
-
-- files: ["cascade.ogg"]
-  license: "CC-BY-SA-3.0"
-  copyright: "Cascade by Kubbi"
-  source: "https://kubbi.bandcamp.com/album/ember"
 
 - files: ["shitsuboo-shita.ogg"]
   license: "CC-BY-3.0"
@@ -95,23 +85,13 @@
 
 - files: ["clown.ogg"]
   license: "Custom"
-  copyright: "Clown taken from tgstation, that was created specially for April Fools"
+  copyright: "Clown taken from tgstation, that was modified specially for April Fools from title2.ogg"
   source: "https://github.com/tgstation/tgstation/commit/5dbd2d49a6e2c38e446db5e3051df2d0addc1390"
-
-- files: ["aurora_caelus.ogg"]
-  license: "CC-BY-3.0"
-  copyright: "Music for Manatees by Kevin MacLeod. Taken from tgstation Aurora Caelus event"
-  source: "https://github.com/tgstation/tgstation/commit/4a6e0c6b00a6e7a172637d93039ec9bef23caa5b"
 
 - files: ["lightness.ogg"]
   license: "CC-BY-3.0"
   copyright: "Lightness by Nomyn"
   source: "https://soundcloud.com/nomyn/lightness"
-
-- files: ["stellar.ogg"]
-  license: "CC-BY-3.0"
-  copyright: "Stellar by Nomyn"
-  source: "https://soundcloud.com/nomyn/stellar"
 
 - files: ["родина.ogg"]
   license: "CC-BY-3.0"
