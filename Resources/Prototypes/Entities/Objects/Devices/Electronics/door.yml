@@ -307,3 +307,19 @@
   components:
   - type: AccessStorage
     access: [["Chemistry"]]
+
+- type: entity
+  id: DoorElectronicsSyndicate
+  parent: DoorElectronics
+  suffix: Syndicate
+  components:
+  - type: AccessStorage
+    access: [["Syndicate"]]
+
+- type: entity
+  id: DoorElectronicsSyndicateCommand
+  parent: DoorElectronics
+  suffix: SyndicateCommand
+  components:
+  - type: AccessStorage
+    access: [["NuclearOperative"]]
