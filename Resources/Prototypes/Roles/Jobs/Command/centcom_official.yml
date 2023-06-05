@@ -23,6 +23,6 @@
     gloves: ClothingHandsGlovesColorBlack
     outerClothing: ClothingOuterVestKevlar
     id: CentcomPDA
-    ears: ClothingHeadsetAltCentCom
+    ears: ClothingHeadsetAltCommand
     pocket1: RubberStampCentcom
     pocket2: BoxFolderBlue
