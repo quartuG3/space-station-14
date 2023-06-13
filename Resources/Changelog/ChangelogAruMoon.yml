@@ -614,3 +614,11 @@ Entries:
     type: Tweak
   id: 52
   time: '2023-06-05T10:43:43.0000000+00:00'
+- author: MilenVolf
+  changes:
+  - message: "\u041E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0430 \u043A\u0430\u0440\
+      \u0442\u0430 Meta Station \u043F\u043E\u0434 TG-\u0432\u0435\u0440\u0441\u0438\
+      \u044E"
+    type: Fix
+  id: 53
+  time: '2023-06-13T08:02:55.0000000+00:00'
