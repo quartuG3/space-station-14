@@ -147,3 +147,4 @@
       radius: 3
       color: red
     - type: Climbable
+    - type: Clickable
