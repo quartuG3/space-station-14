@@ -1,5 +1,4 @@
 using Content.Server.AlertLevel;
-using Content.Shared.AlertLevel;
 using Content.Server.CartridgeLoader;
 using Content.Server.DeviceNetwork.Components;
 using Content.Server.Instruments;
@@ -13,6 +12,7 @@ using Content.Shared.PDA;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using Content.Shared.Light.Component;
+using Content.Shared.AlertLevel;
 
 namespace Content.Server.PDA
 {

@@ -72,38 +72,22 @@
 
 - type: entity
   id: HolosignEngineering
+  parent: HolosignWetFloor
   name: holobarrier
   description: A short holographic barrier which can only be passed by walking.
-  placement:
-    mode: SnapgridCenter
-    snap:
-      - Wall
   components:
-    - type: MeleeSound
-      soundGroups:
-        Brute:
-          path:
-            "/Audio/Weapons/egloves.ogg"
-        Burn:
-          path:
-            "/Audio/Weapons/egloves.ogg"
     - type: Sprite
       sprite: Structures/Holo/engi.rsi
       state: icon
-      drawdepth: Overdoors
       netsync: false
-    - type: Transform
-      anchored: true
-    - type: Physics
     - type: Fixtures
       fixtures:
-      - hard: false
-        density: 7
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.5,-0.5,0.5,0.5"
-        layer:
-        - MidImpassable
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          layer:
+            - MidImpassable
     - type: AtmosExposed
     - type: SlowContacts
       walkSpeedModifier: 1
@@ -122,7 +106,7 @@
 
 - type: entity
   id: HolosignSecurity
-  parent: HolosignEngineering
+  parent: HolosignWetFloor
   name: holobarrier
   description: A short holographic barrier which can only be passed by walking.
   components:

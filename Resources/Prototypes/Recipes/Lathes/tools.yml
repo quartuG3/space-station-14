@@ -159,15 +159,6 @@
     Steel: 50
 
 - type: latheRecipe
-  id: Holoprojector
-  result: Holoprojector
-  completetime: 8
-  materials:
-    Steel: 300
-    Glass: 200
-    Plastic: 150
-
-- type: latheRecipe
   id: HoloprojectorEngineering
   result: HoloprojectorEngineering
   completetime: 8
