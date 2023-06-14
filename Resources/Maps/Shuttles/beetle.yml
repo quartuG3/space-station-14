@@ -1,7 +1,5 @@
 meta:
-  format: 4
-  name: DemoStation
-  author: Space-Wizards
+  format: 5
   postmapinit: false
 tilemap:
   0: Space
@@ -349,96 +347,134 @@ entities:
     - pos: -0.5,3.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 19
     components:
     - pos: -0.5,2.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 20
     components:
     - pos: -0.5,1.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 21
     components:
     - pos: -0.5,-0.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 22
     components:
     - pos: -0.5,-1.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 23
     components:
     - pos: 0.5,3.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 24
     components:
     - pos: 0.5,2.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 25
     components:
     - pos: 0.5,1.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 26
     components:
     - pos: 0.5,-0.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 27
     components:
     - pos: 0.5,-1.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 28
     components:
     - pos: 1.5,1.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 29
     components:
     - pos: -0.5,-2.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 30
     components:
     - pos: 0.5,-2.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 31
     components:
     - pos: -1.5,-0.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 32
     components:
     - pos: -1.5,0.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 33
     components:
     - pos: 1.5,0.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 34
     components:
     - pos: 1.5,-0.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 35
     components:
     - pos: -1.5,1.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 36
     components:
     - pos: -0.5,-3.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 37
     components:
     - pos: -1.5,-3.5
@@ -446,6 +482,8 @@ entities:
       type: Transform
     - enabled: True
       type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
 - proto: CableHV
   entities:
   - uid: 38
@@ -453,11 +491,15 @@ entities:
     - pos: 0.5,3.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 39
     components:
     - pos: 0.5,2.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 40
     components:
     - pos: 1.5,3.5
@@ -465,16 +507,22 @@ entities:
       type: Transform
     - enabled: True
       type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
   - uid: 41
     components:
     - pos: 0.5,-3.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 42
     components:
     - pos: 0.5,-2.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 43
     components:
     - pos: 1.5,-3.5
@@ -482,31 +530,43 @@ entities:
       type: Transform
     - enabled: True
       type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
   - uid: 44
     components:
     - pos: -0.5,3.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 45
     components:
     - pos: 0.5,-1.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 46
     components:
     - pos: 0.5,0.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 47
     components:
     - pos: 0.5,-0.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 48
     components:
     - pos: 0.5,1.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 49
     components:
     - pos: -1.5,3.5
@@ -514,6 +574,8 @@ entities:
       type: Transform
     - enabled: True
       type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
 - proto: CableMV
   entities:
   - uid: 50
@@ -523,11 +585,15 @@ entities:
       type: Transform
     - enabled: True
       type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
   - uid: 51
     components:
     - pos: 0.5,-3.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
   - uid: 52
     components:
     - pos: -1.5,-3.5
@@ -535,11 +601,15 @@ entities:
       type: Transform
     - enabled: True
       type: AmbientSound
+    - fixtures: {}
+      type: Fixtures
   - uid: 53
     components:
     - pos: -0.5,-3.5
       parent: 1
       type: Transform
+    - fixtures: {}
+      type: Fixtures
 - proto: ChairPilotSeat
   entities:
   - uid: 54
@@ -548,32 +618,24 @@ entities:
       pos: -0.5,2.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
   - uid: 55
     components:
     - rot: 3.141592653589793 rad
       pos: 0.5,2.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
   - uid: 56
     components:
     - rot: 3.141592653589793 rad
       pos: -0.5,1.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
   - uid: 57
     components:
     - rot: 3.141592653589793 rad
       pos: 0.5,1.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
 - proto: ClothingMaskGas
   entities:
   - uid: 58
@@ -617,8 +679,6 @@ entities:
       pos: 0.5,1.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
 - proto: GasPipeStraight
   entities:
   - uid: 64
@@ -627,8 +687,6 @@ entities:
       pos: -0.5,0.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
 - proto: GasPipeTJunction
   entities:
   - uid: 65
@@ -636,8 +694,6 @@ entities:
     - pos: -0.5,1.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
 - proto: GasPort
   entities:
   - uid: 66
@@ -646,8 +702,6 @@ entities:
       pos: -1.5,1.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
 - proto: GasVentPump
   entities:
   - uid: 67
@@ -656,15 +710,15 @@ entities:
       pos: -0.5,-0.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
+    - enabled: False
+      type: AmbientSound
   - uid: 68
     components:
     - pos: 0.5,2.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
+    - enabled: False
+      type: AmbientSound
 - proto: GeneratorWallmountAPU
   entities:
   - uid: 69
@@ -705,8 +759,6 @@ entities:
     - pos: -1.5,-1.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
 - proto: LockerWallMedical
   entities:
   - uid: 125
@@ -717,7 +769,9 @@ entities:
       pos: -2.5,1.5
       parent: 1
       type: Transform
-    - access: [["Medical"], ["Salvage"]]
+    - access:
+      - - Medical
+      - - Salvage
       type: AccessReader
     - air:
         volume: 200
@@ -861,46 +915,34 @@ entities:
       pos: 2.5,-4.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
   - uid: 84
     components:
     - rot: 3.141592653589793 rad
       pos: -2.5,-4.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
   - uid: 85
     components:
     - rot: 1.5707963267948966 rad
       pos: -2.5,-2.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
   - uid: 86
     components:
     - rot: -1.5707963267948966 rad
       pos: 2.5,-2.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
   - uid: 87
     components:
     - pos: 2.5,4.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
   - uid: 88
     components:
     - pos: -2.5,4.5
       parent: 1
       type: Transform
-    - bodyType: Static
-      type: Physics
 - proto: ToolboxEmergencyFilled
   entities:
   - uid: 89
