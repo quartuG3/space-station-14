@@ -1,6 +1,9 @@
 ent-WardrobePrisonFilled = { ent-WardrobePrison }
     .desc = Содержит коллекцию красивой оранжевой одежды для людей, наслаждающихся пребыванием в бриге.
     .suffix = Заполненный
+ent-WardrobeRoboticsFilled = { ent-WardrobeRobotics }
+    .desc = Вы можете соорудить робота из этого шкафчика.
+    .suffix = Заполненный
 ent-WardrobeChemistryFilled = { ent-WardrobeChemistry }
     .desc = Благодаря стильным оранжевым шмоткам, содержащимся внутри, у Вас гораздо меньше шансов быть выгнанным из химической лаборатории.
     .suffix = Заполненный

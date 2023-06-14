@@ -63,6 +63,7 @@ namespace Content.Server.Arcade.Components
             "HarmonicaInstrument", "OcarinaInstrument", "RecorderInstrument", "GunpetInstrument", "BirdToyInstrument",
             "toyShlepa", "toyDumpling", "PortalRadio"
 
+            "HarmonicaInstrument", "OcarinaInstrument", "RecorderInstrument", "GunpetInstrument", "BirdToyInstrument", "PlushieXeno"
         };
 
         [DataField("rewardMinAmount")]

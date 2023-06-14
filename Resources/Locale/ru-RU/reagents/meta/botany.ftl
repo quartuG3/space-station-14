@@ -1,5 +1,5 @@
 reagent-name-e-z-nutrient = EZ nutrient
-reagent-desc-e-z-nutrient = Дайте вашим растениям немного этих ЛЁГКИХ питательных веществ!
+reagent-desc-e-z-nutrient = Дайте Вашим растениям немного этих ЛЁГКИХ питательных веществ!
 reagent-name-left4-zed = left-4-zed
 reagent-desc-left4-zed = Коктейль из различных мутагенов, которые вызывают сильную нестабильность у растительности.
 reagent-name-pest-killer = пестициды

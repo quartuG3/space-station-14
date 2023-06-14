@@ -1,7 +1,7 @@
 reagent-name-coffee = кофе
 reagent-desc-coffee = Напиток, приготовленный из заваренных кофейных зерен. Содержит умеренное количество кофеина.
 reagent-name-cream = сливки
-reagent-desc-cream = Жирная, но еще жидкая часть молока. Почему бы вам не смешать это с виски, а?
+reagent-desc-cream = Жирная, но еще жидкая часть молока. Почему бы Вам не смешать это с виски, а?
 reagent-name-cafe-latte = кофе латте
 reagent-desc-cafe-latte = Приятный, крепкий и вкусный напиток на время чтения.
 reagent-name-green-tea = зелёный чай
