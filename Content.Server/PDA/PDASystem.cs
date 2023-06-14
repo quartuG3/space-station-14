@@ -1,4 +1,5 @@
 using Content.Server.AlertLevel;
+using Content.Shared.AlertLevel;
 using Content.Server.CartridgeLoader;
 using Content.Server.DeviceNetwork.Components;
 using Content.Server.Instruments;

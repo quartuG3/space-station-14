@@ -18,7 +18,7 @@ public sealed class HolosignBarrierMedicalSystem : EntitySystem
 
     private void OnCollide(EntityUid uid, HolosignBarrierMedicalComponent component, ref StartCollideEvent args)
     {
-        var otherEnt = args.OtherFixture.Body.Owner;
+        var otherEnt = args.OtherEntity;
 
         if (!_entManager.TryGetComponent<SpriteComponent?>(uid, out var sprite))
             return;
@@ -28,7 +28,7 @@ public sealed class HolosignBarrierMedicalSystem : EntitySystem
 
     private void OnEndCollide(EntityUid uid, HolosignBarrierMedicalComponent component, ref EndCollideEvent args)
     {
-     	var otherEnt = args.OtherFixture.Body.Owner;
+     	var otherEnt = args.OtherEntity;
 
         if (!_entManager.TryGetComponent<SpriteComponent?>(uid, out var sprite))
             return;

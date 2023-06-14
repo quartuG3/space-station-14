@@ -481,7 +481,7 @@ public abstract class SharedDoorSystem : EntitySystem
     /// <summary>
     ///     Does the user have the permissions required to open this door?
     /// </summary>
-    public override bool HasAccess(EntityUid uid, EntityUid? user = null, DoorComponent? door = null, AccessReaderBoardComponent? access = null, AccessStorageComponent? storage = null)
+    public bool HasAccess(EntityUid uid, EntityUid? user = null, DoorComponent? door = null, AccessReaderBoardComponent? access = null, AccessStorageComponent? storage = null)
     {
         // TODO network AccessComponent for predicting doors
 

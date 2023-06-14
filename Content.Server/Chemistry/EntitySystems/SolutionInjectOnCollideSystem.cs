@@ -36,8 +36,6 @@ namespace Content.Server.Chemistry.EntitySystems
         {
             if (args.OurFixture.ID != component.FixtureID) return;
 
-            var target = args.OtherFixture.Body.Owner;
-
             var target = args.OtherEntity;
 
             if (!args.OtherBody.Hard ||

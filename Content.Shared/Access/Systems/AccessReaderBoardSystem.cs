@@ -7,7 +7,7 @@ using Content.Shared.PDA;
 using Content.Shared.Access.Components;
 using Robust.Shared.Prototypes;
 using Content.Shared.Hands.EntitySystems;
-using Content.Shared.MachineLinking.Events;
+using Content.Shared.DeviceLinking.Events;
 using Content.Shared.StationRecords;
 using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
@@ -55,7 +55,7 @@ namespace Content.Shared.Access.Systems
         }
         private void OnAlertLevelChanged(AlertLevelChangedEvent args)
         {
-            // Gives an access to appropriate departments to doors of other departments in case of emergency 
+            // Gives an access to appropriate departments to doors of other departments in case of emergency
             foreach (var (_, access) in EntityQuery<AirlockComponent, AccessReaderBoardComponent>(true))
             {
                 if (TryComp(access.BoardContainer.ContainedEntities.FirstOrDefault(), out AccessStorageComponent? accessStorage)
@@ -118,7 +118,7 @@ namespace Content.Shared.Access.Systems
         {
             component.BoardContainer = _container.EnsureContainer<Container>(uid, component.BoardContainerId);
         }
-        
+
         private void OnStorageInit(EntityUid uid, AccessStorageComponent storage, ComponentInit args)
         {
             var allTags = storage.AccessLists.SelectMany(c => c).Union(storage.DenyTags);
@@ -363,7 +363,7 @@ namespace Content.Shared.Access.Systems
             return false;
         }
 
-        
+
         private bool IsAirlockSupportAlertLevel (List<HashSet<string>> accessLists)
         {
             var exceptions = new List<string>() { "Captain",
