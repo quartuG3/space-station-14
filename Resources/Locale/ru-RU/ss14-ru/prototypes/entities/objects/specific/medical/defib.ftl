@@ -1,4 +1,4 @@
-ent-Defibrillator = Дефибриллятор
+ent-Defibrillator = дефибриллятор
     .desc = Чисто! Зззз!
     .suffix = { "" }
 ent-DefibrillatorEmpty = { ent-Defibrillator }

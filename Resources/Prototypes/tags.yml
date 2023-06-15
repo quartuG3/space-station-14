@@ -677,7 +677,7 @@
   id: Syringe
 
 - type: Tag
-  id: Syringecartridge
+  id: SyringeCartridge
 
 - type: Tag
   id: SyringeGunMagazine

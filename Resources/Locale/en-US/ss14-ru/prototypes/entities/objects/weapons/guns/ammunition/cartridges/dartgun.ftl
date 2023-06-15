@@ -1,3 +1,3 @@
-ent-Syringecartridge = Syringe cartridge
+ent-SyringeCartridge = Syringe cartridge
     .desc = { ent-BaseCartridge.desc }
     .suffix = { "" }
