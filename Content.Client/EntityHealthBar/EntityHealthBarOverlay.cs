@@ -105,6 +105,8 @@ public sealed class EntityHealthBarOverlay : Overlay
 
             // Draw state icon
             Texture current_state;
+//            if (_entManager.TryGetComponent<DiseasedComponent>(mob.Owner, out var bebra) && _mobStateSystem.IsAlive(mob.Owner, mob))
+//                current_state = _sickStateTexture; //TryComp<DiseasedComponent>
             if (_mobStateSystem.IsAlive(mob.Owner, mob))
                 current_state = _lifeStateTexture;
             else
