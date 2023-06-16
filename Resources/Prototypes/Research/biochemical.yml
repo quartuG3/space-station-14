@@ -11,9 +11,12 @@
   cost: 10000
   recipeUnlocks:
   - LargeBeaker
+  - LargeBottle
   - Dropper
   - HotplateMachineCircuitboard
   - ChemicalPayload
+  - ClothingEyesGlassesScience
+  - ClothingEyesHudMedical
 
 - type: technology
   id: SurgicalTools
