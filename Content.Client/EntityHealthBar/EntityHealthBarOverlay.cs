@@ -3,7 +3,7 @@ using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.FixedPoint;
-//using Content.Shared.Disease.Components;
+using Content.Shared.Zombies;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
@@ -24,7 +24,8 @@ public sealed class EntityHealthBarOverlay : Overlay
     private readonly MobThresholdSystem _mobThresholdSystem;
     private readonly Texture _barTexture;
     private readonly Texture _lifeStateTexture;
-//    private readonly Texture _sickStateTexture;
+    private readonly Texture _sickStateTexture;
+    private readonly Texture _zombieStateTexture;
     private readonly Texture _deadStateTexture;
     private readonly ShaderInstance _shader;
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
@@ -42,8 +43,10 @@ public sealed class EntityHealthBarOverlay : Overlay
 
         var life_state_sprite = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Misc/health_state.rsi"), "life_state");
         _lifeStateTexture = _entManager.EntitySysManager.GetEntitySystem<SpriteSystem>().Frame0(life_state_sprite);
-//        var sick_state_sprite = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Misc/health_state.rsi"), "sick_state");
-//        _sickStateTexture = _entManager.EntitySysManager.GetEntitySystem<SpriteSystem>().Frame0(sick_state_sprite);
+        var sick_state_sprite = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Misc/health_state.rsi"), "sick_state");
+        _sickStateTexture = _entManager.EntitySysManager.GetEntitySystem<SpriteSystem>().Frame0(sick_state_sprite);
+        var zombie_state_sprite = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Misc/health_state.rsi"), "zombie_state");
+        _zombieStateTexture = _entManager.EntitySysManager.GetEntitySystem<SpriteSystem>().Frame0(zombie_state_sprite);
         var dead_state_sprite = new SpriteSpecifier.Rsi(new ResPath("/Textures/Interface/Misc/health_state.rsi"), "dead_state");
         _deadStateTexture = _entManager.EntitySysManager.GetEntitySystem<SpriteSystem>().Frame0(dead_state_sprite);
 
@@ -105,9 +108,9 @@ public sealed class EntityHealthBarOverlay : Overlay
 
             // Draw state icon
             Texture current_state;
-//            if (_entManager.TryGetComponent<DiseasedComponent>(mob.Owner, out var bebra) && _mobStateSystem.IsAlive(mob.Owner, mob))
-//                current_state = _sickStateTexture; //TryComp<DiseasedComponent>
-            if (_mobStateSystem.IsAlive(mob.Owner, mob))
+            if (_entManager.TryGetComponent<ZombieComponent>(mob.Owner, out var bebra) && _mobStateSystem.IsAlive(mob.Owner, mob))
+                current_state = _zombieStateTexture; //TryComp<DiseasedComponent>
+            else if (_mobStateSystem.IsAlive(mob.Owner, mob))
                 current_state = _lifeStateTexture;
             else
                 current_state = _deadStateTexture;
