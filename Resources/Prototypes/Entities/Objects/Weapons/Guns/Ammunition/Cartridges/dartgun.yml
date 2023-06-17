@@ -1,12 +1,12 @@
 - type: entity
   parent: BaseCartridge
-  id: SyringeCartridge
+  id: Syringecartridge
   name: Syringe cartridge
   components:
   - type: Tag
     tags:
     - Cartridge
-    - SyringeCartridge
+    - Syringecartridge
   - type: CartridgeAmmo
     proto: SyringeGunProject
     deleteOnSpawn: true
@@ -14,6 +14,7 @@
     sprite: Objects/Weapons/Guns/Ammunition/Casings/anomalous_casing.rsi
     layers:
     - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
   - type: ChemicalAmmo
   - type: SolutionContainerManager
     solutions:
@@ -21,21 +22,11 @@
         maxVol: 15
   - type: FitsInDispenser
     solution: ammo
-  - type: DrawableSolution
-    solution: ammo
-  - type: ExaminableSolution
-    solution: ammo
   - type: RefillableSolution
     solution: ammo
-  - type: DrainableSolution
-    solution: ammo
   - type: SolutionTransfer
-    canChangeTransferAmount: true
     maxTransferAmount: 15
-  - type: UserInterface
-    interfaces:
-    - key: enum.TransferAmountUiKey.Key
-      type: TransferAmountBoundUserInterface
   - type: Appearance
+  - type: SpentAmmoVisuals
   - type: StaticPrice
     price: 20

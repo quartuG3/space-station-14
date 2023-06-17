@@ -1,3 +1,3 @@
-ent-SyringeGunProject = Syringe
+ent-SyringeGunProject = Syrgine
     .desc = { ent-syringeprojctile.desc }
     .suffix = { "" }

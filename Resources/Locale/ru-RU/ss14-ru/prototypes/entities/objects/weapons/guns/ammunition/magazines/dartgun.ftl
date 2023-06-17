@@ -1,6 +1,6 @@
-ent-BaseSyringeGunMagazine = шприцевый картридж
+ent-BaseSyringeGunMagazine = Шприцевый картридж
     .desc = { ent-BaseItem.desc }
     .suffix = { "" }
-ent-SyringeGunMagazine = шприцевый спидлоадер
+ent-SyringeGunMagazine = Шприцевый спидлоадер
     .desc = { ent-BaseCartridge.desc }
     .suffix = { "" }

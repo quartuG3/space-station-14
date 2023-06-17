@@ -301,7 +301,6 @@
   parent: BaseWeaponSubMachineGun
   id: SyringeGun
   description: A syringe pistol developed by the Syndicate organization. Uses syringe cartridges.
-  suffix: Syndicate
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/SMGs/dartgun.rsi
@@ -332,11 +331,11 @@
             - SyringeGunMagazine
       gun_chamber:
         name: Chamber
-        startingItem: SyringeCartridge
+        startingItem: Syringecartridge
         priority: 1
         whitelist:
           tags:
-            - SyringeCartridge
+            - Syringecartridge
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -369,11 +368,11 @@
     slots:
       gun_chamber:
         name: Chamber
-        startingItem: SyringeCartridge
+        startingItem: Syringecartridge
         priority: 1
         whitelist:
           tags:
-            - SyringeCartridge
+            - Syringecartridge
   - type: MagazineVisuals
     magState: mag
     steps: 1

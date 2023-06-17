@@ -11,8 +11,8 @@
     mayTransfer: true
     whitelist:
       tags:
-        - SyringeCartridge
-    proto: SyringeCartridge
+        - Syringecartridge
+    proto: Syringecartridge
     capacity: 7
   - type: Item
     size: 3
@@ -39,4 +39,4 @@
   parent: BaseSyringeGunMagazine
   components:
   - type: BallisticAmmoProvider
-    proto: SyringeCartridge
+    proto: Syringecartridge
