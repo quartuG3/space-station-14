@@ -190,6 +190,17 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCommand ]
+      
+- type: entity
+  parent: WindoorSecure
+  id: WindoorCaptainLocked
+  suffix: Captain, Locked
+  components:
+  - type: AccessReaderBoard
+#    access: [["Command"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCaptain ]
 
 - type: entity
   parent: WindoorSecure

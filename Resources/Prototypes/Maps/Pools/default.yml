@@ -1,13 +1,15 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - Aspid
+  ##- Aspid
   - Bagel
   - Box
   - Cluster
   - Fland
-  - Kettle
+  ##- Kettle
   - Marathon
   - MetaStation
-  - Moose
+  ##- Moose
+  - Omega
   - Origin
+  - Saltern

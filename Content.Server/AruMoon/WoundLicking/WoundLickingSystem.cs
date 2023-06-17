@@ -1,5 +1,5 @@
-using Content.Server.Disease.Components;
-using Content.Server.Disease;
+//using Content.Server.Disease.Components;
+//using Content.Server.Disease;
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Server.Popups;
@@ -24,7 +24,7 @@ namespace Content.Server.Felinid
     {
         [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
         [Dependency] private readonly PopupSystem _popupSystem = default!;
-        [Dependency] private readonly DiseaseSystem _disease = default!;
+//        [Dependency] private readonly DiseaseSystem _disease = default!;
         [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -107,7 +107,7 @@ namespace Content.Server.Felinid
             }
 
             // Popup
-            
+
 
             if (performer == target)
             {
@@ -170,7 +170,7 @@ namespace Content.Server.Felinid
 
             var healed = bloodstream.BleedAmount;
             if (comp.MaxHeal - bloodstream.BleedAmount < 0) healed = comp.MaxHeal;
-            var chance = comp.DiseaseChance * (1 / comp.MaxHeal * healed);
+/*            var chance = comp.DiseaseChance * (1 / comp.MaxHeal * healed);
 
             if (comp.DiseaseChance > 0f & comp.PossibleDiseases.Any())
             {
@@ -180,7 +180,7 @@ namespace Content.Server.Felinid
                     _disease.TryInfect(disCarrier, diseaseName, chance);
                 }
             }
-
+*/
             _bloodstreamSystem.TryModifyBleedAmount(target, -healed, bloodstream);
 
             if (performer == target)

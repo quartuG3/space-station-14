@@ -7,3 +7,6 @@ ent-ScreenTimer = экран таймер
 ent-BrigTimer = бриг таймер
     .desc = Это таймер для бриг клеток.
     .suffix = { "" }
+ent-TimerFrame = каркас таймера
+    .desc = Строительный каркас для таймера.
+    .suffix = { "" }

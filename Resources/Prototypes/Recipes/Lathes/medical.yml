@@ -173,3 +173,10 @@
   materials:
     Glass: 100
     Steel: 100
+
+- type: latheRecipe
+  id: HandLabeler
+  result: HandLabeler
+  completetime: 2
+  materials:
+    Plastic: 100

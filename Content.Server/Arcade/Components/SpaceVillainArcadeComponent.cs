@@ -61,8 +61,7 @@ namespace Content.Server.Arcade.Components
             "PlushieNuke", "PlushieCarp", "PlushieRatvar", "PlushieNar", "PlushieSnake", "Basketball", "Football",
             "PlushieRouny", "PlushieBee", "PlushieSlime", "BalloonCorgi", "ToySword", "CrayonBox", "BoxDonkSoftBox", "BoxCartridgeCap",
             "HarmonicaInstrument", "OcarinaInstrument", "RecorderInstrument", "GunpetInstrument", "BirdToyInstrument",
-            "toyShlepa", "toyDumpling", "PortalRadio"
-
+            "toyShlepa", "toyDumpling", "PortalRadio", "PlushieXeno"
         };
 
         [DataField("rewardMinAmount")]

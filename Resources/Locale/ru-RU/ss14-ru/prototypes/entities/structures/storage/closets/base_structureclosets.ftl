@@ -7,3 +7,6 @@ ent-BaseWallCloset = настенный шкаф
 ent-BaseWallLocker = { ent-BaseWallCloset }
     .desc = { ent-BaseWallCloset.desc }
     .suffix = { "" }
+ent-SuitStorageBase = хранилище скафандров
+    .desc = Высокотехнологичное хранилище, предназначенное для хранения космических скафандров.
+    .suffix = { "" }

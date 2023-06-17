@@ -143,7 +143,7 @@ cmd-monitor-plus-all-hint = Показывает все мониторы
 
 ## 'setambientlight' command
 
-cmd-set-ambient-light-desc = Позволяет вам установить освещение окружения для указанной карты в SRGB.
+cmd-set-ambient-light-desc = Позволяет Вам установить освещение окружения для указанной карты в SRGB.
 cmd-set-ambient-light-help = setambientlight [mapid] [r g b a]
 cmd-set-ambient-light-parse = Невозможно проанализировать аргументы как байтовые значения для цвета.
 
