@@ -14,9 +14,6 @@
             "name": "sick_state"
         },
         {
-            "name": "zombie_state"
-        },
-        {
             "name": "life_state"
         }
     ]
