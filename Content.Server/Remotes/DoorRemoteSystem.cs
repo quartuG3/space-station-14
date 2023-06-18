@@ -7,7 +7,6 @@ using Content.Shared.Doors.Systems;
 using Content.Shared.Physics;
 using Content.Shared.Access.Components;
 using Content.Server.Doors.Systems;
-using Content.Server.Doors.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Shared.Database;
 using Content.Shared.Interaction.Events;
@@ -74,7 +73,8 @@ namespace Content.Server.Remotes
                 return;
             }
 
-            if (!_doorSystem.HasAccess(args.Target.Value, args.Used))
+            if (!_doorSystem.HasAccess(args.Target.Value, args.Used, doorComp))
+
             {
                 _doorSystem.Deny(args.Target.Value, doorComp, args.User);
                 ShowPopupToUser("door-remote-denied", args.User);

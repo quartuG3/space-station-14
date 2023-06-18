@@ -1,2 +1,2 @@
-construction-examine-condition-any-conditions = Любое из этих условий должно быть истинным::
-construction-guide-condition-any-conditions = Любое из этих условий должно быть истинным:
+construction-examine-condition-any-conditions = Любое из этих условий должно выполняться::
+construction-guide-condition-any-conditions = Любое из этих условий должно выполняться:

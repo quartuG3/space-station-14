@@ -1,0 +1,15 @@
+ent-BaseAsteroidDebris = Обломок астероида
+    .desc = { ent-BaseDebris.desc }
+    .suffix = { "" }
+ent-AsteroidDebrisSmall = Маленький обломок астероида
+    .desc = { ent-BaseAsteroidDebris.desc }
+    .suffix = { "" }
+ent-AsteroidDebrisMedium = Средний обломок астероида
+    .desc = { ent-BaseAsteroidDebris.desc }
+    .suffix = { "" }
+ent-AsteroidDebrisLarge = Крупный обломок астероида
+    .desc = { ent-BaseAsteroidDebris.desc }
+    .suffix = { "" }
+ent-AsteroidDebrisLarger = Обломок астероида покрупнее
+    .desc = { ent-BaseAsteroidDebris.desc }
+    .suffix = { "" }

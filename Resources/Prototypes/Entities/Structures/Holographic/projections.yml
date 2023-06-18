@@ -22,17 +22,8 @@
     sprite: Structures/Holo/wetfloor.rsi
     state: icon
     netsync: false
-  - type: Clickable
-  - type: Damageable
-    damageModifierSet: Holosign
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 70
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
+  - type: TimedDespawn
+    lifetime: 90
 
 - type: entity
   id: HoloFan
@@ -46,9 +37,12 @@
     netsync: false
   - type: Fixtures
     fixtures:
-    - shape:
-        !type:PhysShapeAabb
-          bounds: "-0.5,-0.5,0.5,0.5"
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+  - type: TimedDespawn
+    lifetime: 180
   - type: Airtight
     noAirWhenFullyAirBlocked: false
   - type: Clickable
@@ -78,38 +72,27 @@
 
 - type: entity
   id: HolosignEngineering
+  parent: HolosignWetFloor
   name: holobarrier
   description: A short holographic barrier which can only be passed by walking.
-  placement:
-    mode: SnapgridCenter
-    snap:
-      - Wall
   components:
-    - type: MeleeSound
-      soundGroups:
-        Brute:
-          path:
-            "/Audio/Weapons/egloves.ogg"
-        Burn:
-          path:
-            "/Audio/Weapons/egloves.ogg"
+    - type: Physics
+      bodyType: Static
+      canCollide: true
     - type: Sprite
       sprite: Structures/Holo/engi.rsi
       state: icon
-      drawdepth: Overdoors
       netsync: false
-    - type: Transform
-      anchored: true
-    - type: Physics
     - type: Fixtures
       fixtures:
-      - hard: false
-        density: 7
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.5,-0.5,0.5,0.5"
-        layer:
-        - MidImpassable
+        fix1:
+          hard: false
+          density: 7
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          layer:
+            - MidImpassable
     - type: AtmosExposed
     - type: SlowContacts
       walkSpeedModifier: 1
@@ -128,35 +111,40 @@
 
 - type: entity
   id: HolosignSecurity
-  parent: HolosignEngineering
+  parent: HolosignWetFloor
   name: holobarrier
   description: A short holographic barrier which can only be passed by walking.
   components:
-  - type: Sprite
-    sprite: Structures/Holo/sec.rsi
-    state: icon
-    netsync: false
-
-#- type: entity
-#  id: HolosignMedical
-#  name: improper PENLITE holobarrier
-#  description: A holobarrier that uses biometrics to detect human viruses. Denies passing to personnel with easily-detected, malicious viruses. Good for quarantines.
-#  components:
-#    - type: Sprite
-#      sprite: Structures/Holo/penlite.rsi
-#      state: icon
-#      drawdepth: Overdoors
-#      netsync: false
-#    - type: Transform
-#      anchored: true
-#    - type: Physics
-#      bodyType: Static
-#    - type: Fixtures
-#      fixtures:
-#        shape:
-#          !type:PhysShapeAabb
-#          bounds: "-0.5,-0.5,0.5,0.5"
-#        layer:
-#        - WallLayer
-#    - type: AtmosExposed
-#    - type: HolosignBarrierMedical
+    - type: Physics
+      bodyType: Static
+      canCollide: true
+    - type: Sprite
+      sprite: Structures/Holo/security.rsi
+      state: icon
+      netsync: false
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.3,-0.3,0.3,0.3"
+          mask:
+            - TableMask
+          layer:
+            - TableLayer
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: Metallic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 30
+    - type: TimedDespawn
+      lifetime: 60
+    - type: PointLight
+      enabled: true
+      radius: 3
+      color: red
+    - type: Climbable
+    - type: Clickable

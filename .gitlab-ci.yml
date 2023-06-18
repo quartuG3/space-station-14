@@ -37,7 +37,7 @@ publish:
   retry: 2
   interruptible: true
   rules:
-    - if: '$SSH_PRIVATE_KEY != null'
+    - if: '$SSH_PRIVATE_KEY != null && $SSH_REMOTE_IP != null && $SSH_USER != null'
   script:
     - apt update && apt upgrade -y
     - apt install -y python3 libfreetype6 openssh-client rsync
@@ -57,8 +57,26 @@ publish:
     - rsync -avz release/$CI_COMMIT_REF_NAME-$CI_COMMIT_SHA $SSH_USER@$SSH_REMOTE_IP:~/builds/builds/
     - ssh $SSH_USER@$SSH_REMOTE_IP "~/push.ps1 $CI_COMMIT_REF_NAME-$CI_COMMIT_SHA $CI_COMMIT_REF_NAME"
   artifacts:
-    name: "$CI_COMMIT_REF_NAME"
+    name: "Build logs $CI_COMMIT_REF_NAME"
     paths:
-      - release/$CI_COMMIT_REF_NAME-$CI_COMMIT_SHA
       - server_build.log
       - client_build.log
+
+publish-artifact:
+  stage: publish
+  retry: 2
+  interruptible: true
+  rules:
+    - if: '$SSH_PRIVATE_KEY == null'
+  script:
+    - apt update && apt upgrade -y
+    - apt install -y python3 libfreetype6 openssh-client rsync
+    - mkdir .git/hooks -p
+    - python3 RUN_THIS.py
+    # We create artifact only for Windows and x64 Linux, because almost noone uses OSX and Linux on arm for development among our contributors. This will save for us some amount of storage. You can just add osx-x64 or linux-arm64 if you really need it.
+    - Tools/package_server_build.py -p win-x64 linux-x64 --hybrid-acz > server_build.log
+  artifacts:
+    name: "$CI_COMMIT_SHA"
+    paths:
+    - release
+    - server_build.log

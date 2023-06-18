@@ -21,8 +21,6 @@
       Male: UnisexMoth
       Female: UnisexMoth
       Unsexed: UnisexMoth
-  - type: DiseaseCarrier
-    diseaseResist: 0.1
   - type: Flammable
     damage:
       types:

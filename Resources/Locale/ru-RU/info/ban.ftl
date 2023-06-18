@@ -1,6 +1,6 @@
 # ban
 cmd-ban-desc = Банит кого-то
-cmd-ban-help = Использование: ban <name или user ID> <причина> [длительность в минутах, укажите 0 или оставьте пустым для бана навсегда]
+cmd-ban-help = Использование: ban <name или user ID> <причина> [длительность в минутах, укажите 0 или оставьте пустым для блокировки навсегда]
 cmd-ban-player = Не удалось найти игрока с таким никнеймом.
 cmd-ban-self = Вы не можете забанить себя!
 cmd-ban-hint = <name/user ID>
@@ -13,9 +13,9 @@ cmd-ban-hint-duration-4 = 1 неделя
 cmd-ban-hint-duration-5 = 2 недели
 cmd-ban-hint-duration-6 = 1 месяц
 # listbans
-cmd-banlist-desc = Выводит список активных банов игрока
+cmd-banlist-desc = Выводит список активных блокировок игрока
 cmd-banlist-help = Использование: banlist <name или user ID>
-cmd-banlist-empty = Нет активных банов для { $user }
+cmd-banlist-empty = Нет активных блокировок для { $user }
 cmd-banlistF-hint = <name/user ID>
 cmd-ban_exemption_update-desc = Set an exemption to a type of ban on a player.
 cmd-ban_exemption_update-help =
