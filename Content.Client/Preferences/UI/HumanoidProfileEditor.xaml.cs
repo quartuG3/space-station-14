@@ -478,23 +478,23 @@ namespace Content.Client.Preferences.UI
 
             foreach (var antag in prototypeManager.EnumeratePrototypes<AntagPrototype>().OrderBy(a => Loc.GetString(a.Name)))
             {
-                bool check = false;
-                if(playTime.IsAllowed(antag, out var reason))
+                var selector = new AntagPreferenceSelector(antag);
+
+                if (!playTime.IsAllowed(antag, out var reason))
                 {
-                    check = true;
+                    selector.LockRequirements(antag, reason);
                 }
-                
+
                 if (!antag.SetPreference)
                 {
                     continue;
                 }
 
-                var selector = new AntagPreferenceSelector(antag,check);
                 selector.Preference = false;
                 _antagList.AddChild(selector);
                 _antagPreferences.Add(selector);
 
-                
+
 
                 selector.PreferenceChanged += preference =>
                 {
@@ -1329,7 +1329,7 @@ namespace Content.Client.Preferences.UI
         {
             public AntagPrototype Antag { get; }
             private readonly CheckBox _checkBox;
-            
+
             public bool Preference
             {
                 get => _checkBox.Pressed;
@@ -1338,7 +1338,7 @@ namespace Content.Client.Preferences.UI
             public bool Locked = false;
             public event Action<bool>? PreferenceChanged;
 
-            public AntagPreferenceSelector(AntagPrototype antag, bool check)
+            public AntagPreferenceSelector(AntagPrototype antag)
             {
                 Antag = antag;
 
@@ -1359,11 +1359,15 @@ namespace Content.Client.Preferences.UI
                         _checkBox
                     }
                 });
-                if (check == false)
-                {
-                    Locked = true;
-                    _checkBox.Disabled = true;
-                }
+
+            }
+
+            public void LockRequirements(AntagPrototype antag, string requirements)
+            {
+                Locked = true;
+                _checkBox.Disabled = true;
+                _checkBox.Text = Loc.GetString("antag-timer-locked", ("antag", Loc.GetString(antag.Name)));
+                _checkBox.ToolTip = requirements;
             }
 
             private void OnCheckBoxToggled(BaseButton.ButtonToggledEventArgs args)

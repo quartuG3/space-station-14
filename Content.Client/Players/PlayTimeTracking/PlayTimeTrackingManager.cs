@@ -58,6 +58,9 @@ public sealed class PlayTimeTrackingManager
     {
         reason = null;
 
+        if (!_cfg.GetCVar(CCVars.GameRoleTimers))
+            return true;
+
         var player = _playerManager.LocalPlayer?.Session;
 
         if (player == null) return true;
