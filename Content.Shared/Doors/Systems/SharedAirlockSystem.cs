@@ -14,7 +14,6 @@ public abstract class SharedAirlockSystem : EntitySystem
 {
     [Dependency] protected readonly SharedAppearanceSystem Appearance = default!;
     [Dependency] protected readonly SharedContainerSystem _container = default!;
-    [Dependency] protected readonly SharedAudioSystem Audio = default!;
     [Dependency] protected readonly SharedDoorSystem DoorSystem = default!;
     [Dependency] protected readonly SharedPopupSystem Popup = default!;
 
@@ -69,10 +68,5 @@ public abstract class SharedAirlockSystem : EntitySystem
     public void SetSafety(AirlockComponent component, bool value)
     {
         component.Safety = value;
-    }
-
-    public void SetBoltWireCut(AirlockComponent component, bool value)
-    {
-        component.BoltWireCut = value;
     }
 }

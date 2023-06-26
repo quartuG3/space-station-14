@@ -5,6 +5,9 @@
   playTimeTracker: JobQuartermaster
   requirements:
     - !type:RoleTimeRequirement
+      role: JobCargoTechnician
+      time: 21600 #6 hrs
+    - !type:RoleTimeRequirement
       role: JobSalvageSpecialist
       time: 18000
     - !type:DepartmentTimeRequirement
