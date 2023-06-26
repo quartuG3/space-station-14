@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/e1d7836b6044a327530082cc43a55cc01a4d04bb | Moth sprites made by PuroSlavKing (Github)",
+  "copyright": "https://github.com/tgstation/tgstation/commit/e1d7836b6044a327530082cc43a55cc01a4d04bb",
   "size": {
     "x": 64,
     "y": 64
@@ -577,43 +577,6 @@
         [
           0.3,
           0.3
-        ]
-      ]
-    },
-	{
-      "name": "moth0",
-      "delays": [
-        [
-          0.3,
-          0.3,
-          0.3,
-          0.4
-        ]
-      ]
-    },
-    {
-      "name": "moth1",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
-        ]
-      ]
-    },
-    {
-      "name": "moth2",
-      "delays": [
-        [
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1,
-          0.1
         ]
       ]
     }

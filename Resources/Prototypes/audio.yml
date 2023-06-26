@@ -177,9 +177,10 @@
 - type: soundCollection
   id: AmbienceSpace
   files:
-    - /Audio/Ambience/starlight.ogg
-    - /Audio/Ambience/constellations.ogg
-    - /Audio/Ambience/drifting.ogg
+    - /Audio/Ambience/ambispace.ogg
+    - /Audio/Ambience/ambispace2.ogg
+    - /Audio/Ambience/ambispace3.ogg
+    - /Audio/Ambience/ambispace4.ogg
 
 - type: soundCollection
   id: AmbienceSpooky

@@ -11,10 +11,6 @@
 
 - type: wireLayout
   parent: Airlock
-  id: Docking
-
-- type: wireLayout
-  parent: Airlock
   id: AirlockSecurity
 
 - type: wireLayout

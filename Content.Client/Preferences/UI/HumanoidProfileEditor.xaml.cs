@@ -394,7 +394,7 @@ namespace Content.Client.Preferences.UI
             {
                 var selector = new AntagPreferenceSelector(antag);
 
-                if (!playTime.IsAllowed(antag, out var reason))
+                if (!_requirements.IsAllowed(antag, out var reason))
                 {
                     selector.LockRequirements(antag, reason);
                 }
