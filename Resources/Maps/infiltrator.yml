@@ -453,7 +453,6 @@ entities:
     - type: GasTileOverlay
     - nextUpdate: 0
       type: SpreaderGrid
-    - type: GridPathfinding
   - uid: 138
     components:
     - type: MetaData

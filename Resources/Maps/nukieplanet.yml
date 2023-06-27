@@ -1531,9 +1531,7 @@ entities:
     - type: RadiationGridResistance
     - type: OccluderTree
     - type: Shuttle
-    - type: GridPathfinding
-    - nextShake: 0
-      shakeTimes: 10
+    - shakeTimes: 10
       type: GravityShake
     - type: GasTileOverlay
     - nextUpdate: 0
