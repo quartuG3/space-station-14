@@ -21,7 +21,7 @@ entities:
     - name: GX-13 Infiltrator
       type: MetaData
     - pos: 0.64252126,4.1776605
-      parent: 138
+      parent: invalid
       type: Transform
     - chunks:
         -1,-1:
@@ -453,16 +453,6 @@ entities:
     - type: GasTileOverlay
     - nextUpdate: 0
       type: SpreaderGrid
-  - uid: 138
-    components:
-    - type: MetaData
-    - type: Transform
-    - type: Map
-    - type: PhysicsMap
-    - type: GridTree
-    - type: MovedGrids
-    - type: Broadphase
-    - type: OccluderTree
 - proto: AirlockExternalGlassSyndicateLocked
   entities:
   - uid: 442
