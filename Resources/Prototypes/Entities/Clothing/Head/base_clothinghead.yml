@@ -10,6 +10,7 @@
     state: icon
   - type: Tag
     tags:
+      - DogWearable
       - DroneUsable
       - WhitelistChameleon
 
@@ -49,7 +50,6 @@
   noSpawn: true
   components:
   - type: Sprite
-    netsync: false
     layers:
     - state: icon
     - state: icon-flash
@@ -122,6 +122,7 @@
     tags:
     - HidesHair
     - WhitelistChameleon
+    - HelmetEVA
   - type: IdentityBlocker
 
 - type: entity
@@ -170,7 +171,6 @@
   noSpawn: true
   components:
   - type: Sprite
-    netsync: false
     layers:
     - state: icon
     - state: icon-flash

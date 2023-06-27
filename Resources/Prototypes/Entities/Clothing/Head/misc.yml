@@ -149,10 +149,8 @@
   id: ClothingHeadHatCatEars
   name: cat ears
   description: "NYAH!"
+  suffix: DO NOT MAP
   components:
-  - type: Tag
-    tags:
-      - DogWearable
   - type: Sprite
     sprite: Clothing/Head/Hats/catears.rsi
   - type: Clothing

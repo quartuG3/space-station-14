@@ -6,3 +6,4 @@ role-timer-role-insufficient = Требуется ещё { TOSTRING($time, "0") 
 role-timer-role-too-high = Требуется на { TOSTRING($time, "0") } меньше минут игры в качестве { $job } для этой роли. (Вы пытаетесь играть за роль для новичков?)
 role-timer-locked = Закрыто (наведите курсор для подробностей)
 antag-timer-locked = { $antag }. Закрыт (наведите курсор для подробностей)
+role-ban = Вам было запрещено играть на этой роли.

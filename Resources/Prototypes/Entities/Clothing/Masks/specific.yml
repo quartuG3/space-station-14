@@ -1,5 +1,5 @@
 ﻿- type: entity
-  parent: ClothingMaskBase
+  parent: ClothingMaskPullableBase
   id: ClothingMaskGasChameleon
   name: gas mask
   description: A face-covering mask that can be connected to an air supply.
@@ -9,7 +9,6 @@
       tags: [] # ignore "WhitelistChameleon" tag
     - type: Sprite
       sprite: Clothing/Mask/gas.rsi
-      netsync: false
     - type: Clothing
       sprite: Clothing/Mask/gas.rsi
     - type: ChameleonClothing

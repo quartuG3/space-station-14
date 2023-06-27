@@ -19,6 +19,8 @@
       tags:
         - DoorElectronics
         - DroneUsable
+    - type: StaticPrice
+      price: 55
 
 - type: entity
   id: DoorElectronicsService
@@ -163,6 +165,14 @@
   components:
   - type: AccessStorage
     access: [["Medical"]]
+
+- type: entity
+  id: DoorElectronicsParamedic
+  parent: DoorElectronics
+  suffix: Paramedic
+  components:
+  - type: AccessStorage
+    access: [["Paramedic"]]
 
 - type: entity
   id: DoorElectronicsVirology
