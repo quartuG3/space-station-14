@@ -10,6 +10,7 @@
     state: icon
   - type: Tag
     tags:
+      - DogWearable
       - DroneUsable
       - WhitelistChameleon
 
