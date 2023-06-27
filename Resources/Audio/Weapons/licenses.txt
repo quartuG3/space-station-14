@@ -16,6 +16,8 @@ pierce.ogg taken from: https://github.com/tgstation/tgstation/commit/106cd26fc00
 
 batonextend.ogg taken from: https://github.com/tgstation/tgstation/commit/85d04418be3381969b8483ced01a553deb15534a under CC BY-SA 3.0
 
+rubberhammer.ogg taken from https://freesound.org/people/ScreamStudio/sounds/392617/ under CC0 1.0
+
 - files: ["weoweo.ogg"]
   license: "SONNISS #GAMEAUDIOGDC BUNDLE LICENSING"
   copyright: "Taken from Sonniss.com - GDC 2023 - Systematic Sound - TonalElements Obscurum - Dark Drones"

@@ -20,3 +20,4 @@ fibers-white = белые
 fibers-yellow = жёлтые
 fibers-regal-blue = королевские синие
 fibers-rainbow = радужные
+fibers-olive = оливковые

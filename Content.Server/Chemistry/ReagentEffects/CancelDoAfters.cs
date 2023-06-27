@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using Content.Shared.Chemistry.Reagent;
+using Robust.Shared.Prototypes;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
 using Content.Shared.FixedPoint;
@@ -45,6 +46,8 @@ namespace Content.Server.Chemistry.ReagentEffects
         /// </summary>
         [DataField("movement")]
         public float Movement = 1f;
+
+        protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys) => null;
 
         public override void Effect(ReagentEffectArgs args)
         {
