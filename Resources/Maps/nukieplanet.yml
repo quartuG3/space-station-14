@@ -1531,13 +1531,13 @@ entities:
     - type: RadiationGridResistance
     - type: OccluderTree
     - type: Shuttle
+    - type: GridPathfinding
     - nextShake: 0
       shakeTimes: 10
       type: GravityShake
     - type: GasTileOverlay
     - nextUpdate: 0
       type: SpreaderGrid
-    - type: GridPathfinding
   - uid: 1295
     components:
     - type: MetaData
@@ -1569,23 +1569,16 @@ entities:
     - type: LoadedMap
     - type: GridTree
     - type: MovedGrids
-- proto: AirlockCargoGlass
+- proto: AirlockExternalGlassSyndicateLocked
   entities:
-  - uid: 650
-    components:
-    - pos: -11.5,6.5
-      parent: 104
-      type: Transform
-- proto: AirlockExternalGlass
-  entities:
-  - uid: 1088
-    components:
-    - pos: -1.5,-3.5
-      parent: 104
-      type: Transform
-  - uid: 1089
+  - uid: 55
     components:
     - pos: -5.5,-3.5
+      parent: 104
+      type: Transform
+  - uid: 65
+    components:
+    - pos: -1.5,-3.5
       parent: 104
       type: Transform
 - proto: AirlockGlassShuttle
@@ -1656,92 +1649,96 @@ entities:
       pos: -13.5,-20.5
       parent: 104
       type: Transform
-- proto: AirlockMedicalGlass
+- proto: AirlockSyndicate
   entities:
-  - uid: 1119
-    components:
-    - pos: 2.5,-14.5
-      parent: 104
-      type: Transform
-- proto: AirlockScienceGlass
-  entities:
-  - uid: 1810
-    components:
-    - pos: 8.5,-16.5
-      parent: 104
-      type: Transform
-- proto: AirlockSecurity
-  entities:
-  - uid: 272
+  - uid: 112
     components:
     - pos: 14.5,-1.5
       parent: 104
       type: Transform
-- proto: AirlockSecurityGlass
+- proto: AirlockSyndicateGlass
   entities:
-  - uid: 49
+  - uid: 96
     components:
-    - pos: 16.5,-7.5
+    - rot: -1.5707963267948966 rad
+      pos: 2.5,-14.5
       parent: 104
       type: Transform
-  - uid: 55
-    components:
-    - pos: 23.5,-7.5
-      parent: 104
-      type: Transform
-  - uid: 65
-    components:
-    - pos: 9.5,-9.5
-      parent: 104
-      type: Transform
-  - uid: 109
-    components:
-    - pos: 11.5,-7.5
-      parent: 104
-      type: Transform
-  - uid: 112
+  - uid: 272
     components:
     - pos: 8.5,-0.5
       parent: 104
       type: Transform
-  - uid: 122
-    components:
-    - pos: 17.5,-7.5
-      parent: 104
-      type: Transform
-  - uid: 131
-    components:
-    - pos: 20.5,-10.5
-      parent: 104
-      type: Transform
-  - uid: 136
+  - uid: 650
     components:
     - pos: 10.5,-2.5
       parent: 104
       type: Transform
+- proto: AirlockSyndicateGlassLocked
+  entities:
+  - uid: 49
+    components:
+    - pos: -11.5,6.5
+      parent: 104
+      type: Transform
+  - uid: 109
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 8.5,-16.5
+      parent: 104
+      type: Transform
+  - uid: 122
+    components:
+    - pos: 16.5,-7.5
+      parent: 104
+      type: Transform
+  - uid: 131
+    components:
+    - pos: 23.5,-7.5
+      parent: 104
+      type: Transform
+  - uid: 136
+    components:
+    - pos: 9.5,-9.5
+      parent: 104
+      type: Transform
   - uid: 190
     components:
-    - pos: 16.5,-13.5
+    - pos: 11.5,-7.5
       parent: 104
       type: Transform
   - uid: 317
     components:
-    - pos: 20.5,-4.5
+    - pos: 17.5,-7.5
       parent: 104
       type: Transform
   - uid: 348
     components:
+    - pos: 20.5,-10.5
+      parent: 104
+      type: Transform
+  - uid: 819
+    components:
+    - rot: -1.5707963267948966 rad
+      pos: 16.5,-13.5
+      parent: 104
+      type: Transform
+  - uid: 1088
+    components:
+    - pos: 20.5,-4.5
+      parent: 104
+      type: Transform
+  - uid: 1089
+    components:
     - pos: 14.5,-5.5
       parent: 104
       type: Transform
-  - uid: 1547
+  - uid: 1119
     components:
     - pos: 3.5,1.5
       parent: 104
       type: Transform
-- proto: AirlockVirologyGlass
-  entities:
-  - uid: 96
+  - uid: 1547
     components:
     - pos: 6.5,-9.5
       parent: 104
@@ -2038,6 +2035,18 @@ entities:
       pos: 7.5,-3.5
       parent: 104
       type: Transform
+- proto: Beaker
+  entities:
+  - uid: 1333
+    components:
+    - pos: 4.7242413,-12.192329
+      parent: 104
+      type: Transform
+  - uid: 1334
+    components:
+    - pos: 3.7053413,-12.135814
+      parent: 104
+      type: Transform
 - proto: BedsheetMedical
   entities:
   - uid: 1872
@@ -2075,6 +2084,13 @@ entities:
       pos: 2.5,-8.5
       parent: 104
       type: Transform
+- proto: BoxBeaker
+  entities:
+  - uid: 2095
+    components:
+    - pos: 4.348109,-12.412251
+      parent: 104
+      type: Transform
 - proto: BoxFolderBlack
   entities:
   - uid: 1022
@@ -2110,7 +2126,12 @@ entities:
     - pos: 5.4972115,14.562988
       parent: 104
       type: Transform
-    - unspawnedCount: 12
+    - entities: []
+      unspawnedCount: 12
+      soundInsert: !type:SoundPathSpecifier
+        path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+      soundRack: !type:SoundPathSpecifier
+        path: /Audio/Weapons/Guns/Cock/smg_cock.ogg
       type: BallisticAmmoProvider
 - proto: CableApcExtension
   entities:
@@ -5460,6 +5481,13 @@ entities:
     - pos: 3.4476795,-2.4108348
       parent: 104
       type: Transform
+- proto: chem_master
+  entities:
+  - uid: 2031
+    components:
+    - pos: 5.5,-10.5
+      parent: 104
+      type: Transform
 - proto: ChemicalPayload
   entities:
   - uid: 2380
@@ -5470,6 +5498,13 @@ entities:
   - uid: 3110
     components:
     - pos: 3.6284866,-17.287361
+      parent: 104
+      type: Transform
+- proto: ChemistryHotplate
+  entities:
+  - uid: 1257
+    components:
+    - pos: 3.5,-10.5
       parent: 104
       type: Transform
 - proto: ClosetEmergencyFilledRandom
@@ -5614,6 +5649,13 @@ entities:
       pos: -14.5,6.5
       parent: 104
       type: Transform
+- proto: CrateChemistrySupplies
+  entities:
+  - uid: 1299
+    components:
+    - pos: 5.5,-12.5
+      parent: 104
+      type: Transform
 - proto: CrateInternals
   entities:
   - uid: 350
@@ -5625,6 +5667,13 @@ entities:
       - EntityStorageComponent
       - entity_storage
       type: Construction
+- proto: CryostasisBeaker
+  entities:
+  - uid: 3112
+    components:
+    - pos: 3.4240913,-12.323509
+      parent: 104
+      type: Transform
 - proto: CyberPen
   entities:
   - uid: 696
@@ -6207,6 +6256,13 @@ entities:
     - pos: 3.5,-11.5
       parent: 104
       type: Transform
+- proto: LargeBeaker
+  entities:
+  - uid: 1335
+    components:
+    - pos: 3.8615913,-12.386074
+      parent: 104
+      type: Transform
 - proto: LightPostSmall
   entities:
   - uid: 214
@@ -6393,6 +6449,13 @@ entities:
   - uid: 1894
     components:
     - pos: 7.5339637,-10.889339
+      parent: 104
+      type: Transform
+- proto: MedkitCombatFilled
+  entities:
+  - uid: 1844
+    components:
+    - pos: 3.1661625,-6.4598556
       parent: 104
       type: Transform
 - proto: MedkitFilled
@@ -12376,6 +12439,13 @@ entities:
     - pos: 20.5,-16.5
       parent: 104
       type: Transform
+- proto: SheetPlasma1
+  entities:
+  - uid: 2114
+    components:
+    - pos: 3.505671,-10.842375
+      parent: 104
+      type: Transform
 - proto: SheetPlasteel
   entities:
   - uid: 2423
@@ -13269,6 +13339,18 @@ entities:
     - pos: -10.5,7.5
       parent: 104
       type: Transform
+- proto: VendingMachineChemicals
+  entities:
+  - uid: 1810
+    components:
+    - flags: SessionSpecific
+      type: MetaData
+    - pos: 4.5,-10.5
+      parent: 104
+      type: Transform
+    - enabled: False
+      type: AccessReader
+    - type: Emagged
 - proto: VendingMachineCigs
   entities:
   - uid: 117
@@ -13279,6 +13361,7 @@ entities:
     - pos: 7.5,0.5
       parent: 104
       type: Transform
+    - type: Emagged
 - proto: VendingMachineClothing
   entities:
   - uid: 1617
@@ -13334,13 +13417,16 @@ entities:
       type: Transform
 - proto: VendingMachineWallMedical
   entities:
-  - uid: 819
+  - uid: 2021
     components:
     - flags: SessionSpecific
       type: MetaData
-    - pos: 2.5,-16.5
+    - rot: -1.5707963267948966 rad
+      pos: 8.5,-13.5
       parent: 104
       type: Transform
+    - enabled: False
+      type: AccessReader
 - proto: VendingMachineYouTool
   entities:
   - uid: 204
