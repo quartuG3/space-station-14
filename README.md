@@ -22,9 +22,9 @@ Space Station 14 это ремейк SS13, который работает на 
 
 ## Готовая сборка
 
-Статус сборки: [![pipeline status](https://git.arumoon.ru/Workbench-Team/space-station-14/badges/master-ru/pipeline.svg)](https://git.arumoon.ru/Workbench-Team/space-station-14/-/commits/master-ru)
+Статус сборки: [![pipeline status](https://git.arumoon.ru/Workbench-Team/space-station-14/badges/tgmc/pipeline.svg)](https://git.arumoon.ru/Workbench-Team/space-station-14/-/commits/tgmc)
 
-Готовые билды сборки Вы можете скачать из [CDN хостинга (быстро)](https://ss14.lolicon.monster/builds/master-ru-builds.html) или [артефактов CI/CD (медленно)](https://git.arumoon.ru/Workbench-Team/space-station-14/-/pipelines?page=1&scope=all&ref=master-ru&status=success)
+Готовые билды сборки Вы можете скачать из [CDN хостинга (быстро)](https://ss14.lolicon.monster/builds/tgmc-builds.html) или [артефактов CI/CD (медленно)](https://git.arumoon.ru/Workbench-Team/space-station-14/-/pipelines?page=1&scope=all&ref=tgmc&status=success)
 
 ## Самостоятельная сборка
 
@@ -36,8 +36,8 @@ Space Station 14 это ремейк SS13, который работает на 
 
 ## Лицензия
 
-Весь код репозитория лицензирован под [MIT](https://git.arumoon.ru/Workbench-Team/space-station-14/blob/master-ru/LICENSE.TXT).
+Весь код репозитория лицензирован под [MIT](https://git.arumoon.ru/Workbench-Team/space-station-14/blob/tgmc/LICENSE.TXT).
 
-Большинство ассетов лицензированы под [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) если не имеют иное. Ассеты имеют свою лицензию и авторские права в файле метаданных. [Пример](https://git.arumoon.ru/Workbench-Team/space-station-14/blob/master-ru/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
+Большинство ассетов лицензированы под [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) если не имеют иное. Ассеты имеют свою лицензию и авторские права в файле метаданных. [Пример](https://git.arumoon.ru/Workbench-Team/space-station-14/blob/tgmc/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
 
 Обратите внимание, что некоторые ассеты лицензированы на некоммерческой основе [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) или аналогичной некоммерческой лицензией, и их необходимо удалить, если Вы хотите использовать этот проект в коммерческих целях.
