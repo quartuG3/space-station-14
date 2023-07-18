@@ -67,3 +67,6 @@ ent-FoodBakedCannoli = cannoli
 ent-FoodBakedDumplings = dumplings
     .desc = Average recipe for meat in doughs.
     .suffix = { "" }
+ent-FoodBakedChevreChaud = chèvre chaud
+    .desc = A disk of slightly melted chèvre flopped on top of a crostini, and toasted all-round.
+    .suffix = { "" }

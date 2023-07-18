@@ -1,0 +1,9 @@
+ent-BaseBoardEntity = board
+    .desc = A blank board.
+    .suffix = { "" }
+ent-BaseTabletopPiece = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
+    .suffix = { "" }
+ent-BaseBoardTabletop = baseboard
+    .desc = { "" }
+    .suffix = { "" }

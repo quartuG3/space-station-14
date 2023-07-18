@@ -1,6 +1,9 @@
 ent-ToySpawner = Toy Spawner
     .desc = { ent-MarkerBase.desc }
     .suffix = { "" }
-ent-FigureSpawner = Figure Spawner
+ent-FigureSpawner = Prize Figurine Spawner
     .desc = { ent-MarkerBase.desc }
     .suffix = { "" }
+ent-SpacemenFigureSpawner = Spacemen Minifigure Spawner
+    .suffix = Librarian only, map with care!
+    .desc = { ent-MarkerBase.desc }

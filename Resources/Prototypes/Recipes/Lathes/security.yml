@@ -21,6 +21,25 @@
     Plastic: 300
 
 - type: latheRecipe
+  id: WeaponLaserCarbine
+  result: WeaponLaserCarbine
+  completetime: 30
+  materials:
+    Steel: 2000
+    Glass: 800
+    Plastic: 500
+
+- type: latheRecipe
+  id: WeaponAdvancedLaser
+  result: WeaponAdvancedLaser
+  completetime: 20
+  materials:
+    Steel: 1000
+    Glass: 500
+    Gold: 150
+    Uranium: 600
+
+- type: latheRecipe
   id: WeaponLaserCannon
   result: WeaponLaserCannon
   completetime: 5
@@ -434,30 +453,6 @@
   materials:
     Glass: 250
     Steel: 250
-
-- type: latheRecipe
-  id: WeaponLaserCarbine
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
-    state: base
-  result: WeaponLaserCarbine
-  completetime: 30
-  materials:
-    Glass: 600
-    Plastic: 600
-    Steel: 600
-
-- type: latheRecipe
-  id: WeaponAdvancedLaser
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
-    state: base
-  result: WeaponAdvancedLaser
-  completetime: 30
-  materials:
-    Gold: 2000
-    Steel: 600
-    Uranium: 600
 
 - type: latheRecipe
   id: MagazineBoxPistol
