@@ -606,29 +606,37 @@ entities:
     - links:
       - 374
       type: DeviceLinkSink
-  - uid: 371
+  - uid: 370
     components:
-    - pos: 7.5,-2.5
+    - pos: 6.5,-2.5
       parent: 2
       type: Transform
     - links:
-      - 370
+      - 568
+      type: DeviceLinkSink
+  - uid: 371
+    components:
+    - pos: -3.5,6.5
+      parent: 2
+      type: Transform
+    - links:
+      - 568
       type: DeviceLinkSink
   - uid: 372
     components:
-    - pos: -8.5,-2.5
+    - pos: -7.5,-2.5
       parent: 2
       type: Transform
     - links:
-      - 370
+      - 568
       type: DeviceLinkSink
   - uid: 373
     components:
-    - pos: -3.5,7.5
+    - pos: 2.5,6.5
       parent: 2
       type: Transform
     - links:
-      - 370
+      - 568
       type: DeviceLinkSink
   - uid: 431
     components:
@@ -661,14 +669,6 @@ entities:
       type: Transform
     - links:
       - 569
-      type: DeviceLinkSink
-  - uid: 568
-    components:
-    - pos: 2.5,7.5
-      parent: 2
-      type: Transform
-    - links:
-      - 370
       type: DeviceLinkSink
 - proto: BoxFolderRed
   entities:
@@ -2985,40 +2985,6 @@ entities:
       type: Transform
 - proto: SignalSwitch
   entities:
-  - uid: 370
-    components:
-    - desc: Закрывает/открывает гермозатворы шлюзов.
-      name: блокировка шлюзов
-      type: MetaData
-    - rot: 3.141592653589793 rad
-      pos: -2.5,10.5
-      parent: 2
-      type: Transform
-    - linkedPorts:
-        373:
-        - On: Close
-        - Off: Open
-        568:
-        - On: Close
-        - Off: Open
-        372:
-        - On: Close
-        - Off: Open
-        371:
-        - On: Close
-        - Off: Open
-      registeredSinks:
-        On:
-        - 373
-        - 568
-        - 372
-        - 371
-        Off:
-        - 373
-        - 568
-        - 372
-        - 371
-      type: DeviceLinkSource
   - uid: 374
     components:
     - desc: Закрывает/открывает гермозатворы ДАМ и верхней части шаттла.
@@ -3042,6 +3008,40 @@ entities:
         Off:
         - 368
         - 369
+      type: DeviceLinkSource
+  - uid: 568
+    components:
+    - desc: Закрывает/открывает гермозатворы шлюзов.
+      name: блокировка шлюзов
+      type: MetaData
+    - rot: 3.141592653589793 rad
+      pos: -2.5,10.5
+      parent: 2
+      type: Transform
+    - linkedPorts:
+        370:
+        - On: Close
+        - Off: Open
+        372:
+        - On: Close
+        - Off: Open
+        371:
+        - On: Close
+        - Off: Open
+        373:
+        - On: Close
+        - Off: Open
+      registeredSinks:
+        On:
+        - 370
+        - 372
+        - 371
+        - 373
+        Off:
+        - 370
+        - 372
+        - 371
+        - 373
       type: DeviceLinkSource
   - uid: 569
     components:
@@ -3067,6 +3067,7 @@ entities:
         - Off: Open
         447:
         - On: Close
+        - Off: Open
         101:
         - On: Close
         - Off: Open
@@ -3084,6 +3085,7 @@ entities:
         - 431
         - 100
         - 101
+        - 447
       type: DeviceLinkSource
 - proto: SignalTrigger
   entities:
