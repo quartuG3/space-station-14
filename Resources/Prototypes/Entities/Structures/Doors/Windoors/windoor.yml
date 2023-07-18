@@ -197,7 +197,7 @@
   suffix: Captain, Locked
   components:
   - type: AccessReaderBoard
-#    access: [["Command"]]
+#    access: [["Captain"]]
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCaptain ]
