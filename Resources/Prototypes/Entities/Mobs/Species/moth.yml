@@ -8,6 +8,10 @@
   - type: HumanoidAppearance
     species: Moth
   - type: Hunger
+    starvationDamage:
+      types:
+        Cold: 0.25
+        Bloodloss: 0.25
   - type: Thirst
   - type: Perishable
   - type: Icon
