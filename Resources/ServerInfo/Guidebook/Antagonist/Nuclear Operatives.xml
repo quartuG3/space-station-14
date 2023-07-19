@@ -35,7 +35,7 @@
   В общем, вам понадобится оружие, что-то для взлома дверей, а также инструменты и медикаменты.
 
   <Box>
-    <GuideEntityEmbed Entity="BaseUplinkRadio40TC" Caption="Аплинк"/>
+    <GuideEntityEmbed Entity="BaseUplinkRadio" Caption="Аплинк"/>
   </Box>
 
   ## Как добраться до станции
