@@ -2152,7 +2152,7 @@ entities:
       pos: 2.5,12.5
       parent: 2
       type: Transform
-- proto: ComputerSurveillanceWirelessCameraMonitor
+- proto: ComputerSurveillanceCameraMonitor
   entities:
   - uid: 250
     components:
