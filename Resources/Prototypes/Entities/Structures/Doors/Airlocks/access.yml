@@ -209,17 +209,6 @@
       board: [ DoorElectronicsSalvage ]
 
 - type: entity
-  parent: AirlockCargo
-  id: AirlockQuartermasterLocked
-  suffix: Quartermaster, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["Quartermaster"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsQuartermaster ]
-
-- type: entity
   parent: AirlockMedical
   id: AirlockMedicalLocked
   suffix: Medical, Locked
@@ -352,6 +341,17 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockQuartermasterLocked
+  suffix: Quartermaster, Locked
+  components:
+  - type: AccessReaderBoard
+#    access: [["Quartermaster"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsQuartermaster ]
 
 - type: entity
   parent: AirlockSecurity
@@ -605,17 +605,6 @@
       board: [ DoorElectronicsSalvage ]
 
 - type: entity
-  parent: AirlockCargoGlass
-  id: AirlockQuartermasterGlassLocked
-  suffix: Quartermaster, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["Quartermaster"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsQuartermaster ]
-
-- type: entity
   parent: AirlockMedicalGlass
   id: AirlockMedicalGlassLocked
   suffix: Medical, Locked
@@ -735,6 +724,17 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockQuartermasterGlassLocked
+  suffix: Quartermaster, Locked
+  components:
+  - type: AccessReaderBoard
+#    access: [["Quartermaster"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsQuartermaster ]
 
 - type: entity
   parent: AirlockSecurityGlass

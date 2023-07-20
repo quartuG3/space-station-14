@@ -11,7 +11,7 @@ namespace Content.Client.Access.UI
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
 
-        public AccessStorageBoundUserInterface(ClientUserInterfaceComponent owner, Enum uiKey) : base(owner, uiKey)
+        public AccessStorageBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
         }
 
@@ -23,7 +23,7 @@ namespace Content.Client.Access.UI
 
             List<string> accessLevels;
 
-            if (_entityManager.TryGetComponent<AccessStorageComponent>(Owner.Owner, out var accessStorage))
+            if (EntMan.TryGetComponent<AccessStorageComponent>(Owner, out var accessStorage))
             {
                 accessLevels = accessStorage.AccessLevels;
                 accessLevels.Sort();
@@ -33,7 +33,7 @@ namespace Content.Client.Access.UI
                 accessLevels = new List<string>();
             }
 
-            _window = new AccessStorageWindow(this, _prototypeManager, accessLevels) {Title = _entityManager.GetComponent<MetaDataComponent>(Owner.Owner).EntityName};
+            _window = new AccessStorageWindow(this, _prototypeManager, accessLevels) {Title = EntMan.GetComponent<MetaDataComponent>(Owner).EntityName};
 
             _window.OnClose += Close;
             _window.OpenCentered();
