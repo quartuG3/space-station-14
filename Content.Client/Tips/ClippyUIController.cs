@@ -1,3 +1,4 @@
+using System.Numerics;
 using Content.Client.Gameplay;
 using Content.Client.Message;
 using Content.Client.Paper;
@@ -132,7 +133,7 @@ public sealed class ClippyUIController : UIController
             || clippy.State == ClippyState.Speaking
             || !EntityManager.TryGetComponent(_entity, out SpriteComponent? sprite))
         {
-            return (screenSize.X - offset * (clippy.DesiredSize.X + Padding), (screenSize.Y - clippy.DesiredSize.Y) / 2);
+            return new Vector2(screenSize.X - offset * (clippy.DesiredSize.X + Padding), (screenSize.Y - clippy.DesiredSize.Y) / 2);
         }
 
         var numSteps = (int) Math.Ceiling(slideTime / waddle);
@@ -155,7 +156,7 @@ public sealed class ClippyUIController : UIController
             }
         }
 
-        return (screenSize.X - stepSize * curStep, (screenSize.Y - clippy.DesiredSize.Y) / 2);
+        return new Vector2(screenSize.X - stepSize * curStep, (screenSize.Y - clippy.DesiredSize.Y) / 2);
     }
 
     private void NextState(ClippyUI clippy)

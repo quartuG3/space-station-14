@@ -13,3 +13,6 @@ ent-ResearchDiskDebug = диск исследовательских очков
 ent-TechnologyDisk = диск технологий
     .desc = Диск для сервера РНД содержащий изучаемые технологии.
     .suffix = { "" }
+ent-TechnologyDiskRare = { ent-TechnologyDisk }
+    .suffix = Редкий
+    .desc = { ent-TechnologyDisk.desc }

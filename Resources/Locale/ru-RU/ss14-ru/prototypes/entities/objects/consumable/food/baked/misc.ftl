@@ -67,3 +67,6 @@ ent-FoodBakedCannoli = канноли
 ent-FoodBakedDumplings = пельмени
     .desc = Обычный рецепт мяса в тесте.
     .suffix = { "" }
+ent-FoodBakedChevreChaud = шевре-шо
+    .desc = Диск слегка подтаявшего козьего сыра выкладывается на кростини и поджаривается со всех сторон.
+    .suffix = { "" }

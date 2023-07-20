@@ -268,6 +268,21 @@ reagent-effect-guidebook-paralyze =
         [1] Парализует
        *[other] парализовать
     } существо на { NATURALFIXED($time, 3) } { MANY("секунд", $time) }
+reagent-effect-guidebook-cure-zombie-infection =
+    { $chance ->
+        [1] Cures
+       *[other] cure
+    } an ongoing zombie infection
+reagent-effect-guidebook-cause-zombie-infection =
+    { $chance ->
+        [1] Gives
+       *[other] give
+    } an individual the zombie infection
+reagent-effect-guidebook-innoculate-zombie-infection =
+    { $chance ->
+        [1] Cures
+       *[other] cure
+    } an ongoing zombie infection, and provides immunity to future infections
 reagent-effect-guidebook-movespeed-modifier =
     { $chance ->
         [1] Изменяет

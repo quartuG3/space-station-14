@@ -73,3 +73,6 @@ ent-BoxEncryptionKeyService = service encryption key box
 ent-BoxEncryptionKeySyndie = syndicate encryption key box
     .desc = Two syndicate encryption keys for the price of one. Miniaturized for ease of use.
     .suffix = { "" }
+ent-BoxDeathRattleImplants = deathrattle implant box
+    .desc = Six deathrattle implants and handheld GPS devices for the whole squad.
+    .suffix = { "" }

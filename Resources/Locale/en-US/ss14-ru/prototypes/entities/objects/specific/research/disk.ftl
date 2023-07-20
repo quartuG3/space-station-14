@@ -13,3 +13,6 @@ ent-ResearchDiskDebug = research point disk
 ent-TechnologyDisk = technology disk
     .desc = A disk for the R&D server containing research technology.
     .suffix = { "" }
+ent-TechnologyDiskRare = { ent-TechnologyDisk }
+    .suffix = rare.
+    .desc = { ent-TechnologyDisk.desc }
