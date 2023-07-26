@@ -16,3 +16,6 @@ ent-ZiptiesBroken = broken zipties
 ent-CablecuffsBroken = broken cables
     .desc = These cables are broken in several places and don't seem very useful.
     .suffix = { "" }
+ent-ClothingOuterStraightjacket = straitjacket
+    .desc = Used to restrain those who may cause harm to themselves or others.
+    .suffix = { "" }
