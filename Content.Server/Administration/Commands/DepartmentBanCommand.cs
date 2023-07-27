@@ -1,4 +1,3 @@
-using Content.Server.Arumoon.BansNotifications;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
@@ -17,7 +16,6 @@ public sealed class DepartmentBanCommand : IConsoleCommand
     [Dependency] private readonly IPlayerLocator _locator = default!;
     [Dependency] private readonly IBanManager _banManager = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IBansNotificationsSystem _arumoonBans = default!;
 
     public string Command => "departmentban";
     public string Description => Loc.GetString("cmd-departmentban-desc");
@@ -97,13 +95,10 @@ public sealed class DepartmentBanCommand : IConsoleCommand
         // If you are trying to remove the following variable, please don't. It's there because the note system groups role bans by time, reason and banning admin.
         // Without it the note list will get needlessly cluttered.
         var now = DateTimeOffset.UtcNow;
-        var expires = DateTimeOffset.Now + TimeSpan.FromMinutes(minutes);
         foreach (var job in departmentProto.Roles)
         {
             _banManager.CreateRoleBan(targetUid, located.Username, shell.Player?.UserId, null, targetHWid, job, minutes, severity, reason, now);
         }
-
-        _arumoonBans.RaiseLocalDepartmentBanEvent(located.Username, expires, departmentProto, reason);
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

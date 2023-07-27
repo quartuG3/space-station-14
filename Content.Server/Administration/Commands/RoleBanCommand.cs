@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using System.Text;
-using Content.Server.Arumoon.BansNotifications;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
@@ -8,18 +7,14 @@ using Content.Shared.Database;
 using Content.Shared.Roles;
 using Robust.Shared.Configuration;
 using Robust.Shared.Console;
-using Robust.Shared.Prototypes;
-
 namespace Content.Server.Administration.Commands;
 
 [AdminCommand(AdminFlags.Ban)]
 public sealed class RoleBanCommand : IConsoleCommand
 {
-    [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly IPlayerLocator _locator = default!;
     [Dependency] private readonly IBanManager _bans = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IBansNotificationsSystem _arumoonBans = default!;
 
     public string Command => "roleban";
     public string Description => Loc.GetString("cmd-roleban-desc");
@@ -80,11 +75,6 @@ public sealed class RoleBanCommand : IConsoleCommand
                 shell.WriteLine(Help);
                 return;
         }
-        
-        if (!_protoManager.TryIndex(job, out JobPrototype? jobPrototype))
-        {
-            return;
-        }
 
         var located = await _locator.LookupIdByNameOrIdAsync(target);
         if (located == null)
@@ -95,10 +85,8 @@ public sealed class RoleBanCommand : IConsoleCommand
 
         var targetUid = located.UserId;
         var targetHWid = located.LastHWId;
-        var expires = DateTimeOffset.Now + TimeSpan.FromMinutes(minutes);
 
         _bans.CreateRoleBan(targetUid, located.Username, shell.Player?.UserId, null, targetHWid, job, minutes, severity, reason, DateTimeOffset.UtcNow);
-        _arumoonBans.RaiseLocalJobBanEvent(located.Username, expires, jobPrototype, reason);
     }
 
     public CompletionResult GetCompletion(IConsoleShell shell, string[] args)

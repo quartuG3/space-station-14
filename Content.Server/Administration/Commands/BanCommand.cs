@@ -2,7 +2,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using Content.Server.Arumoon.BansNotifications;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Notes;
 using Content.Server.Database;
@@ -26,7 +25,6 @@ public sealed class BanCommand : LocalizedCommands
     [Dependency] private readonly IBanManager _bans = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly IBansNotificationsSystem _arumoonBans = default!;
 
     public override string Command => "ban";
 
@@ -96,10 +94,8 @@ public sealed class BanCommand : LocalizedCommands
 
         var targetUid = located.UserId;
         var targetHWid = located.LastHWId;
-        var expires = DateTimeOffset.Now + TimeSpan.FromMinutes(minutes);
 
         _bans.CreateServerBan(targetUid, target, player?.UserId, null, targetHWid, minutes, severity, reason);
-        _arumoonBans.RaiseLocalBanEvent(located.Username, expires, reason);
     }
 
     public override CompletionResult GetCompletion(IConsoleShell shell, string[] args)
