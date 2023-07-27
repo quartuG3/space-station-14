@@ -357,9 +357,12 @@
   components:
   - type: Storage
     capacity: 12
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      tags:
+        - ShellShotgun
+  - type: Dumpable
   - type: Item
     size: 12
   - type: Sprite
