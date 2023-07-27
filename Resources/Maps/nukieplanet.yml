@@ -1070,6 +1070,14 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         chunkSize: 4
       type: GridAtmosphere
     - type: GasTileOverlay
@@ -1093,6 +1101,14 @@ entities:
         moles:
         - 21.824879
         - 82.10312
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -15751,10 +15767,6 @@ entities:
         - Pressed: Toggle
         741:
         - Pressed: Toggle
-      registeredSinks:
-        Pressed:
-        - 742
-        - 741
       type: DeviceLinkSource
 - proto: SignalSwitch
   entities:
@@ -15780,19 +15792,6 @@ entities:
         1485:
         - On: Open
         - Off: Close
-      registeredSinks:
-        On:
-        - 1484
-        - 1483
-        - 1487
-        - 1486
-        - 1485
-        Off:
-        - 1484
-        - 1483
-        - 1487
-        - 1486
-        - 1485
       type: DeviceLinkSource
   - uid: 1523
     components:
@@ -15807,13 +15806,6 @@ entities:
         1522:
         - On: Open
         - Off: Close
-      registeredSinks:
-        On:
-        - 1521
-        - 1522
-        Off:
-        - 1521
-        - 1522
       type: DeviceLinkSource
   - uid: 2359
     components:
@@ -15864,37 +15856,6 @@ entities:
         1512:
         - On: Open
         - Off: Close
-      registeredSinks:
-        On:
-        - 1499
-        - 1500
-        - 1501
-        - 1502
-        - 1503
-        - 1504
-        - 1505
-        - 1506
-        - 1507
-        - 1508
-        - 1509
-        - 1510
-        - 1511
-        - 1512
-        Off:
-        - 1499
-        - 1500
-        - 1501
-        - 1502
-        - 1503
-        - 1504
-        - 1505
-        - 1506
-        - 1507
-        - 1508
-        - 1509
-        - 1510
-        - 1511
-        - 1512
       type: DeviceLinkSource
 - proto: SignalTrigger
   entities:

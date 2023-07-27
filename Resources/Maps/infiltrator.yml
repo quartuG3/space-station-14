@@ -298,6 +298,14 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         chunkSize: 4
       type: GridAtmosphere
     - type: GasTileOverlay
@@ -2508,8 +2516,6 @@ entities:
     - pos: 3.5,0.5
       parent: 2
       type: Transform
-    - bodyType: Dynamic
-      type: Physics
 - proto: NukeCodePaper
   entities:
   - uid: 609
@@ -3001,13 +3007,6 @@ entities:
         369:
         - On: Close
         - Off: Open
-      registeredSinks:
-        On:
-        - 368
-        - 369
-        Off:
-        - 368
-        - 369
       type: DeviceLinkSource
   - uid: 568
     components:
@@ -3031,17 +3030,6 @@ entities:
         373:
         - On: Close
         - Off: Open
-      registeredSinks:
-        On:
-        - 370
-        - 372
-        - 371
-        - 373
-        Off:
-        - 370
-        - 372
-        - 371
-        - 373
       type: DeviceLinkSource
   - uid: 569
     components:
@@ -3071,21 +3059,6 @@ entities:
         101:
         - On: Close
         - Off: Open
-      registeredSinks:
-        On:
-        - 524
-        - 523
-        - 431
-        - 100
-        - 447
-        - 101
-        Off:
-        - 524
-        - 523
-        - 431
-        - 100
-        - 101
-        - 447
       type: DeviceLinkSource
 - proto: SignalTrigger
   entities:

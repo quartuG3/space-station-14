@@ -13,7 +13,7 @@ entities:
     components:
     - name: Жук-Добытчик
       type: MetaData
-    - pos: 0,0
+    - parent: invalid
       type: Transform
     - chunks:
         0,0:
@@ -38,8 +38,7 @@ entities:
     - fixtures: {}
       type: Fixtures
     - type: OccluderTree
-    - nextUpdate: 0
-      type: SpreaderGrid
+    - type: SpreaderGrid
     - type: Shuttle
     - gravityShakeSound: !type:SoundPathSpecifier
         path: /Audio/Effects/alert.ogg
@@ -190,6 +189,14 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.14996
           moles:
@@ -205,10 +212,19 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         chunkSize: 4
       type: GridAtmosphere
     - type: GasTileOverlay
     - type: RadiationGridResistance
+    - type: GridPathfinding
 - proto: AirCanister
   entities:
   - uid: 2
@@ -287,57 +303,33 @@ entities:
     - pos: 2.5,-0.5
       parent: 1
       type: Transform
-    - inputs:
-        Open:
-        - port: On
-          uid: 80
-        Close:
-        - port: Off
-          uid: 80
-        Toggle: []
-      type: SignalReceiver
+    - links:
+      - 80
+      type: DeviceLinkSink
   - uid: 15
     components:
     - pos: 2.5,0.5
       parent: 1
       type: Transform
-    - inputs:
-        Open:
-        - port: On
-          uid: 80
-        Close:
-        - port: Off
-          uid: 80
-        Toggle: []
-      type: SignalReceiver
+    - links:
+      - 80
+      type: DeviceLinkSink
   - uid: 16
     components:
     - pos: -2.5,0.5
       parent: 1
       type: Transform
-    - inputs:
-        Open:
-        - port: On
-          uid: 79
-        Close:
-        - port: Off
-          uid: 79
-        Toggle: []
-      type: SignalReceiver
+    - links:
+      - 79
+      type: DeviceLinkSink
   - uid: 17
     components:
     - pos: -2.5,-0.5
       parent: 1
       type: Transform
-    - inputs:
-        Open:
-        - port: On
-          uid: 79
-        Close:
-        - port: Off
-          uid: 79
-        Toggle: []
-      type: SignalReceiver
+    - links:
+      - 79
+      type: DeviceLinkSink
 - proto: CableApcExtension
   entities:
   - uid: 18
@@ -716,6 +708,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
       type: EntityStorage
     - containers:
         entity_storage: !type:Container
@@ -787,36 +787,28 @@ entities:
       pos: -1.5,2.5
       parent: 1
       type: Transform
-    - outputs:
-        On:
-        - port: Open
-          uid: 17
-        - port: Open
-          uid: 16
-        Off:
-        - port: Close
-          uid: 17
-        - port: Close
-          uid: 16
-      type: SignalTransmitter
+    - linkedPorts:
+        17:
+        - On: Open
+        - Off: Close
+        16:
+        - On: Open
+        - Off: Close
+      type: DeviceLinkSource
   - uid: 80
     components:
     - rot: -1.5707963267948966 rad
       pos: 1.5,2.5
       parent: 1
       type: Transform
-    - outputs:
-        On:
-        - port: Open
-          uid: 15
-        - port: Open
-          uid: 14
-        Off:
-        - port: Close
-          uid: 15
-        - port: Close
-          uid: 14
-      type: SignalTransmitter
+    - linkedPorts:
+        15:
+        - On: Open
+        - Off: Close
+        14:
+        - On: Open
+        - Off: Close
+      type: DeviceLinkSource
 - proto: SubstationWallBasic
   entities:
   - uid: 81
