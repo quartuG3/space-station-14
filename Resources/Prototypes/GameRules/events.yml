@@ -58,8 +58,8 @@
   - type: BureaucraticErrorRule
 
 - type: entity
-  id: Dragon
   parent: BaseGameRule
+  id: Dragon
   noSpawn: true
   components:
   - type: StationEvent
@@ -67,11 +67,12 @@
     duration: 1
     earliestStart: 45
     minimumPlayers: 20
-  - type: DragonRule
+  - type: RandomSpawnRule
+    prototype: SpawnPointGhostDragon
 
 - type: entity
-  id: RevenantSpawn
   parent: BaseGameRule
+  id: RevenantSpawn
   noSpawn: true
   components:
   - type: StationEvent
@@ -79,7 +80,8 @@
     duration: 1
     earliestStart: 45
     minimumPlayers: 20
-  - type: RevenantSpawnRule
+  - type: RandomSpawnRule
+    prototype: MobRevenant
 
 - type: entity
   id: FalseAlarm
