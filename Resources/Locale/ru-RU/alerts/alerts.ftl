@@ -37,7 +37,7 @@ alerts-piloting-desc = Вы пилотируете шаттл. Щелкните 
 alerts-hunger-name = [color=yellow]Проголодавшийся[/color]
 alerts-hunger-desc = Прямо сейчас было бы неплохо поесть.
 alerts-stamina-name = Выносливость
-alerts-stamina-desc = Оглушает Вас, если она слишком низкое.
+alerts-stamina-desc = Оглушает Вас, если она слишком низкая.
 alerts-starving-name = [color=red]Голодание[/color]
 alerts-starving-desc = Вы сильно истощены. Голодание делает передвижение сложным.
 alerts-thirsty-name = [color=yellow]Жажда[/color]
@@ -56,3 +56,5 @@ alerts-pulling-name = Вы тянете
 alerts-pulling-desc = Вы что-то тянете. Щелкните предупреждение, чтобы перестать.
 alerts-suit-power-name = Сила костюма
 alerts-suit-power-desc = Сколько энергии у Вашего костюма космического ниндзя.
+alerts-bleed-name = [color=red]Кровотечение[/color]
+alerts-bleed-desc = Вы [color=red]истекаете кровью[/color].

@@ -97,3 +97,6 @@ ent-ComputerIFFCircuitboard = консоль системы опозновани
 ent-ComputerIFFSyndicateCircuitboard = консоль системы опознования синдиката
     .desc = Позволяет контролировать параметры "свой-чужой" и стелс судна или станции.
     .suffix = { "" }
+ent-ComputerMassMediaCircuitboard = консоль СМИ (машинная плата)
+    .desc = Напишите свое послание миру!
+    .suffix = { "" }
