@@ -88,3 +88,6 @@ ent-ComputerSurveillanceWirelessCameraMonitor = wireless camera monitor
 ent-ComputerPalletConsole = cargo sale computer
     .desc = Used to sell goods loaded onto cargo pallets
     .suffix = { "" }
+ent-ComputerMassMedia = mass-media console
+    .desc = Write your message to the world!
+    .suffix = { "" }
