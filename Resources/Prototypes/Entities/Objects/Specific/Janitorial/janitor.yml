@@ -480,7 +480,7 @@
           - state: equipped-HELMET
             offset: "0, 0.15"
         mask:
-          - state: plunger-equipped-MASK
+          - state: equipped-MASK
     - type: MeleeWeapon
       damage:
         types:
