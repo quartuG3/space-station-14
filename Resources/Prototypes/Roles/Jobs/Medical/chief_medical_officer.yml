@@ -8,7 +8,7 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobChemist
-      time: 21600 #6 hrs
+      time: 10800 #3 hrs
     - !type:RoleTimeRequirement
       role: JobMedicalDoctor
       time: 21600 #6 hrs
@@ -17,7 +17,7 @@
       time: 72000
   weight: 10
   startingGear: CMOGear
-  icon: "ChiefMedicalOfficer"
+  icon: "JobIconChiefMedicalOfficer"
   requireAdminNotify: true
   supervisors: job-supervisors-captain
   access:

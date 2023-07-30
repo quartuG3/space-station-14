@@ -97,3 +97,6 @@ ent-ComputerIFFCircuitboard = IFF console board
 ent-ComputerIFFSyndicateCircuitboard = syndicate IFF console board
     .desc = Allows you to control the IFF and stealth characteristics of this vessel.
     .suffix = { "" }
+ent-ComputerMassMediaCircuitboard = mass-media console board
+    .desc = Write your message to the world!
+    .suffix = { "" }

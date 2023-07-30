@@ -69,6 +69,7 @@ ban-panel-permanent = Навсегда
 ban-panel-ip-hwid-tooltip = Оставьте пустым и установите флажок ниже, чтобы использовать данные с последнего подключения
 ban-panel-severity = Тяжесть:
 # Ban string
-server-ban-string = { $admin } произвёл бан { $severity } тяжести, который истекает { $expires } для [{ $name }, { $ip }, { $hwid }], по причине: { $reason }
+server-ban-string = { $admin } выдал бан { $severity } тяжести, который истекает { $expires } для [{ $name }, { $ip }, { $hwid }], по причине: { $reason }
 server-ban-string-never = никогда
+server-ban-string-no-pii = { $admin } выдал бан { $severity } тяжести, который истекает { $expires } для { $name } по причине: { $reason }
 cmd-ban_exemption_get-arg-player = <игрок>
