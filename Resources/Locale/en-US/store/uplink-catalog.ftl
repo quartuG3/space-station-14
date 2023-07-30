@@ -289,3 +289,5 @@ uplink-scarf-syndie-red-desc = A stylish striped syndicate red scarf. The perfec
 uplink-scarf-syndie-green-name = striped syndicate green scarf
 uplink-scarf-syndie-green-desc = A stylish striped syndicate green scarf. The perfect winter accessory for those with a keen fashion sense, and those who are in the mood to steal something.
 
+uplink-miniature-energy-crossbow-syndie-green-name = Miniature Energy Crossbow
+uplink-miniature-energy-crossbow-syndie-green-desc = The syndicate's energy crossbow, small, silent and deadly.
