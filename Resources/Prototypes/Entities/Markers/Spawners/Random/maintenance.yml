@@ -144,7 +144,7 @@
       layers:
         - state: red
         - sprite: Objects/Misc/spaceshroom.rsi
-          state: spaceshroom
+          state: object
     - type: RandomSpawner
       prototypes:
         - FoodSpaceshroom
