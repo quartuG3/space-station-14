@@ -12,7 +12,6 @@ using JetBrains.Annotations;
 using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using static Content.Server.ReagentVisor.ReagentVisorSystem;
 
 namespace Content.Server.Chemistry.EntitySystems;
 
@@ -142,11 +141,6 @@ public sealed partial class SolutionContainerSystem : EntitySystem
         }
 
         args.PushMarkup(Loc.GetString("examinable-solution-has-recognizable-chemicals", ("recognizedString", msg.ToString())));
-
-        // ReagentVisor Behaviour
-        var ev = new ReagentVisorAttemptEvent(solutionHolder);
-        RaiseLocalEvent(args.Examiner, ev);
-        if (ev.Handled && ev.Text != null) args.PushMarkup(ev.Text);
     }
 
     public void UpdateAppearance(EntityUid uid, Solution solution,
