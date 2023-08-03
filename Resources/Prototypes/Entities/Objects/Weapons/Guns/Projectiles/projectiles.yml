@@ -744,3 +744,49 @@
             - Impassable
             - HighImpassable
     - type: GrapplingProjectile
+
+- type: entity
+  id: BulletMic
+  name: MIC bolt
+  parent: BaseBullet
+  noSpawn: true
+  description: Not too bad, but you still don't want to get hit by it.
+  components:
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: cbbolt
+  - type: GatheringProjectile
+  - type: Projectile
+    damage:
+      types:
+        Poison: 10
+  - type: TimedDespawn
+    lifetime: 0.4
+  - type: StaminaDamageOnCollide
+    damage: 65
+
+- type: entity
+  id: BulletCutter
+  name: Cutter bolt
+  parent: BaseBullet
+  noSpawn: true
+  description: Not too bad, but you still don't want to get hit by it.
+  components:
+  - type: Reflective
+    reflective:
+      - NonEnergy
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    layers:
+    - state: scatterlaser
+  - type: GatheringProjectile
+  - type: Projectile
+    damage:
+      types:
+        Heat: 0.5
+  # Short lifespan
+  - type: TimedDespawn
+    lifetime: 0.4

@@ -458,3 +458,66 @@
   - type: Appearance
   - type: StaticPrice
     price: 750
+    
+- type: entity
+  name: Miniature Energy Crossbow
+  parent: BaseWeaponBatterySmall
+  id: MiniatureEnergyCrossbow
+  description: The syndicate's energy crossbow, small, silent and deadly.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/miniature_ebow.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/heavy_shot_suppressed.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletMic
+    fireCost: 900
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 400
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+
+- type: entity
+  name: Cutter
+  parent: BaseWeaponBatterySmall
+  id: WeaponCutter
+  description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
+  components:
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Battery/cutter.rsi
+      state: icon
+    - type: Gun
+      fireRate: 6
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/plasma_cutter.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletCutter
+      fireCost: 10
+    - type: Appearance
+
+- type: entity
+  name: Advanced Cutter
+  parent: BaseWeaponBatterySmall
+  id: WeaponCutterAdv
+  description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
+  components:
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Battery/cutteradv.rsi
+      state: icon
+    - type: Gun
+      fireRate: 8
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/plasma_cutter.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletCutter
+      fireCost: 5
+    - type: Appearance
