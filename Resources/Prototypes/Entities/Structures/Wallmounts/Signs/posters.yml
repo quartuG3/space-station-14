@@ -544,7 +544,7 @@
   description: "A poster encouraging people crew to stop using 'standard operating procedures' because they are inefficient and boring."
   components:
   - type: Sprite
-    state: poster57_contraband
+    state: poster63_contraband
 
 # Legit
 - type: entity
