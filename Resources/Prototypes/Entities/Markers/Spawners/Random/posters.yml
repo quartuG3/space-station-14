@@ -85,6 +85,12 @@
       - PosterContrabandNuclearDeviceInformational
       - PosterContrabandRevolt
       - PosterContrabandRise
+      - PosterContrabandMoth
+      - PosterContrabandCybersun600
+      - PosterContrabandDonk
+      - PosterContrabandEnlistGorlex
+      - PosterContrabandInterdyne
+      - PosterContrabandWaffleCorp
       - PosterContrabandSOPIsShit
     chance: 1
 
@@ -140,4 +146,8 @@
       - PosterLegitThereIsNoGasGiant
       - PosterLegitJustAWeekAway
       - PosterLegitSecWatch
+      - PosterLegitVacation
+      - PosterLegitPeriodicTable
+      - PosterLegitRenault
+      - PosterLegitNTTGC
     chance: 1
