@@ -135,6 +135,7 @@ public sealed class EntityPainter
 
             var pointX = (int) entity.X - (imgX / 2) + EyeManager.PixelsPerMeter / 2;
             var pointY = (int) entity.Y - (imgY / 2) + EyeManager.PixelsPerMeter / 2;
+            image.Mutate(o => o.Rotate((float) -entity.Rotation.Degrees));
             canvas.Mutate(o => o.DrawImage(image, new Point(pointX, pointY), 1));
         }
     }

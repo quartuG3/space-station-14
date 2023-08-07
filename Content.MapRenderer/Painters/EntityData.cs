@@ -3,7 +3,7 @@ using Robust.Shared.GameObjects;
 
 namespace Content.MapRenderer.Painters;
 
-public readonly record struct EntityData(EntityUid Owner, SpriteComponent Sprite, float X, float Y)
+public readonly record struct EntityData(EntityUid Owner, SpriteComponent Sprite, float X, float Y, Angle Rotation)
 {
     public readonly EntityUid Owner = Owner;
 
@@ -12,4 +12,6 @@ public readonly record struct EntityData(EntityUid Owner, SpriteComponent Sprite
     public readonly float X = X;
 
     public readonly float Y = Y;
+
+    public readonly Angle Rotation = Rotation;
 }

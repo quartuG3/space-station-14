@@ -92,7 +92,7 @@ namespace Content.MapRenderer.Painters
                     var position = transform.LocalPosition;
 
                     var (x, y) = TransformLocalPosition(position, grid);
-                    var data = new EntityData(entity, sprite, x, y);
+                    var data = new EntityData(entity, sprite, x, y, transform.LocalRotation);
 
                     components.GetOrAdd(transform.GridUid.Value, _ => new List<EntityData>()).Add(data);
                 }
