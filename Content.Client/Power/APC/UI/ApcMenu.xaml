@@ -1,4 +1,4 @@
-﻿﻿<controls:FancyWindow  xmlns="https://spacestation14.io"
+﻿<controls:FancyWindow  xmlns="https://spacestation14.io"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns:style="clr-namespace:Content.Client.Stylesheets"
@@ -22,6 +22,30 @@
                         <BoxContainer Orientation="Horizontal" MinWidth="90">
                             <Button Name="BreakerButton" Text="{Loc 'apc-menu-breaker-button'}" HorizontalExpand="True"/>
                         </BoxContainer>
+                        <!-- Cover Locked/Unlocked -->
+                        <Label Text="{Loc 'apc-menu-cover-label'}" HorizontalExpand="True"
+                                StyleClasses="StatusFieldTitle" MinWidth="120"/>
+                        <BoxContainer Orientation="Horizontal" MinWidth="90">
+                            <Button Name="CoverButton" Text="{Loc 'apc-menu-cover-button'}" HorizontalExpand="True"/>
+                        </BoxContainer>
+                        <!-- Channel panel mode -->
+                        <Label Name="CEquipmentLabel" Text="{Loc 'apc-menu-equipment'}" HorizontalExpand="True"
+                                StyleClasses="StatusFieldTitle" MinWidth="120"/>
+                        <BoxContainer Orientation="Horizontal" MinWidth="90">
+                            <OptionButton Name="CEquipmentButton" HorizontalExpand="True"/>
+                        </BoxContainer>
+                        <Label Name="CLightingLabel" Text="{Loc 'apc-menu-lighting'}" HorizontalExpand="True"
+                                StyleClasses="StatusFieldTitle" MinWidth="120"/>
+                        <BoxContainer Orientation="Horizontal" MinWidth="90">
+                            <OptionButton Name="CLightingButton" HorizontalExpand="True"/>
+                        </BoxContainer>
+                        <Label Name="CEnvironmentLabel" Text="{Loc 'apc-menu-environment'}" HorizontalExpand="True"
+                                StyleClasses="StatusFieldTitle" MinWidth="120"/>
+                        <BoxContainer Orientation="Horizontal" MinWidth="90">
+                            <OptionButton Name="CEnvironmentButton" HorizontalExpand="True"/>
+                        </BoxContainer>
+                        <Label Name="CTotalLabel" Text="{Loc 'apc-menu-environment'}" HorizontalExpand="True"
+                                StyleClasses="StatusFieldTitle" MinWidth="120"/>
                         <!--Charging Status-->
                         <Label Text="{Loc 'apc-menu-external-label'}" StyleClasses="StatusFieldTitle" MinWidth="120" />
                         <Label Name="ExternalPowerStateLabel" Text="{Loc 'apc-menu-power-state-good'}" />
@@ -54,33 +78,6 @@
                 <TextureRect StyleClasses="NTLogoDark" Stretch="KeepAspectCentered"
                         VerticalAlignment="Center" HorizontalAlignment="Right" SetSize="19 19"/>
             </BoxContainer>
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
-            <Label Text="{Loc 'apc-menu-breaker-label'}"/>
-            <Button Name="BreakerButton" Text="{Loc 'apc-menu-breaker-button-blank'}"></Button>
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
-            <Label Text="{Loc 'apc-menu-external-label'}"/>
-            <Label Name="ExternalPowerStateLabel" Text="{Loc 'apc-menu-power-state-good'}"/>
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
-            <Label Text="{Loc 'apc-menu-cover-label'}"/>
-            <Button Name="CoverButton" Text="{Loc 'apc-menu-cover-button-blank'}"></Button>
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
-            <Label Name = "CEquipmentLabel" Text="{Loc 'apc-menu-equipment-blank'}" Margin="0 0 2 0" />
-            <OptionButton Name="CEquipmentButton" HorizontalExpand="True" />
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
-            <Label Name = "CLightingLabel" Text="{Loc 'apc-menu-lighting-blank'}" Margin="0 0 2 0" />
-            <OptionButton Name="CLightingButton" HorizontalExpand="True" />
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
-            <Label Name = "CEnvironmentLabel" Text="{Loc 'apc-menu-environment-blank'}" Margin="0 0 2 0" />
-            <OptionButton Name="CEnvironmentButton" HorizontalExpand="True" />
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal">
-            <Label Name = "CTotalLabel" Text="{Loc 'apc-menu-total-blank'}" Margin="0 0 2 0" />
         </BoxContainer>
     </BoxContainer>
 </controls:FancyWindow>

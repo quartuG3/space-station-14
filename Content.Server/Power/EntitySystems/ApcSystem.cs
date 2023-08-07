@@ -9,8 +9,8 @@ using Content.Server.Lock;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.APC;
-using Content.Shared.Containers.ItemSlots;
 */
+using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.APC;
@@ -400,7 +400,6 @@ namespace Content.Server.Power.EntitySystems
             SoundSystem.Play(apc.OnReceiveMessageSound.GetSound(), Filter.Pvs(uid), uid, AudioParams.Default.WithVolume(-2f));
         }
 
-        private void OnEmagged(EntityUid uid, ApcComponent comp, GotEmaggedEvent args)
         private void OnEmagged(EntityUid uid, ApcComponent comp, ref GotEmaggedEvent args)
         {
             // no fancy conditions
@@ -515,9 +514,6 @@ namespace Content.Server.Power.EntitySystems
             if (!Resolve(uid, ref apc))
                 return ApcChargeState.Lack;
 
-            if (apc != null && HasComp<EmaggedComponent>(uid))
-                return ApcChargeState.Emag;
-
             if(!_cellSystem.TryGetBatteryFromSlot(uid, out battery))
                 return ApcChargeState.Lack;
 
@@ -559,21 +555,21 @@ namespace Content.Server.Power.EntitySystems
             return ApcExternalPowerState.Good;
         }
 
-        public static ApcPanelState GetPanelState(ApcComponent apc)
+        public static ApcPanelState GetPanelState(EntityUid uid, ApcComponent apc)
         {
             if (apc.MaintaincePanelOpened)
                 return ApcPanelState.Maintaince;
-
-            if(apc.Emagged)
+/*
+            if (HasComp<EmaggedComponent>(apc.Owner))
                 return ApcPanelState.Emag;
-
+*/
             if (apc.IsApcOpen)
                 return ApcPanelState.Open;
             else
                 return ApcPanelState.Closed;
         }
 
-        public static ApcLockState GetLockState(ApcComponent apc)
+        public static ApcLockState GetLockState(EntityUid uid, ApcComponent apc)
         {
             return apc.MaintaincePanelUnlocked switch
             {
@@ -584,7 +580,7 @@ namespace Content.Server.Power.EntitySystems
 
         private void OnApcAltVerb(EntityUid uid, ApcComponent component, GetVerbsEvent<AlternativeVerb> args)
         {
-            if(component.MaintaincePanelUnlocked)
+            if (component.MaintaincePanelUnlocked)
             {
                 args.Verbs.Add(new AlternativeVerb()
                 {
@@ -642,11 +638,11 @@ namespace Content.Server.Power.EntitySystems
             if (!Resolve(uid, ref appearance, ref apc, false))
                 return;
 
-            _appearance.SetData(uid, ApcVisuals.PanelState, GetPanelState(apc));
+            _appearance.SetData(uid, ApcVisuals.PanelState, GetPanelState(uid, apc));
             _appearance.SetData(uid, ApcVisuals.EquipmentChannelState, apc.EquipmentChannelState);
             _appearance.SetData(uid, ApcVisuals.LightingChannelState, apc.LightingChannelState);
             _appearance.SetData(uid, ApcVisuals.EnvironmentChannelState, apc.EnvironmentChannelState);
-            _appearance.SetData(uid, ApcVisuals.LockState, GetLockState(apc));
+            _appearance.SetData(uid, ApcVisuals.LockState, GetLockState(uid, apc));
         }
 
         private sealed class ApcToolFinishedEvent : EntityEventArgs

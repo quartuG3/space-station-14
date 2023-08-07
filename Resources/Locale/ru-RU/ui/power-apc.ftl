@@ -1,32 +1,34 @@
-apc-menu-title = ЛКП
-apc-menu-breaker-label = Рубильник:{ " " }
+apc-menu-title = APC
+
+apc-menu-breaker-label = Main Breaker
+apc-menu-breaker-button = Toggle
 apc-menu-breaker-button-on = On
 apc-menu-breaker-button-off = Off
-apc-menu-breaker-button-blank = Error
-apc-menu-cover-label = Cover Lock:{" "}
+apc-menu-cover-label = Cover Lock
+apc-menu-cover-button = Toggle
 apc-menu-cover-button-engaged = Engaged
 apc-menu-cover-button-disengaged = Disengaged
-apc-menu-cover-button-blank = Error
+
+apc-menu-equipment = Equipment: { POWERWATTS($power) }
+apc-menu-lighting = Lighting: { POWERWATTS($power) }
+apc-menu-environment = Environment: { POWERWATTS($power) }
+apc-menu-total = Total: { POWERWATTS($power) }
+
 apc-menu-modes-on = On
 apc-menu-modes-off = Off
 apc-menu-modes-auto = Auto
-apc-menu-equipment = Equipment: { POWERWATTS($power) } { " " }
-apc-menu-equipment-blank = Equipment: { "" } { " " }
-apc-menu-lighting = Lighting: { POWERWATTS($power) } { " " }
-apc-menu-lighting-blank = Lighting: { "" } { " " }
-apc-menu-environment = Environment: { POWERWATTS($power) } { " " }
-apc-menu-environment-blank = Environment: { " " } { " " }
-apc-menu-total = Total: { POWERWATTS($power) }
-apc-menu-total-blank = Total: { " " }
-apc-menu-breaker-button = Переключить
-apc-menu-power-label = Питание: { $power } Вт
-apc-menu-external-label = Внешнее питание:{ " " }
-apc-menu-charge-label = Заряд:{ " " }
+
+apc-menu-power-label = Battery Power
+apc-menu-external-label = External Power
+apc-menu-charge-label = {$percent} Charged
 
 # For the power state label
 
-apc-menu-power-state-good = Хорошее
-apc-menu-power-state-low = Слабое
-apc-menu-power-state-none = Отсутствует
-apc-menu-flavor-left = Свяжитесь с инженером для помощи.
+apc-menu-power-state-good = Good
+apc-menu-power-state-low = Low
+apc-menu-power-state-none = None
+
+# For the flavor text on the footer
+
+apc-menu-flavor-left = Contact an engineer for assistance.
 apc-menu-flavor-right = v1.1
