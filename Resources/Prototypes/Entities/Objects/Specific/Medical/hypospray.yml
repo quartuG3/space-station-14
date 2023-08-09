@@ -136,7 +136,7 @@
   - type: Sprite
     sprite: Objects/Specific/Medical/medipen.rsi
     layers:
-    - state: salpen
+    - state: bicpen
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: Hypospray
     solutionName: pen
@@ -162,7 +162,7 @@
   - type: Sprite
     sprite: Objects/Specific/Medical/medipen.rsi
     layers:
-    - state: oxapen
+    - state: dermpen
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: Hypospray
     solutionName: pen
