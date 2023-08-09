@@ -19,12 +19,19 @@ public sealed class AccessReaderUISystem : EntitySystem
 
     private void OnUseInHand(EntityUid uid, AccessStorageComponent component, UseInHandEvent args)
     {
-        string[] access = { "" };
+        List<string> accessList = new List<string>();
 
         if (component.AccessLists.Count > 0)
-            access = component.AccessLists[0].ToArray<string>();
-
-        AccessStorageBoundUserInterfaceState newState = new(access, component.DenyTags.ToArray());
+        {
+            foreach (HashSet<string> hashSet in component.AccessLists)
+            {
+                foreach (string hash in hashSet.ToArray())
+                {
+                    accessList.Add(hash);
+                }
+            }
+        }
+        AccessStorageBoundUserInterfaceState newState = new(accessList.ToArray(), component.DenyTags.ToArray());
         _userInterfaceSystem.TrySetUiState(uid, AccessStorageUiKey.Key, newState);
     }
 }
