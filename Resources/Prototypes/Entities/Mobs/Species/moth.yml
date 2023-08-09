@@ -42,8 +42,8 @@
       85: Critical
       175: Dead
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.5
-    baseSprintSpeed : 5.5
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 5.5
     weightlessAcceleration: 1.5 # Move around more easily in space.
     weightlessFriction: 1
     weightlessModifier: 1
