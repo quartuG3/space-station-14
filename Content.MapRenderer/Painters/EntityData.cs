@@ -1,5 +1,6 @@
 ﻿using Robust.Client.GameObjects;
 using Robust.Shared.GameObjects;
+using Robust.Shared.Maths;
 
 namespace Content.MapRenderer.Painters;
 
