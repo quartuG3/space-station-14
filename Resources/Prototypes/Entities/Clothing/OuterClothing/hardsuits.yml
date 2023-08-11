@@ -59,6 +59,9 @@
     sprintModifier: 0.7
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitAtmos
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
 
 #Engineering Hardsuit
 - type: entity
@@ -125,6 +128,9 @@
     sprintModifier: 0.7
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitEngineering
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
 
 #Spationaut Hardsuit
 - type: entity
@@ -359,6 +365,9 @@
     sprintModifier: 0.8
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitEngineeringWhite
+  - type: GloveHeatResistance
+    heatResistance: 1400
+  - type: Insulated
 
 #Chief Medical Officer's Hardsuit
 - type: entity
