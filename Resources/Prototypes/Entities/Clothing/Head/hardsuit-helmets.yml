@@ -55,6 +55,7 @@
     lowPressureMultiplier: 1000
   - type: TemperatureProtection
     coefficient: 0.005
+  - type: EyeProtection
 
 #Engineering Hardsuit
 - type: entity
@@ -73,6 +74,7 @@
   - type: PressureProtection
     highPressureMultiplier: 0.1
     lowPressureMultiplier: 1000
+  - type: EyeProtection
 
 #Spationaut Hardsuit
 - type: entity
@@ -277,6 +279,7 @@
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
+  - type: EyeProtection
 
 #Chief Medical Officer's Hardsuit
 - type: entity
@@ -295,6 +298,10 @@
   - type: PressureProtection
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
+  - type: ClothingGrantComponent
+    component:
+    - type: ShowHealthBars
+      damageContainer: Biological
 
 #Research Director's Hardsuit
 - type: entity
@@ -416,6 +423,10 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: ClothingGrantComponent
+    component:
+    - type: ShowHealthBars
+      damageContainer: Biological
 
 #Syndicate Commander Hardsuit
 - type: entity
@@ -560,6 +571,10 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: PressureProtection
+    highPressureMultiplier: 0.1
+    lowPressureMultiplier: 1000
+  - type: EyeProtection
 
 #ERT Medical Hardsuit
 - type: entity
@@ -574,6 +589,10 @@
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
   - type: PointLight
     color: "#adffec"
+  - type: ClothingGrantComponent
+    component:
+    - type: ShowHealthBars
+      damageContainer: Biological
 
 #ERT Security Hardsuit
 - type: entity
