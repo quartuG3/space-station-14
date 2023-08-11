@@ -583,7 +583,6 @@
         - Ingot
         - Wood
         - Uranium
-        - Gold
 
 - type: entity
   id: AmmoTechFab

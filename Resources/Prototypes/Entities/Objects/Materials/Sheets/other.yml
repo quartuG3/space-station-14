@@ -204,6 +204,11 @@
         reagents:
         - ReagentId: Uranium
           Quantity: 10
+  - type: Tag
+    tags:
+    - Sheet
+    - DroneUsable
+    - Uranium
 
 - type: entity
   parent: SheetUranium

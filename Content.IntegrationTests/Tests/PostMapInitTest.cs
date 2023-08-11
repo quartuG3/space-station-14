@@ -46,7 +46,7 @@ namespace Content.IntegrationTests.Tests
         {
             "Dev",
             "Fland",
-            "Meta",
+            "MetaStation",
             "Packed",
             "Aspid",
             "Cluster",
@@ -55,7 +55,6 @@ namespace Content.IntegrationTests.Tests
             "Origin",
             "CentComm",
             "Box",
-            "Barratry",
             "Saltern",
             "Core",
             "Marathon",

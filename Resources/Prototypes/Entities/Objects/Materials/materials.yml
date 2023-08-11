@@ -235,6 +235,11 @@
   - type: Appearance
   - type: Item
     heldPrefix: wood
+  - type: Tag
+    tags:
+      - DroneUsable
+      - RawMaterial
+      - Wood
 
 - type: entity
   parent: MaterialWoodPlank
