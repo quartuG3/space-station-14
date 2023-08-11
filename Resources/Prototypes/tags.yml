@@ -464,6 +464,12 @@
   id: Ingot
 
 - type: Tag
+  id: Uranium
+
+- type: Tag
+  id: Wood
+
+- type: Tag
   id: InstantDoAfters
 
 - type: Tag
