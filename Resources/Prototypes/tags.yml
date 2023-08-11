@@ -23,6 +23,9 @@
   id: Baguette
 
 - type: Tag
+  id: Balloon
+
+- type: Tag
   id: BaseballBat
 
 - type: Tag
@@ -163,6 +166,9 @@
 
 - type: Tag
   id: CigPack
+
+- type: Tag
+  id: ClothMade
 
 - type: Tag
   id: ClownMask
@@ -327,6 +333,9 @@
   id: Folder
 
 - type: Tag
+  id: FoodSnack
+
+- type: Tag
   id: FootstepSound
 
 - type: Tag
@@ -453,6 +462,12 @@
 
 - type: Tag
   id: Ingot
+
+- type: Tag
+  id: Uranium
+
+- type: Tag
+  id: Wood
 
 - type: Tag
   id: InstantDoAfters
@@ -586,8 +601,6 @@
 - type: Tag
   id: Multitool
 
-- type: Tag
-  id: NoSpinOnThrow
 
 - type: Tag
   id: NoBlockAnchoring
@@ -893,3 +906,4 @@
 
 - type: Tag
   id: ModularReceiver
+

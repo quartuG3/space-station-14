@@ -8,11 +8,9 @@
   markingLimits: MobMothMarkingLimits
   dollPrototype: MobMothDummy
   skinColoration: Hues
-  sexes:
-    - Female
-  maleFirstNames: names_moth_female
-  femaleFirstNames: names_moth_female
-  maleLastNames: names_moth_last_female
+  maleFirstNames: names_moth_first_male
+  femaleFirstNames: names_moth_first_female
+  maleLastNames: names_moth_last_male
   femaleLastNames: names_moth_last_female
 
 - type: speciesBaseSprites
@@ -37,8 +35,8 @@
 - type: humanoidBaseSprite
   id: MobMothEyes
   baseSprite:
-    sprite: Mobs/Customization/eyes.rsi
-    state: moth_eyes
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: eyes
 
 - type: markingPoints
   id: MobMothMarkingLimits

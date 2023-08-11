@@ -1,8 +1,44 @@
 - type: dataset
   id: names_moth_last_female
   values:
+  - Черноведова # Ascalapha odorata
+  - Мёртвоглавая # refers to any of the 3 Acherontia
+  - Павлиноглазая # Saturniinae
+  - Опалённокрылая # Plagodis dolabraria
+  - Темнора # Temnora
+  - Уста # Usta
+  - Беловедова # Thysania agrippina
+  - Зимняя # Operophtera brumata
+
+  # Other languages
+  - Эпиолосова # Ancient Greek "moth"
+  - Моллер # conceivably any Old Norse descendant of mǫlr but probably more Danish than anything. "oe" digraph for ø.
+  - Ночекрылая # literal pseudo-translation of German Nachtfalter
+
+  # Myth and legend
+  - Вестникова # belief of moths flying at night signalling the reception of a letter
+  - Леандрова # Greek figure associated with Hero, and similar sounding to Oleander hawk-moth
+  - Мольмэнова # split between being a myth reference and actual possible surname given the actual Goodman, Hoffman, Newman, Coleman, etc.
+
+  # Fun names
+  - Кометакрылая
+  - Рассветова
+  - Светлякова
+  - Огнекрылая
+  - Пламякуртная
+  - Светопрядова
+  - Лунноплясая
+  - Ночегрёзая
+  - Ночеглазая
+  - Совоядова
+  - Шелкопрядова
+  - Искравидная
+  - Звездоглядная
+  - Звездоищущая
+
+  # AruMoon
   - Аккурата
-  - Прелюбодеяние
+  - Прелюбодеяния
   - Альбипуншта
   - Альбостриата
   - Альбовеноса
@@ -27,7 +63,7 @@
   - Импура
   - Остров
   - Инфраргия
-  - Промежуточные
+  - Промежуточная
   - Недопустимость
   - Лаэвуста
   - Лангида
@@ -35,21 +71,21 @@
   - Люсида
   - Максима
   - Медиана
-  - Режимы
+  - Режимова
   - Монтикола
   - Науманни
   - Непалина
   - Туманность
   - Осетинство
   - Пастелина
-  - флебит 
+  - Флебит 
   - Пирауста
   - Радиата
   - Рипария
   - Руфулоса
   - Семикана
   - Сепарата
-  - сиамцы
+  - Сиамцова
   - Симплекс
   - Тумоди
   - Ундицилия

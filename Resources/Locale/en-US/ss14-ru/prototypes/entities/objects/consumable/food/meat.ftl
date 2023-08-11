@@ -1,6 +1,9 @@
 ent-FoodMeatBase = { ent-FoodInjectableBase }
     .desc = { ent-FoodInjectableBase.desc }
     .suffix = { "" }
+ent-FoodMeatRawBase = { ent-FoodMeatBase }
+    .desc = { ent-FoodMeatBase.desc }
+    .suffix = { "" }
 ent-FoodMeat = raw meat
     .desc = A slab of raw meat.
     .suffix = { "" }
@@ -76,7 +79,7 @@ ent-FoodMeatMeatball = meatball
 ent-FoodMeatSlime = slimeball
     .desc = A gelatinous shaping of slime jelly.
     .suffix = { "" }
-ent-MaterialSmileExtract = extract smile
+ent-MaterialSmileExtract = smile extract
     .desc = It's a real panacea. But at what cost?
     .suffix = { "" }
 ent-FoodMeatCooked = steak
@@ -169,3 +172,7 @@ ent-FoodMeatSpiderCutletCooked = spider cutlet
 ent-FoodMeatXenoCutletCooked = xeno cutlet
     .desc = A cutlet of cooked xeno, dripping with... tastiness?
     .suffix = { "" }
+ent-FoodMeatGondola = raw gondola meat
+    .desc = A raw piece of gondola. Stinky.
+    .suffix = { "" }
+	

@@ -1,6 +1,9 @@
 ent-FoodMeatBase = { ent-FoodInjectableBase }
     .desc = { ent-FoodInjectableBase.desc }
     .suffix = { "" }
+ent-FoodMeatRawBase = { ent-FoodMeatBase }
+    .desc = { ent-FoodMeatBase.desc }
+    .suffix = { "" }
 ent-FoodMeat = сырое мясо
     .desc = Кусок сырого мяса.
     .suffix = { "" }
@@ -169,3 +172,7 @@ ent-FoodMeatSpiderCutletCooked = паучья котлета
 ent-FoodMeatXenoCutletCooked = ксено котлета
     .desc = Котлета из ксеноса, сочащаяся... вкусом?
     .suffix = { "" }
+ent-FoodMeatGondola = сырое мясо гондолы
+    .desc = Сырой кусок гондолы. Липкое.
+    .suffix = { "" }
+	
