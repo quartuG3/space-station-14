@@ -418,6 +418,7 @@
     - HamtrRArm
     - HamtrLLeg
     - HamtrRLeg
+    - VimHarness
   - type: MaterialStorage
     whitelist:
       tags:
@@ -456,6 +457,7 @@
     idleState: icon
     runningState: icon
     staticRecipes:
+      - ClothingEyesHudSecurity
       - Flash
       - Handcuffs
       - Zipties
@@ -760,6 +762,8 @@
       - ClothingUniformJumpskirtPrisoner
       - ClothingUniformJumpsuitQM
       - ClothingUniformJumpskirtQM
+      - ClothingUniformJumpsuitQMTurtleneck
+      - ClothingUniformJumpskirtQMTurtleneck
       - ClothingUniformJumpsuitResearchDirector
       - ClothingUniformJumpskirtResearchDirector
       - ClothingUniformJumpsuitScientist
