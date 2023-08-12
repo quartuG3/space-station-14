@@ -57,7 +57,7 @@ namespace Content.Server.Arumoon.BansNotifications
             var request = await _httpClient.PostAsync(_webhookUrl,
                 new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json"));
 
-            _sawmill.Log(LogLevel.Debug, $"Discord webhook message: {JsonSerializer.Serialize(payload)}");
+//            _sawmill.Log(LogLevel.Debug, $"Discord webhook message: {JsonSerializer.Serialize(payload)}");
 
             var content = await request.Content.ReadAsStringAsync();
             if (!request.IsSuccessStatusCode)
