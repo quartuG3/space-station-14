@@ -2,6 +2,7 @@ using Content.Shared.CCVar;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
 using Content.Shared.Roles;
+using Robust.Shared;
 using Robust.Shared.Configuration;
 using System.Net.Http;
 using System.Net;
@@ -28,13 +29,16 @@ namespace Content.Server.Arumoon.BansNotifications
         private ISawmill _sawmill = default!;
         private readonly HttpClient _httpClient = new();
         private string _webhookUrl = String.Empty;
+        private string _serverName = String.Empty;
 
         public override void Initialize()
         {
+            _sawmill = Logger.GetSawmill("bans_notifications");
             SubscribeLocalEvent<BanEvent>(OnBan);
             SubscribeLocalEvent<JobBanEvent>(OnJobBan);
             SubscribeLocalEvent<DepartmentBanEvent>(OnDepartmentBan);
             _config.OnValueChanged(CCVars.DiscordBanWebhook, value => _webhookUrl = value, true);
+            _config.OnValueChanged(CVars.GameHostName, value => _serverName = value, true);
         }
 
         public void RaiseLocalBanEvent(string username, DateTimeOffset? expires, string reason, NoteSeverity severity, string adminusername)
@@ -57,12 +61,12 @@ namespace Content.Server.Arumoon.BansNotifications
             var request = await _httpClient.PostAsync(_webhookUrl,
                 new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json"));
 
-//            _sawmill.Log(LogLevel.Debug, $"Discord webhook message: {JsonSerializer.Serialize(payload)}");
+            _sawmill.Debug($"Discord webhook json: {JsonSerializer.Serialize(payload)}");
 
             var content = await request.Content.ReadAsStringAsync();
             if (!request.IsSuccessStatusCode)
             {
-//                _sawmill.Log(LogLevel.Error, $"Discord returned bad status code when posting message: {request.StatusCode}\nResponse: {content}");
+                _sawmill.Error($"Discord returned bad status code when posting message: {request.StatusCode}\nResponse: {content}");
                 return;
             }
         }
@@ -89,8 +93,9 @@ namespace Content.Server.Arumoon.BansNotifications
 
             var payload = new WebhookPayload
             {
+
+                Username = _serverName,
                 /*
-                Username = username,
                 AvatarUrl = string.IsNullOrWhiteSpace(_avatarUrl) ? null : _avatarUrl,
                 */
                 Embeds = new List<Embed>
@@ -137,8 +142,8 @@ namespace Content.Server.Arumoon.BansNotifications
 
             var payload = new WebhookPayload
             {
+                Username = _serverName,
                 /*
-                Username = username,
                 AvatarUrl = string.IsNullOrWhiteSpace(_avatarUrl) ? null : _avatarUrl,
                 */
                 Embeds = new List<Embed>
