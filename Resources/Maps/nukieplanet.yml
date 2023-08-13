@@ -10114,7 +10114,7 @@ entities:
       type: Transform
     - fixtures: {}
       type: Fixtures
-- proto: FloorLavaEntity
+- proto: FloorLiquidPlasmaEntity
   entities:
   - uid: 1066
     components:
