@@ -9,6 +9,7 @@ guide-entry-network-configurator = Конфигуратор Сети
 guide-entry-power = Электроснабжение
 guide-entry-ame = Двигатель антиматерии (ДАМ)
 guide-entry-singularity = Сингулярный двигатель
+guide-entry-teg = Термо-электрический Генератор (ТЭГ)
 guide-entry-science = Наука
 guide-entry-radio = Радиосвязь
 guide-entry-machine-upgrading = Улучшение Машин
