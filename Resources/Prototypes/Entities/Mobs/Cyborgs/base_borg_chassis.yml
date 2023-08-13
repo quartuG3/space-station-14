@@ -103,7 +103,13 @@
   - type: TypingIndicator
     proto: robot
   - type: Speech
-    speechSounds: Pai
+    speechSounds: Borg
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: LimbstepBorg
+      params:
+        variation: 0.07
+        volume: -5
   - type: Construction
     graph: Cyborg
     containers:
@@ -170,3 +176,4 @@
     tags:
     - ShoesRequiredStepTriggerImmune
     - DoorBumpOpener
+    - FootstepSound
