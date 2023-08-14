@@ -21,7 +21,7 @@ gun-cartridge-unspent = Он [color=lime]не израсходован[/color].
 # BatteryAmmoProvider
 gun-battery-examine = Заряда хватит на [color={ $color }]{ $count }[/color] выстрелов.
 # CartridgeAmmoProvider
-gun-chamber-bolt-ammo = Отсутствует затвор
+gun-chamber-bolt-ammo = Затвор не закрыт
 gun-chamber-bolt = Затвор [color={ $color }]{ $bolt }[/color].
 gun-chamber-bolt-closed = Затвор закрыт
 gun-chamber-bolt-opened = Затвор открыт
