@@ -539,26 +539,8 @@ entities:
     - pos: -0.5,-6.5
       parent: 2
       type: Transform
-    - containers:
-        AMEController-fuelJarContainer: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: 67
-        AmeFuel: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-      type: ContainerContainer
 - proto: AmeJar
   entities:
-  - uid: 67
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 66
-      type: Transform
-    - canCollide: False
-      type: Physics
   - uid: 88
     components:
     - pos: -1.7455716,-6.412507
@@ -788,6 +770,23 @@ entities:
     - links:
       - 569
       type: DeviceLinkSink
+- proto: BorgCharger
+  entities:
+  - uid: 104
+    components:
+    - pos: 4.5,-11.5
+      parent: 2
+      type: Transform
+  - uid: 105
+    components:
+    - pos: 5.5,-11.5
+      parent: 2
+      type: Transform
+  - uid: 317
+    components:
+    - pos: 6.5,-11.5
+      parent: 2
+      type: Transform
 - proto: BoxFolderRed
   entities:
   - uid: 387
@@ -2590,18 +2589,6 @@ entities:
     - pos: 2.5,0.5
       parent: 2
       type: Transform
-- proto: MachineFrameDestroyed
-  entities:
-  - uid: 105
-    components:
-    - pos: 6.5,-11.5
-      parent: 2
-      type: Transform
-  - uid: 317
-    components:
-    - pos: 5.5,-11.5
-      parent: 2
-      type: Transform
 - proto: MedicalBed
   entities:
   - uid: 308
@@ -3624,13 +3611,6 @@ entities:
   - uid: 323
     components:
     - pos: 3.5,-9.5
-      parent: 2
-      type: Transform
-- proto: UnfinishedMachineFrame
-  entities:
-  - uid: 104
-    components:
-    - pos: 4.5,-11.5
       parent: 2
       type: Transform
 - proto: VendingMachineTankDispenserEVA
