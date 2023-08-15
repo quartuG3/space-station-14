@@ -13178,8 +13178,7 @@ entities:
   entities:
   - uid: 662
     components:
-    - rot: 3.141592653589793 rad
-      pos: 6.5,3.5
+    - pos: 6.5,3.5
       parent: 3
       type: Transform
 - proto: OxygenCanister
