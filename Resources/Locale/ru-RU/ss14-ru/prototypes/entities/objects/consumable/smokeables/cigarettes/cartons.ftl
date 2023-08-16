@@ -10,3 +10,6 @@ ent-CigCartonBlue = блок сигарет AcmeCo
 ent-CigCartonBlack = блок сигарет Nomads
     .desc = Картонная коробка, содержащая 6 пачек сигарет Nomads.
     .suffix = { "" }
+ent-CigCartonMixed = пропитанные сигареты Дэна
+    .desc = Картонная коробка, содержащая 3 пачки пропитанных сигарет Дэна.
+    .suffix = { "" }

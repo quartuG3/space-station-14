@@ -23,6 +23,8 @@
   - type: StaticPrice
     price: 1250
   - type: InteractionOutline
+  - type: Physics
+    bodyType: KinematicController
   - type: Fixtures
     fixtures:
       fix1:
@@ -47,11 +49,6 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-  - type: NpcFactionMember
-    factions:
-    - NanoTrasen
-  - type: Physics
-    bodyType: KinematicController
   - type: UserInterface
     interfaces:
     - key: enum.SiliconLawsUiKey.Key
@@ -99,7 +96,13 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
   - type: DoAfter
+  - type: Eye
   - type: Body
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
   - type: Actions
   - type: TypingIndicator
     proto: robot
@@ -178,3 +181,16 @@
     - ShoesRequiredStepTriggerImmune
     - DoorBumpOpener
     - FootstepSound
+
+- type: entity
+  id: BaseBorgChassisNT
+  parent: BaseBorgChassis
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: Access
+    enabled: false
+    groups:
+    - AllAccess

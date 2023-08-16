@@ -169,3 +169,6 @@ ent-TelecomServerCircuitboard = telecommunication server machine board
 ent-SalvageMagnetMachineCircuitboard = salvage magnet machine board
     .desc = A machine printed circuit board for a salvage magnet.
     .suffix = { "" }
+ent-MiniGravityGeneratorCircuitboard = mini gravity generator machine board
+    .desc = A machine printed circuit board for a mini gravity generator.
+    .suffix = { "" }

@@ -477,7 +477,7 @@
       clothingVisuals:
         head:
           - state: equipped-HELMET
-            offset: "0, 0.15"
+            offset: "0, 0.15625"
         mask:
           - state: equipped-MASK
     - type: MeleeWeapon

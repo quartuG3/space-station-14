@@ -21,6 +21,7 @@ chat-manager-sender-announcement-wrap-message =
     Объявление { $sender }:
     { $message }
 chat-manager-entity-say-wrap-message = { $entityName } говорит: "{ $message }"
+chat-manager-entity-say-bold-wrap-message = [bold]{ $entityName }[/bold] { $verb }, [font={ $fontType } size={ $fontSize }][bold]"{ $message }"[/bold][/font]
 chat-manager-entity-whisper-wrap-message = { $entityName } шепчет: "{ $message }"
 chat-manager-entity-whisper-unknown-wrap-message = Кто-то шепчет: "{ $message }"
 chat-manager-entity-me-wrap-message = { $entityName } { $message }
@@ -34,3 +35,22 @@ chat-manager-send-admin-announcement-wrap-message = { $adminChannelName }: { $me
 chat-manager-send-hook-ooc-wrap-message = OOC: (D){ $senderName }: { $message }
 chat-manager-dead-channel-name = МЁРТВЫЕ
 chat-manager-admin-channel-name = АДМИН
+chat-speech-verb-suffix-exclamation = !
+chat-speech-verb-suffix-exclamation-strong = !!
+chat-speech-verb-suffix-question = ?
+chat-speech-verb-default = говорит
+chat-speech-verb-exclamation = восклицает
+chat-speech-verb-exclamation-strong = кричит
+chat-speech-verb-question = спрашивает
+chat-speech-verb-insect-1 = стрекочит
+chat-speech-verb-insect-2 = трепещет
+chat-speech-verb-slime = щебечет
+chat-speech-verb-robotic = заявляет
+chat-speech-verb-reptilian = шипит
+chat-speech-verb-skeleton = гремит
+chat-speech-verb-small-mob = пищит
+chat-speech-verb-large-mob = рычит
+chat-speech-verb-monkey = шимпанзит
+chat-speech-verb-cluwne-1 = хихикает
+chat-speech-verb-cluwne-2 = Гогочет
+chat-speech-verb-cluwne-3 = смеётся

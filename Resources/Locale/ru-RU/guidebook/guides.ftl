@@ -1,6 +1,6 @@
 guide-entry-engineering = Инженерия
 guide-entry-construction = Строительство
-guide-entry-airlock-security = Улучшения Шлюзов
+guide-entry-airlock-security = Защита Шлюзов
 guide-entry-atmospherics = Атмосфера
 guide-entry-botany = Ботаника
 guide-entry-fires = Пожары & Космос
