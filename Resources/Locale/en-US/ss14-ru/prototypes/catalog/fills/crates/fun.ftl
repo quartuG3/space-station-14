@@ -55,3 +55,6 @@ ent-CrateFunToyBox = { ent-CrateToyBox }
 ent-CrateFunBikeHornImplants = { ent-CrateGenericSteel }
     .desc = { ent-CrateGenericSteel.desc }
     .suffix = { "" }
+ent-CrateFunMysteryFigurines = { ent-CratePlastic }
+    .desc = { ent-CratePlastic.desc }
+    .suffix = { "" }

@@ -169,3 +169,6 @@ ent-TelecomServerCircuitboard = телеком сервер (машинная п
 ent-SalvageMagnetMachineCircuitboard = магнит обломков (машинная плата)
     .desc = Печатная плата магнита обломков.
     .suffix = { "" }
+ent-MiniGravityGeneratorCircuitboard = мини генератор гравитации (машинная плата)
+    .desc = Печатная плата мини генератора гравитации.
+    .suffix = { "" }

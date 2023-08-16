@@ -10,3 +10,6 @@ ent-Onestar = ванстар меха
 ent-PlayerBorgGeneric = { ent-BorgChassisGeneric }
     .desc = { ent-BorgChassisGeneric.desc }
     .suffix = { "" }
+ent-PlayerBorgBattery = { ent-BorgChassisGeneric }
+    .suffix = Батарея
+    .desc = { ent-BorgChassisGeneric.desc }
