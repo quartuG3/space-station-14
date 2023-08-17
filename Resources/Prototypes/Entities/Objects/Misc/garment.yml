@@ -8,6 +8,9 @@
     size: 105
   - type: Storage
     capacity: 105
+    whitelist:
+      tags:
+        - ClothMade
 
 - type: entity
   name: garment bag
