@@ -52,10 +52,10 @@
   result: WeaponAdvancedLaser
   completetime: 20
   materials:
-    Steel: 1000
-    Glass: 500
-    Gold: 150
-    Uranium: 600
+    Steel: 1500
+    Glass: 1000
+    Gold: 850
+    Uranium: 150
 
 - type: latheRecipe
   id: WeaponLaserCannon
@@ -64,7 +64,7 @@
   materials:
     Steel: 1250
     Plastic: 750
-    Gold: 100
+    Gold: 500
 
 - type: latheRecipe
   id: WeaponXrayCannon
