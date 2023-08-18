@@ -22,7 +22,8 @@
     requiredLegs: 2
   - type: Damageable
     damageContainer: Biological
-    damageModifierSet: Moth # moff
+  - type: Speech
+    speechVerb: Insect
   - type: Butcherable
     butcheringType: Spike
     spawned:

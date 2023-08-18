@@ -427,6 +427,7 @@
     mode: SensorCords
   - type: Tag
     tags:
+    - Clothing
     - ClothMade
     - PrisonUniform
     - WhitelistChameleon
@@ -441,6 +442,17 @@
     sprite: Clothing/Uniforms/Jumpsuit/qm.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/qm.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitQMTurtleneck
+  name: quartermasters's turtleneck
+  description: A sharp turtleneck made for the hardy work environment of supply.
+  components:
+    - type: Sprite
+      sprite: Clothing/Uniforms/Jumpsuit/qmturtle.rsi
+    - type: Clothing
+      sprite: Clothing/Uniforms/Jumpsuit/qmturtle.rsi
 
 - type: entity
   parent: ClothingUniformBase

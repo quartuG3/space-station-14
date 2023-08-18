@@ -4,6 +4,7 @@ job-name-cadet = Кадет СБ
 job-name-hos = Глава службы безопасности
 job-name-detective = Детектив
 job-name-brigmedic = Бригмедик
+job-name-borg = Киборг
 job-name-scientist = Учёный
 job-name-research-assistant = Научный ассистент
 job-name-rd = Научный руководитель
@@ -50,6 +51,7 @@ job-name-senior-officer = Офицер-инструктор
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = Атмосферный техник
 JobBartender = Бармен
+JobBorg = Борг
 JobBotanist = Ботаник
 JobCaptain = Капитан
 JobCargoTechnician = Грузчик

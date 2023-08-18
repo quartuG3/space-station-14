@@ -1,0 +1,9 @@
+ent-FoodCartBase = тележка с едой
+    .desc = Тележка для продуктов.
+    .suffix = { "" }
+ent-FoodCartHot = Тележка с горячей едой
+    .desc = Налетай пока горячее!
+    .suffix = { "" }
+ent-FoodCartCold = Тележка с холодной едой
+    .desc = Это мороженщик! Это мороженщик!
+    .suffix = { "" }
