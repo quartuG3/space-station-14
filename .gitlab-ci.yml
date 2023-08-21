@@ -1,4 +1,4 @@
-image: mcr.microsoft.com/dotnet/sdk:7.0
+image: registry.git.arumoon.ru/arumoon/ss14-build-image:latest
 
 stages:
   - test
@@ -8,8 +8,6 @@ test-debug:
   stage: test
   retry: 2
   script:
-    - apt update && apt upgrade -y
-    - apt install -y python3 libfreetype6
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
     - dotnet restore
@@ -22,8 +20,6 @@ test-release:
   stage: test
   retry: 2
   script:
-    - apt update && apt upgrade -y
-    - apt install -y python3 libfreetype6
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
     - dotnet restore
@@ -38,9 +34,8 @@ publish:
   interruptible: true
   rules:
     - if: '$SSH_PRIVATE_KEY != null && $SSH_REMOTE_IP != null && $SSH_USER != null'
+    - if: '$CI_PIPELINE_SOURCE == "schedule" || $CI_PIPELINE_SOURCE == "web"'
   script:
-    - apt update && apt upgrade -y
-    - apt install -y python3 libfreetype6 openssh-client rsync
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
     - Tools/package_server_build.py -p win-x64 linux-x64 osx-x64 linux-arm64 > server_build.log
@@ -69,8 +64,6 @@ publish-artifact:
   rules:
     - if: '$SSH_PRIVATE_KEY == null'
   script:
-    - apt update && apt upgrade -y
-    - apt install -y python3 libfreetype6 openssh-client rsync
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
     # We create artifact only for Windows and x64 Linux, because almost noone uses OSX and Linux on arm for development among our contributors. This will save for us some amount of storage. You can just add osx-x64 or linux-arm64 if you really need it.
