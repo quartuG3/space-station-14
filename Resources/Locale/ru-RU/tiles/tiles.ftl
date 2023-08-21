@@ -80,7 +80,6 @@ tiles-dirt-floor = грязь
 tiles-asteroid-sand = астероидный песок
 tiles-asteroid-sand-rocks = астероидные камни
 tiles-asteroid-sand-pebbles = астероидная галька
-tiles-asteroid-floor = пол астероида
 tiles-asteroid-plating = астероидное покрытие
 tiles-asteroid-tile = плитка астероида
 tiles-asteroid-coarse-sand = крупный песок астероида

@@ -131,6 +131,9 @@
     - Clothing
     - HamsterWearable
     - WhitelistChameleon
+  - type: GuideHelp
+    guides:
+    - Security
 
 - type: entity
   parent: ClothingEyesBase

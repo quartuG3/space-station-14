@@ -367,6 +367,9 @@
   - type: Clothing
     sprite: Clothing/Hands/Gloves/forensic.rsi
   - type: FingerprintMask
+  - type: GuideHelp
+    guides:
+    - DNA
 
 - type: entity
   parent: ClothingHandsBase
