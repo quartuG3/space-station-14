@@ -62,7 +62,8 @@ publish-artifact:
   retry: 2
   interruptible: true
   rules:
-    - if: '$SSH_PRIVATE_KEY == null'
+    - if: '$CI_PIPELINE_SOURCE == "schedule" || $CI_PIPELINE_SOURCE == "web"'
+      when: never
   script:
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
