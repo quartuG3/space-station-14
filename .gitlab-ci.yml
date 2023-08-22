@@ -21,8 +21,6 @@ test-debug:
 test-release:
   stage: test
   retry: 2
-  except:
-    - schedules
   script:
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
