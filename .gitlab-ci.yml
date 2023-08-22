@@ -1,4 +1,4 @@
-image: mcr.microsoft.com/dotnet/sdk:7.0
+image: registry.git.arumoon.ru/workbench-team/space-station-14/build-image:latest
 
 stages:
   - test
@@ -7,9 +7,9 @@ stages:
 test-debug:
   stage: test
   retry: 2
+  except:
+    - schedules
   script:
-    - apt update && apt upgrade -y
-    - apt install -y python3 libfreetype6
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
     - dotnet restore
@@ -22,8 +22,6 @@ test-release:
   stage: test
   retry: 2
   script:
-    - apt update && apt upgrade -y
-    - apt install -y python3 libfreetype6
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
     - dotnet restore
@@ -36,11 +34,12 @@ publish:
   stage: publish
   retry: 2
   interruptible: true
-  rules:
-    - if: '$SSH_PRIVATE_KEY != null && $SSH_REMOTE_IP != null && $SSH_USER != null'
+  only:
+    - schedules
+  except:
+    variables:
+      - ($SSH_PRIVATE_KEY == null || $SSH_REMOTE_IP == null || $SSH_USER == null)
   script:
-    - apt update && apt upgrade -y
-    - apt install -y python3 libfreetype6 openssh-client rsync
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
     - Tools/package_server_build.py -p win-x64 linux-x64 osx-x64 linux-arm64 > server_build.log
@@ -66,11 +65,9 @@ publish-artifact:
   stage: publish
   retry: 2
   interruptible: true
-  rules:
-    - if: '$SSH_PRIVATE_KEY == null'
+  except:
+    - schedules
   script:
-    - apt update && apt upgrade -y
-    - apt install -y python3 libfreetype6 openssh-client rsync
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
     # We create artifact only for Windows and x64 Linux, because almost noone uses OSX and Linux on arm for development among our contributors. This will save for us some amount of storage. You can just add osx-x64 or linux-arm64 if you really need it.
