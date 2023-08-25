@@ -330,6 +330,9 @@
   parent: BaseBullet
   noSpawn: true
   components:
+  - type: Reflective
+    reflective:
+    - Energy
   - type: Sprite
     color: "#ffff33"
     sprite: Structures/Power/Generation/Singularity/emitter.rsi
@@ -807,3 +810,14 @@
     lifetime: 0.4
   - type: StaminaDamageOnCollide
     damage: 65
+
+- type: entity
+  name: emitter bolt
+  id: EmitterCannonBolt
+  parent: EmitterBolt
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Heat: 25
