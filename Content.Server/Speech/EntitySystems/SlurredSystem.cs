@@ -71,7 +71,7 @@ public sealed class SlurredSystem : SharedSlurredSystem
                     'ё' => "о",
                     'ч' => "щ",
                     _ => $"{character}",
-                }; // AruMoon-Localization
+                }; // Starshine-Localization
 
                 sb.Append(newString);
             }
