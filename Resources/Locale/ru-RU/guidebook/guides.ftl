@@ -51,5 +51,5 @@ guide-entry-zombies = Зомби
 guide-entry-minor-antagonists = Малые Антагонисты
 guide-entry-writing = Написание
 
-guide-entry-arumoon = Станция им. Aru Moon
-guide-entry-arumoon-spacelaw = Космический Закон
+guide-entry-starshine = Starshine
+guide-entry-starshine-spacelaw = Космический Закон
