@@ -179,3 +179,4 @@
           reagents:
             - ReagentId: Kvass
               Quantity: 1500
+    transferAmount: 100

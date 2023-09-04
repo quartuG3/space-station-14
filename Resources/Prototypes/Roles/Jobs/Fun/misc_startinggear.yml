@@ -153,6 +153,8 @@
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: BaseUplinkRadio30TC
     belt: ClothingBeltMilitaryWebbing
+  inhand:
+    right hand: NukeOpsDeclarationOfWar
   innerclothingskirt: ClothingUniformJumpskirtOperative
   satchel: ClothingBackpackDuffelSyndicateOperative
   duffelbag: ClothingBackpackDuffelSyndicateOperative
@@ -296,8 +298,22 @@
   id: MobMonkeyGear
   equipment:
     head: ClothingHeadHatTophat
+    ears: ClothingHeadsetService
     jumpsuit: ClothingUniformJumpsuitJacketMonkey
     id: BartenderIDCard
+
+# DeathMatch Gear
+
+- type: startingGear
+  id: DeathMatchGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+    shoes: ClothingShoesBootsJack
+    ears: ClothingHeadsetGrey
+    gloves: ClothingHandsGlovesFingerless
+  innerclothingskirt: ClothingUniformJumpskirtColorWhite
+  inhand:
+    left hand: WeaponMeleeToolboxRobust
 
 #Brigmedic
 
