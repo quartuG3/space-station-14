@@ -109,7 +109,7 @@
     ears: ClothingHeadsetAltSyndicate
     gloves: ClothingHandsGlovesCombat
     shoes: ClothingShoesBootsCombatFilled
-    pocket1: BaseUplinkRadio30TC
+    pocket1: BaseUplinkRadio40TC
     id: AgentIDCard
   innerclothingskirt: ClothingUniformJumpsuitOperative
   satchel: ClothingBackpackDuffelSyndicateOperative
@@ -130,7 +130,7 @@
     shoes: ClothingShoesBootsCombatFilled
     id: SyndicateNuclearIDCard
     pocket1: DoubleEmergencyOxygenTankFilled
-    pocket2: BaseUplinkRadio30TC
+    pocket2: BaseUplinkRadio40TC
     belt: ClothingBeltMilitaryWebbing
   innerclothingskirt: ClothingUniformJumpskirtOperative
   satchel: ClothingBackpackDuffelSyndicateOperative
@@ -151,7 +151,7 @@
     shoes: ClothingShoesBootsCombatFilled
     id: SyndiPDA
     pocket1: DoubleEmergencyOxygenTankFilled
-    pocket2: BaseUplinkRadio30TC
+    pocket2: BaseUplinkRadio40TC
     belt: ClothingBeltMilitaryWebbing
   inhand:
     right hand: NukeOpsDeclarationOfWar
@@ -173,7 +173,7 @@
     shoes: ClothingShoesBootsMagSyndie
     id: SyndiPDA
     pocket1: DoubleEmergencyOxygenTankFilled
-    pocket2: BaseUplinkRadio30TC
+    pocket2: BaseUplinkRadio40TC
     belt: ClothingBeltMilitaryWebbingMedFilled
   innerclothingskirt: ClothingUniformJumpskirtOperative
   satchel: ClothingBackpackDuffelSyndicateOperativeMedic

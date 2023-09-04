@@ -514,6 +514,7 @@ public abstract partial class SharedDoorSystem : EntitySystem
             AccessTypes.AllowAllIdExternal => !isExternal || _accessReaderBoardSystem.IsAllowed(user.Value, access, storage),
             AccessTypes.AllowAllNoExternal => !isExternal,
             _ => _accessReaderBoardSystem.IsAllowed(user.Value, access, storage)
+        };
     }
 
     /// <summary>
