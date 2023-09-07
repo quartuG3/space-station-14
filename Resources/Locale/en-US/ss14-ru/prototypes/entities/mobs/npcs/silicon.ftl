@@ -1,6 +1,10 @@
 ent-MobSiliconBase = { "" }
     .desc = { "" }
     .suffix = { "" }
+ent-MobSiliconBaseVehicle = { ent-['MobSiliconBase', 'BaseVehicle'] }
+
+  .desc = { ent-['MobSiliconBase', 'BaseVehicle'].desc }
+  .suffix = { "" }
 ent-MobTaxiBot = taxibot
     .desc = Give a ride?
     .suffix = { "" }

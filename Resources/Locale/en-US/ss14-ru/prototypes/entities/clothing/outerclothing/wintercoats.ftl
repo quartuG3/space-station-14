@@ -97,3 +97,6 @@ ent-ClothingOuterWinterSyndie = syndicate's winter coat
 ent-ClothingOuterWinterMusician = musician's winter coat
     .desc = An oversized, plasticine space tuxedo that'll have people asking "do you know me?"
     .suffix = { "" }
+ent-ClothingOuterWinterWeb = web winter coat
+    .desc = Feels like the inside of a cocoon, not that this would make you less afraid of being in one.
+    .suffix = { "" }

@@ -208,3 +208,6 @@ ent-ClothingUniformJumpskirtSeniorOfficer = senior officer jumpskirt
 ent-ClothingUniformJumpskirtSecGrey = grey security jumpskirt
     .desc = A tactical relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood.
     .suffix = { "" }
+ent-ClothingUniformJumpskirtWeb = web jumpskirt
+    .desc = Makes it clear that you are one with the webs.
+    .suffix = { "" }

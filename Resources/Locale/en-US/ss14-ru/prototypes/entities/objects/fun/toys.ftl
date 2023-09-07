@@ -151,3 +151,6 @@ ent-PlasticBanana = banana
 ent-CrazyGlue = crazy glue
     .desc = A bottle of crazy glue manufactured by Honk! Co.
     .suffix = { "" }
+ent-PlushieMoth = moth plushie
+    .desc = Cute and fluffy moth plushie. Enjoy, bz!
+    .suffix = { "" }
