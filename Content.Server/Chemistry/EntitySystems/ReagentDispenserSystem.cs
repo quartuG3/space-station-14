@@ -109,7 +109,7 @@ namespace Content.Server.Chemistry.EntitySystems
                         if (_prototypeManager.TryIndex(upgradePackPrototypeId, out ReagentDispenserInventoryTieredPrototype? upgradePackPrototype)
                             && (upgradePackPrototype.Tier == null || upgradePackPrototype.Tier <= minRating))
                         {
-                            inventory.AddRange(upgradePackPrototype.Inventory);
+                            inventory.AddRange(upgradePackPrototype.Inventory.Select(x => new ReagentId(x, null)));
                         }
                     }
                 }
