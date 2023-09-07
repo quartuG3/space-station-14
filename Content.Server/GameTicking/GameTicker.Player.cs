@@ -1,5 +1,6 @@
 using Content.Server.Database;
 using Content.Server.Players;
+using Content.Server.Players.PlayTimeTracking;
 using Content.Shared.GameTicking;
 using Content.Shared.GameWindow;
 using Content.Shared.Players;
@@ -16,6 +17,7 @@ namespace Content.Server.GameTicking
     public sealed partial class GameTicker
     {
         [Dependency] private readonly IPlayerManager _playerManager = default!;
+        [Dependency] private readonly PlayTimeTrackingManager _playTimeTrackingManager = default!;
         [Dependency] private readonly IServerDbManager _dbManager = default!;
 
         private void InitializePlayer()
@@ -48,7 +50,10 @@ namespace Content.Server.GameTicking
                     {
                         var data = new PlayerData(session.UserId, args.Session.Name);
                         data.Mind = mindId;
+                        data.Whitelisted = await _db.GetWhitelistStatusAsync(session.UserId);
                         session.Data.ContentDataUncast = data;
+
+                        _playTimeTrackingManager.SendWhitelistCached(session);
                     }
 
                     // Make the player actually join the game.
