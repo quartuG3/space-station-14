@@ -747,7 +747,7 @@
   description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
   components:
   - type: Pda
-    id: SyndicateEliteIDCard
+    id: SyndicateIDCard
     state: pda-syndi
   - type: PdaBorderColor
     borderColor: "#891417"

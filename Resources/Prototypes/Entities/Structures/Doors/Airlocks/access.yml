@@ -132,17 +132,6 @@
       board: [ DoorElectronicsAtmospherics ]
 
 - type: entity
-  parent: AirlockExternal
-  id: AirlockExternalSyndicateLocked
-  suffix: External, Syndicate, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["Syndicate"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicate ]
-
-- type: entity
   parent: AirlockFreezer
   id: AirlockFreezerLocked
   suffix: Kitchen, Locked
@@ -427,28 +416,6 @@
     containers:
       board: [ DoorElectronicsExternal ]
 
-- type: entity
-  parent: AirlockSyndicate
-  id: AirlockSyndicateLocked
-  suffix: Syndicate, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["Syndicate"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicate ]
-
-- type: entity
-  parent: AirlockSyndicateCommand
-  id: AirlockSyndicateCommandLocked
-  suffix: Syndicate, Command, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["SyndicateCommand"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicateCommand ]
-
 # Glass Airlocks
 - type: entity
   parent: AirlockGlass
@@ -504,17 +471,6 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsEngineering ]
-
-- type: entity
-  parent: AirlockExternalGlass
-  id: AirlockExternalGlassSyndicateLocked
-  suffix: External, Syndicate, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["Syndicate"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicate ]
 
 - type: entity
   parent: AirlockExternalGlass
@@ -790,28 +746,6 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsExternal ]
-
-- type: entity
-  parent: AirlockSyndicateGlass
-  id: AirlockSyndicateGlassLocked
-  suffix: Syndicate, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["Syndicate"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicate ]
-
-- type: entity
-  parent: AirlockSyndicateCommandGlass
-  id: AirlockSyndicateCommandGlassLocked
-  suffix: Syndicate, Command, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["SyndicateCommand"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSyndicateCommand ]
 
 # Maintenance Hatches
 - type: entity

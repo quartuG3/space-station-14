@@ -324,7 +324,7 @@
   suffix: Syndicate
   components:
   - type: AccessStorage
-    access: [["Syndicate"]]
+    access: [["SyndicateAgent"]]
 
 - type: entity
   id: DoorElectronicsSyndicateCommand
