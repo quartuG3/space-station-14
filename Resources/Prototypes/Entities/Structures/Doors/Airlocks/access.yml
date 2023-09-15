@@ -136,16 +136,22 @@
   id: AirlockExternalSyndicateLocked
   suffix: External, Syndicate, Locked
   components:
-  - type: AccessReader
-    access: [["SyndicateAgent"]]
+  - type: AccessReaderBoard
+#    access: [["SyndicateAgent"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicate ]
 
 - type: entity
   parent: AirlockExternal
   id: AirlockExternalNukeopLocked
   suffix: External, Nukeop, Locked
   components:
-  - type: AccessReader
-    access: [["NuclearOperative"]]
+  - type: AccessReaderBoard
+#    access: [["NuclearOperative"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNukeop ]
 
 - type: entity
   parent: AirlockFreezer
@@ -482,16 +488,22 @@
   id: AirlockExternalGlassSyndicateLocked
   suffix: External, Glass, Syndicate, Locked
   components:
-  - type: AccessReader
-    access: [["SyndicateAgent"]]
+  - type: AccessReaderBoard
+#    access: [["SyndicateAgent"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicate ]
 
 - type: entity
   parent: AirlockExternalGlass
   id: AirlockExternalGlassNukeopLocked
   suffix: External, Glass, Nukeop, Locked
   components:
-  - type: AccessReader
-    access: [["NuclearOperative"]]
+  - type: AccessReaderBoard
+#    access: [["NuclearOperative"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNukeop ]
 
 - type: entity
   parent: AirlockExternalGlass
@@ -784,16 +796,33 @@
   id: AirlockSyndicateGlassLocked
   suffix: Syndicate, Locked
   components:
-  - type: AccessReader
-    access: [["SyndicateAgent"]]
+  - type: AccessReaderBoard
+#    access: [["SyndicateAgent"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicate ]
 
 - type: entity
   parent: AirlockSyndicateGlass
   id: AirlockSyndicateNukeopGlassLocked
   suffix: Nukeop, Locked
   components:
-  - type: AccessReader
-    access: [["NuclearOperative"]]
+  - type: AccessReaderBoard
+#    access: [["NuclearOperative"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNukeop ]
+
+- type: entity
+  parent: AirlockSyndicateGlass
+  id: AirlockNukeopCommandGlassLocked
+  suffix: Nukeop, Command, Locked
+  components:
+  - type: AccessReaderBoard
+#    access: [["NukeopCommand"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNukeopCommand ]
 
 # Maintenance Hatches
 - type: entity
@@ -1054,16 +1083,33 @@
   id: AirlockSyndicateLocked
   suffix: Syndicate, Locked
   components:
-  - type: AccessReader
-    access: [["SyndicateAgent"]]
+  - type: AccessReaderBoard
+#    access: [["SyndicateAgent"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicate ]
 
 - type: entity
   parent: AirlockSyndicate
   id: AirlockSyndicateNukeopLocked
   suffix: Nukeop, Locked
   components:
-  - type: AccessReader
-    access: [["NuclearOperative"]]
+  - type: AccessReaderBoard
+#    access: [["NuclearOperative"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNukeop ]
+
+- type: entity
+  parent: AirlockNukeopCommand
+  id: AirlockNukeopCommandLocked
+  suffix: Nukeop, Command, Locked
+  components:
+  - type: AccessReaderBoard
+#    access: [["NukeopCommand"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNukeopCommand ]
 
 # Shuttle airlocks
 - type: entity
@@ -1082,16 +1128,22 @@
   id: AirlockExternalShuttleSyndicateLocked
   suffix: External, Docking, Syndicate, Locked
   components:
-  - type: AccessReader
-    access: [["SyndicateAgent"]]
+  - type: AccessReaderBoard
+#    access: [["SyndicateAgent"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicate ]
 
 - type: entity
   parent: AirlockShuttle
   id: AirlockExternalShuttleNukeopLocked
   suffix: External, Docking, Nukeop, Locked
   components:
-  - type: AccessReader
-    access: [["NuclearOperative"]]
+  - type: AccessReaderBoard
+#    access: [["NuclearOperative"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNukeop ]
 
 - type: entity
   parent: AirlockGlassShuttle

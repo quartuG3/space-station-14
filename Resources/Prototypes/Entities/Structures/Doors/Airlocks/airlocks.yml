@@ -105,6 +105,18 @@
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/syndicate.rsi
+  - type: Construction
+    node: airlockMedSecurity
+
+- type: entity
+  parent: Airlock
+  id: AirlockNukeopCommand
+  suffix: Nukeop, Command
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/syndicatecommand.rsi
+  - type: Construction
+    node: airlockMaxSecurity
 
 # Glass
 
@@ -259,3 +271,15 @@
     sprite: Structures/Doors/Airlocks/Glass/syndicate.rsi
   - type: PaintableAirlock
     group: Glass
+  - type: Construction
+    node: glassAirlockMedSecurity
+
+- type: entity
+  parent: Airlock
+  id: AirlockNukeopCommandGlass
+  suffix: Nukeop, Command
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/syndicatecommand.rsi
+  - type: Construction
+    node: glassAirlockMaxSecurity
