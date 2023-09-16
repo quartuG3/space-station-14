@@ -814,8 +814,8 @@
       board: [ DoorElectronicsNukeop ]
 
 - type: entity
-  parent: AirlockSyndicateGlass
-  id: AirlockNukeopCommandGlassLocked
+  parent: AirlockSyndicateNukeopCommandGlass
+  id: AirlockSyndicateNukeopCommandGlassLocked
   suffix: Nukeop, Command, Locked
   components:
   - type: AccessReaderBoard
@@ -1101,8 +1101,8 @@
       board: [ DoorElectronicsNukeop ]
 
 - type: entity
-  parent: AirlockNukeopCommand
-  id: AirlockNukeopCommandLocked
+  parent: AirlockSyndicateNukeopCommand
+  id: AirlockSyndicateNukeopCommandLocked
   suffix: Nukeop, Command, Locked
   components:
   - type: AccessReaderBoard

@@ -63,6 +63,7 @@ ent-WeaponBananaPeelMineLauncher9000 = минобанановая мортира
     .desc = Навесная пусковая установка банановой кожуры.
     .suffix = { "" }
 ent-LandMineExplosiveBanana = мина-кожурка от банана
+    .desc = Чрезвычайно взрывоопасная шутка.
     .suffix = { "" }
 ent-MechaDrill9000 = бур
     .desc = Бур. Сильнее, лучше, быстрее, мощнее.

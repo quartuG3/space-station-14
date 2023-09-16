@@ -295,17 +295,6 @@
     Steel: 250
 
 - type: latheRecipe
-  id: MagazineRifleRubber
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle_mag.rsi
-    state: rubber
-  result: MagazineRifleRubber
-  completetime: 20
-  materials:
-    Plastic: 250
-    Steel: 225
-
-- type: latheRecipe
   id: MagazineMagnumSubMachineGunRubber
   icon:
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/Magnum/magnum_smg_mag.rsi
@@ -315,16 +304,6 @@
   materials:
     Plastic: 250
     Steel: 250
-
-- type: latheRecipe
-  id: MagazinePistol
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi
-    state: red
-  result: MagazinePistol
-  completetime: 10
-  materials:
-    Steel: 200
 
 - type: latheRecipe
   id: SpeedLoaderMagnum
@@ -337,27 +316,6 @@
     Steel: 200
 
 - type: latheRecipe
-  id: MagazineLightRifle
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_mag.rsi
-    state: red
-  result: MagazineLightRifle
-  completetime: 20
-  materials:
-    Steel: 1000
-
-- type: latheRecipe
-  id: MagazineRifle
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle_mag.rsi
-    state: red
-  result: MagazineRifle
-  completetime: 20
-  materials:
-    Plastic: 250
-    Steel: 225
-
-- type: latheRecipe
   id: MagazineMagnumSubMachineGun
   icon:
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/Magnum/magnum_smg_mag.rsi
@@ -366,17 +324,6 @@
   completetime: 20
   materials:
     Steel: 350
-
-- type: latheRecipe
-  id: MagazinePistolSubMachineGunTopMounted
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag_top_mounted.rsi
-    state: mag-unshaded-5
-  result: MagazinePistolSubMachineGunTopMounted
-  completetime: 20
-  materials:
-    Plastic: 100
-    Steel: 250
 
 # Magazines for SecurityTechFab
 # Weapons kinetic

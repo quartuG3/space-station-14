@@ -110,7 +110,7 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockNukeopCommand
+  id: AirlockSyndicateNukeopCommand
   suffix: Nukeop, Command
   components:
   - type: Sprite
@@ -276,10 +276,12 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockNukeopCommandGlass
+  id: AirlockSyndicateNukeopCommandGlass
   suffix: Nukeop, Command
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/syndicatecommand.rsi
+    sprite: Structures/Doors/Airlocks/Glass/syndicatecommand.rsi
+  - type: PaintableAirlock
+    group: Glass
   - type: Construction
     node: glassAirlockMaxSecurity

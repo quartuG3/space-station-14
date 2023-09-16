@@ -30,23 +30,23 @@ namespace Content.Server.Felinid
         public override void Initialize()
         {
             base.Initialize();
-            SubscribeLocalEvent<WoundLickingComponent, ComponentStartup>(OnInit);
-            SubscribeLocalEvent<WoundLickingComponent, ComponentShutdown>(OnRemove);
+            SubscribeLocalEvent<WoundLickingComponent, ComponentInit>(OnInit);
+            SubscribeLocalEvent<WoundLickingComponent, ComponentRemove>(OnRemove);
             SubscribeLocalEvent<WoundLickingComponent, WoundLickingDoAfterEvent>(OnDoAfter);
-            SubscribeLocalEvent<WoundLickingComponent, WoundLickingActionEvent>(OnActionPerform);
+            SubscribeLocalEvent<WoundLickingActionEvent>(OnActionPerform);
         }
 
-        private void OnInit(EntityUid uid, WoundLickingComponent comp, ComponentStartup args)
+        private void OnInit(EntityUid uid, WoundLickingComponent comp, ComponentInit args)
         {
             _actionsSystem.AddAction(uid, ref comp.WoundLickingActionEntity, comp.WoundLickingAction);
         }
 
-        private void OnRemove(EntityUid uid, WoundLickingComponent comp, ComponentShutdown args)
+        private void OnRemove(EntityUid uid, WoundLickingComponent comp, ComponentRemove args)
         {
             _actionsSystem.RemoveAction(uid, comp.WoundLickingActionEntity);
         }
 
-        protected void OnActionPerform(EntityUid uid, WoundLickingComponent component, WoundLickingActionEvent args)
+        protected void OnActionPerform(WoundLickingActionEvent args)
         {
             if (args.Handled)
                 return;
