@@ -1,5 +1,4 @@
 using System.Numerics;
-using Content.Shared.Actions;
 using Content.Shared.CCVar;
 using Content.Shared.Follower.Components;
 using Content.Shared.Input;
@@ -20,8 +19,6 @@ namespace Content.Shared.Movement.Systems
     /// </summary>
     public abstract partial class SharedMoverController
     {
-        [Dependency] private   readonly SharedActionsSystem _actionsSystem = default!;
-
         public bool CameraRotationLocked { get; set; }
 
         private void InitializeInput()
@@ -55,7 +52,6 @@ namespace Content.Shared.Movement.Systems
             SubscribeLocalEvent<InputMoverComponent, ComponentGetState>(OnInputGetState);
             SubscribeLocalEvent<InputMoverComponent, ComponentHandleState>(OnInputHandleState);
             SubscribeLocalEvent<InputMoverComponent, EntParentChangedMessage>(OnInputParentChange);
-            SubscribeLocalEvent<InputMoverComponent, ToggleMoveModeActionEvent>(OnActionPerform);
 
             SubscribeLocalEvent<AutoOrientComponent, EntParentChangedMessage>(OnAutoParentChange);
 
@@ -265,25 +261,6 @@ namespace Content.Shared.Movement.Systems
             Dirty(uid, component);
         }
 
-        private void OnActionPerform(EntityUid uid, InputMoverComponent component, ToggleMoveModeActionEvent args)
-        {
-            if (args.Handled)
-                return;
-
-            var movementSpeed = EnsureComp<MovementSpeedModifierComponent>(uid);
-            (movementSpeed.BaseSprintSpeed, movementSpeed.BaseWalkSpeed) = (movementSpeed.BaseWalkSpeed, movementSpeed.BaseSprintSpeed);
-
-            component.SprintMove = !component.SprintMove;
-
-            if (component.MoveModeToggleActionEntity != null)
-                _actionsSystem.SetToggled(component.MoveModeToggleActionEntity, component.SprintMove);
-
-            Dirty(uid, component);
-            Dirty(uid, movementSpeed);
-
-            args.Handled = true;
-        }
-
         private void HandleDirChange(EntityUid entity, Direction dir, ushort subTick, bool state)
         {
             // Relayed movement just uses the same keybinds given we're moving the relayed entity
@@ -334,8 +311,6 @@ namespace Content.Shared.Movement.Systems
 
             component.RelativeEntity = xform.GridUid ?? xform.MapUid;
             component.TargetRelativeRotation = Angle.Zero;
-
-            _actionsSystem.AddAction(uid, ref component.MoveModeToggleActionEntity, component.MoveModeToggleAction);
         }
 
         private void HandleRunChange(EntityUid uid, ushort subTick, bool walking)
@@ -663,5 +638,4 @@ namespace Content.Shared.Movement.Systems
         Brake = 1 << 6,
     }
 
-    public sealed partial class ToggleMoveModeActionEvent : InstantActionEvent { }
 }

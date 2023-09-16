@@ -61,6 +61,3 @@ ent-ActionWake = Проснуться
 ent-ActionActivateHonkImplant = Хонк
     .desc = Активирует ваш хонкающий имплантат, который будет издавать фирменный звук клоуна.
     .suffix = { "" }
-ent-ActionMoveModeToggle = Переключение ходьба/бег
-    .desc = Устанавливает ходьбу/бег по умолчанию.
-    .suffix = { "" }
