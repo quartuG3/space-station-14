@@ -481,83 +481,61 @@ entities:
     - pos: -0.5,-4.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 106
     components:
     - rot: 3.141592653589793 rad
       pos: -4.5,-4.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 123
     components:
     - pos: -0.5,10.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 137
     components:
     - pos: 3.5,-4.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 154
     components:
     - rot: -1.5707963267948966 rad
       pos: -2.5,-2.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 155
     components:
     - rot: -1.5707963267948966 rad
       pos: 1.5,-2.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 232
     components:
     - pos: -2.5,2.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 233
     components:
     - pos: 1.5,2.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 358
     components:
     - rot: 1.5707963267948966 rad
       pos: 0.5,0.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 364
     components:
     - rot: 1.5707963267948966 rad
       pos: -1.5,0.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 449
     components:
     - pos: -0.5,4.5
       parent: 2
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
 - proto: AmeController
   entities:
   - uid: 66
