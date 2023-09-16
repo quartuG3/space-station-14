@@ -1266,110 +1266,82 @@ entities:
       pos: 17.5,0.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 810
     components:
     - rot: 3.141592653589793 rad
       pos: 17.5,5.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 812
     components:
     - rot: 3.141592653589793 rad
       pos: 15.5,5.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 815
     components:
     - rot: 3.141592653589793 rad
       pos: 15.5,0.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 816
     components:
     - rot: 3.141592653589793 rad
       pos: 6.5,-5.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 817
     components:
     - rot: 3.141592653589793 rad
       pos: 2.5,-1.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 1061
     components:
     - rot: 3.141592653589793 rad
       pos: 6.5,-1.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 1062
     components:
     - rot: 3.141592653589793 rad
       pos: 1.5,-5.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 1441
     components:
     - rot: 3.141592653589793 rad
       pos: 37.5,2.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 1442
     components:
     - rot: 3.141592653589793 rad
       pos: 38.5,2.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 1443
     components:
     - rot: 3.141592653589793 rad
       pos: 38.5,7.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 1444
     components:
     - rot: 3.141592653589793 rad
       pos: 37.5,7.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 1582
     components:
     - pos: 46.5,0.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
   - uid: 1614
     components:
     - pos: 48.5,2.5
       parent: 3
       type: Transform
-    - securityLevel: Level2
-      type: WiresPanel
 - proto: AirlockSyndicateLocked
   entities:
   - uid: 397
@@ -1445,8 +1417,6 @@ entities:
       pos: 41.5,2.5
       parent: 3
       type: Transform
-    - securityLevel: Level5
-      type: WiresPanel
 - proto: AlwaysPoweredWallLight
   entities:
   - uid: 2983

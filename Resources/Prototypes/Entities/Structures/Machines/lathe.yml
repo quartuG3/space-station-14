@@ -631,13 +631,13 @@
     runningState: icon
     staticRecipes:
       - WeaponDisablerPractice
-    dynamicRecipes:
-      # Magazines
       - MagazinePistolRubber
       - SpeedLoaderMagnumRubber
       - MagazineLightRifleRubber
       - MagazineRifleRubber
       - MagazineMagnumSubMachineGunRubber
+    dynamicRecipes:
+      # Magazines
       - MagazinePistol
       - SpeedLoaderMagnum
       - MagazineLightRifle

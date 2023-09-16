@@ -295,6 +295,17 @@
     Steel: 250
 
 - type: latheRecipe
+  id: MagazineRifleRubber
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/Rifle/rifle_mag.rsi
+    state: rubber
+  result: MagazineRifleRubber
+  completetime: 20
+  materials:
+    Plastic: 250
+    Steel: 225
+
+- type: latheRecipe
   id: MagazineMagnumSubMachineGunRubber
   icon:
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/Magnum/magnum_smg_mag.rsi
