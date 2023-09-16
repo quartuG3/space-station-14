@@ -61,3 +61,6 @@ ent-ActionWake = Wake up
 ent-ActionActivateHonkImplant = Honk
     .desc = Activates your honking implant, which will produce the signature sound of the clown.
     .suffix = { "" }
+ent-ActionMoveModeToggle = Toggle sprint
+    .desc = Settings walk/sprint move mode by default.
+    .suffix = { "" }
