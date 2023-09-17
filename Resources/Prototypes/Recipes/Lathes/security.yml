@@ -111,7 +111,7 @@
 
 - type: latheRecipe
   id: HoloprojectorSecurity
-  result: HoloprojectorSecurityEmpty
+  result: HoloprojectorSecurity
   completetime: 2
   materials:
     Steel: 300
