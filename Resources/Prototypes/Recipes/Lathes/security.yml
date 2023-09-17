@@ -326,16 +326,6 @@
     Steel: 250
 
 - type: latheRecipe
-  id: SpeedLoaderMagnum
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
-    state: base-6
-  result: SpeedLoaderMagnum
-  completetime: 10
-  materials:
-    Steel: 200
-
-- type: latheRecipe
   id: MagazineMagnumSubMachineGun
   icon:
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/Magnum/magnum_smg_mag.rsi
