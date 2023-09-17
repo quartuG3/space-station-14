@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Shared.Actions;
 using Content.Shared.CCVar;
 using Content.Shared.Follower.Components;
 using Content.Shared.Input;
@@ -19,6 +20,8 @@ namespace Content.Shared.Movement.Systems
     /// </summary>
     public abstract partial class SharedMoverController
     {
+        [Dependency] private   readonly SharedActionsSystem _actionsSystem = default!;
+
         public bool CameraRotationLocked { get; set; }
 
         private void InitializeInput()
@@ -49,9 +52,11 @@ namespace Content.Shared.Movement.Systems
                 .Register<SharedMoverController>();
 
             SubscribeLocalEvent<InputMoverComponent, ComponentInit>(OnInputInit);
+            SubscribeLocalEvent<InputMoverComponent, MapInitEvent>(OnInputMapInit);
             SubscribeLocalEvent<InputMoverComponent, ComponentGetState>(OnInputGetState);
             SubscribeLocalEvent<InputMoverComponent, ComponentHandleState>(OnInputHandleState);
             SubscribeLocalEvent<InputMoverComponent, EntParentChangedMessage>(OnInputParentChange);
+            SubscribeLocalEvent<InputMoverComponent, ToggleMoveModeActionEvent>(OnActionPerform);
 
             SubscribeLocalEvent<AutoOrientComponent, EntParentChangedMessage>(OnAutoParentChange);
 
@@ -89,6 +94,9 @@ namespace Content.Shared.Movement.Systems
             component.TargetRelativeRotation = state.TargetRelativeRotation;
             component.RelativeEntity = EnsureEntity<InputMoverComponent>(state.RelativeEntity, uid);
             component.LerpTarget = state.LerpAccumulator;
+            if (state.ActionEntity is not null)
+                component.MoveModeToggleActionEntity = EnsureEntity<ActionsComponent>(state.ActionEntity, uid);
+            component.SprintMove = state.SprintMove;
         }
 
         private void OnInputGetState(EntityUid uid, InputMoverComponent component, ref ComponentGetState args)
@@ -99,7 +107,9 @@ namespace Content.Shared.Movement.Systems
                 component.RelativeRotation,
                 component.TargetRelativeRotation,
                 GetNetEntity(component.RelativeEntity),
-                component.LerpTarget);
+                component.LerpTarget,
+                GetNetEntity(component.MoveModeToggleActionEntity),
+                component.SprintMove);
         }
 
         private void ShutdownInput()
@@ -261,6 +271,24 @@ namespace Content.Shared.Movement.Systems
             Dirty(uid, component);
         }
 
+        private void OnActionPerform(EntityUid uid, InputMoverComponent component, ToggleMoveModeActionEvent args)
+        {
+            if (args.Handled)
+                return;
+
+            var movementSpeed = EnsureComp<MovementSpeedModifierComponent>(uid);
+            (movementSpeed.BaseSprintSpeed, movementSpeed.BaseWalkSpeed) = (movementSpeed.BaseWalkSpeed, movementSpeed.BaseSprintSpeed);
+
+            component.SprintMove = !component.SprintMove;
+
+            if (component.MoveModeToggleActionEntity != null)
+                _actionsSystem.SetToggled(component.MoveModeToggleActionEntity, component.SprintMove);
+
+            Dirty(uid, movementSpeed);
+
+            args.Handled = true;
+        }
+
         private void HandleDirChange(EntityUid entity, Direction dir, ushort subTick, bool state)
         {
             // Relayed movement just uses the same keybinds given we're moving the relayed entity
@@ -311,6 +339,11 @@ namespace Content.Shared.Movement.Systems
 
             component.RelativeEntity = xform.GridUid ?? xform.MapUid;
             component.TargetRelativeRotation = Angle.Zero;
+        }
+
+        private void OnInputMapInit(EntityUid uid, InputMoverComponent component, MapInitEvent args)
+        {
+            _actionsSystem.AddAction(uid, ref component.MoveModeToggleActionEntity, component.MoveModeToggleAction);
         }
 
         private void HandleRunChange(EntityUid uid, ushort subTick, bool walking)
@@ -582,7 +615,10 @@ namespace Content.Shared.Movement.Systems
             public NetEntity? RelativeEntity;
             public TimeSpan LerpAccumulator;
 
-            public InputMoverComponentState(MoveButtons buttons, bool canMove, Angle relativeRotation, Angle targetRelativeRotation, NetEntity? relativeEntity, TimeSpan lerpTarget)
+            public NetEntity? ActionEntity;
+            public bool SprintMove;
+
+            public InputMoverComponentState(MoveButtons buttons, bool canMove, Angle relativeRotation, Angle targetRelativeRotation, NetEntity? relativeEntity, TimeSpan lerpTarget, NetEntity? actionEntity, bool sprintMove)
             {
                 Buttons = buttons;
                 CanMove = canMove;
@@ -590,6 +626,8 @@ namespace Content.Shared.Movement.Systems
                 TargetRelativeRotation = targetRelativeRotation;
                 RelativeEntity = relativeEntity;
                 LerpAccumulator = lerpTarget;
+                ActionEntity = actionEntity;
+                SprintMove = sprintMove;
             }
         }
 
@@ -638,4 +676,5 @@ namespace Content.Shared.Movement.Systems
         Brake = 1 << 6,
     }
 
+    public sealed partial class ToggleMoveModeActionEvent : InstantActionEvent { }
 }
