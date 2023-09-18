@@ -755,6 +755,7 @@
       - MedkitAdvanced
       - MedkitRadiation
       - MedkitCombat
+      - InjectorCase
     dynamicRecipes:
       - HandheldCrewMonitor
       - ClothingHandsGlovesNitrile
