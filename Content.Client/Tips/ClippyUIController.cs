@@ -150,7 +150,7 @@ public sealed class ClippyUIController : UIController
             if (EntityManager.TryGetComponent(_entity, out FootstepModifierComponent? step))
             {
                 var audioParams = step.Sound.Params
-                    .AddVolume(-10f)
+                    .AddVolume(-7f)
                     .WithVariation(0.1f);
                 _audio?.PlayGlobal(step.Sound, EntityUid.Invalid, audioParams);
             }
