@@ -1518,13 +1518,16 @@ namespace Content.Shared.CCVar
             SalvageForced = CVarDef.Create("salvage.forced", "", CVar.SERVERONLY);
 
         /// <summary>
-        /// Cooldown for successful missions.
+        /// Duration for missions
+        /// </summary>
+        public static readonly CVarDef<float>
+            SalvageExpeditionDuration = CVarDef.Create("salvage.expedition_duration", 600f, CVar.REPLICATED);
+
+        /// <summary>
+        /// Cooldown for missions.
         /// </summary>
         public static readonly CVarDef<float>
             SalvageExpeditionCooldown = CVarDef.Create("salvage.expedition_cooldown", 150f, CVar.REPLICATED);
-
-        public static readonly CVarDef<float>
-            SalvageExpeditionFailedCooldown = CVarDef.Create("salvage.expedition_failed_cooldown", 900f, CVar.REPLICATED);
 
         /*
          * Flavor
