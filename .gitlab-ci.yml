@@ -14,8 +14,9 @@ test-debug:
     - python3 RUN_THIS.py
     - dotnet restore
     - dotnet build --configuration DebugOpt --no-restore /p:WarningsAsErrors=nullable /m
-    - 'pwsh -Command "dotnet test --test-adapter-path:. --logger:"junit;LogFilePath=..\artifacts\{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose" --configuration DebugOpt --no-build Content.Tests/Content.Tests.csproj"'
-    - export DOTNET_gcServer=1
+    - 'dotnet test --test-adapter-path:. --logger:"junit;LogFilePath=..\artifacts\{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose" --configuration DebugOpt'
+#    - 'pwsh -Command "dotnet test --test-adapter-path:. --logger:"junit;LogFilePath=..\artifacts\{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose" --configuration DebugOpt --no-build Content.Tests/Content.Tests.csproj"'
+#    - export DOTNET_gcServer=1
 #    - 'pwsh -Command "dotnet test --test-adapter-path:. --logger:"junit;LogFilePath=..\artifacts\{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose" --configuration DebugOpt --no-build Content.IntegrationTests/Content.IntegrationTests.csproj -- NUnit.ConsoleOut=0"'
   artifacts:
     when: always
@@ -33,8 +34,9 @@ test-release:
     - python3 RUN_THIS.py
     - dotnet restore
     - dotnet build --configuration Tools --no-restore /p:WarningsAsErrors=nullable /m
-    - 'pwsh -Command "dotnet test --test-adapter-path:. --logger:"junit;LogFilePath=..\artifacts\{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose" --configuration Tools --no-build Content.Tests/Content.Tests.csproj"'
-    - export DOTNET_gcServer=1
+    - 'dotnet test --test-adapter-path:. --logger:"junit;LogFilePath=..\artifacts\{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose" --configuration Tools'
+#    - 'pwsh -Command "dotnet test --test-adapter-path:. --logger:"junit;LogFilePath=..\artifacts\{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose" --configuration Tools --no-build Content.Tests/Content.Tests.csproj"'
+#    - export DOTNET_gcServer=1
 #    - 'pwsh -Command "dotnet test --test-adapter-path:. --logger:"junit;LogFilePath=..\artifacts\{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose" --configuration Tools --no-build Content.IntegrationTests/Content.IntegrationTests.csproj -- NUnit.ConsoleOut=0"'
   artifacts:
     when: always
