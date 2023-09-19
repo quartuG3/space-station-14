@@ -134,7 +134,7 @@
     sprite: Mobs/Animals/mothroach.rsi
     state: icon-0
   product: CrateNPCMothroach
-  cost: 2500
+  cost: 2700
   category: Livestock
   group: market
 
