@@ -148,24 +148,15 @@
   components:
   - type: GhostRole
     description: ghost-role-information-space-dragon-dungeon-description
-  - type: SlowOnDamage
-    speedModifierThresholds:
-      100: 0.7
+  # less tanky, no crit
   - type: MobThresholds
     thresholds:
       0: Alive
-      200: Dead
-  # less meat spawned since it's a lot easier to kill
-  - type: Butcherable
-    spawned:
-    - id: FoodMeatDragon
-      amount: 1
-    - id: MaterialDragonSinew1
-      prob: 0.5
+      300: Dead
   - type: MeleeWeapon
     damage:
       groups:
-        Brute: 12
+        Brute: 15
 
 - type: entity
   id: ActionSpawnRift
