@@ -73,6 +73,17 @@
 
 - type: entity
   parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlueShield
+  name: captain's jumpsuit
+  description: It's a blue jumpsuit with some gold markings denoting the rank of "Captain".
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/blueshield.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/blueshield.rsi
+
+- type: entity
+  parent: ClothingUniformBase
   id: ClothingUniformJumpsuitCargo
   name: cargo tech jumpsuit
   description: A sturdy jumpsuit, issued to members of the Cargo department.
@@ -333,6 +344,39 @@
     sprite: Clothing/Uniforms/Jumpsuit/hos_alt.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/hos_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBearBase
+  name: head of security's turtleneck
+  description: It's a turtleneck worn by those strong and disciplined enough to achieve the position of Head of Security.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/bearbase.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/bearbase.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBearfbifast
+  name: head of security's turtleneck
+  description: It's a turtleneck worn by those strong and disciplined enough to achieve the position of Head of Security.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/bearfbifast.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/bearfbifast.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBearG99
+  name: head of security's turtleneck
+  description: It's a turtleneck worn by those strong and disciplined enough to achieve the position of Head of Security.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/bearg99.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/bearg99.rsi
 
 - type: entity
   parent: ClothingUniformBase

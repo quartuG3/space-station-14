@@ -53,6 +53,41 @@
 - type: entity
   name: brown briefcase
   parent: BriefcaseSyndieBase
+  id: WeaponcaseBlueShield
+  description: A handy briefcase.
+  components:
+  - type: Sprite
+    sprite: Objects/Storage/Briefcases/blueshield_case.rsi
+    state: icon
+  - type: Item
+    sprite: Objects/Storage/Briefcases/blueshield_case.rsi
+  - type: Storage
+    storageOpenSound:
+      collection: WeaponCaseOpen
+
+- type: entity
+  parent: PresentRandom
+  id: MysteryWeaponBox
+  name: mystery spacemen minifigure box
+  description: A box containing a mystery minifigure. The side of the box depicts a few blacked-out 'rare' figures, including one with a large, non-humanoid shilouette.
+  components:
+  - type: Item
+    sprite: Objects/Storage/Briefcases/blueshield_case.rsi
+  - type: Sprite
+    sprite: Objects/Storage/Briefcases/blueshield_case.rsi
+    layers:
+      - state: icon
+  - type: SpawnItemsOnUse
+    items:
+      - id: WeaponCaseAsh9
+        orGroup: WeaponCaseRandom
+      - id: WeaponCaseSaiga
+        orGroup: WeaponCaseRandom
+      - id: ClothingOuterHardsuitERTBlueShield
+  
+- type: entity
+  name: brown briefcase
+  parent: BriefcaseSyndieBase
   id: WeaponcaseSyndie
   description: A handy briefcase.
   components:

@@ -51,6 +51,21 @@
       - id: ClothingHeadHatCapcap
 
 - type: entity
+  id: LockerBlueShieldFilled
+  suffix: Filled
+  parent: LockerBlueShield
+  components:
+  - type: StorageFill
+    contents:
+      - id: MysteryWeaponBox
+      - id: MedkitCombatFilled
+      - id: Handcuffs
+      - id: Flash
+      - id: BoxCardboardTrackImp
+      - id: ClothingBeltSecurityWebbing
+      - id: GarmentBagBlueShield
+
+- type: entity
   id: LockerCaptainFilled
   suffix: Filled
   parent: LockerCaptain
