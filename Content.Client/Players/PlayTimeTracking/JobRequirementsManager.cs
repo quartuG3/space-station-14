@@ -87,39 +87,6 @@ public sealed class JobRequirementsManager
         _whitelisted = message.Whitelisted;
     }
 
-    public bool IsAllowed(AntagPrototype antag, [NotNullWhen(false)] out string? reason)
-    {
-        reason = null;
-
-        if (!_cfg.GetCVar(CCVars.GameRoleTimers))
-            return true;
-
-        var player = _playerManager.LocalPlayer?.Session;
-
-        if (player == null) return true;
-
-        var reasonBuilder = new StringBuilder();
-        var roles = _roles;
-
-        var first = true;
-        if (antag.Requirements is not null)
-        {
-            foreach (var requirement in antag.Requirements)
-            {
-                if (JobRequirements.TryRequirementMet(requirement, roles, out var jobReason, _entManager, _prototypes))
-                    continue;
-
-                if (!first)
-                    reasonBuilder.Append('\n');
-                first = false;
-
-                reasonBuilder.AppendLine(jobReason.ToMarkup());
-            }
-        }
-        reason = reasonBuilder.Length == 0 ? null : reasonBuilder.ToString();
-        return reason == null;
-    }
-
     public bool IsAllowed(JobPrototype job, [NotNullWhen(false)] out FormattedMessage? reason)
     {
         reason = null;
