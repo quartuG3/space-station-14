@@ -90,7 +90,6 @@ public sealed class JobRequirementsManager
     public bool IsAllowed(JobPrototype job, [NotNullWhen(false)] out FormattedMessage? reason)
     {
         reason = null;
-
         if (_roleBans.Contains($"Job:{job.ID}"))
         {
             reason = FormattedMessage.FromUnformatted(Loc.GetString("role-ban"));
