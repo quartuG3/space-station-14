@@ -106,10 +106,10 @@ public sealed class JobRequirementsManager
         if (player == null)
             return true;
 
-        return CheckRoleTime(job.Requirements, out reason);
+        return CheckRoleTime(job.Requirements, job.WhitelistRequired, out reason);
     }
 
-    public bool CheckRoleTime(HashSet<JobRequirement>? requirements, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool CheckRoleTime(HashSet<JobRequirement>? requirements, bool whitelistRequired, [NotNullWhen(false)] out FormattedMessage? reason)
     {
         reason = null;
 
@@ -125,12 +125,12 @@ public sealed class JobRequirementsManager
             reasons.Add(jobReason.ToMarkup());
         }
 
-        if (job.WhitelistRequired && _cfg.GetCVar(CCVars.WhitelistEnabled) && !_whitelisted)
+        if (whitelistRequired && _cfg.GetCVar(CCVars.WhitelistEnabled) && !_whitelisted)
         {
-            if (reasonBuilder.Length > 0)
-                reasonBuilder.Append('\n');
+            if (reasons.Count > 0)
+                reasons.Add("\n");
 
-            reasonBuilder.AppendLine(Loc.GetString("playtime-deny-reason-not-whitelisted"));
+            reasons.Add(Loc.GetString("playtime-deny-reason-not-whitelisted"));
         }
 
         reason = reasons.Count == 0 ? null : FormattedMessage.FromMarkup(string.Join('\n', reasons));

@@ -43,4 +43,7 @@ public sealed class AntagPrototype : IPrototype
     /// </summary>
     [DataField("requirements")]
     public HashSet<JobRequirement>? Requirements;
+
+    [DataField("whitelistRequired")]
+    public bool WhitelistRequired = false;
 }
