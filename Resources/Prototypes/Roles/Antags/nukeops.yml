@@ -4,6 +4,9 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-nuclear-operative-objective
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 108000 #30 hrs
 
 - type: antag
   id: NukeopsMedic
@@ -11,6 +14,15 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-nuclear-operative-agent-objective
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobChemist
+      time: 18000 #5 hrs
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 36000 #10 hrs
+    - !type:OverallPlaytimeRequirement
+      time: 162000 #45 hrs
 
 - type: antag
   id: NukeopsCommander
@@ -18,3 +30,9 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-nuclear-operative-commander-objective
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 54000 # 15 hours
+    - !type:OverallPlaytimeRequirement
+      time: 216000 #60 hrs
