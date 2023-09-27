@@ -19,4 +19,4 @@
                 state: modcore8
               doAfter: 2
     - node: modsuitstandard
-      entity: ClothingModsuitbackStandart
+      entity: ClothingModsuitBackStandard

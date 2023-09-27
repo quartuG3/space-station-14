@@ -7,7 +7,7 @@
     - to: modsuitassembled
       steps:
       - tag: ModsuitCoreEnergy
-        name: энергетическое ядро модсьюта
+        name: MOD standard core
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
@@ -22,14 +22,14 @@
           data: 2
 
       - component: PowerCell
-        name: батарейку
+        name: battery
         store: battery-container
         icon:
           sprite: Objects/Power/power_cells.rsi
           state: small
 
       - tag: ModsuitHelmet
-        name: шлем модсьюта
+        name: MODsuit helmet
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
@@ -37,7 +37,7 @@
           data: 3
 
       - tag: ModsuitChestplate
-        name: нагрудник модсьюта
+        name: MODsuit chestplate
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
@@ -45,7 +45,7 @@
           data: 4
 
       - tag: ModsuitGauntlets
-        name: перчатки модсьюта
+        name: MODsuit gauntlets
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
@@ -53,7 +53,7 @@
           data: 5
 
       - tag: ModsuitBoots
-        name: ботинки модсьюта
+        name: MODsuit boots
         doAfter: 1
         completed:
         - !type:VisualizerDataInt
