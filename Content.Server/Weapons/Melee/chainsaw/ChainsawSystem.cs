@@ -94,7 +94,7 @@ public sealed class ChainsawSystem : EntitySystem
         {
             weaponComp.HitSound = comp.OnHitOff;
             if (comp.Secret)
-                weaponComp.HideFromExamine = true;
+                weaponComp.Hidden = true;
         }
 
         if (comp.IsSharp)
@@ -119,7 +119,7 @@ public sealed class ChainsawSystem : EntitySystem
         {
             weaponComp.HitSound = comp.OnHitOn;
             if (comp.Secret)
-                weaponComp.HideFromExamine = false;
+                weaponComp.Hidden = false;
         }
 
         if (TryComp<DisarmMalusComponent>(uid, out var malus))
