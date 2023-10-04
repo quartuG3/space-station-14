@@ -644,6 +644,9 @@
       - WeaponLaserCarbinePractice
       - WeaponTaser
       - WeaponXrayCannon
+      - BowCompound
+      - ArrowCompound
+      - ClothingBeltQuiverComposit
   - type: MaterialStorage
     whitelist:
       tags:
