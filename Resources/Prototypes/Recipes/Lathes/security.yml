@@ -414,17 +414,6 @@
     Steel: 350
 
 - type: latheRecipe
-  id: WeaponDisablerPractice
-  icon:
-    sprite: Objects/Weapons/Guns/Battery/practice_disabler.rsi
-    state: base
-  result: WeaponDisablerPractice
-  completetime: 15
-  materials:
-    Glass: 250
-    Steel: 250
-
-- type: latheRecipe
   id: MagazinePistol
   result: MagazinePistol
   completetime: 5
