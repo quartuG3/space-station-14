@@ -482,6 +482,14 @@
   solids:
     FoodBreadPlainSlice: 2
 
+- type: microwaveMealRecipe
+  id: RecipeOnionRings
+  name: onion rings recipe
+  result: FoodOnionRings
+  time: 15
+  solids:
+    FoodOnionSlice: 1
+
 #Pizzas TODO: contruction graph based pizza
 - type: microwaveMealRecipe
   id: RecipeMargheritaPizza

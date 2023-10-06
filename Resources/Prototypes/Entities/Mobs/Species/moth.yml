@@ -25,6 +25,7 @@
     damageModifierSet: Moth # moff
   - type: Speech
     speechVerb: Moth
+  - type: Perishable
   - type: Butcherable
     butcheringType: Spike
     spawned:
