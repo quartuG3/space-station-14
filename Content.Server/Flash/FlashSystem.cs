@@ -61,7 +61,7 @@ namespace Content.Server.Flash
             args.Handled = true;
             foreach (var e in args.HitEntities)
             {
-                Flash(e, args.User, uid, comp.FlashDuration, comp.SlowTo, melee: true, bang: comp.Bang);
+                Flash(e, args.User, uid, comp.FlashDuration, comp.SlowTo, melee: true);
             }
         }
 
@@ -71,7 +71,7 @@ namespace Content.Server.Flash
                 return;
 
             args.Handled = true;
-            FlashArea(uid, args.User, comp.Range, comp.AoeFlashDuration, comp.SlowTo, true, bang: comp.Bang);
+            FlashArea(uid, args.User, comp.Range, comp.AoeFlashDuration, comp.SlowTo, true);
         }
 
         private bool UseFlash(EntityUid uid, FlashComponent comp, EntityUid user)
@@ -111,14 +111,16 @@ namespace Content.Server.Flash
             float slowTo,
             bool displayPopup = true,
             FlashableComponent? flashable = null,
-            bool melee = false,
-            bool bang = false)
+            bool melee = false)
         {
             if (!Resolve(target, ref flashable, false))
                 return;
 
             var attempt = new FlashAttemptEvent(target, user, used);
             RaiseLocalEvent(target, attempt, true);
+
+            if (attempt.Cancelled)
+                return;
 
             if (melee)
             {
@@ -133,25 +135,8 @@ namespace Content.Server.Flash
             flashable.Duration = flashDuration / 1000f; // TODO: Make this sane...
             Dirty(target, flashable);
 
-            float flashdur = attempt.AddBaseFlash ? flashDuration * flashable.DurationMultiplier : 0f;
-            float slowdur = flashdur;
-
-            if (bang && attempt.AddBangFlash)
-            {
-                var debuffDur = flashDuration * flashable.BangAddMultiplier;
-                slowdur += debuffDur;
-                if (attempt.AddBaseFlash || flashable.BangFlash) flashdur += debuffDur;
-            }
-
-            if (flashdur > 0f)
-            {
-                flashable.Duration = flashdur / 1000f; // TODO: Make this sane...
-                Dirty(flashable);
-            }
-
-            if (slowdur > 0f)
-                _stun.TrySlowdown(target, TimeSpan.FromSeconds(slowdur/1000f), true,
-                    slowTo, slowTo);
+            _stun.TrySlowdown(target, TimeSpan.FromSeconds(flashDuration/1000f), true,
+                slowTo, slowTo);
 
             if (displayPopup && user != null && target != user && Exists(user.Value))
             {
@@ -161,7 +146,7 @@ namespace Content.Server.Flash
 
         }
 
-        public void FlashArea(EntityUid source, EntityUid? user, float range, float duration, float slowTo = 0.8f, bool displayPopup = false, SoundSpecifier? sound = null, bool bang = false)
+        public void FlashArea(EntityUid source, EntityUid? user, float range, float duration, float slowTo = 0.8f, bool displayPopup = false, SoundSpecifier? sound = null)
         {
             var transform = EntityManager.GetComponent<TransformComponent>(source);
             var mapPosition = transform.MapPosition;
@@ -183,7 +168,7 @@ namespace Content.Server.Flash
                     continue;
 
                 // They shouldn't have flash removed in between right?
-                Flash(entity, user, source, duration, slowTo, displayPopup, flashableQuery.GetComponent(entity), bang: bang);
+                Flash(entity, user, source, duration, slowTo, displayPopup, flashableQuery.GetComponent(entity));
             }
             if (sound != null)
             {
@@ -195,7 +180,7 @@ namespace Content.Server.Flash
         {
             foreach (var slot in new[] { "head", "eyes", "mask" })
             {
-                if (!args.AddBaseFlash)
+                if (args.Cancelled)
                     break;
                 if (_inventory.TryGetSlotEntity(uid, slot, out var item, component))
                     RaiseLocalEvent(item.Value, args, true);
@@ -204,11 +189,8 @@ namespace Content.Server.Flash
 
         private void OnFlashImmunityFlashAttempt(EntityUid uid, FlashImmunityComponent component, FlashAttemptEvent args)
         {
-            if(component.Enabled) {
-                args.AddBaseFlash = false;
-                if (component.ProtectFromBangs) args.AddBangFlash = false;
-            }
-
+            if(component.Enabled)
+                args.Cancel();
         }
 
         private void OnPermanentBlindnessFlashAttempt(EntityUid uid, PermanentBlindnessComponent component, FlashAttemptEvent args)
@@ -227,8 +209,6 @@ namespace Content.Server.Flash
         public readonly EntityUid Target;
         public readonly EntityUid? User;
         public readonly EntityUid? Used;
-        public bool AddBangFlash = true;
-        public bool AddBaseFlash = true;
 
         public FlashAttemptEvent(EntityUid target, EntityUid? user, EntityUid? used)
         {
