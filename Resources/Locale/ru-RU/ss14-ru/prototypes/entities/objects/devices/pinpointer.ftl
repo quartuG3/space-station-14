@@ -6,3 +6,4 @@ ent-PinpointerUniversal = универсиальный поисковый нав
     .desc = Портативное устройство слежения, которое фиксирует любой физический объект когда выключен.
 ent-PinpointerStation = { ent-PinpointerBase }
     .desc = { ent-PinpointerBase.desc }
+    .suffix = Станция
