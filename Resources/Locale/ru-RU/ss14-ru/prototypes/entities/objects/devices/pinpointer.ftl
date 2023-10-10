@@ -7,3 +7,6 @@ ent-PinpointerUniversal = универсиальный поисковый нав
 ent-PinpointerStation = { ent-PinpointerBase }
     .desc = { ent-PinpointerBase.desc }
     .suffix = Станция
+ent-PinpointerAnomaly = поисковый навигатор аномалий
+    .desc = Портативное устройство слежения, которое фиксирует любую аномальную активность когда включено.
+    .suffix = Аномалия
