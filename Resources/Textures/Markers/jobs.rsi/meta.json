@@ -38,9 +38,6 @@
       "name": "cburn"
     },
     {
-      "name": "salvager"
-    },
-    {
       "name": "centcom"
     },
     {
@@ -182,33 +179,6 @@
       "name": "serviceworker"
     },
     {
-      "name": "brigmedic"
-    },
-    {
-      "name": "miner"
-    },
-    {
-      "name": "engineer"
-    },
-    {
-      "name": "virologist"
-    },
-    {
-      "name": "librarian"
-    },
-    {
-      "name": "warden"
-    },
-    {
-      "name": "death_squad"
-    },
-	{
-      "name": "cluwne"
-    },
-    {
-      "name": "musician"
-    },
-    {
       "name": "seniorengineer"
     },
     {
@@ -231,6 +201,9 @@
     },
     {
       "name": "zookeeper"
+    },
+    {
+      "name": "death_squad"
     }
   ]
 }

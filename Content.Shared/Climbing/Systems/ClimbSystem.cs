@@ -214,7 +214,14 @@ public sealed partial class ClimbSystem : VirtualController
          if (climbing.IsClimbing)
              return true;
 
-         var args = new DoAfterArgs(EntityManager, user, comp.ClimbDelay, new ClimbDoAfterEvent(),
+         // Time to climb. If someone tries to put someone other to a table, it will not use multiplier
+         var climbDelay = comp.ClimbDelay;
+         if (comp.UseTableMultiplier & (user == entityToMove))
+         {
+             climbDelay *= climbing.TableClimbMultiplier;
+         }
+
+         var args = new DoAfterArgs(EntityManager, user, climbDelay, new ClimbDoAfterEvent(),
              entityToMove,
              target: climbable,
              used: entityToMove)
