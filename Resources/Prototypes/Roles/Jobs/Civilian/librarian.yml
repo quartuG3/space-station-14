@@ -22,7 +22,7 @@
     pocket1: d10Dice
     pocket2: HandLabeler # for making named bestsellers
   inhand:
-    right hand: BriefcaseBrownFilled
+    - BriefcaseBrownFilled
   innerClothingSkirt: ClothingUniformJumpskirtLibrarian
   femaleSocks: ClothingUnderSocksRedKneeSocks
   satchel: ClothingBackpackSatchelLibrarianFilled
