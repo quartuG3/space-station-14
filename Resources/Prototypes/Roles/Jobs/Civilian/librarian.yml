@@ -23,7 +23,7 @@
     pocket2: HandLabeler # for making named bestsellers
   inhand:
     right hand: BriefcaseBrownFilled
-  innerclothingskirt: ClothingUniformJumpskirtLibrarian
+  innerClothingSkirt: ClothingUniformJumpskirtLibrarian
   femaleSocks: ClothingUnderSocksRedKneeSocks
   satchel: ClothingBackpackSatchelLibrarianFilled
   duffelbag: ClothingBackpackDuffelLibrarianFilled

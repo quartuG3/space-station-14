@@ -49,6 +49,7 @@ guide-entry-antagonists = Антагонисты
 guide-entry-nuclear-operatives = Ядерные Оперативники
 guide-entry-traitors = Предатели
 guide-entry-zombies = Зомби
+guide-entry-revolutionaries = Революционеры
 guide-entry-minor-antagonists = Малые Антагонисты
 guide-entry-space-ninja = Космический Ниндзя
 guide-entry-writing = Написание

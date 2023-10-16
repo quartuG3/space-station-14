@@ -27,7 +27,7 @@
     # TODO add copy of space law
   inhand:
     right hand: BriefcaseBrownFilled
-  innerclothingskirt: ClothingUniformJumpskirtLawyerBlack
+  innerClothingSkirt: ClothingUniformJumpskirtLawyerBlack
   femaleSocks: ClothingUnderSocksBlackKneeSocks
   satchel: ClothingBackpackSatchelFilled
   duffelbag: ClothingBackpackDuffelFilled
