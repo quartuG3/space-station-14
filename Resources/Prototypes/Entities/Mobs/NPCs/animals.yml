@@ -1,6 +1,6 @@
 - type: entity
   name: bat
-  parent: [ SimpleMobBase, FlyingMobBase ]
+  parent: [ SimpleMobBase, FlyingMobBase, MobCombat ]
   id: MobBat
   description: Some cultures find them terrifying, others crunchy on the teeth.
   components:
@@ -51,7 +51,6 @@
   - type: ReplacementAccent
     accent: mouse
   - type: MeleeWeapon
-    hidden: true
     soundHit:
         path: /Audio/Effects/bite.ogg
     angle: 0
@@ -126,13 +125,12 @@
 - type: entity
   name: bee
   suffix: Angry
-  parent: MobBee
+  parent: [ MobBee, MobCombat ]
   id: MobAngryBee
   description: How nice a bee. Oh no, it looks angry and wants my pizza.
   components:
   - type: CombatMode
   - type: MeleeWeapon
-    hidden: true
     angle: 0
     animation: WeaponArcBite
     damage:
@@ -668,7 +666,7 @@
 
 - type: entity
   name: gorilla
-  parent: SimpleMobBase
+  parent: [ SimpleMobBase, MobCombat ]
   id: MobGorilla
   description: Smashes, roars, looks cool. Don't stand near one.
   components:
@@ -722,7 +720,7 @@
 
 - type: entity
   name: kangaroo
-  parent: SimpleMobBase
+  parent: [ SimpleMobBase, MobCombat ]
   id: MobKangaroo
   description: A large marsupial herbivore. It has powerful hind legs, with nails that resemble long claws.
   components:
@@ -1486,7 +1484,7 @@
 
 - type: entity
   name: grenade penguin
-  parent: SimpleMobBase
+  parent: [ SimpleMobBase, MobCombat ]
   id: MobGrenadePenguin
   description: A small penguin with a grenade strapped around its neck. Harvested by the Syndicate from icy shit-hole planets.
   components:
@@ -1530,7 +1528,6 @@
     - id: FoodMeatPenguin
       amount: 3
   - type: MeleeWeapon
-    hidden: true
     angle: 0
     animation: WeaponArcBite
     damage:
@@ -1713,7 +1710,7 @@
 # random sprite state when you spawn it.
 - type: entity
   name: tarantula
-  parent: SimpleMobBase
+  parent: [ SimpleMobBase, MobCombat ]
   id: MobGiantSpider
   description: Widely recognized to be the literal worst thing in existence.
   components:
@@ -1751,7 +1748,6 @@
       0: Alive
       90: Dead
   - type: MeleeWeapon
-    hidden: true
     angle: 0
     animation: WeaponArcBite
     soundHit:
@@ -1841,7 +1837,6 @@
       - DoorBumpOpener
       - FootstepSound
     - type: MeleeWeapon
-      hidden: true
       angle: 0
       animation: WeaponArcBite
       soundHit:
@@ -2095,7 +2090,7 @@
 
 - type: entity
   name: corrupted corgi
-  parent: MobCorgi
+  parent: [ MobCorgi, MobCombat ]
   id: MobCorgiNarsi
   description: Ian! No!
   components:
@@ -2112,7 +2107,6 @@
       Dead:
         Base: narsian_dead
   - type: MeleeWeapon
-    hidden: true
     soundHit:
         path: /Audio/Effects/bite.ogg
     angle: 0
@@ -2425,7 +2419,7 @@
 
 - type: entity
   name: hamster
-  parent: SimpleMobBase
+  parent: [ SimpleMobBase, MobCombat ]
   id: MobHamster
   description: A cute, fluffy, robust hamster.
   components:
@@ -2532,7 +2526,6 @@
         Blunt: 0.1
   - type: CombatMode
   - type: MeleeWeapon
-    hidden: true
     soundHit:
         path: /Audio/Effects/bite.ogg
     angle: 0

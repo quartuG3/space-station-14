@@ -34,6 +34,7 @@ guide-entry-botanicals = Ботанический
 guide-entry-cloning = Клонирование
 guide-entry-cryogenics = Криогеника
 guide-entry-survival = Выживание
+guide-entry-technologies = Технологии
 guide-entry-anomalous-research = Исследование Аномалий
 guide-entry-scanners-and-vessels = Сканеры и Сосуды
 guide-entry-ape = И.А.Ч.
