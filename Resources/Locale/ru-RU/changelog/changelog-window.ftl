@@ -9,4 +9,5 @@ changelog-version-tag = версия v{ $version }
 changelog-button = Обновления
 changelog-button-new-entries = Обновления (!)
 changelog-tab-title-Changelog = Изменения
+changelog-tab-title-ChangelogStarshine = Обновления Starshine
 changelog-tab-title-Admin = Админ
