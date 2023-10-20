@@ -253,7 +253,7 @@ namespace Content.Server.GameTicking
             AnnounceRound();
             UpdateInfoText();
             SendRoundStartedDiscordMessage();
-            RaiseLocalEvent(new RoundStartedEvent(RoundId)); // Corvax
+            RaiseLocalEvent(new RoundStartedEvent(RoundId)); // Starshine
 
 #if EXCEPTION_TOLERANCE
             }

@@ -105,4 +105,4 @@
     - type: FaxMachine
       name: "Captain's Office"
       receiveNukeCodes: true
-      receiveStationGoal: true # Corvax-StationGoal
+      receiveStationGoal: true # Starshine-StationGoal
