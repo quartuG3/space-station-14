@@ -205,7 +205,9 @@ namespace Content.Server.Ghost.Roles
             if (!_ghostRoles.TryGetValue(identifier, out var role))
                 return;
 
-            if (role.WhitelistRequired && _cfg.GetCVar(CCVars.WhitelistEnabled) && !player.ContentData()!.Whitelisted)
+            var component = role.Comp;
+
+            if (component.WhitelistRequired && _cfg.GetCVar(CCVars.WhitelistEnabled) && !player.ContentData()!.Whitelisted)
                 return;
 
             var ev = new TakeGhostRoleEvent(player);
