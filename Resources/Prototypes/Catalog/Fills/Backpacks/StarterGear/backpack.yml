@@ -297,7 +297,6 @@
     - type: StorageFill
       contents:
         - id: BoxSurvivalEngineering
-        - id: TelescopicBaton
         - id: trayScanner
         - id: RCD
         - id: RCDAmmo
