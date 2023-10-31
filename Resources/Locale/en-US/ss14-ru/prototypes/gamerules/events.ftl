@@ -52,3 +52,5 @@ ent-MassHallucinations = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
 ent-ImmovableRodSpawn = { ent-BaseGameRule }
     .desc = { ent-BaseGameRule.desc }
+ent-IonStorm = { ent-BaseGameRule }
+    .desc = { ent-BaseGameRule.desc }

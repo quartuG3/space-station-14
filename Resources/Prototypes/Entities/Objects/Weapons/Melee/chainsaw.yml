@@ -49,13 +49,21 @@
     quickEquip: false
     slots:
     - suitStorage
-  - type: UseDelay
-    delay: 1.0
   - type: Appearance
   - type: ToggleableLightVisuals
     spriteLayer: wielded
   - type: Wieldable
-    wieldTime: 1
   - type: Construction
     graph: ChainsawGraph
     node: chainsaw
+  - type: RefillableSolution
+    solution: Welder
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 300
+        maxVol: 300
+  - type: UseDelay
+    delay: 1
