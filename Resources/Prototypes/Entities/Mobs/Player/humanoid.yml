@@ -8,8 +8,8 @@
   suffix: ERTRole, Death Squad
   components:
     - type: Sprite
-      sprite: Clothing/OuterClothing/Hardsuits/deathsquad.rsi
-      state: icon
+      sprite: Markers/jobs.rsi
+      state: death_squad
     - type: RandomMetadata
       nameSegments:
         - NamesFirstMilitaryLeader
@@ -387,32 +387,6 @@
     - type: GhostRole
       name: ghost-role-information-cburn-agent-name
       description: ghost-role-information-cburn-agent-description
-    - type: GhostTakeoverAvailable
-    - type: RandomMetadata
-      nameSegments:
-      - NamesFirstMilitary
-      - names_last
-## Death Squad
-
-- type: entity
-  id: RandomHumanoidSpawnerDeathSquadOfficer
-  name: Death Squad officer
-  components:
-    - type: Sprite
-      netsync: false
-      sprite: Markers/jobs.rsi
-      state: death_squad
-    - type: RandomHumanoidSpawner
-      settings: DSOfficer
-
-- type: randomHumanoidSettings
-  id: DSOfficer
-  components:
-    - type: Loadout
-      prototypes: [ DeathSquadGear ]
-    - type: GhostRole
-      name: ghost-role-information-death-squad-name
-      description: ghost-role-information-death-squad-description
     - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:
