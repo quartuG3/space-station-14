@@ -281,7 +281,6 @@
       contents:
         - id: BoxSurvivalMedical
         - id: TelescopicBaton
-        - id: WeaponPulseCarbine
         - id: Hypospray
         - id: MedkitAdvancedFilled
         - id: CrowbarRed
@@ -300,8 +299,7 @@
         - id: trayScanner
         - id: RCD
         - id: RCDAmmo
-        - id: RCDAmmo
-        - id: RCDAmmo
+          amount: 2
         - id: CableMVStack
         - id: CableHVStack
         - id: CableApcStack
@@ -318,7 +316,6 @@
       contents:
         - id: BoxSurvivalEngineering
         - id: TelescopicBaton
-        - id: WeaponPulsePistol
         - id: MedkitFilled
         - id: LightReplacer
         - id: BoxLightMixed
@@ -336,6 +333,8 @@
   name: death squad backpack
   description: Holds the kit of CentComm's most feared agents.
   components:
+    - type: Storage
+      maxTotalWeight: 56
     - type: StorageFill
       contents:
         - id: BoxSurvivalEngineering

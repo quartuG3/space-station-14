@@ -42,7 +42,7 @@
       types:
         Blunt: 5.5
   - type: Item
-    size: 30
+    size: Normal
   - type: Clothing
     sprite: Objects/Weapons/Melee/chainsaw.rsi
     quickEquip: false
