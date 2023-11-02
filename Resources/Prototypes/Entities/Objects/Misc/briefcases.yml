@@ -34,8 +34,8 @@
   - type: Item
     size: Huge
   - type: Storage
-    maxSlots: 6
-    maxTotalWeight: 24
+    maxItemSize: Huge
+    maxTotalWeight: 40
   - type: Tag
     tags:
     - Briefcase

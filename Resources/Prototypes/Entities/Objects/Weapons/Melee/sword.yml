@@ -181,7 +181,7 @@
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
-    size: 15
+    size: Normal
     sprite: Objects/Weapons/Melee/katana_cursed.rsi
   - type: DisarmMalus
 

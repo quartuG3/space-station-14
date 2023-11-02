@@ -431,8 +431,6 @@
     - Mouse
   - type: Body
     prototype: Moth
-  - type: TypingIndicator
-    proto: moth
 
 - type: entity
   name: mallard duck #Quack

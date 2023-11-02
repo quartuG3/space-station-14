@@ -356,7 +356,7 @@
   - type: Sprite
     state: dragonsinew
   - type: Item
-    size: 60
+    size: Normal
 
 - type: entity
   parent: MaterialDragonSinew
@@ -366,8 +366,6 @@
   components:
   - type: Stack
     count: 1
-  - type: Item
-    size: 6
 
 - type: entity
   parent: MaterialBase
@@ -381,7 +379,7 @@
   - type: Sprite
     state: alienplate
   - type: Item
-    size: 60
+    size: Normal
 
 - type: entity
   parent: MaterialXenoScale
@@ -391,8 +389,6 @@
   components:
   - type: Stack
     count: 1
-  - type: Item
-    size: 6
 
 - type: entity
   parent: MaterialBase

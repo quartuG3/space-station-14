@@ -535,7 +535,7 @@
   - type: Gun
     projectileSpeed: 75
   - type: Item
-    size: 25
+    size: Normal
   - type: ProjectileBatteryAmmoProvider
     proto: X01Attack
     fireCost: 100 
@@ -631,7 +631,7 @@
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/plasma_cutter.ogg
     - type: Item
-      size: 25
+      size: Normal
     - type: ProjectileBatteryAmmoProvider
       proto: BulletCutter
       fireCost: 200

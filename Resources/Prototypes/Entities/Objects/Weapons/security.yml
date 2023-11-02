@@ -93,7 +93,7 @@
   - type: ItemCooldown
   - type: Item
     heldPrefix: off
-    size: 10
+    size: Small
   - type: Clothing
     sprite: Objects/Weapons/Melee/telescopic.rsi
     quickEquip: false
@@ -159,7 +159,7 @@
   - type: StaminaDamageOnHit
     damage: 18
   - type: Item
-    size: 20
+    size: Normal
   - type: Clothing
     sprite: Objects/Weapons/Melee/baton.rsi
     quickEquip: false

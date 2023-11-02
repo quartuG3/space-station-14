@@ -256,7 +256,7 @@
     proto: CartridgeCaselessUniversalPT1
     capacity: 20
   - type: Item
-    size: 10
+    size: Small
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -311,7 +311,7 @@
     proto: CartridgeCaselessUniversalPT1
     capacity: 10
   - type: Item
-    size: 5
+    size: Small
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/universal_rifle_mag_short.rsi
     layers:

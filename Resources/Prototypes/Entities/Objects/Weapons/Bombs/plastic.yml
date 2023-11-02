@@ -78,7 +78,7 @@
       map: ["base"]
   - type: Item
     sprite: Objects/Weapons/Bombs/explosion_package.rsi
-    size: 5
+    size: Small
   - type: OnUseTimerTrigger
     delay: 5
     delayOptions: [5, 10, 15, 20, 30]

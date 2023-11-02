@@ -472,3 +472,5 @@
     contents:
       - id: KatanacursedShard
       - id: ClothingOuterDogi
+  - type: Storage
+    maxItemSize: Normal

@@ -115,7 +115,7 @@
   abstract: true
   components:
   - type: Item
-    size: 5
+    size: Small
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/arrowscomp.rsi
   - type: Fixtures

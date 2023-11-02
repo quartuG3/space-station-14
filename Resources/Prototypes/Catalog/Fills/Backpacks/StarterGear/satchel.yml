@@ -115,7 +115,6 @@
       - id: WeaponSniperMosin
       - id: SpeedLoaderLightRifle
       - id: MagazineBoxLightRifle
-      - id: Handcuffs
 
 - type: entity
   noSpawn: true

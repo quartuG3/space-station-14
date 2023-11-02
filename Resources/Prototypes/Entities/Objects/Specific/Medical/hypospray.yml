@@ -407,7 +407,7 @@
       map: [ "enum.SolutionContainerLayers.Fill" ]
   - type: Item
     sprite: Objects/Specific/Medical/medipen.rsi
-    size: 3
+    size: Tiny
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     changeColor: false
@@ -440,7 +440,7 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: Item
     sprite: Objects/Specific/Medical/medipen.rsi
-    size: 3
+    size: Tiny
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     changeColor: false
@@ -508,7 +508,7 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: Item
     sprite: Objects/Specific/Medical/medipen.rsi
-    size: 5
+    size: Tiny
   - type: SolutionContainerManager
     solutions:
       pen:
@@ -545,7 +545,7 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: Item
     sprite: Objects/Specific/Medical/medipen.rsi
-    size: 5
+    size: Tiny
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     changeColor: false
@@ -580,7 +580,7 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: Item
     sprite: Objects/Specific/Medical/medipen.rsi
-    size: 5
+    size: Tiny
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     changeColor: false
@@ -613,7 +613,7 @@
       map: ["enum.SolutionContainerLayers.Fill"]
   - type: Item
     sprite: Objects/Specific/Medical/medipen.rsi
-    size: 5
+    size: Tiny
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     changeColor: false

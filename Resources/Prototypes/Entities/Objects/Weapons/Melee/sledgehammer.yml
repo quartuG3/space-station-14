@@ -70,7 +70,7 @@
   - type: StaminaDamageOnHit
     damage: 5
   - type: Item
-    size: 25
+    size: Large
     sprite: Objects/Weapons/Melee/metalpipe.rsi
     quickEquip: false
   - type: Construction

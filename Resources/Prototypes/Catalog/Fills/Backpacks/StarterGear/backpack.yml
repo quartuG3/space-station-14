@@ -255,7 +255,6 @@
         - id: RegenerativeMesh
         - id: BoxZiptie
         - id: CrowbarRed
-        - id: MagazinePistol
 
 - type: entity
   noSpawn: true
@@ -383,20 +382,3 @@
         - id: Cutlass
         - id: WeaponRevolverPirate
         - id: ClothingEyesEyepatch
-
-- type: entity
-  parent: ClothingBackpackERTSecurity
-  id: ClothingBackpackDeathsquad
-  components:
-    - type: StorageFill
-      contents:
-        - id: BoxSurvival
-        - id: WeaponRevolverMateba
-        - id: WeaponPulseRifle
-        - id: SpeedLoaderMagnumAP
-        - id: MagazineBoxMagnum
-        - id: C4
-        - id: C4
-        - id: MedkitDeathsquadFilled
-        - id: BoxAMRE
-        - id: MicroBombImplanter

@@ -275,7 +275,7 @@
   abstract: true
   components:
   - type: Storage
-    capacity: 12
+    maxTotalWeight: 12
     quickInsert: true
     areaInsert: true
     whitelist:
@@ -440,6 +440,8 @@
   id: BoxSyringeCartridge
   description: A box full of syringe cartridges.
   components:
+  - type: Storage
+    maxTotalWeight: 10
   - type: StorageFill
     contents:
       - id: Syringecartridge

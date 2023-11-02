@@ -142,8 +142,10 @@
   - type: Item
     heldPrefix: injectorscase
     sprite: Objects/Specific/Medical/firstaidkits.rsi
-    size: 15
+    size: Small
   - type: Storage
+    maxTotalWeight: 6
+    maxItemSize: Tiny
     whitelist:
       tags:
         - AutoInjector
@@ -217,6 +219,8 @@
   id: BoxCardboardTrackImp
   description: A box full of medpens.
   components:
+  - type: Storage
+    maxTotalWeight: 12
   - type: StorageFill
     contents:
       - id: TrackingImplanter

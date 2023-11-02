@@ -5,9 +5,9 @@
   description: Useful for carrying items in your hands.
   components:
   - type: Item
-    size: 105
+    size: Ginormous
   - type: Storage
-    capacity: 105
+    maxTotalWeight: 80
     whitelist:
       tags:
         - Clothing
