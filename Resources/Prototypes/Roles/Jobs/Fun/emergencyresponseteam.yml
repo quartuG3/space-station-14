@@ -15,7 +15,6 @@
 - type: startingGear
   id: ERTLeaderGear
   equipment:
-    socks: ClothingUnderSocksAzureKneeSocks
     jumpsuit: ClothingUniformJumpsuitERTLeader
     back: ClothingBackpackERTLeaderFilled
     shoes: ClothingShoesBootsCombatFilled
@@ -32,7 +31,6 @@
 - type: startingGear
   id: ERTLeaderGearEVA
   equipment:
-    socks: ClothingUnderSocksAzureKneeSocks
     jumpsuit: ClothingUniformJumpsuitERTLeader
     back: ClothingBackpackERTLeaderFilled
     shoes: ClothingShoesBootsMagAdv
@@ -83,7 +81,6 @@
 - type: startingGear
   id: ERTEngineerGear
   equipment:
-    socks: ClothingUnderSocksOrangeKneeSocks
     jumpsuit: ClothingUniformJumpsuitERTEngineer
     back: ClothingBackpackERTEngineerFilled
     shoes: ClothingShoesBootsWork
@@ -100,7 +97,6 @@
 - type: startingGear
   id: ERTEngineerGearEVA
   equipment:
-    socks: ClothingUnderSocksOrangeKneeSocks
     jumpsuit: ClothingUniformJumpsuitERTEngineer
     back: ClothingBackpackERTEngineerFilled
     shoes: ClothingShoesBootsMagAdv
@@ -132,7 +128,6 @@
 - type: startingGear
   id: ERTSecurityGear
   equipment:
-    socks: ClothingUnderSocksRedKneeSocks
     jumpsuit: ClothingUniformJumpsuitERTSecurity
     back: ClothingBackpackERTSecurityFilled
     shoes: ClothingShoesBootsCombatFilled
@@ -149,7 +144,6 @@
 - type: startingGear
   id: ERTSecurityGearEVA
   equipment:
-    socks: ClothingUnderSocksRedKneeSocks
     jumpsuit: ClothingUniformJumpsuitERTSecurity
     back: ClothingBackpackERTSecurityFilled
     shoes: ClothingShoesBootsMag
@@ -200,7 +194,6 @@
 - type: startingGear
   id: ERTMedicalGear
   equipment:
-    socks: ClothingUnderSocksCyanKneeSocks
     jumpsuit: ClothingUniformJumpsuitERTMedic
     back: ClothingBackpackERTMedicalFilled
     shoes: ClothingShoesBootsCombatFilled
@@ -217,7 +210,6 @@
 - type: startingGear
   id: ERTMedicalGearEVA
   equipment:
-    socks: ClothingUnderSocksCyanKneeSocks
     jumpsuit: ClothingUniformJumpsuitERTMedic
     back: ClothingBackpackERTMedicalFilled
     shoes: ClothingShoesBootsMag
@@ -249,7 +241,6 @@
 - type: startingGear
   id: ERTJanitorGear
   equipment:
-    socks: ClothingUnderSocksPurpleKneeSocks
     jumpsuit: ClothingUniformJumpsuitERTJanitor
     back: ClothingBackpackERTJanitorFilled
     shoes: ClothingShoesGaloshes
@@ -264,7 +255,6 @@
 - type: startingGear
   id: ERTJanitorGearEVA
   equipment:
-    socks: ClothingUnderSocksPurpleKneeSocks
     jumpsuit: ClothingUniformJumpsuitERTJanitor
     back: ClothingBackpackERTJanitorFilled
     shoes: ClothingShoesBootsMag
