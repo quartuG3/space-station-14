@@ -44,6 +44,15 @@
     path: /Audio/Animals/mouse_squeak.ogg
 
 - type: speechSounds
+  id: Mothroach
+  saySound:
+    path: /Audio/Voice/Moth/moth_scream.ogg
+  askSound:
+    path: /Audio/Voice/Moth/moth_scream.ogg
+  exclaimSound:
+    path: /Audio/Voice/Moth/moth_scream.ogg
+
+- type: speechSounds
   id: Vending
   saySound:
     path: /Audio/Machines/vending_jingle.ogg

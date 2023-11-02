@@ -360,7 +360,7 @@
   - type: GhostTakeoverAvailable
   - type: Speech
     speechVerb: Moth
-    speechSounds: Squeak
+    speechSounds: Mothroach
   - type: Sprite
     sprite: Mobs/Animals/mothroach.rsi
     layers:
@@ -405,6 +405,7 @@
       types:
         Asphyxiation: -0.5
   - type: CombatMode
+    combatToggleAction: ActionCombatModeToggleOff
   - type: Butcherable
     spawned:
     - id: FoodMeatSlime

@@ -35,10 +35,9 @@
   id: mothroach
   fullReplacements:
   - accent-words-mothroach-1
-  - accent-words-mouse-1
-  - accent-words-mouse-2
-  - accent-words-mouse-3
-  - accent-words-mouse-4
+  - accent-words-mothroach-2
+  - accent-words-mothroach-3
+  - accent-words-mothroach-4
 
 - type: accent
   id: mumble

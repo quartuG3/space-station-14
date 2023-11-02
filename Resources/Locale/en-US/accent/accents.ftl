@@ -90,4 +90,7 @@ accent-words-slimes-4 = Bluuump...
 accent-words-slimes-5 = Blabl blump!
 
 # Mothroach
-accent-words-mothroach-1 = Chirp!
+accent-words-mothroach-1 = Bzzz!
+accent-words-mothroach-2 = Zhzhzh!
+accent-words-mothroach-3 = Bzzzt!
+accent-words-mothroach-4 = Bzz.
