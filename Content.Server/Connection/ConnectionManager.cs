@@ -111,6 +111,8 @@ namespace Content.Server.Connection
             if (!String.IsNullOrEmpty(ipv4_blacklist))
                 foreach ( var ip in ipv4_blacklist.Split( Environment.NewLine ) )
                 {
+                    if (String.IsNullOrEmpty(ip))
+                        continue;
                     if (addr.IsInSubnet(ip))
                         return (ConnectionDenyReason.Ban, Loc.GetString("ip-blacklist"), null);
                 }
