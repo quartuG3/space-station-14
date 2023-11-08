@@ -1228,6 +1228,9 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> BanHardwareIds =
             CVarDef.Create("ban.hardware_ids", true, CVar.SERVERONLY);
 
+        public static readonly CVarDef<bool> BanBlacklistIPs =
+            CVarDef.Create("ban.blacklist_ips", false, CVar.SERVERONLY);
+
         /*
          * Procgen
          */
