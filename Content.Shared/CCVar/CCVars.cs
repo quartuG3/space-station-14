@@ -1750,13 +1750,13 @@ namespace Content.Shared.CCVar
             CVarDef.Create("infolinks.laws", "", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
-        /// Link to Boosty.
+        /// Donation link.
         /// </summary>
-        public static readonly CVarDef<string> InfoLinksBoosty =
-            CVarDef.Create("infolinks.boosty", "", CVar.SERVER | CVar.REPLICATED);
+        public static readonly CVarDef<string> InfoLinksDonate =
+            CVarDef.Create("infolinks.donate", "", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
-        /// Link to Donation shop.
+        /// Link to shop.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksShop =
             CVarDef.Create("infolinks.shop", "", CVar.SERVER | CVar.REPLICATED);
