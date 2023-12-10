@@ -33,12 +33,8 @@ namespace Content.Server.Connection
         [Dependency] private readonly ILocalizationManager _loc = default!;
         [Dependency] private readonly IResourceManager _resourceManager = default!;
 
-        private string ipv4_blacklist = default!;
-
         public void Initialize()
         {
-            if (_resourceManager.UserData.Exists(new ($"/Blacklist/ipv4.txt")) && _resourceManager.UserData.TryReadAllText(new ($"/Blacklist/ipv4.txt"), out var text))
-                ipv4_blacklist = text;
             _netMgr.Connecting += NetMgrOnConnecting;
             _netMgr.AssignUserIdCallback = AssignUserIdCallback;
             // Approval-based IP bans disabled because they don't play well with Happy Eyeballs.
@@ -177,6 +173,9 @@ namespace Content.Server.Connection
             }
 
             // Check if IP subnet is in the blacklist.
+            var ipv4_blacklist = "";
+            if (_resourceManager.UserData.Exists(new ($"/Blacklist/ipv4.txt")) && _resourceManager.UserData.TryReadAllText(new ($"/Blacklist/ipv4.txt"), out var text))
+                ipv4_blacklist = text;
             if (!String.IsNullOrEmpty(ipv4_blacklist) && _cfg.GetCVar(CCVars.BanBlacklistIPs))
                 foreach ( var ip in ipv4_blacklist.Split( Environment.NewLine ) )
                 {
