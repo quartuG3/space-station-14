@@ -139,7 +139,6 @@
   - type: EmagLatheRecipes
     emagStaticRecipes:
        - CartridgePistol
-       - CartridgePistolUranium
        - CartridgeMagnum
        - ShellShotgun
        - ShellShotgunFlare
