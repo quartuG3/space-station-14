@@ -162,8 +162,11 @@
     heldPrefix: injectorscase
     sprite: Objects/Specific/Medical/firstaidkits.rsi
     size: Small
+    shape:
+    - 0,0,1,1
   - type: Storage
-    maxTotalWeight: 6
+    grid:
+    - 0,0,2,1
     maxItemSize: Tiny
     whitelist:
       tags:
@@ -239,7 +242,8 @@
   description: A box full of medpens.
   components:
   - type: Storage
-    maxTotalWeight: 12
+    grid:
+    - 0,0,3,2
   - type: StorageFill
     contents:
       - id: TrackingImplanter

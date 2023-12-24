@@ -259,7 +259,6 @@
         - id: BoxSurvivalEngineering
         - id: TelescopicBaton
         - id: WeaponPulseCarbine
-        - id: WeaponPulsePistol
         - id: WeaponDisabler
         - id: MedicatedSuture
         - id: RegenerativeMesh

@@ -293,25 +293,6 @@
 # Ammo
 
 - type: listing
-  id: UplinkAmmoBundle
-  name: uplink-ammo-bundle-name
-  description: uplink-ammo-bundle-desc
-  productEntity: ClothingBackpackDuffelSyndicateAmmoFilled
-  cost:
-    Telecrystal: 18
-  categories:
-  - UplinkAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - NukeOpsUplink
-    - !type:BuyerWhitelistCondition
-      blacklist:
-        components:
-          - SurplusBundle
-
-- type: listing
   id: UplinkPistol9mmMagazine
   name: uplink-pistol-magazine-name
   description: uplink-pistol-magazine-desc
@@ -1753,7 +1734,7 @@
 #- type: listing
 #  id: UplinkSyndicateMauler
 #  name: uplink-mauler-name
-#  description: uplink-mauler-desc 
+#  description: uplink-mauler-desc
 #  icon: { sprite: /Textures/Objects/Specific/Mech/mecha.rsi, state: mauler }
 #  productEntity: MechMaulerReal
 #  cost:

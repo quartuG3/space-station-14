@@ -105,7 +105,7 @@
   - type: StorageFill
     contents:
       - id: ArrowCompound
-        amount: 40
+        amount: 24
 
 - type: entity
   parent: WeaponcaseBlueShield

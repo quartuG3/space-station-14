@@ -199,10 +199,6 @@
   - type: Hypospray
     solutionName: pen
     transferAmount: 20
-  - type: SolutionContainerVisuals
-    maxFillLevels: 1
-    changeColor: false
-    emptySpriteName: bicpen_empty
   - type: SolutionContainerManager
     solutions:
       pen:
@@ -226,10 +222,6 @@
     layers:
     - state: dermpen
       map: ["enum.SolutionContainerLayers.Fill"]
-  - type: SolutionContainerVisuals
-    maxFillLevels: 1
-    changeColor: false
-    emptySpriteName: dermpen_empty
   - type: Hypospray
     solutionName: pen
     transferAmount: 20
