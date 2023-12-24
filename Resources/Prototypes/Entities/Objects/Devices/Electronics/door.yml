@@ -167,20 +167,20 @@
     access: [["Quartermaster"]]
 
 - type: entity
+  id: DoorElectronicsLawyer
+  parent: DoorElectronics
+  suffix: Lawyer
+  components:
+  - type: AccessStorage
+    access: [["Security"], ["Lawyer"]]
+
+- type: entity
   id: DoorElectronicsMedical
   parent: DoorElectronics
   suffix: Medical
   components:
   - type: AccessStorage
     access: [["Medical"]]
-
-- type: entity
-  id: DoorElectronicsParamedic
-  parent: DoorElectronics
-  suffix: Paramedic
-  components:
-  - type: AccessStorage
-    access: [["Paramedic"]]
 
 - type: entity
   id: DoorElectronicsVirology
