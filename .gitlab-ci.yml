@@ -6,8 +6,6 @@ stages:
 
 test-debug:
   stage: test
-  except:
-    - schedules
   script:
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
