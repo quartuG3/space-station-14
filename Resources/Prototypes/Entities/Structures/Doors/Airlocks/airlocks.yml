@@ -152,6 +152,14 @@
   - type: WiresPanelSecurity
     securityLevel: medSecurity
 
+- type: entity
+  parent: Airlock
+  id: AirlockMining
+  suffix: Mining(Salvage)
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/mining.rsi
+
 # Glass
 
 - type: entity
@@ -261,6 +269,16 @@
 
 - type: entity
   parent: AirlockGlass
+  id: AirlockChemistryGlass
+  suffix: Chemistry
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/medical.rsi
+  - type: PaintableAirlock
+    group: Glass
+
+- type: entity
+  parent: AirlockGlass
   id: AirlockMedicalGlass
   suffix: Medical
   components:
@@ -331,3 +349,11 @@
   - type: PaintableAirlock
   - type: WiresPanelSecurity
     securityLevel: medSecurity
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMiningGlass
+  suffix: Mining(Salvage)
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/mining.rsi

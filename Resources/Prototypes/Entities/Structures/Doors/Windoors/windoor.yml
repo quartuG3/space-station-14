@@ -258,6 +258,17 @@
       board: [ DoorElectronicsKitchen ]
 
 - type: entity
+  parent: WindoorSecureSecurityLocked
+  id: WindoorSecureSecurityLawyerLocked
+  suffix: Security/Lawyer, Locked
+  components:
+  - type: AccessReaderBoard
+#    access: [["Security"], ["Lawyer"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsLawyer ]
+
+- type: entity
   parent: WindoorSecure
   id: WindoorSecureMedicalLocked
   suffix: Medical, Locked
@@ -333,14 +344,3 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsAtmospherics ]
-
-- type: entity
-  parent: WindoorSecure
-  id: WindoorSecureParamedicLocked
-  suffix: Paramedic, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["Paramedic"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsParamedic ]

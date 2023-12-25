@@ -11,8 +11,8 @@
     sprite: Objects/Storage/medalcase.rsi
     size: Normal
   - type: Storage
-    maxSlots: 8
-    maxTotalWeight: 16
+    grid:
+    - 0,0,7,1
   - type: StorageFill
     contents:
     - id: ClothingNeckGoldmedal
@@ -42,8 +42,8 @@
     sprite: Objects/Storage/medalcase.rsi
     size: Normal
   - type: Storage
-    maxSlots: 5
-    maxTotalWeight: 10
+    grid:
+    - 0,0,3,1
   - type: StorageFill
     contents:
     - id: ClothingNeckBlueshieldMedal

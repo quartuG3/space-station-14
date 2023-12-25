@@ -7,7 +7,8 @@
   - type: Item
     size: Ginormous
   - type: Storage
-    maxTotalWeight: 80
+    grid:
+    - 0,0,9,5
     whitelist:
       tags:
         - Clothing
