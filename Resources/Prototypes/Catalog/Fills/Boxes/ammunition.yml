@@ -285,6 +285,8 @@
   - type: Dumpable
   - type: Item
     size: Normal
+    shape:
+    - 0,0,1,1
   - type: Sprite
     sprite: Objects/Storage/boxes.rsi
 

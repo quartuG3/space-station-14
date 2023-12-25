@@ -125,9 +125,6 @@
   - type: StorageFill
     contents:
       - id: BoxSurvival
-      - id: WeaponSniperMosin
-      - id: SpeedLoaderLightRifle
-      - id: MagazineBoxLightRifle
 
 - type: entity
   noSpawn: true
