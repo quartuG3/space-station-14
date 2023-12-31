@@ -207,12 +207,12 @@
     access: [["Research"], ["Medical"]]
 
 - type: entity
-  id: DoorElectronicsCentcom
+  id: DoorElectronicsCentralCommand
   parent: DoorElectronics
-  suffix: Centcom
+  suffix: CentralCommand
   components:
   - type: AccessStorage
-    access: [["Centcom"]]
+    access: [["CentralCommand"]]
 
 - type: entity
   id: DoorElectronicsCommand

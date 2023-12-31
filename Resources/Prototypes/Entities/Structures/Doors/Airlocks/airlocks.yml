@@ -32,8 +32,8 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockCentcomV2
-  suffix: Centcom
+  id: AirlockCentralCommandV2
+  suffix: CentralCommand
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/centcom_green.rsi
@@ -42,8 +42,8 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockCentcom
-  suffix: Centcom
+  id: AirlockCentralCommand
+  suffix: CentralCommand
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/centcom.rsi
@@ -55,8 +55,8 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockCentcomHatch
-  suffix: Centcom, Hatch
+  id: AirlockCentralCommandHatch
+  suffix: CentralCommand, Hatch
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/centcom_hatch.rsi
@@ -227,8 +227,8 @@
 
 - type: entity
   parent: AirlockGlass
-  id: AirlockCentcomGlass
-  suffix: Centcom
+  id: AirlockCentralCommandGlass
+  suffix: CentralCommand
   components:
   - type: Sprite
     sprite: Structures/Doors/Airlocks/Glass/centcom_green.rsi

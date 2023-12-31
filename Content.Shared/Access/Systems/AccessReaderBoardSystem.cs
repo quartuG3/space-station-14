@@ -388,7 +388,7 @@ namespace Content.Shared.Access.Systems
                     "ChiefMedicalOfficer",
                     "Command",
                     "Armory",
-                    "Centcom"
+                    "CentralCommand"
                 };
             return accessLists.Count > 0 && !accessLists[0].Any(a => exceptions.Contains(a));
         }

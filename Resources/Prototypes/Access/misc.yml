@@ -36,7 +36,7 @@
 - type: accessGroup
   id: AllAccessCentCom
   tags:
-  - Centcom
+  - CentralCommand
   - EmergencyShuttleRepealAll
   - Captain
   - HeadOfPersonnel

@@ -32,7 +32,7 @@
   - Maintenance
   - Cargo
   - Research
-  - Centcom
+  - CentralCommand
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
