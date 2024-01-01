@@ -29,3 +29,6 @@ ent-SpawnMobSpiderSalvage = спавнер космического паука (
     .desc = { ent-MarkerBase.desc }
 ent-SpawnMobCobraSalvage = спавнер космической кобры (обломок)
     .desc = { ent-MarkerBase.desc }
+ent-SalvageFleshSpawner = спавнер плоти (обломок)
+    .suffix = 100
+    .desc = { ent-SalvageMobSpawner.desc }

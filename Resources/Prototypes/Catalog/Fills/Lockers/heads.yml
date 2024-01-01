@@ -7,7 +7,6 @@
     contents:
       - id: GarmentBagQM
       - id: BoxFolderQmClipboard
-      - id: ClothingHeadsetCargo
       - id: CargoRequestComputerCircuitboard
       - id: CargoShuttleComputerCircuitboard
       - id: CargoShuttleConsoleCircuitboard
@@ -48,7 +47,7 @@
       - id: WeaponAntiqueLaser
       - id: JetpackCaptainFilled
       - id: MedalCase
-      - id: ClothingHeadHatCapcap
+      - id: HandheldIntercomMonitor
 
 - type: entity
   id: LockerCentcomConsultantFilled
@@ -119,7 +118,6 @@
       - id: CaptainIDCard
       - id: WeaponDisabler
       - id: CommsComputerCircuitboard
-      - id: HandheldIntercomMonitor
       - id: ClothingHeadsetAltCommand
       - id: SpaceCash1000
       - id: PlushieNuke
@@ -132,6 +130,7 @@
       - id: WeaponAntiqueLaser
       - id: JetpackCaptainFilled
       - id: MedalCase
+      - id: HandheldIntercomMonitor
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -171,8 +170,6 @@
       - id: GarmentBagCE
       - id: ClothingOuterHardsuitEngineeringWhite
       - id: ClothingMaskBreath
-      - id: ClothingUniformJumpsuitChiefEngineerTurtle
-      - id: ClothingUniformJumpskirtChiefEngineerTurtle
       - id: OxygenTankFilled
       - id: NitrogenTankFilled
       - id: ClothingBeltChiefEngineerFilled
@@ -189,6 +186,7 @@
       - id: AccessConfigurator
       - id: RCD
       - id: RCDAmmo
+      - id: HandheldSolarMonitor
 
 - type: entity
   id: LockerChiefEngineerFilled
@@ -199,7 +197,6 @@
     contents:
       - id: GarmentBagCE
       - id: ClothingBeltChiefEngineerFilled
-      - id: HandheldSolarMonitor
       - id: CigarCase
         prob: 0.15
       - id: DoorRemoteEngineering
@@ -211,6 +208,7 @@
       - id: AccessConfigurator
       - id: RCD
       - id: RCDAmmo
+      - id: HandheldSolarMonitor
 
 - type: entity
   id: LockerChiefMedicalOfficerFilledHardsuit
@@ -266,12 +264,13 @@
       - id: CircuitImprinterMachineCircuitboard
       - id: ClothingHeadsetMedicalScience
       - id: ClothingOuterHardsuitRd
-      - id: BriefcaseRDFilled
       - id: DoorRemoteResearch
       - id: ClothingBeltUtilityFilled
       - id: RubberStampRd
       - id: ClothingHeadsetAltScience
       - id: BoxEncryptionKeyScience
+      - id: HandheldRndMonitor
+      - id: BriefcaseRDFilled
 
 - type: entity
   id: LockerResearchDirectorFilled
@@ -287,11 +286,12 @@
       - id: ClothingHeadsetMedicalScience
       - id: BriefcaseRDFilled
       - id: DoorRemoteResearch
-      - id: HandheldRndMonitor
       - id: ClothingBeltUtilityFilled
       - id: RubberStampRd
       - id: ClothingHeadsetAltScience
       - id: BoxEncryptionKeyScience
+      - id: HandheldRndMonitor
+      - id: BriefcaseRDFilled
 
 - type: entity
   id: LockerHeadOfSecurityFilledHardsuit

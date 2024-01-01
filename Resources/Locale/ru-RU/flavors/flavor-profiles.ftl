@@ -44,6 +44,7 @@ flavor-base-sharp = резко
 flavor-base-syrupy = сиропно
 flavor-base-spaceshroom = загадочно
 flavor-base-clean = чисто
+flavor-base-alkaline = щёлочно
 flavor-base-holy = свято
 # lmao
 flavor-base-terrible = ужасно

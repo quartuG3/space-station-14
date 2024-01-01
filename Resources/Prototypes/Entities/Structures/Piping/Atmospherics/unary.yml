@@ -47,7 +47,7 @@
         Oxygen: stationOxygen
         Nitrogen: ignore
         CarbonDioxide: stationCO2
-        Plasma: danger # everything below is usually bad
+        Plasma: stationPlasma # everything below is usually bad
         Tritium: danger
         WaterVapor: stationWaterVapor
         Ammonia: stationAmmonia
@@ -149,7 +149,7 @@
         Oxygen: stationOxygen
         Nitrogen: ignore
         CarbonDioxide: stationCO2
-        Plasma: danger # everything below is usually bad
+        Plasma: stationPlasma # everything below is usually bad
         Tritium: danger
         WaterVapor: stationWaterVapor
         Ammonia: stationAmmonia
@@ -320,6 +320,8 @@
       board: ThermomachineFreezerMachineCircuitBoard
     - type: DeviceNetwork
       prefix: device-address-prefix-freezer
+    - type: StealTarget
+      stealGroup: FreezerHeater
 
 - type: entity
   parent: GasThermoMachineFreezer
@@ -363,6 +365,8 @@
       board: ThermomachineHeaterMachineCircuitBoard
     - type: DeviceNetwork
       prefix: device-address-prefix-heater
+    - type: StealTarget
+      stealGroup: FreezerHeater
 
 - type: entity
   parent: GasThermoMachineHeater

@@ -13,6 +13,7 @@ ui-options-default = По умолчанию
 ## Audio menu
 
 ui-options-discordrich = Включить Discord Rich Presence
+ui-options-general-ui-style = Стиль UI
 ui-options-general-discord = Discord
 ui-options-general-cursor = Курсор
 ui-options-general-speech = Речь
@@ -23,6 +24,7 @@ ui-options-ambient-music-volume = Громкость музыки окружен
 ui-options-ambience-volume = Громкость окружения:
 ui-options-lobby-volume = Громкость лобби музыки:
 ui-options-ambience-max-sounds = Кол-во одновременных звуков окружения:
+ui-options-interface-volume = Громкость интерфейса:
 ui-options-lobby-music = Музыка в лобби
 ui-options-restart-sounds = Звуки перезапуска раунда
 ui-options-event-music = Музыка событий

@@ -4,6 +4,6 @@ ent-WindowDirectional = направленное окно
     .desc = Смотри не заляпай.
 ent-WindowFrostedDirectional = направленное матовое окно
     .desc = Смотри не заляпай.
-ent-WindowDiagonal = диагональное окно
+ent-WindowDiagonal = { ent-Window }
     .suffix = Диагональное
     .desc = { ent-Window.desc }
