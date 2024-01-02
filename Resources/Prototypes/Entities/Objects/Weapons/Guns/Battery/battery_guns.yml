@@ -627,7 +627,7 @@
       fireCost: 100
 
 - type: entity
-  name: X-01 multiphase energy gun
+  name: X-01 multiphase laser gun
   parent: BaseWeaponBatterySmall
   id: WeaponLaserHos
   description: Nanotrasen's first attempt to remake the Antique Laser Gun. Has more firing modes on offer but lacks the ability to self-recharge.

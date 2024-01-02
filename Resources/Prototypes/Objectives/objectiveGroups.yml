@@ -95,7 +95,6 @@
     BibleStealObjective: 1
     ClothingNeckGoldmedalStealObjective: 1              #other
     ClothingNeckClownmedalStealObjective: 0.5
-    ClothingNeckBlueshieldMedal: 0.25                   #centcom
     
 - type: weightedRandom
   id: ThiefObjectiveGroupStructure

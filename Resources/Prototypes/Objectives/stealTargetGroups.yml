@@ -77,6 +77,20 @@
     sprite: Objects/Misc/nukedisk.rsi
     state: icon
 
+- type: stealTargetGroup
+  id: WeaponLaserHos
+  name: X-01 multiphase laser gun
+  sprite: 
+    sprite: Objects/Weapons/Guns/Battery/hoslasergun.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: ClothingNeckBlueshieldMedal
+  name: blueshield medal
+  sprite: 
+    sprite: Clothing/Neck/Medals/shieldblue.rsi
+    state: icon
+
 # Thief Collection
 
 - type: stealTargetGroup
