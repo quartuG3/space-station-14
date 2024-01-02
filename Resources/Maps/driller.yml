@@ -5173,7 +5173,7 @@ entities:
     - pos: 54.5,-15.5
       parent: 2
       type: Transform
-- proto: AirlockCentcomHatchLocked
+- proto: AirlockHatchCentralCommandLocked
   entities:
   - uid: 3468
     components:

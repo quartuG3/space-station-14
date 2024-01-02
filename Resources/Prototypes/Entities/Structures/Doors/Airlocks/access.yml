@@ -490,8 +490,8 @@
     layoutId: AirlockCommand
 
 - type: entity
-  parent: AirlockCentralCommandHatch
-  id: AirlockCentralCommandHatchLocked
+  parent: AirlockHatchCentralCommand
+  id: AirlockHatchCentralCommandLocked
   suffix: CentralCommand, Hatch, Locked
   components:
   - type: AccessReaderBoard
@@ -503,8 +503,8 @@
     layoutId: AirlockCommand
 
 - type: entity
-  parent: AirlockCentralCommandHatch
-  id: AirlockCentralCommandHatchCommandLocked
+  parent: AirlockHatchCentralCommand
+  id: AirlockHatchCommandLocked
   suffix: Command, Hatch, Locked
   components:
   - type: AccessReaderBoard

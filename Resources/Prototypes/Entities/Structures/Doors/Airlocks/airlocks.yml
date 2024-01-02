@@ -45,7 +45,7 @@
 
 - type: entity
   parent: Airlock
-  id: AirlockCentralCommandHatch
+  id: AirlockHatchCentralCommand
   suffix: CentralCommand, Hatch
   components:
   - type: Sprite
