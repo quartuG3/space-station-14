@@ -118,6 +118,30 @@
       - id: InflatableDoorStack1
 
 - type: entity
+  id: CrateEngineeringTeslaGenerator
+  parent: CrateEngineeringSecure
+  components:
+  - type: StorageFill
+    contents:
+      - id: TeslaGenerator
+
+- type: entity
+  id: CrateEngineeringTeslaCoil
+  parent: CrateEngineeringSecure
+  components:
+  - type: StorageFill
+    contents:
+      - id: TeslaCoil
+      
+- type: entity
+  id: CrateEngineeringTeslaGroundingRod
+  parent: CrateEngineeringSecure
+  components:
+  - type: StorageFill
+    contents:
+      - id: TeslaGroundingRod
+
+- type: entity
   name: Crate with center thermo electric generator
   id: CrateEngineeringTegCenter
   parent: CrateEngineeringSecure

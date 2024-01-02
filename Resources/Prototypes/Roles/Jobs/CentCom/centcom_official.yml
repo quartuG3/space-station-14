@@ -10,7 +10,9 @@
   canBeAntag: false
   whitelistRequired: true
   accessGroups:
-  - AllAccessCentCom
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: CentcomGear

@@ -70,7 +70,7 @@
 - type: emote
   id: Honk
   category: Vocal
-  chatMessages: [honks]
+  chatMessages: [хонкает]
 
 - type: emote
   id: Sigh
@@ -180,7 +180,7 @@
 - type: emote
   id: Squeak
   category: Vocal
-  chatMessages: [squeaks.]
+  chatMessages: [пищит.]
   chatTriggers:
    - squeak
    - squeak.

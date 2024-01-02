@@ -88,3 +88,10 @@ accent-words-mothroach-1 = Бззз!
 accent-words-mothroach-2 = Жжж!
 accent-words-mothroach-3 = Бзззт!
 accent-words-mothroach-4 = Бзз.
+# Crab
+accent-words-crab-1 = Чик.
+accent-words-crab-2 = Чик-клац!
+accent-words-crab-3 = Клац?
+accent-words-crab-4 = Типи-тап!
+accent-words-crab-5 = Чик-тап.
+accent-words-crab-6 = Чикичик.

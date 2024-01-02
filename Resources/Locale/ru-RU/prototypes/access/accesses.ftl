@@ -1,4 +1,3 @@
-id-card-access-level-centcom = ЦентКом
 id-card-access-level-command = Командование
 id-card-access-level-captain = Капитан
 id-card-access-level-head-of-personnel = Глава персонала
@@ -32,3 +31,4 @@ id-card-access-level-maintenance = Технический
 id-card-access-level-external = Внешний
 id-card-access-level-nuclear-operative = Ядерные оперативники
 id-card-access-level-syndicate-agent = Агент Синдиката
+id-card-access-level-central-command = Центральное командование

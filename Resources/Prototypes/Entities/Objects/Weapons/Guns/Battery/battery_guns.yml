@@ -395,6 +395,42 @@
       - Security
 
 - type: entity
+  name: disabler SMG
+  parent: BaseWeaponBattery
+  id: WeaponDisablerSMG
+  description: Advanced weapon that exhausts organic targets, weakening them until they collapse.
+  components:
+  - type: Item
+    size: Large
+  - type: Tag
+    tags:
+      - Taser
+      - Sidearm
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/disabler_smg.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-0
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 4
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisablerSmg
+    fireCost: 33
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+
+- type: entity
   name: practice disabler
   parent: WeaponDisabler
   id: WeaponDisablerPractice
@@ -490,6 +526,8 @@
     - HeavyWeapon
   - type: StaticPrice
     price: 750
+  - type: StealTarget
+    stealGroup: WeaponAntiqueLaser
 
 - type: entity
   name: advanced laser pistol
@@ -589,7 +627,7 @@
       fireCost: 100
 
 - type: entity
-  name: X-01 multiphase energy gun
+  name: X-01 multiphase laser gun
   parent: BaseWeaponBatterySmall
   id: WeaponLaserHos
   description: Nanotrasen's first attempt to remake the Antique Laser Gun. Has more firing modes on offer but lacks the ability to self-recharge.

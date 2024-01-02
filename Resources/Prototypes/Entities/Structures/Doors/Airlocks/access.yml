@@ -141,14 +141,14 @@
 
 - type: entity
   parent: AirlockExternal
-  id: AirlockExternalCentcomLocked
-  suffix: External, Centcom, Locked
+  id: AirlockExternalCentralCommandLocked
+  suffix: External, CentralCommand, Locked
   components:
   - type: AccessReaderBoard
-#    access: [["Centcom"]]
+#    access: [["CentralCommand"]]
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCentcom ]
+      board: [ DoorElectronicsCentralCommand ]
 
 - type: entity
   parent: AirlockExternal
@@ -321,6 +321,20 @@
       board: [ DoorElectronicsMedicalScience ]
 
 - type: entity
+  parent: AirlockCentralCommand
+  id: AirlockCentralCommandLocked
+  suffix: Central Command, Locked
+  components:
+  - type: AccessReaderBoard
+#    access: [["CentralCommand"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCentralCommand ]
+  - type: Wires
+    layoutId: AirlockCommand
+
+
+- type: entity
   parent: AirlockCommand
   id: AirlockCommandLocked
   suffix: Command, Locked
@@ -450,47 +464,21 @@
     layoutId: AirlockSecurity
 
 - type: entity
-  parent: AirlockCentcomV2
-  id: AirlockCentcomV2Locked
-  suffix: Centcom, Locked
+  parent: AirlockCentralCommandV2
+  id: AirlockCentralCommandV2Locked
+  suffix: CentralCommand, Locked
   components:
   - type: AccessReaderBoard
-#    access: [["Centcom"]]
+#    access: [["CentralCommand"]]
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCentcom ]
+      board: [ DoorElectronicsCentralCommand ]
   - type: Wires
     layoutId: AirlockCommand
 
 - type: entity
-  parent: AirlockCentcomGlass
-  id: AirlockCentcomGlassLocked
-  suffix: Centcom, Glass, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["Centcom"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCentcom ]
-  - type: Wires
-    layoutId: AirlockCommand
-
-- type: entity
-  parent: AirlockCentcom
-  id: AirlockCentcomLocked
-  suffix: Centcom, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["Centcom"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCentcom ]
-  - type: Wires
-    layoutId: AirlockCommand
-
-- type: entity
-  parent: AirlockCentcom
-  id: AirlockCentcomCommandLocked
+  parent: AirlockCentralCommand
+  id: AirlockCentralCommandCommandLocked
   suffix: Command, Locked
   components:
   - type: AccessReaderBoard
@@ -502,21 +490,21 @@
     layoutId: AirlockCommand
 
 - type: entity
-  parent: AirlockCentcomHatch
-  id: AirlockCentcomHatchLocked
-  suffix: Centcom, Hatch, Locked
+  parent: AirlockHatchCentralCommand
+  id: AirlockHatchCentralCommandLocked
+  suffix: CentralCommand, Hatch, Locked
   components:
   - type: AccessReaderBoard
-#    access: [["Centcom"]]
+#    access: [["CentralCommand"]]
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCentcom ]
+      board: [ DoorElectronicsCentralCommand ]
   - type: Wires
     layoutId: AirlockCommand
 
 - type: entity
-  parent: AirlockCentcomHatch
-  id: AirlockCentcomHatchCommandLocked
+  parent: AirlockHatchCentralCommand
+  id: AirlockHatchCommandLocked
   suffix: Command, Hatch, Locked
   components:
   - type: AccessReaderBoard
@@ -671,14 +659,14 @@
 
 - type: entity
   parent: AirlockExternalGlass
-  id: AirlockExternalGlassCentcomLocked
-  suffix: External, Glass, Centcom, Locked
+  id: AirlockExternalGlassCentralCommandLocked
+  suffix: External, Glass, CentralCommand, Locked
   components:
   - type: AccessReaderBoard
-#    access: [["Centcom"]]
+#    access: [["CentralCommand"]]
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCentcom ]
+      board: [ DoorElectronicsCentralCommand ]
 
 - type: entity
   parent: AirlockGlass
@@ -830,25 +818,35 @@
 
 - type: entity
   parent: AirlockCommandGlass
-  id: AirlockCommandCentcomGlassLocked
-  suffix: Centcom, Glass, Locked
+  id: AirlockCommandCentralCommandGlassLocked
+  suffix: CentralCommand, Glass, Locked
   components:
   - type: AccessReaderBoard
-#    access: [["Centcom"]]
+#    access: [["CentralCommand"]]
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCentcom ]
+      board: [ DoorElectronicsCentralCommand ]
 
 - type: entity
   parent: AirlockCommand
-  id: AirlockCommandCentcomLocked
-  suffix: Centcom, Locked
+  id: AirlockCommandCentralCommandLocked
+  suffix: CentralCommand, Locked
   components:
   - type: AccessReaderBoard
-#    access: [["Centcom"]]
+#    access: [["CentralCommand"]]
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCentcom ]
+      board: [ DoorElectronicsCentralCommand ]
+
+- type: entity
+  parent: AirlockCentralCommandGlass
+  id: AirlockCentralCommandGlassLocked
+  suffix: Central Command, Locked
+  components:
+  - type: AccessReader
+    access: [["CentralCommand"]]
+  - type: Wires
+    layoutId: AirlockCommand
 
 - type: entity
   parent: AirlockCommandGlass
@@ -1092,14 +1090,14 @@
 
 - type: entity
   parent: AirlockMaint
-  id: AirlockMaintCentcomLocked
-  suffix: Centcom, Locked
+  id: AirlockMaintCentralCommandLocked
+  suffix: CentralCommand, Locked
   components:
   - type: AccessReaderBoard
-#    access: [["Centcom"]]
+#    access: [["CentralCommand"]]
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCentcom ]
+      board: [ DoorElectronicsCentralCommand ]
 
 - type: entity
   parent: AirlockMaint
@@ -1462,14 +1460,14 @@
 
 - type: entity
   parent: AirlockGlassShuttle
-  id: AirlockExternalGlassShuttleCentcomLocked
-  suffix: External, Centcom, Glass, Docking, Locked
+  id: AirlockExternalGlassShuttleCentralCommandLocked
+  suffix: External, CentralCommand, Glass, Docking, Locked
   components:
   - type: AccessReaderBoard
-#    access: [["Centcom"]]
+#    access: [["CentralCommand"]]
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCentcom ]
+      board: [ DoorElectronicsCentralCommand ]
 
 - type: entity
   parent: AirlockGlassShuttle
@@ -1500,6 +1498,14 @@
     - type: GridFill
 
 #HighSecDoors
+- type: entity
+  parent: HighSecDoor
+  id: HighSecCentralCommandLocked
+  suffix: Central Command, Locked
+  components:
+  - type: AccessReader
+    access: [["CentralCommand"]]
+
 - type: entity
   parent: HighSecDoor
   id: HighSecCommandLocked

@@ -10,7 +10,9 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-  - AllAccessCentCom
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: ERTLeaderGear
@@ -76,7 +78,9 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-  - AllAccessCentCom
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: ERTEngineerGear
@@ -123,7 +127,9 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-  - AllAccessCentCom
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: ERTSecurityGear
@@ -189,7 +195,9 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-  - AllAccessCentCom
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: ERTMedicalGear
@@ -236,7 +244,9 @@
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
-  - AllAccessCentCom
+  - AllAccess
+  access:
+  - CentralCommand
 
 - type: startingGear
   id: ERTJanitorGear

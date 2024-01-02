@@ -69,7 +69,7 @@
     ClothingBeltStorageWaistbag: 3
     ClothingUniformJumpsuitCitizen: 3
     ClothingEyesGlasses: 6
-    ClothingEyesGlassesCosmeticSunglasses: 6
+    ClothingEyesGlassesSunglasses: 2
     ClothingHandsGlovesColorBlack: 4
   contrabandInventory:
     ClothingUniformJumpsuitTacticool: 1

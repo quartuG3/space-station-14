@@ -247,11 +247,11 @@
   - type: AccessReader
     access: [["Armory"]]
 
-#Centcom hardsuit
+#CentralCommand hardsuit
 - type: entity
   id: SuitStorageCentcom
   parent: SuitStorageBase
-  suffix: Centcom
+  suffix: CentralCommand
   components:
   - type: StorageFill
     contents:
@@ -260,7 +260,7 @@
         - id: ClothingOuterHardsuitCentcom
         - id: ClothingMaskGasCentcom
   - type: AccessReader
-    access: [["Centcom"]]
+    access: [["CentralCommand"]]
 
 - type: entity
   id: SuitStorageCentcomConsultant
@@ -274,7 +274,7 @@
         - id: ClothingOuterHardsuitCentcomConsultant
         - id: ClothingMaskGasCentcom
   - type: AccessReader
-    access: [["Centcom"]]
+    access: [["CentralCommand"]]
 
 #Captain's hardsuit
 - type: entity

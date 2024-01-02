@@ -102,3 +102,11 @@ accent-words-mothroach-1 = Bzzz!
 accent-words-mothroach-2 = Zhzhzh!
 accent-words-mothroach-3 = Bzzzt!
 accent-words-mothroach-4 = Bzz.
+
+# Crab
+accent-words-crab-1 = Click.
+accent-words-crab-2 = Click-clack!
+accent-words-crab-3 = Clack?
+accent-words-crab-4 = Tipi-tap!
+accent-words-crab-5 = Clik-tap.
+accent-words-crab-6 = Cliliick.

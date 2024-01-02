@@ -182,14 +182,14 @@
 
 - type: entity
   parent: WindoorSecure
-  id: WindoorSecureCentcomLocked
-  suffix: Centcom, Locked
+  id: WindoorSecureCentralCommandLocked
+  suffix: Central Command, Locked
   components:
   - type: AccessReaderBoard
-#    access: [["Centcom"]]
+#    access: [["CentralCommand"]]
   - type: ContainerFill
     containers:
-      board: [ DoorElectronicsCentcom ]
+      board: [ DoorElectronicsCentralCommand ]
 
 - type: entity
   parent: WindoorSecure

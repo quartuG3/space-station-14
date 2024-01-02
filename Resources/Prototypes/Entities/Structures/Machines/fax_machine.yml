@@ -106,3 +106,5 @@
       name: "Captain's Office"
       receiveNukeCodes: true
       receiveStationGoal: true # Starshine-StationGoal
+    - type: StealTarget
+      stealGroup: FaxMachineCaptain

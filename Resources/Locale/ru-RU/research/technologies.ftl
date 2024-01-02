@@ -46,6 +46,7 @@ research-technology-basic-anomalous-research = Базовая технологи
 research-technology-basic-xenoarcheology = Базовая ксеноархеология
 research-technology-alternative-research = Альтернативное исследование
 research-technology-magnets-tech = Локальный магнетизм
+research-technology-anomaly-harnessing = Освоение ядер аномалий
 research-technology-advanced-parts = Продвинутые детали
 research-technology-grappling = Цепляющие приспособления
 research-technology-abnormal-artifact-manipulation = Иное управление артефактами

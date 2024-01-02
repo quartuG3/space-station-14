@@ -46,7 +46,7 @@ guide-entry-ss14 = Space Station 14
 guide-entry-robotics = Робототехника
 guide-entry-cyborgs = Киборги
 guide-entry-security = Служба безопасности
-guide-entry-dna = ДНК
+guide-entry-forensics = Отпечатки
 guide-entry-defusal = Обезвреживание Больших Бомб
 guide-entry-antagonists = Антагонисты
 guide-entry-nuclear-operatives = Ядерные Оперативники
@@ -56,7 +56,7 @@ guide-entry-revolutionaries = Революционеры
 guide-entry-minor-antagonists = Малые Антагонисты
 guide-entry-space-ninja = Космический Ниндзя
 guide-entry-writing = Разметка письма
-guide-entry-glossary = Глоссарий
+guide-entry-glossary = Словарь терминов
 
 guide-entry-starshine = Starshine
 guide-entry-starshine-spacelaw = Корпоративный Закон
