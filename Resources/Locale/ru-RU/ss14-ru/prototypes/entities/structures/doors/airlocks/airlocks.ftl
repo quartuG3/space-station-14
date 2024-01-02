@@ -16,7 +16,6 @@ ent-AirlockMiner = { ent-Airlock }
 ent-AirlockCentralCommandV2 = { ent-Airlock }
     .suffix = ЦентральноеКомандование
     .desc = { ent-Airlock.desc }
-    .desc = { ent-Airlock.desc }
 ent-AirlockCentralCommandHatch = { ent-Airlock }
     .suffix = ЦентральноеКомандование, Четверной
     .desc = { ent-Airlock.desc }

@@ -36,16 +36,6 @@
   suffix: CentralCommand
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/centcom_green.rsi
-  - type: WiresPanelSecurity
-    securityLevel: medSecurity
-
-- type: entity
-  parent: Airlock
-  id: AirlockCentralCommand
-  suffix: CentralCommand
-  components:
-  - type: Sprite
     sprite: Structures/Doors/Airlocks/Standard/centcom.rsi
   - type: WiresPanelSecurity
     securityLevel: maxSecurity
@@ -234,18 +224,6 @@
     sprite: Structures/Doors/Airlocks/Glass/maint.rsi
   - type: PaintableAirlock
     group: Glass
-
-- type: entity
-  parent: AirlockGlass
-  id: AirlockCentralCommandGlass
-  suffix: CentralCommand
-  components:
-  - type: Sprite
-    sprite: Structures/Doors/Airlocks/Glass/centcom_green.rsi
-  - type: PaintableAirlock
-    group: Glass
-  - type: WiresPanelSecurity
-    securityLevel: medSecurity
 
 - type: entity
   parent: AirlockGlass

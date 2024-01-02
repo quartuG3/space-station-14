@@ -198,8 +198,12 @@
   parent: BaseTraitorStealObjective
   id: HosGunStealObjective
   components:
+  - type: Objective
+    difficulty: 3
+  - type: NotJobRequirement
+    job: HeadOfSecurity
   - type: StealCondition
-    prototype: WeaponLaserHos
+    stealGroup: WeaponLaserHos
     owner: job-name-hos
 
 ## ce
@@ -296,12 +300,15 @@
     stealGroup: NukeDisk
     owner: objective-condition-steal-station
 
-##BS
+## BS (Starshine)
+
 - type: entity
   noSpawn: true
   parent: BaseTraitorStealObjective
   id: BlueshieldMedalObjective
   components:
+  - type: Objective
+    difficulty: 3.5
   - type: StealCondition
-    prototype: ClothingNeckBlueshieldMedal
+    stealGroup: ClothingNeckBlueshieldMedal
     owner: job-name-blueshield

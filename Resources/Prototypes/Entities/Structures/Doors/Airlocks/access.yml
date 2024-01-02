@@ -325,10 +325,14 @@
   id: AirlockCentralCommandLocked
   suffix: Central Command, Locked
   components:
-  - type: AccessReader
-    access: [["CentralCommand"]]
+  - type: AccessReaderBoard
+#    access: [["CentralCommand"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCentralCommand ]
   - type: Wires
     layoutId: AirlockCommand
+
 
 - type: entity
   parent: AirlockCommand
@@ -462,32 +466,6 @@
 - type: entity
   parent: AirlockCentralCommandV2
   id: AirlockCentralCommandV2Locked
-  suffix: CentralCommand, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["CentralCommand"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCentralCommand ]
-  - type: Wires
-    layoutId: AirlockCommand
-
-- type: entity
-  parent: AirlockCentralCommandGlass
-  id: AirlockCentralCommandGlassLocked
-  suffix: CentralCommand, Glass, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["CentralCommand"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCentralCommand ]
-  - type: Wires
-    layoutId: AirlockCommand
-
-- type: entity
-  parent: AirlockCentralCommand
-  id: AirlockCentralCommandLocked
   suffix: CentralCommand, Locked
   components:
   - type: AccessReaderBoard

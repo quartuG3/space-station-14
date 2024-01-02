@@ -595,7 +595,9 @@
     jobTitle: Central Commander
   - type: Access
     groups:
-    - AllAccessCentCom
+    - AllAccess
+    tags:
+    - CentralCommand
 
 - type: entity
   parent: IDCardStandard
@@ -612,7 +614,9 @@
     jobTitle: Centcom Intern
   - type: Access
     groups:
-    - AllAccessCentCom
+    - AllAccess
+    tags:
+    - CentralCommand
 
 - type: entity
   parent: IDCardStandard

@@ -183,21 +183,13 @@
 - type: entity
   parent: WindoorSecure
   id: WindoorSecureCentralCommandLocked
-  suffix: CentralCommand, Locked
+  suffix: Central Command, Locked
   components:
   - type: AccessReaderBoard
 #    access: [["CentralCommand"]]
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCentralCommand ]
-
-- type: entity
-  parent: WindoorSecure
-  id: WindoorSecureCentralCommandLocked
-  suffix: Central Command, Locked
-  components:
-  - type: AccessReader
-    access: [["CentralCommand"]]
 
 - type: entity
   parent: WindoorSecure
