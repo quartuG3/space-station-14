@@ -74,10 +74,12 @@
         Slash: 0.95
         Heat: 0.90
         Radiation: 0.75
-  - type: ClothingGrantComponent
-    component:
-    - type: ShowHealthBars
-      damageContainer: Biological
+  - type: ShowHealthBars
+    damageContainers: 
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers: 
+    - Biological
 
 #Ancient Void Helmet
 - type: entity

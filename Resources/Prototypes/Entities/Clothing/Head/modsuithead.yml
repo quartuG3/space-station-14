@@ -145,10 +145,12 @@
     sprite: Clothing/Head/Modsuit/medical.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHandsModsuitMedical
-  - type: ClothingGrantComponent
-    component:
-    - type: ShowHealthBars
-      damageContainer: Biological
+  - type: ShowHealthBars
+    damageContainers: 
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers: 
+    - Biological
 
 - type: entity
   parent: ClothingHeadHelmetModsuitBase
