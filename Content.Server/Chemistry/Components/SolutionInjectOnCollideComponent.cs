@@ -24,4 +24,9 @@ public sealed partial class SolutionInjectOnCollideComponent : Component
     /// </summary>
     [DataField("blockSlots"), ViewVariables(VVAccess.ReadWrite)]
     public SlotFlags BlockSlots = SlotFlags.MASK;
+    /// <summary>
+    /// Fixture we track for the collision.
+    /// </summary>
+    [DataField("fixture")]
+    public string FixtureId = "projectile";
 }
