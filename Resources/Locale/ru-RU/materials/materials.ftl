@@ -23,5 +23,13 @@ materials-meat = мясо
 materials-web = шёлк
 materials-bones = кость
 materials-coal = уголь
+# Ores
+materials-raw-iron = сталь
+materials-raw-quartz = кварц
+materials-raw-gold = золото
+materials-raw-silver = серебро
+materials-raw-plasma = плазма
+materials-raw-uranium = уран
+materials-raw-bananium = бананиум
 # Material Reclaimer
 material-reclaimer-upgrade-process-rate = Скорость процесса

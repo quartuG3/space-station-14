@@ -1,6 +1,6 @@
 store-currency-inserted = { CAPITALIZE($used) } внесены в { $target }.
 store-currency-war-boost-given = { CAPITALIZE($target) } начинает жужжать
-store-currency-inserted-implant = { CAPITALIZE(THE($used)) } внесены в Ваш имплантат.
+store-currency-inserted-implant = { CAPITALIZE(THE($used)) } внесены в Ваш имплант.
 store-currency-free = Бесплатно
 store-currency-display-debugdollar =
     { $amount ->

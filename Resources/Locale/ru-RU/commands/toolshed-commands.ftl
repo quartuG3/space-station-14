@@ -19,6 +19,7 @@ command-description-stations-addgrid = Добавляет грид к задан
 command-description-stations-rmgrid = Удаляет грид с заданной станции.
 command-description-stations-rename = Переименовывает заданную станцию.
 command-description-stations-largestgrid = Возвращает наибольший грид, который имеет заданная станция, если таковая имеется.
+command-description-stations-rerollBounties = Очищает все текущие задания карго для станции и предлагает новый выбор.
 command-description-stationevent-lsprob = Перечисляет шансы возникновения различных событий на станции из всего пула.
 command-description-stationevent-lsprobtime = Перечисляет шансы возникновения различных событий на станции при заданной длительности раунда.
 command-description-stationevent-prob = Returns the probability of a single station event occuring out of the entire pool.

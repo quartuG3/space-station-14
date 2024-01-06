@@ -26,7 +26,8 @@
     accent: zombieMoth
   - type: Speech
     speechVerb: Moth
-  - type: Perishable
+  - type: TypingIndicator
+    proto: moth
   - type: Butcherable
     butcheringType: Spike
     spawned:
