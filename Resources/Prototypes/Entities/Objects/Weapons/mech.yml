@@ -306,7 +306,6 @@
     solution: spray
   - type: DrainableSolution
     solution: spray
-  - type: ItemCooldown
   - type: Spray
     spraySound:
       path: /Audio/Effects/extinguish.ogg
@@ -426,7 +425,6 @@
   - type: Sprite
     sprite: Objects/Specific/Mech/mecha_equipment.rsi
     state: mecha_honker
-  - type: ItemCooldown
   - type: UseDelay
     delay: 0.1
   - type: EmitSoundOnUse
@@ -490,7 +488,6 @@
   parent: BaseItem
   id: JawsOfLife9000
   components:
-  - type: ItemCooldown
   - type: Tag
     tags:
     - JawsOfLife
@@ -582,7 +579,6 @@
     sound: /Audio/Effects/saw.ogg
     gatheringTime: 0.50
     MaxGatheringEntities: 2
-  - type: ItemCooldown
   - type: MeleeWeapon
     damage:
       types:

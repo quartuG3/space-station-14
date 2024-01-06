@@ -402,12 +402,12 @@
       food:
         reagents:
         - ReagentId: Ichor
-          Quantity: 2
+          Quantity: 10
   - type: Extractable
     juiceSolution:
       reagents:
       - ReagentId: Ichor
-        Quantity: 2
+        Quantity: 10
 
 - type: entity
   name: raw rat meat
@@ -776,7 +776,6 @@
     available:
       - enum.DamageStateVisualLayers.Base:
           bacon-cooked: ""
-      - enum.DamageStateVisualLayers.Base:
           bacon2-cooked: ""
   - type: SolutionContainerManager
     solutions:
@@ -892,7 +891,6 @@
     available:
       - enum.DamageStateVisualLayers.Base:
           chicken-fried: ""
-      - enum.DamageStateVisualLayers.Base:
           chicken2-fried: ""
   - type: SolutionContainerManager
     solutions:

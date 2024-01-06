@@ -74,10 +74,12 @@
     sprite: Clothing/Eyes/Glasses/garmed.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/garmed.rsi
-  - type: ClothingGrantComponent
-    component:
-    - type: ShowHealthBars
-      damageContainer: Biological
+  - type: ShowHealthBars
+    damageContainers: 
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers: 
+    - Biological
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
@@ -265,10 +267,12 @@
     sprite: Clothing/Eyes/Glasses/medglasses.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/medglasses.rsi
-  - type: ClothingGrantComponent
-    component:
-    - type: ShowHealthBars
-      damageContainer: Biological
+  - type: ShowHealthBars
+    damageContainers: 
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers: 
+    - Biological
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5

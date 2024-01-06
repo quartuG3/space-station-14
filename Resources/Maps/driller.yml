@@ -35444,7 +35444,6 @@ entities:
     - pos: -30.492846,-13.489474
       parent: 2
       type: Transform
-    - type: ItemCooldown
 - proto: ClothingBeltHolster
   entities:
   - uid: 2837
@@ -81622,7 +81621,6 @@ entities:
         - Right: Forward
         - Middle: Off
       type: DeviceLinkSource
-    - type: ItemCooldown
 - proto: UniformPrinter
   entities:
   - uid: 4308

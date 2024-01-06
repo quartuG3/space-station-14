@@ -206,6 +206,7 @@
     tags:
     - ShoesRequiredStepTriggerImmune
     - DoorBumpOpener
+    - CanPilot
     - FootstepSound
   - type: Emoting
   - type: GuideHelp

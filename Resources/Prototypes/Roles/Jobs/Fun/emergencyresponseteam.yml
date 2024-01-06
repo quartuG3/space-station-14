@@ -26,7 +26,7 @@
     outerClothing: ClothingOuterArmorBasicSlim
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
+    belt: ClothingBeltERTSecurityFilled
     pocket1: WeaponPistolMk58Nonlethal
     pocket2: FlashlightSeclite
 
@@ -43,7 +43,7 @@
     suitstorage: AirTankFilled
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
+    belt: ClothingBeltERTSecurityFilled
     pocket1: WeaponPistolMk58Nonlethal
     pocket2: FlashlightSeclite
 
@@ -60,7 +60,7 @@
     suitstorage: WeaponRifleLecter
     id: ERTLeaderPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
+    belt: ClothingBeltERTSecurityFilled
     pocket1: MagazineRifle
     pocket2: MagazineRifle
   inhand:
@@ -143,7 +143,7 @@
     outerClothing: ClothingOuterArmorBasicSlim
     id: ERTSecurityPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
+    belt: ClothingBeltERTSecurityFilled
     pocket1: WeaponPistolMk58Nonlethal
     pocket2: FlashlightSeclite
 
@@ -160,7 +160,7 @@
     suitstorage: AirTankFilled
     id: ERTSecurityPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
+    belt: ClothingBeltERTSecurityFilled
     pocket1: WeaponPistolMk58Nonlethal
     pocket2: FlashlightSeclite
 
@@ -177,7 +177,7 @@
     suitstorage: WeaponRifleLecter
     id: ERTSecurityPDA
     ears: ClothingHeadsetAltCentCom
-    belt: ClothingBeltSecurityFilled
+    belt: ClothingBeltERTSecurityFilled
     pocket1: MagazineRifle
     pocket2: MagazineRifle
   inhand:

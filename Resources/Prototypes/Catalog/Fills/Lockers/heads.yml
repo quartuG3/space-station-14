@@ -267,7 +267,6 @@
       - id: DoorRemoteResearch
       - id: ClothingBeltUtilityFilled
       - id: RubberStampRd
-      - id: ClothingHeadsetAltScience
       - id: BoxEncryptionKeyScience
       - id: HandheldRndMonitor
       - id: BriefcaseRDFilled
@@ -288,7 +287,6 @@
       - id: DoorRemoteResearch
       - id: ClothingBeltUtilityFilled
       - id: RubberStampRd
-      - id: ClothingHeadsetAltScience
       - id: BoxEncryptionKeyScience
       - id: HandheldRndMonitor
       - id: BriefcaseRDFilled

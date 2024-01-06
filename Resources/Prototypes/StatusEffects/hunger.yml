@@ -5,7 +5,7 @@
   icon:
     sprite: Interface/Misc/food_icons.rsi
     state: overfed
-  locationPreference: Right
+  locationPreference: Left
 
 - type: statusIcon
   id: HungerIconPeckish
@@ -13,7 +13,7 @@
   icon:
     sprite: Interface/Misc/food_icons.rsi
     state: peckish
-  locationPreference: Right
+  locationPreference: Left
 
 - type: statusIcon
   id: HungerIconStarving
@@ -21,7 +21,7 @@
   icon:
     sprite: Interface/Misc/food_icons.rsi
     state: starving
-  locationPreference: Right
+  locationPreference: Left
 
 #Thirst
 - type: statusIcon

@@ -36,6 +36,7 @@ wires-board-name-firelock = Контроль ПожарШлюзом
 wires-board-name-windoor = Контроль РаздвОкном
 wires-board-name-mech = Меха
 wires-board-name-fatextractor = ЛипидныйЭкстрактор
+wires-board-name-flatpacker = Плоскоупаковщик
 
 # names that get displayed in the wire hacking hud & admin logs.
 

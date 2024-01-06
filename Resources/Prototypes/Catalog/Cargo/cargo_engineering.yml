@@ -118,6 +118,16 @@
   category: Engineering
   group: market
 
+- type: cargoProduct
+  id: EngineeringParticleDecelerators
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/particle_decelerator.rsi
+    state: base
+  product: CrateParticleDecelerators
+  cost: 15000
+  category: Engineering
+  group: market
+  
 ## Starshine
 
 - type: cargoProduct

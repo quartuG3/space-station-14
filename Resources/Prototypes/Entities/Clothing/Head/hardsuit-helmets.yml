@@ -337,10 +337,12 @@
   - type: PressureProtection
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
-  - type: ClothingGrantComponent
-    component:
-    - type: ShowHealthBars
-      damageContainer: Biological
+  - type: ShowHealthBars
+    damageContainers: 
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers: 
+    - Biological
 
 #Research Director's Hardsuit
 - type: entity
@@ -455,6 +457,12 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: ShowHealthBars
+    damageContainers: 
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers: 
+    - Biological
 
 #Syndicate Elite Hardsuit
 - type: entity
@@ -483,10 +491,12 @@
         Piercing: 0.8
         Heat: 0.2
         Radiation: 0.5
-  - type: ClothingGrantComponent
-    component:
-    - type: ShowHealthBars
-      damageContainer: Biological
+  - type: ShowHealthBars
+    damageContainers: 
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers: 
+    - Biological
 
 #Syndicate Commander Hardsuit
 - type: entity
@@ -677,10 +687,12 @@
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
   - type: PointLight
     color: "#adffec"
-  - type: ClothingGrantComponent
-    component:
-    - type: ShowHealthBars
-      damageContainer: Biological
+  - type: ShowHealthBars
+    damageContainers: 
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers: 
+    - Biological
 
 #ERT Security Hardsuit
 - type: entity

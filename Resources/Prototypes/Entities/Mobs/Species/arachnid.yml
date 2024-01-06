@@ -27,7 +27,6 @@
     - FootstepSound
     - DoorBumpOpener
     - SpiderCraft
-  - type: Perishable
   - type: Butcherable
     butcheringType: Spike
     spawned:
@@ -61,7 +60,7 @@
       Female: UnisexArachnid
       Unsexed: UnisexArachnid
   - type: TypingIndicator
-    proto: default # TODO: change to 'spider' when sprite and proto fixed
+    proto: spider
   - type: Sprite # I'd prefer if these maps were better. Insert map pun here.
     layers:
       - map: [ "enum.HumanoidVisualLayers.Chest" ]

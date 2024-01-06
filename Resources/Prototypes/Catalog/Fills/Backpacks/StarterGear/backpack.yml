@@ -268,7 +268,6 @@
     - type: StorageFill
       contents:
         - id: BoxSurvivalEngineering
-        - id: TelescopicBaton
         - id: WeaponPulseCarbine
         - id: WeaponDisabler
         - id: MedicatedSuture
