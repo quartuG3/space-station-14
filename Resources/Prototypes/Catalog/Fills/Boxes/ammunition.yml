@@ -301,3 +301,19 @@
     contents:
       - id: MagazineRifleRubber
         amount: 4
+
+- type: entity
+  name: Syringe Cartridges box
+  parent: BoxMagazine
+  id: BoxSyringeCartridge
+  description: A box full of syringe cartridges.
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,2
+  - type: StorageFill
+    contents:
+      - id: Syringecartridge
+        amount: 6
+      - id: SyringeGunMagazine
+        amount: 2

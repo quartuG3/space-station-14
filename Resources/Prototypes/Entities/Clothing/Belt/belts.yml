@@ -547,6 +547,7 @@
         - MagazinePistol
         - HolosignProjector
       components:
+        - Policebaton
         - Stunbaton
         - FlashOnTrigger
         - SmokeOnTrigger
@@ -562,6 +563,10 @@
         whitelist:
           components:
           - Stunbaton
+      telescopicbaton:
+        whitelist:
+          components:
+          - Policebaton
       tear_gas_grenade:
         whitelist:
           components:
