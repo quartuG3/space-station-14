@@ -69,6 +69,7 @@
   questionState: slime1
   actionState: slime2
   thinkState: slime3
+  offset: 0, 0.125
 
 - type: typingIndicator
   id: lawyer
@@ -88,14 +89,15 @@
 - type: typingIndicator
   id: moth
   typingState: moth0
+  questionState: moth1
+  actionState: moth2
+  thinkState: moth3
   offset: 0, 0.125
 
 - type: typingIndicator
   id: spider
   typingState: spider0
-  offset: 0, 0.125
-
-- type: typingIndicator
-  id: slime
-  typingState: slime0
+  questionState: spider1
+  actionState: spider2
+  thinkState: spider0
   offset: 0, 0.125
