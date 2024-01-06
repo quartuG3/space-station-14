@@ -115,8 +115,16 @@
     - state: unwielded-arrowc4
       map: [ arrowc4 ]
       visible: false
+    - state: unwielded-plunger
+      map: [ plunger ]
+      visible: false
   - type: Appearance
   - type: ItemMapper
+    spriteLayers:
+    - arrowcompound
+    - arrowexplosive
+    - arrowc4
+    - plunger
     mapLayers:
       arrowcompound:
         whitelist:
@@ -130,6 +138,10 @@
         whitelist:
           tags:
           - ArrowCompoundC4
+      plunger:
+        whitelist:
+          tags:
+          - Plunger
   - type: GenericVisualizer
     visuals:
       enum.WieldableVisuals.Wielded:
@@ -142,6 +154,9 @@
         arrowc4:
           True: { state: wielded-arrowc4 }
           False: { state: unwielded-arrowc4 }
+        plunger:
+          True: { state: wielded-plunger }
+          False: { state: unwielded-plunger }
         base:
           True: { state: wielded }
           False: { state: unwielded }
@@ -152,13 +167,14 @@
     projectileSpeed: 35
   - type: ItemSlots
     slots:
-      arrow:
+      projectiles:
         name: Arrow
         startingItem: null
         insertSound: /Audio/Weapons/Guns/Misc/arrow_nock.ogg
         whitelist:
           tags:
           - ArrowBaseCompound
+          - Plunger
 
 - type: entity
   id: BowCompoundRed
@@ -180,8 +196,16 @@
     - state: unwielded-arrowc4
       map: [ arrowc4 ]
       visible: false
+    - state: unwielded-plunger
+      map: [ plunger ]
+      visible: false 
   - type: Appearance
   - type: ItemMapper
+    spriteLayers:
+    - arrowcompound
+    - arrowexplosive
+    - arrowc4
+    - plunger
     mapLayers:
       arrowcompound:
         whitelist:
@@ -195,6 +219,10 @@
         whitelist:
           tags:
           - ArrowCompoundC4
+      plunger:
+        whitelist:
+          tags:
+          - Plunger
   - type: GenericVisualizer
     visuals:
       enum.WieldableVisuals.Wielded:
@@ -207,6 +235,9 @@
         arrowc4:
           True: { state: wielded-arrowc4 }
           False: { state: unwielded-arrowc4 }
+        plunger:
+          True: { state: wielded-plunger }
+          False: { state: unwielded-plunger }
         base:
           True: { state: wieldedred }
           False: { state: unwieldedred }
@@ -217,10 +248,11 @@
     projectileSpeed: 125
   - type: ItemSlots
     slots:
-      arrow:
+      projectiles:
         name: Arrow
         startingItem: null
         insertSound: /Audio/Weapons/Guns/Misc/arrow_nock.ogg
         whitelist:
           tags:
           - ArrowBaseCompound
+          - Plunger
