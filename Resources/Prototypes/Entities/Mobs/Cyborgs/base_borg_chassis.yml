@@ -257,3 +257,8 @@
         - Syndicate
     - type: ShowSyndicateIcons
     - type: MovementAlwaysTouching
+    - type: Vocal
+      sounds:
+        Male: SyndieBorgEmotes
+        Female: SyndieBorgEmotes
+        Unsexed: SyndieBorgEmotes

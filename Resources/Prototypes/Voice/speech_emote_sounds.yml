@@ -273,6 +273,18 @@
     Squeak:
       path: /Audio/Voice/Moth/moth_squeak.ogg
 
+## Starshine
+
+- type: emoteSounds
+  id: SyndieBorgEmotes
+  sounds:
+    Scream:
+      path: /Audio/Voice/Silicon/syndieborg_laugh.ogg
+    Laugh:
+      path: /Audio/Voice/Silicon/syndieborg_laugh.ogg
+  params:
+    variation: 0.125
+
 # body emotes
 - type: emoteSounds
   id: GeneralBodyEmotes
