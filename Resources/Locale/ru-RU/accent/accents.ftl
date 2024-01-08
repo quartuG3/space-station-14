@@ -95,3 +95,13 @@ accent-words-crab-3 = Клац?
 accent-words-crab-4 = Типи-тап!
 accent-words-crab-5 = Чик-тап.
 accent-words-crab-6 = Чикичик.
+# Kobold
+accent-words-kobold-1 = Ип!
+accent-words-kobold-2 = Гррар.
+accent-words-kobold-3 = Яп!
+accent-words-kobold-4 = Бип.
+accent-words-kobold-5 = Скрит?
+accent-words-kobold-6 = Гронк!
+accent-words-kobold-7 = Хсс!
+accent-words-kobold-8 = Ииии!
+accent-words-kobold-9 = Ип.

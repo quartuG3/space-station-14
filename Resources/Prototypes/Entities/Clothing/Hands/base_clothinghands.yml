@@ -24,3 +24,14 @@
     - Clothing
     - ClothMade
     - WhitelistChameleon
+
+- type: entity
+  abstract: true
+  parent: ClothingHandsBase
+  id: ClothingHandsButcherable
+  components:
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1

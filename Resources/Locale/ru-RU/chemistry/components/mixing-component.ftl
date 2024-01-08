@@ -1,14 +1,14 @@
 # Types
-mixing-verb-default-mix = смешать
-mixing-verb-default-grind = измельчить
-mixing-verb-default-juice = выжать
-mixing-verb-default-condense = конденсировать
+mixing-verb-default-mix = смешивание
+mixing-verb-default-grind = измельчение
+mixing-verb-default-juice = выжимание
+mixing-verb-default-condense = конденсирование
 # Types
 mixing-verb-centrifuge = центрифугирование
 mixing-verb-electrolysis = электролиз
-mixing-verb-holy = благословить
+mixing-verb-holy = благословение
 
 ## Entity
 
-default-mixing-success = Вы смешали { $mixed } c { $mixer }
+default-mixing-success = Вы смешали { $mixed } при помощи { $mixer }
 bible-mixing-success = Вы благословляете { $mixed } с помощью { $mixer }

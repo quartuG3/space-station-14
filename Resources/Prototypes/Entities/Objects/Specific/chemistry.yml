@@ -201,7 +201,7 @@
     maxFillLevels: 6
     fillBaseName: beakerlarge
   - type: StaticPrice
-    price: 40
+    price: 20
   
 - type: entity
   name: small bottle
@@ -242,7 +242,7 @@
     maxFillLevels: 6
     fillBaseName: bottlesmall
   - type: StaticPrice
-    price: 30
+    price: 10
   
 - type: entity
   name: large bottle
@@ -258,7 +258,7 @@
         map: ["enum.SolutionContainerLayers.Fill"]
         visible: false
   - type: Item
-    size: Small
+    size: Normal
     sprite: Objects/Specific/Chemistry/bottle_large.rsi
   - type: SolutionContainerManager
     solutions:
@@ -283,7 +283,7 @@
     maxFillLevels: 6
     fillBaseName: bottlelarge
   - type: StaticPrice
-    price: 40
+    price: 20
 
 - type: entity
   name: cryostasis beaker

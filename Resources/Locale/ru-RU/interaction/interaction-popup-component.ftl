@@ -30,6 +30,7 @@ petting-success-hamster = Вы гладите { $target } по его пушис
 petting-success-bear = Вы неохотно гладите { $target } по его мистической голове.
 petting-success-slimes = Вы гладите { $target } по его слизистой поверхности.
 petting-success-snake = Вы гладите { $target } по { POSS-ADJ($target) } большой чешуйчатой голове.
+petting-success-monkey = Вы гладите { $target } по { POSS-ADJ($target) } маленькой озорной головке.
 petting-failure-generic = Вы тянетесь погладить { $target }, но { $target } настороженно уклоняется от Вас.
 petting-failure-bat = Вы тянетесь погладить { $target }, но { $target } очень трудно поймать!
 petting-failure-carp = Вы тянетесь погладить { $target }, но его острые зубы заставляют задуматься.
@@ -49,6 +50,7 @@ petting-failure-bear = Вы протягиваете руку, чтобы пог
 
 ## Knocking on windows
 
+petting-failure-monkey = Вы тянетесь погладить { $target }, но { $target } чуть не кусает вас за пальцы!
 petting-success-honkbot = Вы гладите { $target } по его скользкой металлической голове.
 petting-success-mimebot = Вы гладите { $target } по его холодной металлической голове.
 petting-success-cleanbot = Вы гладите { $target } по его влажной металлической голове.
@@ -64,5 +66,5 @@ hugging-success-generic = Вы обнимаете { $target }.
 hugging-success-generic-others = { CAPITALIZE($user) } обнимает { $target }.
 fence-rattle-success = *шуршит*
 hugging-success-generic-target = { CAPITALIZE($user) } обнимает Вас.
-petting-success-tesla = Вы гладите { $target }, нарушая законы природы и физики.
-petting-failure-tesla = Вы тянетесь погладить { $target }, но она отбивает вашу руку током.
+petting-success-tesla = Вы гладите { $target }, попутно нарушая законы природы и физики.
+petting-failure-tesla = Вы тянетесь погладить { $target }, но разряд заставляет вас отдёрнуть руку.

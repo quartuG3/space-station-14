@@ -68,3 +68,5 @@ ent-GrapplingHook = grappling hook
     .desc = { "" }
 ent-BulletDisablerSmg = disabler bolt smg
     .desc = { ent-BaseBullet.desc }
+ent-TeslaGunBullet = tesla gun lightning
+    .desc = { ent-BaseBullet.desc }

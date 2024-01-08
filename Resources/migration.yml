@@ -124,6 +124,13 @@ WarpPointBeaconService: null
 ClothingEyesGlassesCosmeticSunglasses: ClothingEyesGlassesSunglasses
 SpawnPointAssistant: SpawnPointPassenger
 
+# 2024-01-05
+DrinkGoldschlagerBottleFull: DrinkGildlagerBottleFull
+DrinkGoldschlagerGlass: DrinkGildlagerGlass
+
+# 2024-01-07
+MonkeyCubeBox: VariantCubeBox
+
 # 07-09-2023 Starshine
 PlushieMoff: PlushieMoth
 
