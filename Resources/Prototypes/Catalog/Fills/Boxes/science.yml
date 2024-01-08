@@ -25,6 +25,10 @@
   id: BoxPlasticBottle
   description: A box full of plastic bottles.
   components:
+  - type: Storage
+    grid:
+    - 0,0,3,2
+    maxItemSize: Normal
   - type: StorageFill
     contents:
       - id: SmallBottle
