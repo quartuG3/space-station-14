@@ -49,7 +49,7 @@
   suffix: CentralCommand, Hatch
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/centcom_hatch.rsi
+    sprite: Structures/Doors/Airlocks/Standard/hatch.rsi
   - type: WiresPanelSecurity
     securityLevel: maxSecurity
   - type: Wires
