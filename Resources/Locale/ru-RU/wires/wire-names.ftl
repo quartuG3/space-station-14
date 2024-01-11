@@ -29,6 +29,7 @@ wires-board-name-hydroponicstray = ГидропонныйЛоток
 wires-board-name-telecomserver = ТелекомСервер
 wires-board-name-medicalscanner = МедицинскийСканер
 wires-board-name-reclaimer = Переработчик
+wires-board-name-recharger = Зарядник
 wires-board-name-minigravitygenerator = МиниГенераторГравитации
 wires-board-name-dawinstrument = ЦзрИнструмент
 wires-board-name-airlock = Контроль Шлюзом
