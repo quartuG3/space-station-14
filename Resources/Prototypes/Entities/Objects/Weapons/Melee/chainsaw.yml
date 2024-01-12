@@ -6,7 +6,7 @@
   suffix: Empty
   components:
   - type: ItemToggleSize
-    activatedSize: Huge
+    activatedSize: Ginormous
   - type: ItemToggle
     predictable: false
     soundActivate:
@@ -57,11 +57,12 @@
     soundHit:
       path: /Audio/Weapons/chainsaw_hit.ogg
   - type: Item
-    size: Normal
+    size: Large
   - type: Clothing
     sprite: Objects/Weapons/Melee/chainsaw.rsi
     quickEquip: false
     slots:
+    - Back
     - suitStorage
   - type: Appearance
   - type: ToggleableLightVisuals
@@ -89,7 +90,7 @@
     fuelLitCost: 2
     tankSafe: true
   - type: UseDelay
-    delay: 0.5
+    delay: 0.75
 
 - type: entity
   parent: Chainsaw
