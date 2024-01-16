@@ -48,7 +48,7 @@ flavor-base-alkaline = щёлочно
 flavor-base-holy = свято
 flavor-base-horrible = ужасно
 # lmao
-flavor-base-terrible = ужасно
+flavor-base-terrible = ужасающе
 
 # Complex flavors. Put a flavor here when you want something that's more
 # specific.
