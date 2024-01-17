@@ -2,7 +2,7 @@
   id: MetaStation
   mapName: 'TG Meta Station'
   mapPath: /Maps/metastation.yml
-  minPlayers: 25
+  minPlayers: 0
   stations:
     Meta:
       stationProto: StandardNanotrasenStation

@@ -48,7 +48,7 @@
             ResearchAssistant: [ 1, 1 ]
             Borg: [ 1, 2 ]
             #security
-            BlueShield: [1, 1]
+            #BlueShield: [1, 1]
             HeadOfSecurity: [ 1, 1 ]
             SecurityOfficer: [ 4, 4 ]
             Warden: [ 1, 1 ]
@@ -59,7 +59,7 @@
             CargoTechnician: [ 3, 3 ]
             Quartermaster: [ 1, 1 ]
             SalvageSpecialist: [ 2, 2 ]
-            Miner: [ 2,2 ]
+            #Miner: [ 2,2 ]
             #civilian
             Passenger: [ -1, -1 ]
             Clown: [ 1, 1 ]
