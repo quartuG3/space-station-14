@@ -5,8 +5,8 @@
   children:
   - Traitors
   - NuclearOperatives
-  - Zombies
-  - Revolutionaries
+  # - Zombies
+  # - Revolutionaries
   - MinorAntagonists
   - SpaceNinja
 
@@ -20,15 +20,15 @@
   name: guide-entry-nuclear-operatives
   text: "/ServerInfo/Guidebook/Antagonist/Nuclear Operatives.xml"
 
-- type: guideEntry
-  id: Zombies
-  name: guide-entry-zombies
-  text: "/ServerInfo/Guidebook/Antagonist/Zombies.xml"
+# - type: guideEntry
+  # id: Zombies
+  # name: guide-entry-zombies
+  # text: "/ServerInfo/Guidebook/Antagonist/Zombies.xml"
 
-- type: guideEntry
-  id: Revolutionaries
-  name: guide-entry-revolutionaries
-  text: "/ServerInfo/Guidebook/Antagonist/Revolutionaries.xml"
+# - type: guideEntry
+  # id: Revolutionaries
+  # name: guide-entry-revolutionaries
+  # text: "/ServerInfo/Guidebook/Antagonist/Revolutionaries.xml"
 
 - type: guideEntry
   id: MinorAntagonists
