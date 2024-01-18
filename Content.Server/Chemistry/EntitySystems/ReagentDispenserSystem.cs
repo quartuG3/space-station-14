@@ -1,13 +1,10 @@
 using Content.Server.Administration.Logs;
 using Content.Server.Chemistry.Components;
-using Content.Server.Construction;
-using Content.Server.Construction.Components;
 using Content.Server.Chemistry.Containers.EntitySystems;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Dispenser;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
-using Content.Shared.Construction.Components;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Database;
 using Content.Shared.Emag.Components;
@@ -35,7 +32,6 @@ namespace Content.Server.Chemistry.EntitySystems
         [Dependency] private readonly UserInterfaceSystem _userInterfaceSystem = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-        [Dependency] private readonly ConstructionSystem _construction = default!;
         public override void Initialize()
         {
             base.Initialize();
@@ -100,27 +96,6 @@ namespace Content.Server.Chemistry.EntitySystems
                 && _prototypeManager.TryIndex(reagentDispenser.EmagPackPrototypeId, out ReagentDispenserInventoryPrototype? emagPackPrototype))
             {
                 inventory.AddRange(emagPackPrototype.Inventory.Select(x => new ReagentId(x, null)));
-            }
-
-            if (reagentDispenser.UpgradePacksPrototypeId is not null
-                && TryComp(reagentDispenser.Owner, out MachineComponent? machineComponent)
-                && machineComponent?.PartContainer?.ContainedEntities != null)
-            {
-                List<MachinePartComponent>? machineParts = _construction.GetAllParts(machineComponent);
-
-                if (machineParts != null && machineParts.Count > 0)
-                {
-                    int minRating = machineParts.Min(x => x.Rating);
-
-                    foreach (string upgradePackPrototypeId in reagentDispenser.UpgradePacksPrototypeId)
-                    {
-                        if (_prototypeManager.TryIndex(upgradePackPrototypeId, out ReagentDispenserInventoryTieredPrototype? upgradePackPrototype)
-                            && (upgradePackPrototype.Tier == null || upgradePackPrototype.Tier <= minRating))
-                        {
-                            inventory.AddRange(upgradePackPrototype.Inventory.Select(x => new ReagentId(x, null)));
-                        }
-                    }
-                }
             }
 
             return inventory;
