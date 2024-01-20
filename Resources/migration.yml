@@ -188,3 +188,13 @@ AirlockMaintCentcomLocked: AirlockMaintCentralCommandLocked
 AirlockCentcomCommandLocked: AirlockCentralCommandCommandLocked
 WindoorSecureCentcomLocked: WindoorSecureCentralCommandLocked
 AirlockCommandCentralCommandGlassLocked: AirlockCentralCommandGlassLocked
+
+# 19-01-2024 Starshine
+DresserCaptainFilled: Dresser
+DresserChiefEngineerFilled: Dresser
+DresserChiefMedicalOfficerFilled: Dresser
+DresserHeadOfPersonnelFilled: Dresser
+DresserHeadOfSecurityFilled: Dresser
+DresserQuarterMasterFilled: Dresser
+DresserResearchDirectorFilled: Dresser
+DresserWardenFilled: Dresser

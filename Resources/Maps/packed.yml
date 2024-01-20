@@ -1663,11 +1663,27 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.14996
           moles:
           - 20.078888
           - 75.53487
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -1693,6 +1709,14 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
@@ -1708,9 +1732,25 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -1738,11 +1778,27 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
           - 0
           - 6666.982
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -1758,6 +1814,14 @@ entities:
           moles:
           - 21.6852
           - 81.57766
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -32238,18 +32302,6 @@ entities:
       - Steel
       - Glass
       - Gold
-- proto: ClosetBase
-  entities:
-  - uid: 5460
-    components:
-    - type: Transform
-      pos: 69.5,40.5
-      parent: 2
-  - uid: 5461
-    components:
-    - type: Transform
-      pos: 69.5,37.5
-      parent: 2
 - proto: ClosetBombFilled
   entities:
   - uid: 12854
@@ -32483,6 +32535,18 @@ entities:
     components:
     - type: Transform
       pos: 54.5,25.5
+      parent: 2
+- proto: ClosetSteelBase
+  entities:
+  - uid: 5460
+    components:
+    - type: Transform
+      pos: 69.5,40.5
+      parent: 2
+  - uid: 5461
+    components:
+    - type: Transform
+      pos: 69.5,37.5
       parent: 2
 - proto: ClosetToolFilled
   entities:
@@ -33329,11 +33393,6 @@ entities:
     components:
     - type: Transform
       pos: 74.43015,-5.8248997
-      parent: 2
-  - uid: 12220
-    components:
-    - type: Transform
-      pos: 30.472458,40.268566
       parent: 2
 - proto: ClothingShoeSlippersDuck
   entities:
@@ -34601,6 +34660,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -34885,6 +34952,14 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -38283,47 +38358,37 @@ entities:
     - type: Transform
       pos: 64.522316,20.63157
       parent: 2
-- proto: DresserCaptainFilled
-  entities:
-  - uid: 10279
-    components:
-    - type: Transform
-      pos: 37.5,40.5
-      parent: 2
-- proto: DresserChiefEngineerFilled
-  entities:
-  - uid: 5414
-    components:
-    - type: Transform
-      pos: 10.5,-36.5
-      parent: 2
-- proto: DresserChiefMedicalOfficerFilled
-  entities:
-  - uid: 1179
-    components:
-    - type: Transform
-      pos: 58.5,-10.5
-      parent: 2
-- proto: DresserHeadOfPersonnelFilled
-  entities:
-  - uid: 9438
-    components:
-    - type: Transform
-      pos: 18.5,-5.5
-      parent: 2
-- proto: DresserHeadOfSecurityFilled
+- proto: Dresser
   entities:
   - uid: 386
     components:
     - type: Transform
       pos: 45.5,22.5
       parent: 2
-- proto: DresserQuarterMasterFilled
-  entities:
   - uid: 941
     components:
     - type: Transform
       pos: 13.5,30.5
+      parent: 2
+  - uid: 1179
+    components:
+    - type: Transform
+      pos: 58.5,-10.5
+      parent: 2
+  - uid: 5414
+    components:
+    - type: Transform
+      pos: 10.5,-36.5
+      parent: 2
+  - uid: 9438
+    components:
+    - type: Transform
+      pos: 18.5,-5.5
+      parent: 2
+  - uid: 10279
+    components:
+    - type: Transform
+      pos: 37.5,40.5
       parent: 2
 - proto: DrinkFlask
   entities:
@@ -58817,6 +58882,13 @@ entities:
     - type: Transform
       pos: 32.5,-32.5
       parent: 2
+- proto: LockerBlueShieldFilled
+  entities:
+  - uid: 6937
+    components:
+    - type: Transform
+      pos: 30.5,40.5
+      parent: 2
 - proto: LockerBoozeFilled
   entities:
   - uid: 2901
@@ -58836,12 +58908,26 @@ entities:
     - type: Transform
       pos: 44.5,-10.5
       parent: 2
+- proto: LockerBrigmedicFilledHardsuit
+  entities:
+  - uid: 6939
+    components:
+    - type: Transform
+      pos: 35.5,17.5
+      parent: 2
 - proto: LockerCaptainFilledHardsuit
   entities:
   - uid: 5158
     components:
     - type: Transform
       pos: 37.5,41.5
+      parent: 2
+- proto: LockerCentcomConsultantFilledHardsuit
+  entities:
+  - uid: 6942
+    components:
+    - type: Transform
+      pos: 34.5,42.5
       parent: 2
 - proto: LockerChemistryFilled
   entities:
@@ -59107,6 +59193,14 @@ entities:
         moles:
         - 1.8856695
         - 7.0937095
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -69159,6 +69253,13 @@ entities:
     - type: Transform
       pos: 38.5,-10.5
       parent: 2
+- proto: SpawnPointBlueShield
+  entities:
+  - uid: 6940
+    components:
+    - type: Transform
+      pos: 31.5,40.5
+      parent: 2
 - proto: SpawnPointBorg
   entities:
   - uid: 13142
@@ -69177,6 +69278,13 @@ entities:
     components:
     - type: Transform
       pos: 44.5,-6.5
+      parent: 2
+- proto: SpawnPointBrigmedic
+  entities:
+  - uid: 6938
+    components:
+    - type: Transform
+      pos: 34.5,17.5
       parent: 2
 - proto: SpawnPointCaptain
   entities:
@@ -69201,6 +69309,13 @@ entities:
     components:
     - type: Transform
       pos: 11.5,22.5
+      parent: 2
+- proto: SpawnPointCentcomConsultant
+  entities:
+  - uid: 6941
+    components:
+    - type: Transform
+      pos: 33.5,43.5
       parent: 2
 - proto: SpawnPointChaplain
   entities:
@@ -87148,6 +87263,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 13063
     components:
     - type: Transform
@@ -87161,6 +87284,14 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0

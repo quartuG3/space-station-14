@@ -2498,6 +2498,14 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 235
           moles:
@@ -2513,6 +2521,14 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
@@ -2528,11 +2544,27 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
           - 0
           - 6666.982
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -18844,15 +18876,6 @@ entities:
       parent: 30
     - type: Physics
       canCollide: False
-- proto: ClothingShoesLeather
-  entities:
-  - uid: 7263
-    components:
-    - type: Transform
-      pos: 32.483543,6.1282325
-      parent: 30
-    - type: Physics
-      canCollide: False
 - proto: ClothingShoesSlippers
   entities:
   - uid: 6667
@@ -19234,13 +19257,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 12.5,12.5
-      parent: 30
-- proto: ComputerTelevision
-  entities:
-  - uid: 493
-    components:
-    - type: Transform
-      pos: 32.5,10.5
       parent: 30
 - proto: ConveyorBelt
   entities:
@@ -22295,26 +22311,37 @@ entities:
       parent: 30
     - type: Physics
       canCollide: False
-- proto: DresserCaptainFilled
+- proto: Dresser
   entities:
   - uid: 1639
     components:
     - type: Transform
       pos: 34.5,8.5
       parent: 30
-- proto: DresserChiefEngineerFilled
-  entities:
+  - uid: 2458
+    components:
+    - type: Transform
+      pos: -19.5,-10.5
+      parent: 30
   - uid: 5087
     components:
     - type: Transform
       pos: -38.5,8.5
       parent: 30
-- proto: DresserChiefMedicalOfficerFilled
-  entities:
   - uid: 6377
     components:
     - type: Transform
       pos: -1.5,-13.5
+      parent: 30
+  - uid: 7722
+    components:
+    - type: Transform
+      pos: 4.5,15.5
+      parent: 30
+  - uid: 7727
+    components:
+    - type: Transform
+      pos: -26.5,21.5
       parent: 30
 - proto: DresserFilled
   entities:
@@ -22327,34 +22354,6 @@ entities:
     components:
     - type: Transform
       pos: -44.5,-10.5
-      parent: 30
-- proto: DresserHeadOfPersonnelFilled
-  entities:
-  - uid: 1665
-    components:
-    - type: Transform
-      pos: 32.5,-1.5
-      parent: 30
-- proto: DresserHeadOfSecurityFilled
-  entities:
-  - uid: 7722
-    components:
-    - type: Transform
-      pos: 4.5,15.5
-      parent: 30
-- proto: DresserQuarterMasterFilled
-  entities:
-  - uid: 7727
-    components:
-    - type: Transform
-      pos: -26.5,21.5
-      parent: 30
-- proto: DresserResearchDirectorFilled
-  entities:
-  - uid: 2458
-    components:
-    - type: Transform
-      pos: -19.5,-10.5
       parent: 30
 - proto: DrinkBottleOfNothingFull
   entities:
@@ -22438,22 +22437,6 @@ entities:
     components:
     - type: Transform
       pos: 27.014406,8.908235
-      parent: 30
-    - type: Physics
-      canCollide: False
-- proto: DrinkGlass
-  entities:
-  - uid: 496
-    components:
-    - type: Transform
-      pos: 31.373415,10.717659
-      parent: 30
-    - type: Physics
-      canCollide: False
-  - uid: 501
-    components:
-    - type: Transform
-      pos: 31.529665,10.608284
       parent: 30
     - type: Physics
       canCollide: False
@@ -36816,6 +36799,13 @@ entities:
     - type: Transform
       pos: -36.5,11.5
       parent: 30
+- proto: LockerBlueShieldFilled
+  entities:
+  - uid: 501
+    components:
+    - type: Transform
+      pos: 30.5,6.5
+      parent: 30
 - proto: LockerBoozeFilled
   entities:
   - uid: 6159
@@ -36852,6 +36842,13 @@ entities:
     components:
     - type: Transform
       pos: 34.5,6.5
+      parent: 30
+- proto: LockerCentcomConsultantFilledHardsuit
+  entities:
+  - uid: 295
+    components:
+    - type: Transform
+      pos: 31.5,10.5
       parent: 30
 - proto: LockerChemistryFilled
   entities:
@@ -43914,6 +43911,13 @@ entities:
     - type: Transform
       pos: -19.5,3.5
       parent: 30
+- proto: SpawnPointBlueShield
+  entities:
+  - uid: 1665
+    components:
+    - type: Transform
+      pos: 31.5,7.5
+      parent: 30
 - proto: SpawnPointBorg
   entities:
   - uid: 7621
@@ -43956,6 +43960,13 @@ entities:
     components:
     - type: Transform
       pos: -26.5,15.5
+      parent: 30
+- proto: SpawnPointCentcomConsultant
+  entities:
+  - uid: 7263
+    components:
+    - type: Transform
+      pos: 31.5,9.5
       parent: 30
 - proto: SpawnPointChaplain
   entities:
@@ -45874,7 +45885,7 @@ entities:
   - uid: 299
     components:
     - type: Transform
-      pos: 31.5,10.5
+      pos: 32.5,-1.5
       parent: 30
   - uid: 300
     components:
@@ -46413,7 +46424,7 @@ entities:
     - type: Transform
       pos: -43.5,-5.5
       parent: 30
-  - uid: 295
+  - uid: 496
     components:
     - type: Transform
       pos: 30.5,10.5
@@ -46758,6 +46769,11 @@ entities:
       parent: 30
 - proto: WallmountTelescreen
   entities:
+  - uid: 493
+    components:
+    - type: Transform
+      pos: 32.5,10.5
+      parent: 30
   - uid: 5989
     components:
     - type: Transform

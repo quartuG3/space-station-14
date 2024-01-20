@@ -22,6 +22,7 @@ tilemap:
   77: FloorReinforced
   80: FloorShowroom
   89: FloorSteel
+  91: FloorSteelCheckerDark
   104: FloorTechMaint
   105: FloorTechMaint2
   108: FloorWhite
@@ -189,11 +190,11 @@ entities:
           version: 6
         -3,1:
           ind: -3,1
-          tiles: AAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAHQAAAAACUAAAAAAAUAAAAAAAUAAAAAAAeQAAAAAAAAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAHQAAAAACUAAAAAAAUAAAAAAAUAAAAAAAUAAAAAAAAAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAHQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAATQAAAAAATQAAAAAATQAAAAAATQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAATQAAAAAATQAAAAAATQAAAAAATQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAATQAAAAAATQAAAAAATQAAAAAATQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAABBwAAAAAABwAAAAAABwAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAFBwAAAAAABwAAAAAABwAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAHBwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAFBwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAaAAAAAAA
+          tiles: AAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAAeQAAAAAAeQAAAAAAWwAAAAAAeQAAAAAAHQAAAAACUAAAAAAAUAAAAAAAUAAAAAAAeQAAAAAAAAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAAeQAAAAAAWwAAAAAAWwAAAAAAeQAAAAAAHQAAAAACUAAAAAAAUAAAAAAAUAAAAAAAUAAAAAAAAAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAAeQAAAAAAeQAAAAAABwAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAHQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAATQAAAAAATQAAAAAATQAAAAAATQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAATQAAAAAATQAAAAAATQAAAAAATQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAATQAAAAAATQAAAAAATQAAAAAATQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAABBwAAAAAABwAAAAAABwAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAFBwAAAAAABwAAAAAABwAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAHBwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAFBwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAaAAAAAAA
           version: 6
         -3,0:
           ind: -3,0
-          tiles: eQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAWQAAAAACWQAAAAABeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAWQAAAAABeQAAAAAAWQAAAAACWQAAAAAAWQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAWQAAAAADWQAAAAABWQAAAAAAWQAAAAACWQAAAAABeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAWQAAAAACeQAAAAAAWQAAAAACWQAAAAACWQAAAAACeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAWQAAAAACeQAAAAAAWQAAAAADWQAAAAADWQAAAAACeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAWQAAAAABeQAAAAAAWQAAAAAAWQAAAAACWQAAAAADeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAaAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAaAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAaAAAAAAAaAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAHQAAAAAAHQAAAAADHQAAAAAAHQAAAAACHQAAAAACHQAAAAABHQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAHQAAAAACHQAAAAACHQAAAAABHQAAAAABHQAAAAADHQAAAAACHQAAAAACHQAAAAABeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAHQAAAAACHQAAAAADHQAAAAAAHQAAAAAAHQAAAAACHQAAAAAAHQAAAAABeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAUAAAAAAAeQAAAAAAeQAAAAAAeAAAAAAAeAAAAAAAeAAAAAAAeAAAAAAAeAAAAAAAeAAAAAAAeAAAAAAABwAAAAAABwAAAAAABwAAAAAAeQAAAAAAHQAAAAABUAAAAAAAUAAAAAAAUAAAAAAAeQAAAAAAAAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAABwAAAAAHBwAAAAAABwAAAAAAeQAAAAAAHQAAAAABUAAAAAAAUAAAAAAAUAAAAAAAeQAAAAAA
+          tiles: eQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAWQAAAAACWQAAAAABeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAWQAAAAABeQAAAAAAWQAAAAACWQAAAAAAWQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAWQAAAAADWQAAAAABWQAAAAAAWQAAAAACWQAAAAABeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAWQAAAAACeQAAAAAAWQAAAAACWQAAAAACWQAAAAACeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAWQAAAAACeQAAAAAAWQAAAAADWQAAAAADWQAAAAACeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAWQAAAAABeQAAAAAAWQAAAAAAWQAAAAACWQAAAAADeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAaAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAaAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAaAAAAAAAaAAAAAAAaAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAHQAAAAAAHQAAAAADHQAAAAAAHQAAAAACHQAAAAACHQAAAAABHQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAHQAAAAACHQAAAAACHQAAAAABHQAAAAABHQAAAAADHQAAAAACHQAAAAACHQAAAAABeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAHQAAAAACHQAAAAADHQAAAAAAHQAAAAAAHQAAAAACHQAAAAAAHQAAAAABeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAHQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAUAAAAAAAeQAAAAAAeQAAAAAAeAAAAAAAeAAAAAAAeAAAAAAAeAAAAAAAeAAAAAAAeAAAAAAAeAAAAAAAeQAAAAAAbAAAAAAAbAAAAAAAeQAAAAAAHQAAAAABUAAAAAAAUAAAAAAAUAAAAAAAeQAAAAAAAAAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAeQAAAAAAAAAAAAAAeQAAAAAAbAAAAAAAbAAAAAAAeQAAAAAAHQAAAAABUAAAAAAAUAAAAAAAUAAAAAAAeQAAAAAA
           version: 6
         -3,-3:
           ind: -3,-3
@@ -495,6 +496,7 @@ entities:
           decals:
             1171: -9,-21
             1243: -15,-21
+            1608: -39,15
         - node:
             color: '#D381C996'
             id: BrickTileWhiteCornerNe
@@ -507,6 +509,7 @@ entities:
             1172: -13,-21
             1247: -21,-21
             1248: -23,-23
+            1609: -40,15
         - node:
             color: '#D381C996'
             id: BrickTileWhiteCornerNw
@@ -518,11 +521,18 @@ entities:
           decals:
             1170: -9,-24
             1256: -15,-24
+            1610: -39,14
         - node:
             color: '#52B4E996'
             id: BrickTileWhiteCornerSw
           decals:
             1249: -23,-24
+            1607: -40,14
+        - node:
+            color: '#52B4E996'
+            id: BrickTileWhiteInnerNe
+          decals:
+            1611: -40,14
         - node:
             color: '#D381C996'
             id: BrickTileWhiteInnerNe
@@ -562,6 +572,11 @@ entities:
             id: BrickTileWhiteInnerSe
           decals:
             1494: -6,-23
+        - node:
+            color: '#52B4E996'
+            id: BrickTileWhiteInnerSw
+          decals:
+            1612: -39,15
         - node:
             color: '#D381C996'
             id: BrickTileWhiteInnerSw
@@ -3179,8 +3194,7 @@ entities:
           -3,7:
             0: 65535
           -2,6:
-            0: 63487
-            2: 2048
+            0: 65535
           -2,7:
             0: 65535
           -1,6:
@@ -3626,8 +3640,7 @@ entities:
           4,-5:
             0: 65535
           5,-8:
-            0: 13119
-            3: 52416
+            0: 65535
           5,-7:
             0: 65535
           5,-6:
@@ -3635,8 +3648,7 @@ entities:
           5,-5:
             0: 65535
           6,-8:
-            0: 56543
-            3: 8992
+            0: 65535
           6,-7:
             0: 65535
           6,-6:
@@ -3903,9 +3915,9 @@ entities:
             0: 65535
           -12,4:
             0: 3618
-            3: 204
+            2: 204
           -11,4:
-            3: 17
+            2: 17
             0: 35754
           -11,5:
             0: 52424
@@ -3951,28 +3963,28 @@ entities:
             0: 32768
           -14,0:
             0: 16191
-            4: 192
-            5: 49152
+            3: 192
+            4: 49152
           -14,1:
             0: 16191
-            3: 49344
+            2: 49344
           -14,2:
             0: 16191
-            6: 192
-            3: 49152
+            5: 192
+            2: 49152
           -14,3:
             0: 49407
           -13,0:
             0: 61423
-            4: 16
-            5: 4096
+            3: 16
+            4: 4096
           -13,1:
             0: 61423
-            3: 4112
+            2: 4112
           -13,2:
             0: 61423
-            6: 16
-            3: 4096
+            5: 16
+            2: 4096
           -13,3:
             0: 31999
           -15,-4:
@@ -4093,6 +4105,14 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 235
           moles:
@@ -4108,13 +4128,6 @@ entities:
           - 0
           - 0
           - 0
-        - volume: 2500
-          temperature: 293.15
-          moles:
-          - 21.554012
-          - 81.084145
-          - 0
-          - 0
           - 0
           - 0
           - 0
@@ -4126,6 +4139,14 @@ entities:
         - volume: 2500
           temperature: 293.15
           moles:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -4153,6 +4174,14 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
@@ -4168,6 +4197,14 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
@@ -4175,6 +4212,14 @@ entities:
           - 0
           - 0
           - 6666.982
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -6911,6 +6956,22 @@ entities:
     components:
     - type: Transform
       pos: -30.5,25.5
+      parent: 4812
+- proto: AirlockSecurityLocked
+  entities:
+  - uid: 8434
+    components:
+    - type: MetaData
+      flags: PvsPriority
+    - type: Transform
+      pos: -38.5,13.5
+      parent: 4812
+  - uid: 8435
+    components:
+    - type: MetaData
+      flags: PvsPriority
+    - type: Transform
+      pos: -38.5,16.5
       parent: 4812
 - proto: AirlockServiceLocked
   entities:
@@ -9701,34 +9762,6 @@ entities:
     - type: Transform
       pos: -49.5,-2.5
       parent: 4812
-  - uid: 10926
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -38.5,14.5
-      parent: 4812
-  - uid: 10927
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -38.5,15.5
-      parent: 4812
-  - uid: 10928
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -38.5,16.5
-      parent: 4812
-  - uid: 10929
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -38.5,17.5
-      parent: 4812
   - uid: 10941
     components:
     - type: MetaData
@@ -9848,27 +9881,6 @@ entities:
     - type: Transform
       pos: -35.5,24.5
       parent: 4812
-  - uid: 10965
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -39.5,15.5
-      parent: 4812
-  - uid: 10966
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -39.5,16.5
-      parent: 4812
-  - uid: 10967
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -39.5,17.5
-      parent: 4812
   - uid: 10969
     components:
     - type: MetaData
@@ -9931,13 +9943,6 @@ entities:
       flags: PvsPriority
     - type: Transform
       pos: -40.5,23.5
-      parent: 4812
-  - uid: 10983
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -39.5,18.5
       parent: 4812
   - uid: 10984
     components:
@@ -10057,20 +10062,6 @@ entities:
       flags: PvsPriority
     - type: Transform
       pos: -38.5,32.5
-      parent: 4812
-  - uid: 11009
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -40.5,17.5
-      parent: 4812
-  - uid: 11010
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -40.5,18.5
       parent: 4812
   - uid: 11011
     components:
@@ -11157,6 +11148,14 @@ entities:
     - type: Transform
       pos: -25.5,-20.5
       parent: 4812
+- proto: BedsheetBrigmedic
+  entities:
+  - uid: 12583
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -39.5,15.5
+      parent: 4812
 - proto: BedsheetCaptain
   entities:
   - uid: 2582
@@ -11483,13 +11482,6 @@ entities:
       parent: 4812
 - proto: Bookshelf
   entities:
-  - uid: 1952
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -13.5,25.5
-      parent: 4812
   - uid: 5374
     components:
     - type: MetaData
@@ -20516,6 +20508,31 @@ entities:
     components:
     - type: Transform
       pos: -28.5,-23.5
+      parent: 4812
+  - uid: 12586
+    components:
+    - type: Transform
+      pos: -38.5,12.5
+      parent: 4812
+  - uid: 12587
+    components:
+    - type: Transform
+      pos: -38.5,13.5
+      parent: 4812
+  - uid: 12588
+    components:
+    - type: Transform
+      pos: -38.5,14.5
+      parent: 4812
+  - uid: 12589
+    components:
+    - type: Transform
+      pos: -38.5,15.5
+      parent: 4812
+  - uid: 12590
+    components:
+    - type: Transform
+      pos: -38.5,16.5
       parent: 4812
 - proto: CableApcStack
   entities:
@@ -29812,46 +29829,6 @@ entities:
       - Steel
       - Glass
       - Gold
-- proto: ClosetBase
-  entities:
-  - uid: 11811
-    components:
-    - type: Transform
-      pos: -15.5,0.5
-      parent: 4812
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14957
-        moles:
-        - 1.6033952
-        - 6.031821
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-    - type: ContainerContainer
-      containers:
-        EntityStorageComponent: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 11812
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: ClosetBombFilled
   entities:
   - uid: 6331
@@ -29867,6 +29844,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -29916,6 +29901,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -29945,6 +29938,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -29992,6 +29993,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30019,6 +30028,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30066,6 +30083,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30093,6 +30118,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30140,6 +30173,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30167,6 +30208,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30214,6 +30263,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30251,6 +30308,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 6421
     components:
     - type: Transform
@@ -30264,6 +30329,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30311,6 +30384,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30338,6 +30419,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30385,6 +30474,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30422,6 +30519,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30449,6 +30554,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30498,6 +30611,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30525,6 +30646,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30572,6 +30701,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 4483
     components:
     - type: Transform
@@ -30585,6 +30722,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30632,6 +30777,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30659,6 +30812,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30706,6 +30867,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30733,6 +30902,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30780,6 +30957,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: ClosetJanitorFilled
   entities:
   - uid: 1486
@@ -30805,6 +30990,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: ClosetL3JanitorFilled
   entities:
   - uid: 1479
@@ -30820,6 +31013,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30869,6 +31070,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30896,6 +31105,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -30945,6 +31162,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -30974,6 +31199,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -31023,6 +31256,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -31052,6 +31293,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -31099,6 +31348,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -31126,6 +31383,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -31173,6 +31438,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -31210,6 +31483,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -31237,6 +31518,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -31286,6 +31575,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -31313,6 +31610,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -31360,6 +31665,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -31397,12 +31710,68 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
           showEnts: False
           occludes: True
           ents: []
+        entity_storage: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+        paper_label: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
+- proto: ClosetSteelBase
+  entities:
+  - uid: 11811
+    components:
+    - type: Transform
+      pos: -15.5,0.5
+      parent: 4812
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14957
+        moles:
+        - 1.6033952
+        - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - type: ContainerContainer
+      containers:
+        EntityStorageComponent: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 11812
         entity_storage: !type:Container
           showEnts: False
           occludes: True
@@ -31426,6 +31795,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -31468,6 +31845,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 12375
     components:
     - type: Transform
@@ -31481,6 +31866,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -31521,6 +31914,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: ClosetWallOrange
   entities:
   - uid: 12377
@@ -31536,6 +31937,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -31569,6 +31978,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 12379
     components:
     - type: Transform
@@ -31592,6 +32009,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 12380
     components:
     - type: Transform
@@ -31605,6 +32030,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -33266,6 +33699,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -33325,6 +33766,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -33362,6 +33811,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -33417,6 +33874,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -33450,6 +33915,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -33505,6 +33978,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -33540,6 +34021,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -33587,6 +34076,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -33687,6 +34184,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -33734,6 +34239,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: CrateScienceSecure
   entities:
   - uid: 6250
@@ -33753,6 +34266,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -33798,6 +34319,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -33887,6 +34416,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -34422,6 +34959,11 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -18.5,-25.5
+      parent: 4812
+  - uid: 12592
+    components:
+    - type: Transform
+      pos: -39.5,16.5
       parent: 4812
 - proto: DeskBell
   entities:
@@ -36966,52 +37508,40 @@ entities:
     - type: Transform
       pos: -27.5,-37.5
       parent: 4812
-  - uid: 9046
-    components:
-    - type: Transform
-      pos: -26.5,-40.5
-      parent: 4812
-- proto: DresserCaptainFilled
-  entities:
   - uid: 7064
     components:
     - type: Transform
       pos: -12.5,29.5
       parent: 4812
-- proto: DresserChiefEngineerFilled
-  entities:
-  - uid: 12479
-    components:
-    - type: Transform
-      pos: -48.5,-7.5
-      parent: 4812
-- proto: DresserChiefMedicalOfficerFilled
-  entities:
-  - uid: 7461
-    components:
-    - type: Transform
-      pos: -24.5,-28.5
-      parent: 4812
-- proto: DresserHeadOfPersonnelFilled
-  entities:
   - uid: 7455
     components:
     - type: Transform
       pos: 7.5,29.5
       parent: 4812
-- proto: DresserHeadOfSecurityFilled
-  entities:
   - uid: 7456
     components:
     - type: Transform
       pos: -23.5,28.5
       parent: 4812
-- proto: DresserQuarterMasterFilled
-  entities:
+  - uid: 7461
+    components:
+    - type: Transform
+      pos: -24.5,-28.5
+      parent: 4812
+  - uid: 9046
+    components:
+    - type: Transform
+      pos: -26.5,-40.5
+      parent: 4812
   - uid: 12476
     components:
     - type: Transform
       pos: 16.5,35.5
+      parent: 4812
+  - uid: 12479
+    components:
+    - type: Transform
+      pos: -48.5,-7.5
       parent: 4812
 - proto: DrinkBottleOfNothingFull
   entities:
@@ -37143,10 +37673,10 @@ entities:
     - type: Transform
       pos: 22.59246,12.58923
       parent: 4812
-  - uid: 8435
+  - uid: 8425
     components:
     - type: Transform
-      pos: -38.614426,12.463839
+      pos: -37.678993,10.490259
       parent: 4812
   - uid: 10760
     components:
@@ -37162,10 +37692,10 @@ entities:
       parent: 4812
 - proto: DrinkMugRed
   entities:
-  - uid: 8434
+  - uid: 2598
     components:
     - type: Transform
-      pos: -38.3488,12.713839
+      pos: -37.35087,10.709009
       parent: 4812
 - proto: DrinkShaker
   entities:
@@ -58641,6 +59171,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -58678,6 +59216,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -58692,6 +59238,13 @@ entities:
           showEnts: False
           occludes: True
           ent: null
+- proto: LockerBlueShieldFilled
+  entities:
+  - uid: 11337
+    components:
+    - type: Transform
+      pos: -12.5,25.5
+      parent: 4812
 - proto: LockerBoozeFilled
   entities:
   - uid: 1648
@@ -58707,6 +59260,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -58756,6 +59317,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -58770,6 +59339,13 @@ entities:
           showEnts: False
           occludes: True
           ent: null
+- proto: LockerBrigmedicFilledHardsuit
+  entities:
+  - uid: 12584
+    components:
+    - type: Transform
+      pos: -39.5,14.5
+      parent: 4812
 - proto: LockerCaptainFilled
   entities:
   - uid: 2595
@@ -58795,6 +59371,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -58809,6 +59393,13 @@ entities:
           showEnts: False
           occludes: True
           ent: null
+- proto: LockerCentcomConsultantFilledHardsuit
+  entities:
+  - uid: 10929
+    components:
+    - type: Transform
+      pos: -13.5,25.5
+      parent: 4812
 - proto: LockerChemistryFilled
   entities:
   - uid: 6609
@@ -58824,6 +59415,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -58863,6 +59462,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -58919,6 +59526,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -58948,6 +59563,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -58995,6 +59618,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -59032,6 +59663,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -59059,6 +59698,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -59108,6 +59755,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -59145,6 +59800,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -59172,6 +59835,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -59236,6 +59907,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -59275,6 +59954,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -59302,6 +59989,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -59363,6 +60058,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -59392,6 +60095,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -59470,6 +60181,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -59509,6 +60228,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -59535,6 +60262,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -59596,6 +60331,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
   - uid: 12496
     components:
     - type: Transform
@@ -59609,6 +60352,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -59634,6 +60385,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -59681,6 +60440,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -59710,6 +60477,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -59766,6 +60541,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -59795,6 +60578,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -60074,6 +60865,11 @@ entities:
     - type: Transform
       pos: -37.5,-37.5
       parent: 4812
+  - uid: 12591
+    components:
+    - type: Transform
+      pos: -39.5,15.5
+      parent: 4812
 - proto: MedicalTechFab
   entities:
   - uid: 7398
@@ -60246,6 +61042,12 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -20.5,-15.5
+      parent: 4812
+  - uid: 7765
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -39.5,17.5
       parent: 4812
 - proto: Multitool
   entities:
@@ -61624,14 +62426,6 @@ entities:
     components:
     - type: Transform
       pos: 0.5,18.5
-      parent: 4812
-    - type: ContainerContainer
-      containers:
-        stash: !type:ContainerSlot {}
-  - uid: 2598
-    components:
-    - type: Transform
-      pos: -12.5,25.5
       parent: 4812
     - type: ContainerContainer
       containers:
@@ -64264,6 +65058,12 @@ entities:
       parent: 4812
     - type: ApcPowerReceiver
       powerLoad: 0
+  - uid: 10856
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -39.5,17.5
+      parent: 4812
   - uid: 10880
     components:
     - type: Transform
@@ -64285,6 +65085,12 @@ entities:
       parent: 4812
     - type: ApcPowerReceiver
       powerLoad: 0
+  - uid: 10927
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -38.5,15.5
+      parent: 4812
   - uid: 11256
     components:
     - type: Transform
@@ -69843,6 +70649,13 @@ entities:
     - type: Transform
       pos: 6.5,7.5
       parent: 4812
+- proto: SpawnPointBlueShield
+  entities:
+  - uid: 10967
+    components:
+    - type: Transform
+      pos: -12.5,24.5
+      parent: 4812
 - proto: SpawnPointBorg
   entities:
   - uid: 11922
@@ -69867,6 +70680,13 @@ entities:
     - type: Transform
       pos: -13.5,-6.5
       parent: 4812
+- proto: SpawnPointBrigmedic
+  entities:
+  - uid: 12585
+    components:
+    - type: Transform
+      pos: -38.5,15.5
+      parent: 4812
 - proto: SpawnPointCaptain
   entities:
   - uid: 2697
@@ -69885,6 +70705,13 @@ entities:
     components:
     - type: Transform
       pos: 19.5,19.5
+      parent: 4812
+- proto: SpawnPointCentcomConsultant
+  entities:
+  - uid: 11010
+    components:
+    - type: Transform
+      pos: -13.5,23.5
       parent: 4812
 - proto: SpawnPointChaplain
   entities:
@@ -71707,11 +72534,6 @@ entities:
     components:
     - type: Transform
       pos: -27.5,26.5
-      parent: 4812
-  - uid: 8425
-    components:
-    - type: Transform
-      pos: -38.5,12.5
       parent: 4812
   - uid: 8426
     components:
@@ -74181,6 +75003,14 @@ entities:
     - type: Transform
       pos: -37.5,-33.5
       parent: 4812
+- proto: VendingMachineWallMedical
+  entities:
+  - uid: 12593
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -37.5,14.5
+      parent: 4812
 - proto: VendingMachineYouTool
   entities:
   - uid: 8577
@@ -74982,6 +75812,13 @@ entities:
       flags: PvsPriority
     - type: Transform
       pos: -12.5,21.5
+      parent: 4812
+  - uid: 1952
+    components:
+    - type: MetaData
+      flags: PvsPriority
+    - type: Transform
+      pos: -39.5,18.5
       parent: 4812
   - uid: 1954
     components:
@@ -78652,13 +79489,6 @@ entities:
     - type: Transform
       pos: -36.5,13.5
       parent: 4812
-  - uid: 7765
-    components:
-    - type: MetaData
-      flags: PvsPriority
-    - type: Transform
-      pos: -38.5,13.5
-      parent: 4812
   - uid: 7766
     components:
     - type: MetaData
@@ -80626,12 +81456,47 @@ entities:
     - type: Transform
       pos: -47.5,-10.5
       parent: 4812
+  - uid: 10926
+    components:
+    - type: MetaData
+      flags: PvsPriority
+    - type: Transform
+      pos: -40.5,15.5
+      parent: 4812
+  - uid: 10928
+    components:
+    - type: MetaData
+      flags: PvsPriority
+    - type: Transform
+      pos: -40.5,14.5
+      parent: 4812
   - uid: 10964
     components:
     - type: MetaData
       flags: PvsPriority
     - type: Transform
       pos: 3.5,-37.5
+      parent: 4812
+  - uid: 10965
+    components:
+    - type: MetaData
+      flags: PvsPriority
+    - type: Transform
+      pos: -40.5,18.5
+      parent: 4812
+  - uid: 10966
+    components:
+    - type: MetaData
+      flags: PvsPriority
+    - type: Transform
+      pos: -40.5,17.5
+      parent: 4812
+  - uid: 10983
+    components:
+    - type: MetaData
+      flags: PvsPriority
+    - type: Transform
+      pos: -39.5,16.5
       parent: 4812
   - uid: 10989
     components:
@@ -80660,6 +81525,13 @@ entities:
       flags: PvsPriority
     - type: Transform
       pos: 3.5,-38.5
+      parent: 4812
+  - uid: 11009
+    components:
+    - type: MetaData
+      flags: PvsPriority
+    - type: Transform
+      pos: -40.5,16.5
       parent: 4812
   - uid: 11030
     components:
@@ -85473,6 +86345,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -85502,6 +86382,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -85554,6 +86442,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: WardrobePrisonFilled
   entities:
   - uid: 8354
@@ -85569,6 +86465,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -85616,6 +86520,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -85643,6 +86555,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -85690,6 +86610,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         EntityStorageComponent: !type:Container
@@ -85719,6 +86647,14 @@ entities:
         moles:
         - 1.6033952
         - 6.031821
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
