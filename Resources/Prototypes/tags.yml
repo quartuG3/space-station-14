@@ -278,6 +278,9 @@
   id: CanPilot
 
 - type: Tag
+  id: CannonBall
+  
+- type: Tag
   id: CannonRestrict
 
 - type: Tag
@@ -876,6 +879,9 @@
   id: MagazinePistolSubMachineGun
 
 - type: Tag
+  id: MagazineGrenade
+
+- type: Tag
   id: MailingUnitElectronics
 
 - type: Tag
@@ -1030,6 +1036,9 @@
 
 - type: Tag
   id: PowerCellSmall
+
+- type: Tag
+  id: PowerCage
 
 - type: Tag
   id: Powerdrill
@@ -1253,6 +1262,9 @@
 
 - type: Tag
   id: TrashBag
+
+- type: Tag
+  id: Unimplantable
 
 - type: Tag
   id: Unstackable # To prevent things like atmos devices (filters etc) being stacked on one tile. See NoUnstackableInTile

@@ -41,7 +41,8 @@ research-technology-nonlethal-ammunition = Нелетальная аммуниц
 research-technology-advanced-riot-control = Боевой контроль беспорядков
 research-technology-portable-microfusion-weaponry = Ручное микроинфузионное оружие
 research-technology-experimental-battery-ammo = Экспериментальные батарейные боеприпасы
-
+research-technology-basic-shuttle-armament = Базовое корабельное вооружение
+research-technology-advanced-shuttle-weapon = Продвинутое корабельное оружие
 research-technology-basic-robotics = Базовая робототехника
 research-technology-basic-anomalous-research = Базовая технология аномалий
 research-technology-basic-xenoarcheology = Базовая ксеноархеология
