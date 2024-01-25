@@ -12,29 +12,7 @@
     },
     {
       "name": "mothroach",
-      "directions": 4,
-      "delays": [
-        [
-          0.2,
-          0.2,
-          0.2
-        ],
-        [
-          0.2,
-          0.2,
-          0.2
-        ],
-        [
-          0.2,
-          0.2,
-          0.2
-        ],
-        [
-          0.2,
-          0.2,
-          0.2
-        ]
-      ]
+      "directions": 4
     },
     {
       "name": "mothroach-moving",
