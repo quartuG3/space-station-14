@@ -32,4 +32,3 @@ materials-raw-plasma = плазма
 materials-raw-uranium = уран
 materials-raw-bananium = бананиум
 # Material Reclaimer
-material-reclaimer-upgrade-process-rate = Скорость процесса
