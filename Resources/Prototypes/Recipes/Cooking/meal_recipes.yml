@@ -1442,16 +1442,6 @@
   solids:
     FoodDoughPastryBaseRaw: 1
     FoodMeatMeatball: 1
-    
-- type: microwaveMealRecipe
-  id: RecipeGondolapocket
-  name: gondola pocket recipe
-  result: FoodDonkpocketGondola
-  time: 5
-  solids:
-    FoodMeatGondola: 1
-    FoodDoughPastryBaseRaw: 1
-    FoodMeatMeatball: 1
  
 - type: microwaveMealRecipe
   id: RecipeDonkpocketHonk

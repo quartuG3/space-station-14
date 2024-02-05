@@ -28,16 +28,12 @@
   recipeUnlocks:
   - MagazinePistol
   - MagazinePistolSubMachineGunTopMounted
-  - ShellShotgun
   - MagazineVectorPistolSmall # Маленький
   - MagazinePistolSubMachineGun
   - MagazineRifle
   - MagazineUniversalShort
   - SpeedLoaderUniversal
   - SpeedLoaderMagnum
-  - CartridgePistol
-  - CartridgeRifle
-  - CartridgeMagnum
   - CartridgeCaselessUniversalPT1
 
 - type: technology
