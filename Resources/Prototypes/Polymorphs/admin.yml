@@ -10,21 +10,23 @@
 
 - type: polymorph
   id: AdminFelinidSmite
-  entity: MobFelinid
-  forced: true
-  transferName: true
-  transferHumanoidAppearance: true
-  inventory: Transfer
-  allowRepeatedMorphs: true
+  configuration:
+    entity: MobFelinid
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: Transfer
+    allowRepeatedMorphs: true
 
 - type: polymorph
   id: AdminMothSmite
-  entity: MobMoth
-  forced: true
-  transferName: true
-  transferHumanoidAppearance: true
-  inventory: Transfer
-  allowRepeatedMorphs: true
+  configuration:
+    entity: MobMoth
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: Transfer
+    allowRepeatedMorphs: true
 
 - type: polymorph
   id: AdminMonkeySmite
