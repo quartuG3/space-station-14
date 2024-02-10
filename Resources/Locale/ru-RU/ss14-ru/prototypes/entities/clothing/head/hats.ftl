@@ -156,3 +156,5 @@ ent-ClothingHeadHatCowboyWhite = белая ковбойская шляпа
     .desc = { ent-ClothingHeadHatCowboyBrown.desc }
 ent-ClothingHeadHatCowboyBountyHunter = ковбойская шляпа охотника за головами
     .desc = { ent-ClothingHeadHatCowboyBrown.desc }
+ent-ClothingHeadHatStrawHat = соломенная шляпа
+    .desc = Модная шляпа для жарких дней! Не рекомендуется носить вблизи костров.

@@ -34,7 +34,7 @@ criminal-records-console-not-wanted = { $name } больше не в разыс�
 
 criminal-records-filter-placeholder = Введите текст и нажмите "Enter".
 criminal-records-name-filter = Имя
-criminal-records-prints-filter = Отпечатки пальцев
+criminal-records-prints-filter = Отпечатки
 criminal-records-dna-filter = ДНК
 
 ## Arrest auto history lines

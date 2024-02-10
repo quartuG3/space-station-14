@@ -150,3 +150,5 @@ ent-ClothingHeadHatCowboyWhite = white cowboy hat
     .desc = { ent-ClothingHeadHatCowboyBrown.desc }
 ent-ClothingHeadHatCowboyBountyHunter = bounty hunter cowboy hat
     .desc = { ent-ClothingHeadHatCowboyBrown.desc }
+ent-ClothingHeadHatStrawHat = straw hat
+    .desc = A fancy hat for hot days! Not recommended to wear near fires.
