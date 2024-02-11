@@ -28,7 +28,7 @@ criminal-records-permission-denied = Отказано в доступе
 criminal-records-console-wanted = { $name } разыскивается офицером { $officer } по причине: { $reason }.
 criminal-records-console-detained = { $name } взят под арест офицером { $officer }.
 criminal-records-console-released = { $name } был выпущен офицером { $officer }.
-criminal-records-console-not-wanted = { $name } больше не в разыске.
+criminal-records-console-not-wanted = { $name } больше не в розыске.
 
 ## Filters
 
