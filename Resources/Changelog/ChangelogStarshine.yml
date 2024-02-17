@@ -1,4 +1,4 @@
-Entries:
+﻿Entries:
 - author: AruMoon
   changes:
   - message: Init changelogs!
@@ -1669,4 +1669,12 @@ Entries:
     type: Fix
   id: 128
   time: '2024-01-12T01:30:33.0000000+00:00'
+  url: null
+- author: Tenteratus
+  changes:
+  - message: "\u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435 \u043A\u0430\
+      \u0440\u0442\u044B kilostation!"
+    type: Tweak
+  id: 129
+  time: '2024-02-17T20:46:47.0000000+00:00'
   url: null
