@@ -31,6 +31,7 @@ namespace Content.Server.Holosign
             base.Initialize();
             SubscribeLocalEvent<HolosignProjectorComponent, AfterInteractEvent>(OnAfterInteract);
             SubscribeLocalEvent<HolosignProjectorComponent, BeforeRangedInteractEvent>(OnBeforeInteract);
+            SubscribeLocalEvent<HolosignProjectorComponent, UseInHandEvent>(OnUse);
             SubscribeLocalEvent<HolosignProjectorComponent, ExaminedEvent>(OnExamine);
             SubscribeLocalEvent<HolosignProjectorComponent, ComponentRemove>(OnRemove);
             SubscribeLocalEvent<HolosignProjectorComponent, GetVerbsEvent<Verb>>(AddClearVerb);
@@ -61,6 +62,16 @@ namespace Content.Server.Holosign
             // Would be fun see removing holoprojection without holosign component.
             _entManager.DeleteEntity(args.Target.Value);
             _popupSystem.PopupEntity(Loc.GetString("holoprojector-component-holosign-removed"), args.User, args.User);
+
+            args.Handled = true;
+        }
+
+        private void OnUse(EntityUid uid, HolosignProjectorComponent component, UseInHandEvent args)
+        {
+            if (args.Handled)
+                return;
+
+            ClearHolosignsVerb(uid, component, args.User);
 
             args.Handled = true;
         }
