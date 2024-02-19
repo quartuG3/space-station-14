@@ -102,5 +102,8 @@
     proto: BulletUniversalVPS
   - type: Sprite
     layers:
-    - state: hv
-      map: ["enum.AmmoVisualLayers.Base"]
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#338f12"

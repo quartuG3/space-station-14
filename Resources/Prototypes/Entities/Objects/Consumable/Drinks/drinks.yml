@@ -2138,5 +2138,6 @@
           reagents:
             - ReagentId: Kvass
               Quantity: 30
-    - type: Sprite
+    - type: Icon
       sprite: Objects/Consumable/Drinks/kvass.rsi
+      state: icon
