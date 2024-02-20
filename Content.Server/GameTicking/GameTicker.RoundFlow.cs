@@ -4,19 +4,16 @@ using Content.Server.Discord;
 using Content.Server.GameTicking.Events;
 using Content.Server.Ghost;
 using Content.Server.Maps;
-using Content.Server.Voting.Managers;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
 using Content.Shared.Mind;
 using Content.Shared.Players;
 using Content.Shared.Preferences;
-using Content.Shared.Voting;
 using JetBrains.Annotations;
 using Prometheus;
 using Robust.Server.Maps;
 using Robust.Shared.Asynchronous;
 using Robust.Shared.Audio;
-using Robust.Shared.Console;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -478,10 +475,6 @@ namespace Content.Server.GameTicking
                 UpdateInfoText();
 
                 ReqWindowAttentionAll();
-
-                var mgr = IoCManager.Resolve<IVoteManager>();
-                mgr.CreateStandardVote(null, StandardVoteType.Preset);
-                mgr.CreateStandardVote(null, StandardVoteType.Map);
             }
         }
 
