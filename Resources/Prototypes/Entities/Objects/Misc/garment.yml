@@ -8,7 +8,7 @@
     size: Ginormous
   - type: Storage
     grid:
-    - 0,0,9,5
+    - 0,0,9,6
     whitelist:
       tags:
         - Clothing

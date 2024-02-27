@@ -173,8 +173,11 @@
   id: WindoorSecureAtmosphericsLocked
   suffix: Atmospherics, Locked
   components:
-  - type: AccessReader
-    access: [["Atmospherics"]]
+  - type: AccessReaderBoard
+#    access: [["Atmospherics"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsAtmospherics ]
 
 - type: entity
   parent: WindoorSecure
@@ -453,14 +456,3 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ]
-
-- type: entity
-  parent: WindoorSecure
-  id: WindoorSecureAtmosphericsLocked
-  suffix: Atmospherics, Locked
-  components:
-  - type: AccessReaderBoard
-#    access: [["Atmospherics"]]
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsAtmospherics ]

@@ -132,6 +132,7 @@
     sprite: Clothing/Head/Hats/beret_qm.rsi
   - type: Tag
     tags:
+    - Clothing
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
