@@ -227,7 +227,6 @@
   - type: Tag
     tags:
     - Sheet
-    - DroneUsable
     - Uranium
 
 - type: entity
