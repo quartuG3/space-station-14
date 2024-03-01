@@ -1104,6 +1104,8 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: GridPathfinding
+    - type: BecomesStation
+      id: SyndicateOutpost
   - uid: 1295
     components:
     - name: Nukeops Planet
