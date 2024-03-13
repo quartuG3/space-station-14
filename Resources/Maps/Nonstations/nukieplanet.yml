@@ -36,10 +36,6 @@ entities:
       type: MetaData
     - parent: 1295
       type: Transform
-    - whitelist:
-        tags:
-        - Syndicate
-      type: FTLDestination
     - chunks:
         0,0:
           ind: 0,0
@@ -1112,6 +1108,10 @@ entities:
       type: MetaData
     - type: Transform
     - type: Map
+    - type: FTLDestination
+      whitelist:
+        tags:
+        - Syndicate
     - type: PhysicsMap
     - type: Broadphase
     - type: OccluderTree

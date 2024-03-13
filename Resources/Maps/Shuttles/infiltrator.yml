@@ -19,6 +19,9 @@ entities:
     components:
     - name: GX-68 Infiltrator
       type: MetaData
+    - type: Tag
+      tags:
+      - Syndicate
     - parent: invalid
       type: Transform
     - chunks:

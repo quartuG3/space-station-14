@@ -33,6 +33,7 @@
   - Cargo
   - Research
   - CentralCommand
+  - Cryogenics
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

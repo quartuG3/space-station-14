@@ -1,3 +1,4 @@
+puddle-component-examine-is-slippery-text = It looks [color=#169C9C]slippery[/color].
 puddle-component-examine-is-slipper-text = Выглядит [color=#169C9C]скользким[/color].
 puddle-component-examine-evaporating = Оно [color=#5E7C16]испаряется[/color].
 puddle-component-examine-evaporating-partial = Оно [color=#FED83D]частично испаряется[/color].

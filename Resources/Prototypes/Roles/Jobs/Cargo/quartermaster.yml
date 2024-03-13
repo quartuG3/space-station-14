@@ -27,7 +27,7 @@
   - Maintenance
   - Command
   - Brig
-  - Miner
+  - Cryogenics
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

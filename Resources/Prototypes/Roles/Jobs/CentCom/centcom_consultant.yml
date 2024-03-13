@@ -71,6 +71,7 @@
   - Hydroponics
   - Atmospherics
   - CentralCommand
+  - Cryogenics
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

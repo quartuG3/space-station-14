@@ -152,7 +152,7 @@ public sealed class EmergencyLightSystem : SharedEmergencyLightSystem
         }
         else
         {
-            battery.CurrentCharge += component.ChargingWattage * frameTime * component.ChargingEfficiency;
+            _battery.SetCharge(uid, battery.CurrentCharge + component.ChargingWattage * frameTime * component.ChargingEfficiency, battery);
             if (battery.IsFullyCharged)
             {
                 if (TryComp<ApcPowerReceiverComponent>(uid, out var receiver))
