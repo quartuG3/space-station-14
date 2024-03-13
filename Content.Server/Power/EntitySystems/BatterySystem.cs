@@ -120,9 +120,9 @@ namespace Content.Server.Power.EntitySystems
             if (value <= 0 || !Resolve(uid, ref battery))
                 return 0;
 
-            var newValue = Math.Clamp(battery.CurrentCharge + value, 0, battery._maxCharge);
-            battery.Charge = newValue;
-            var ev = new ChargeChangedEvent(battery.CurrentCharge, battery._maxCharge);
+            var newValue = Math.Clamp(battery.CurrentCharge + value, 0, battery.MaxCharge);
+            battery.CurrentCharge = newValue;
+            var ev = new ChargeChangedEvent(battery.CurrentCharge, battery.MaxCharge);
             RaiseLocalEvent(uid, ref ev);
             return newValue;
         }
