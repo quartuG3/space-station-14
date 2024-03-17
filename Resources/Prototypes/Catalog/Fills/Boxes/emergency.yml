@@ -152,8 +152,6 @@
       - id: ClothingMaskGasSyndicate
       - id: ExtendedEmergencyOxygenTankFilled
       - id: EmergencyMedipen
-      - id: SalineMedipen
-      - id: NutrimentMedipen
       - id: Flare
       - id: FoodSnackNutribrick
   - type: Sprite
