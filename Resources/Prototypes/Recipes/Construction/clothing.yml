@@ -208,7 +208,7 @@
   description: An advanced MODsuit in a particular assembly.
   icon: { sprite: Clothing/Back/Modsuit/standard.rsi, state: icon }
   objectType: Item
-=======
+
 - type: construction
   name: ducky slippers
   id: ClothingShoeSlippersDuck

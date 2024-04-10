@@ -145,7 +145,6 @@
   - type: StaticPrice
     price: 100
   - type: PryUnpowered
-  - type: AccessReaderBoard
 
 - type: entity
   id: BaseSecureWindoor

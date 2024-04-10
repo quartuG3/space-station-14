@@ -557,12 +557,6 @@
   id: Donut
 
 - type: Tag
-  id: DoorBumpOpener
-
-- type: Tag
-  id: DoorElectronics
-
-- type: Tag
   id: DrinkBottle
 
 - type: Tag

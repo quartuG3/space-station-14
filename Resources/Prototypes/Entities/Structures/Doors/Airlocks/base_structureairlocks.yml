@@ -146,7 +146,6 @@
     price: 150
   - type: LightningTarget
     priority: 1
-  - type: AccessReaderBoard
   - type: Tag
     tags:
       - Airlock
