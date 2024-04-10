@@ -70,7 +70,7 @@
     stateDoorOpen: shaftminer_open
     stateDoorClosed: shaftminer_door
   - type: AccessReader
-    access: [["Miner"]]
+    access: [["Salvage"]]
 
 #CentCom
 - type: entity

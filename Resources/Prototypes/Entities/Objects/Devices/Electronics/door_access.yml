@@ -48,6 +48,14 @@
     access: [["Bar"]]
 
 - type: entity
+  id: DoorElectronicsBarKitchen
+  parent: DoorElectronics
+  suffix: Bar
+  components:
+  - type: AccessStorage
+    access: [["Bar"], ["Kitchen"]]
+
+- type: entity
   parent: DoorElectronics
   id: DoorElectronicsHydroponics
   suffix: Hydroponics, Locked
@@ -208,6 +216,14 @@
     access: [["Security"]]
 
 - type: entity
+  id: DoorElectronicsLawyer
+  parent: DoorElectronics
+  suffix: Lawyer
+  components:
+  - type: AccessStorage
+    access: [["Security"], ["Lawyer"]]
+
+- type: entity
   parent: DoorElectronics
   id: DoorElectronicsDetective
   suffix: Detective, Locked
@@ -256,9 +272,33 @@
     access: [["SyndicateAgent"]]
 
 - type: entity
+  id: DoorElectronicsNukeop
+  parent: DoorElectronics
+  suffix: NuclearOperative
+  components:
+  - type: AccessStorage
+    access: [["NuclearOperative"]]
+
+- type: entity
+  id: DoorElectronicsNukeopCommand
+  parent: DoorElectronics
+  suffix: NukeopCommand
+  components:
+  - type: AccessStorage
+    access: [["NuclearOperative"]]
+
+- type: entity
   parent: DoorElectronics
   id: DoorElectronicsRnDMed
   suffix: Medical/Science, Locked
   components:
   - type: AccessReader
     access: [["Research"], ["Medical"]]
+
+- type: entity
+  id: DoorElectronicsCentralCommand
+  parent: DoorElectronics
+  suffix: CentralCommand
+  components:
+  - type: AccessStorage
+    access: [["CentralCommand"]]
