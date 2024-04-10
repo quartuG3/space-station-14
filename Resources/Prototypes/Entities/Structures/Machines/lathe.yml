@@ -174,7 +174,6 @@
        - MagazineBoxLightRifle
        - GrenadeBlast
     emagDynamicRecipes:
-      - ShellShotgunBeanbag
       - ShellShotgunIncendiary
       - CartridgePistolIncendiary
       - CartridgeMagnumIncendiary
@@ -865,22 +864,14 @@
       dynamicRecipes:
         # Weapons kinetic
         - MagazinePistol
-        - MagazinePistolRubber
         - MagazinePistolHighCapacity
-        - MagazinePistolHighCapacityRubber
         - MagazineVectorPistolSmall
-        - MagazineVectorPistolSmallRubber
         - MagazineVectorPistol
-        - MagazineVectorPistolRubber
         - MagazinePistolSubMachineGun
-        - MagazinePistolSubMachineGunRubber
         - MagazinePistolSubMachineGunTopMounted
         - MagazineVectorRifle
-        - MagazineVectorRifleRubber
         - MagazineRifle
-        - MagazineRifleRubber
         - MagazineRifleExt
-        - MagazineRifleExtRubber
         - MagazineUniversalShort
         - MagazineUniversal
         - SpeedLoaderMagnum
@@ -888,24 +879,17 @@
         - MagazineShotgunSaiga
         - MagazineBoxPistol
         - MagazineBoxPistolIncendiary
-        - MagazineBoxPistolRubber
         - MagazineBoxRifle
         - MagazineBoxRifleBig
         - MagazineBoxRifleIncendiary
-        - MagazineBoxRifleRubber
         - MagazineBoxUniversalPT1
         - MagazineBoxUniversalVPS
         - MagazineBoxMagnum
         - BoxLethalshot
         - BoxShotgunIncendiary
-        - BoxBeanbag
         - BoxShotgunSlug
         - BoxShellTranquilizer
-        - CartridgePistolRubber
-        - CartridgeRifleRubber
         - CartridgeCaselessUniversalPT1
-        - CartridgeMagnumRubber
-        - ShellShotgunBeanbag
     - type: MaterialStorage
       whitelist:
         tags:

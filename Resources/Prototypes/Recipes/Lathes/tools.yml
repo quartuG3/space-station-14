@@ -207,13 +207,6 @@
     Plastic: 50
 
 - type: latheRecipe
-  id: RPED
-  result: RPED
-  category: Tools
-  completetime: 10
-
-
-- type: latheRecipe
   id: MiningDrill
   result: MiningDrill
   category: Tools

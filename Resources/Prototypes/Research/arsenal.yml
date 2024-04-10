@@ -225,20 +225,12 @@
     state: base-b
   discipline: Arsenal
   tier: 2
-  cost: 12500
+  cost: 10000
   recipeUnlocks:
-  - MagazineRifleRubber
-  - MagazineRifleExtRubber
-  - MagazineVectorPistolRubber
-  - MagazineVectorRifleRubber
   - MagazineBoxPistolIncendiary
-  - MagazineBoxPistolRubber
   - MagazineBoxRifleIncendiary
-  - MagazineBoxRifleRubber
-  - MagazinePistolHighCapacityRubber
   - BoxShotgunIncendiary
   - BoxShotgunSlug
-  - BoxBeanbag
   - BoxShellTranquilizer
   - MagazineBoxUniversalVPS
 

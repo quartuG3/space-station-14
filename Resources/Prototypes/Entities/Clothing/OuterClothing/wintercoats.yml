@@ -29,6 +29,7 @@
           Quantity: 30
   - type: Tag
     tags:
+    - Clothing
     - ClothMade
     - WhitelistChameleon
   - type: StaticPrice

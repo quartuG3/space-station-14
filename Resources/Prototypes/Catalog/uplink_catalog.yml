@@ -94,7 +94,7 @@
   cost:
     Telecrystal: 8
   categories:
-  - UplinkWeapons
+  - UplinkWeaponry
 
 - type: listing
   id: UplinkEswordDouble
@@ -105,7 +105,7 @@
   cost:
     Telecrystal: 20 #(Originally 16)
   categories:
-  - UplinkWeapons
+  - UplinkWeaponry
   conditions:
     - !type:StoreWhitelistCondition
       blacklist:
@@ -1868,7 +1868,7 @@
 #  cost:
 #    Telecrystal: 120
 #  categories:
-#  - UplinkWeapons
+#  - UplinkWeaponry
 #  conditions:
 #  - !type:BuyerWhitelistCondition
 #    blacklist:
@@ -1884,7 +1884,7 @@
 #  cost:
 #    Telecrystal: 70
 #  categories:
-#  - UplinkWeapons
+#  - UplinkWeaponry
 #  conditions:
 #  - !type:BuyerWhitelistCondition
 #    blacklist:
