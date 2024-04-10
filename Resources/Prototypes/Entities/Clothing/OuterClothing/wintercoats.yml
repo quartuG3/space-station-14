@@ -29,11 +29,10 @@
           Quantity: 30
   - type: Tag
     tags:
-    - Clothing
     - ClothMade
     - WhitelistChameleon
   - type: StaticPrice
-    price: 70
+    price: 50
 
 - type: entity
   parent: ClothingOuterWinterCoat
@@ -85,16 +84,6 @@
     sprite: Clothing/OuterClothing/WinterCoats/coatcap.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterCaptain
-
-- type: entity
-  parent: ClothingOuterWinterCoatToggleable
-  id: ClothingOuterWinterBS
-  name: captain's winter coat
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coatbs.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coatbs.rsi
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable
@@ -531,3 +520,15 @@
           Quantity: 20
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterWeb
+
+## Starshine
+
+- type: entity
+  parent: ClothingOuterWinterCoatToggleable
+  id: ClothingOuterWinterBS
+  name: captain's winter coat
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/WinterCoats/coatbs.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/WinterCoats/coatbs.rsi

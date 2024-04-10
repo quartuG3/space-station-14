@@ -1,4 +1,4 @@
-ent-CrateEngineeringThruster = thruster crate
-    .desc = Contains a thruster flatpack.
-ent-CrateEngineeringGyroscope = gyroscope crate
-    .desc = Contains a gyroscope flatpack.
+ent-CrateEngineeringThruster = ящик с двигателем
+    .desc = Содержит плоскоблок двигателя.
+ent-CrateEngineeringGyroscope = ящик с гироскопом
+    .desc = Содержит плоскоблок гироскопа.

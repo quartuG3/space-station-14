@@ -1,4 +1,3 @@
-
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckBronzeheart
@@ -90,6 +89,8 @@
     sprite: Clothing/Neck/Medals/clownmedal.rsi
   - type: StealTarget
     stealGroup: ClothingNeckClownmedal
+
+## Starshine
 
 - type: entity
   parent: ClothingNeckBase

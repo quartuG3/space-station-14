@@ -190,6 +190,9 @@
         },
         {
             "name": "Visitor"
+        },
+        {
+            "name": "InitialInfected"
         }
     ]
 }

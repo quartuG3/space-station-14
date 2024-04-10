@@ -7,5 +7,5 @@ ent-BenchRedComfy = { ent-BenchComfy }
     .suffix = Одиночная, Красная
     .desc = { ent-BenchComfy.desc }
 ent-BenchBlueComfy = { ent-BenchComfy }
-    .suffix = Solo. Blue
+    .suffix = Одиночная, Синяя
     .desc = { ent-BenchComfy.desc }

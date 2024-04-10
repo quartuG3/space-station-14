@@ -31,7 +31,4 @@ materials-raw-silver = серебро
 materials-raw-plasma = плазма
 materials-raw-uranium = уран
 materials-raw-bananium = бананиум
-materials-raw-salt = raw salt
-
-# Material Reclaimer
-
+materials-raw-salt = каменная соль

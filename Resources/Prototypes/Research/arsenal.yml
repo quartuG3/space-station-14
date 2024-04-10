@@ -80,25 +80,6 @@
   - WeaponLaserGun
 
 - type: technology
-  id: NonlethalAmmunition
-  name: research-technology-nonlethal-ammunition
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
-    state: beanbag
-  discipline: Arsenal
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - ShellShotgunBeanbag
-  - CartridgePistolRubber
-  - CartridgeMagnumRubber
-  - CartridgeRifleRubber
-  - MagazineVectorPistolSmallRubber
-  - MagazineRifleRubber
-  - MagazinePistolRubber
-  - MagazinePistolSubMachineGunRubber
-
-- type: technology
   id: UraniumMunitions
   name: research-technology-uranium-munitions
   icon:
@@ -128,7 +109,6 @@
   tier: 1
   cost: 8000
   recipeUnlocks:
-  - ClothingEyesGlassesSecurity
   - Truncheon
   - TelescopicShield
   - HoloprojectorSecurity

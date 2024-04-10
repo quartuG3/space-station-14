@@ -7,17 +7,28 @@
     - type: Sprite
       sprite: Objects/Misc/module.rsi
       state: door_electronics
+    - type: AccessReader
     - type: ActivatableUI
-      key: enum.AccessStorageUiKey.Key
-      closeOnHandDeselect: true
+      key: enum.DoorElectronicsConfigurationUiKey.Key
+      allowedItems:
+        tags:
+        - Multitool
     - type: UserInterface
       interfaces:
-        - key: enum.AccessStorageUiKey.Key
-          type: AccessStorageBoundUserInterface
-    - type: AccessStorage
+      - key: enum.DoorElectronicsConfigurationUiKey.Key
+        type: DoorElectronicsBoundUserInterface
+    # - type: ActivatableUI
+      # key: enum.AccessStorageUiKey.Key
+      # closeOnHandDeselect: true
+    # - type: UserInterface
+      # interfaces:
+        # - key: enum.AccessStorageUiKey.Key
+          # type: AccessStorageBoundUserInterface
+    # - type: AccessStorage
     - type: Tag
       tags:
         - DoorElectronics
+    - type: DoorElectronics
     - type: StaticPrice
       price: 55
 

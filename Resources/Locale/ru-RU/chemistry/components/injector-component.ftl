@@ -17,8 +17,8 @@ injector-component-transfer-success-message = Вы перемещаете { $amo
 injector-component-draw-success-message = Вы набираете { $amount }ед. из { $target }.
 injector-component-target-already-full-message = { $target } полон!
 injector-component-target-is-empty-message = { $target } пуст!
-injector-component-cannot-toggle-draw-message = Too full to draw!
-injector-component-cannot-toggle-inject-message = Nothing to inject!
+injector-component-cannot-toggle-draw-message = Больше не набрать!
+injector-component-cannot-toggle-inject-message = Нечего вводить!
 
 ## mob-inject doafter messages
 

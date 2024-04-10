@@ -6,4 +6,4 @@ bwoink-system-typing-indicator =
         [one] пишет
        *[other] пишут
     }...
-admin-bwoink-play-sound = Bwoink?
+admin-bwoink-play-sound = Бвоиньк?
