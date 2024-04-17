@@ -102,8 +102,9 @@
   id: PlasmaWindoorJanitorLocked
   suffix: Janitor, Locked, Plasma
   components:
-  - type: AccessReader
-    access: [["Janitor"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsJanitor ]
 
 - type: entity
   parent: Windoor
@@ -166,8 +167,9 @@
   id: WindoorSecureBarLocked
   suffix: Bar, Locked
   components:
-  - type: AccessReader
-    access: [["Bar"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsBar ]
 
 - type: entity
   parent: WindoorSecureSecurityLocked
@@ -210,8 +212,9 @@
   id: PlasmaWindoorSecureChemistryLocked
   suffix: Chemistry, Locked, Plasma
   components:
-  - type: AccessReader
-    access: [["Chemistry"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsChemistry ]
 
 - type: entity
   parent: WindoorSecure
@@ -227,16 +230,18 @@
   id: PlasmaWindoorSecureCentralCommandLocked
   suffix: Central Command, Locked, Plasma
   components:
-  - type: AccessReader
-    access: [["CentralCommand"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCentralCommand ]
 
 - type: entity
   parent: WindoorSecureUranium
   id: UraniumWindoorSecureCentralCommandLocked
   suffix: Central Command, Locked, Uranium
   components:
-  - type: AccessReader
-    access: [["CentralCommand"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCentralCommand ]
 
 - type: entity
   parent: WindoorSecure
@@ -261,8 +266,9 @@
   id: WindoorSecureDetectiveLocked
   suffix: Detective, Locked
   components:
-  - type: AccessReader
-    access: [["Detective"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDetective ]
 
 - type: entity
   parent: WindoorSecure
@@ -278,16 +284,18 @@
   id: PlasmaWindoorSecureEngineeringLocked
   suffix: Engineering, Locked, Plasma
   components:
-  - type: AccessReader
-    access: [["Engineering"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEngineering ]
 
 - type: entity
   parent: WindoorSecureUranium
   id: UraniumWindoorSecureEngineeringLocked
   suffix: Engineering, Locked, Uranium
   components:
-  - type: AccessReader
-    access: [["Engineering"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEngineering ]
 
 - type: entity
   parent: WindoorSecure
@@ -375,16 +383,18 @@
   id: PlasmaWindoorSecureScienceLocked
   suffix: Science, Locked, Plasma
   components:
-  - type: AccessReader
-    access: [["Research"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsResearch ]
 
 - type: entity
   parent: WindoorSecure
   id: WindoorSecureServiceLocked
   suffix: Service, Locked
   components:
-  - type: AccessReader
-    access: [["Service"]]
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsService ]
 
 - type: entity
   parent: WindoorSecure

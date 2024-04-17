@@ -360,11 +360,11 @@
             - SyringeGunMagazine
       gun_chamber:
         name: Chamber
-        startingItem: Syringecartridge
+        startingItem: SyringeCartridge
         priority: 1
         whitelist:
           tags:
-            - Syringecartridge
+            - SyringeCartridge
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
   - type: MagazineVisuals
@@ -401,11 +401,11 @@
     slots:
       gun_chamber:
         name: Chamber
-        startingItem: Syringecartridge
+        startingItem: SyringeCartridge
         priority: 1
         whitelist:
           tags:
-            - Syringecartridge
+            - SyringeCartridge
   - type: MagazineVisuals
     magState: mag
     steps: 1

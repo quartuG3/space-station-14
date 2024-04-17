@@ -20,8 +20,8 @@
     Plastic: 200
 
 - type: latheRecipe
-  id: Syringecartridge
-  result: Syringecartridge
+  id: SyringeCartridge
+  result: SyringeCartridge
   completetime: 1
   materials:
     Plastic: 67

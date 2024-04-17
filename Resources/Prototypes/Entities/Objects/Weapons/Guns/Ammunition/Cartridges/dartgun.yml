@@ -1,12 +1,12 @@
 - type: entity
   parent: BaseCartridge
-  id: Syringecartridge
+  id: SyringeCartridge
   name: Syringe cartridge
   components:
   - type: Tag
     tags:
     - Cartridge
-    - Syringecartridge
+    - SyringeCartridge
   - type: CartridgeAmmo
     proto: SyringeGunProject
     deleteOnSpawn: true
