@@ -65,6 +65,14 @@
 
 - type: entity
   parent: DoorElectronics
+  id: DoorElectronicsLawyer
+  suffix: Lawyer, Locked
+  components:
+  - type: AccessReader
+    access: [["Lawyer"]]
+
+- type: entity
+  parent: DoorElectronics
   id: DoorElectronicsCaptain
   suffix: Captain, Locked
   components:
@@ -161,6 +169,14 @@
 
 - type: entity
   parent: DoorElectronics
+  id: DoorElectronicsCentralCommand
+  suffix: CentralCommand, Locked
+  components:
+  - type: AccessReader
+    access: [["CentralCommand"]]
+
+- type: entity
+  parent: DoorElectronics
   id: DoorElectronicsChiefMedicalOfficer
   suffix: ChiefMedicalOfficer, Locked
   components:
@@ -225,6 +241,14 @@
 
 - type: entity
   parent: DoorElectronics
+  id: DoorElectronicsSecurityLawyer
+  suffix: Security/Lawyer, Locked
+  components:
+  - type: AccessReader
+    access: [["Security"], ["Lawyer"]]
+
+- type: entity
+  parent: DoorElectronics
   id: DoorElectronicsDetective
   suffix: Detective, Locked
   components:
@@ -253,7 +277,7 @@
   suffix: Vault, Locked
   components:
   - type: AccessReader
-    access: [["Security", "Command"]]
+    access: [["Security"], ["Command"]]
 
 - type: entity
   parent: DoorElectronics
@@ -283,6 +307,14 @@
   id: DoorElectronicsNukeopCommand
   parent: DoorElectronics
   suffix: NukeopCommand
+  components:
+  - type: AccessReader
+    access: [["NuclearOperative"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsNukeop
+  suffix: Nukeop, Locked
   components:
   - type: AccessReader
     access: [["NuclearOperative"]]

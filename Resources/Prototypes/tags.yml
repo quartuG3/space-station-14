@@ -551,10 +551,7 @@
   id: DoorElectronics
 
 - type: Tag
-  id: DonkPocket
-
-- type: Tag
-  id: Donut
+  id: DoorElectronicsConfigurator
 
 - type: Tag
   id: DrinkBottle
@@ -1271,7 +1268,7 @@
 
 - type: Tag
   id: SuitEVA
-  
+
 - type: Tag
   id: Sunglasses
 
