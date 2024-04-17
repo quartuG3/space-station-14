@@ -33,7 +33,7 @@ public sealed class AntagPreferenceSelector : RequirementsSelector<AntagPrototyp
         // immediately lock requirements if they arent met.
         // another function checks Disabled after creating the selector so this has to be done now
         var requirements = IoCManager.Resolve<JobRequirementsManager>();
-        if (proto.Requirements != null && !requirements.CheckRoleTime(proto.Requirements, out var reason))
+        if (proto.Requirements != null && !requirements.CheckRoleTime(proto.Requirements, proto.WhitelistRequired, out var reason))
         {
             LockRequirements(reason);
         }

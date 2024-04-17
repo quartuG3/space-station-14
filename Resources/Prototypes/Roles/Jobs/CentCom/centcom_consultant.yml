@@ -82,8 +82,6 @@
 - type: startingGear
   id: ConsultantGear
   equipment:
-    jumpsuit: ClothingUniformJumpsuitCentcomConsultant
-    back: ClothingBackpackCentcomFilled
     shoes: ClothingShoesBootsLaceup
     eyes: ClothingEyesGlassesSunglasses
     gloves: ClothingHandsGlovesLatex
@@ -91,6 +89,3 @@
     ears: ClothingHeadsetCentCom
     belt: BoxFolderClipboard
     pocket1: WeaponDisabler
-  innerClothingSkirt: ClothingUniformJumpskirtCentcomConsultant
-  satchel: ClothingBackpackSatchelCentcomFilled
-  duffelbag: ClothingBackpackDuffelCentcomFilled
