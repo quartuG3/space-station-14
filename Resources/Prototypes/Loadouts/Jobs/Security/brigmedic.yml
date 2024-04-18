@@ -101,7 +101,3 @@
   id: BrigmedicWindbreaker
   equipment:
     outerClothing: ClothingOuterCoatBrigmedicWB
-
-- type: loadout
-  id: BrigmedicWintercoat
-  equipment: BrigmedicWintercoat

@@ -1214,6 +1214,13 @@
   - BrigmedicHead
 
 - type: loadoutGroup
+  id: BrigmedicNeck
+  name: loadout-group-brigmedic-neck
+  minLimit: 0
+  loadouts:
+  - BrigmedicBedsheet
+
+- type: loadoutGroup
   id: BrigmedicJumpsuit
   name: loadout-group-brigmedic-jumpsuit
   loadouts:
@@ -1223,11 +1230,12 @@
   - BrigmedicTurtleneckSkirt
 
 - type: loadoutGroup
-  id: BrigmedicNeck
-  name: loadout-group-brigmedic-neck
-  minLimit: 0
+  id: BrigmedicBackpack
+  name: loadout-group-brigmedic-backpack
   loadouts:
-  - BrigmedicBedsheet
+  - BrigmedicBackpack
+  - BrigmedicSatchel
+  - BrigmedicDuffel
 
 - type: loadoutGroup
   id: BrigmedicOuterClothing
@@ -1236,12 +1244,3 @@
   loadouts:
   - BrigmedicOuterClothing
   - BrigmedicWindbreaker
-  - BrigmedicWintercoat
-
-- type: loadoutGroup
-  id: BrigmedicBackpack
-  name: loadout-group-brigmedic-backpack
-  loadouts:
-  - BrigmedicBackpack
-  - BrigmedicSatchel
-  - BrigmedicDuffel

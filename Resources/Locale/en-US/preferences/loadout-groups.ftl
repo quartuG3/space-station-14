@@ -1,6 +1,19 @@
 # Miscellaneous
 loadout-group-trinkets = Trinkets
 
+# CentCom
+loadout-group-consultant-head = Consultant head
+loadout-group-consultant-jumpsuit = Consultant jumpsuit
+loadout-group-consultant-neck = Consultant neck
+loadout-group-consultant-backpack = Consultant backpack
+loadout-group-consultant-outerclothing = Consultant outer clothing
+
+loadout-group-blueshield-head = BlueShield head
+loadout-group-blueshield-jumpsuit = BlueShield jumpsuit
+loadout-group-blueshield-neck = BlueShield neck
+loadout-group-blueshield-backpack = BlueShield backpack
+loadout-group-blueshield-outerclothing = BlueShield outer clothing
+
 # Command
 loadout-group-captain-head = Captain head
 loadout-group-captain-jumpsuit = Captain jumpsuit
@@ -148,6 +161,12 @@ loadout-group-detective-neck = Detective neck
 loadout-group-detective-jumpsuit = Detective jumpsuit
 loadout-group-detective-backpack = Detective backpack
 loadout-group-detective-outerclothing = Detective outer clothing
+
+loadout-group-brigmedic-head = Brigmedic head
+loadout-group-brigmedic-neck = Brigmedic neck
+loadout-group-brigmedic-jumpsuit = Brigmedic jumpsuit
+loadout-group-brigmedic-backpack = Brigmedic backpack
+loadout-group-brigmedic-outerclothing = Brigmedic outer clothing
 
 loadout-group-security-cadet-jumpsuit = Security cadet jumpsuit
 
