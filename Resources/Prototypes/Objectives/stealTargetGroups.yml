@@ -92,7 +92,7 @@
     state: icon
 
 - type: stealTargetGroup
-  id: ClothingNeckBlueshieldMedal
+  id: ClothingNeckBlueShieldMedal
   name: blueshield medal
   sprite: 
     sprite: Clothing/Neck/Medals/shieldblue.rsi

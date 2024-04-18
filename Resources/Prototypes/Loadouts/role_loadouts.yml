@@ -1,3 +1,25 @@
+## Starshine
+# CentCom
+- type: roleLoadout
+  id: JobCentComConsultant
+  groups:
+  - ConsultantHead
+  - ConsultantNeck
+  - ConsultantJumpsuit
+  - ConsultantBackpack
+  - ConsultantOuterClothing
+  - Trinkets
+
+- type: roleLoadout
+  id: JobBlueShield
+  groups:
+  - BlueShieldHead
+  - BlueShieldNeck
+  - BlueShieldJumpsuit
+  - BlueShieldBackpack
+  - BlueShieldOuterClothing
+  - Trinkets
+
 # Command
 - type: roleLoadout
   id: JobCaptain
@@ -271,6 +293,17 @@
   - DetectiveBackpack
   - DetectiveOuterClothing
   - SecurityShoes
+  - Trinkets
+
+## Starshine
+- type: roleLoadout
+  id: JobBrigmedic
+  groups:
+  - BrigmedicHead
+  - BrigmedicNeck
+  - BrigmedicJumpsuit
+  - BrigmedicBackpack
+  - BrigmedicOuterClothing
   - Trinkets
 
 - type: roleLoadout

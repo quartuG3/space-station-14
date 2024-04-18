@@ -44,7 +44,7 @@
 
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtBlueshield
+  id: ClothingUniformJumpskirtBlueShield
   name: blueshield officer's jumpskirt
   description: It's a blue jumpskirt with some gold markings denoting the rank of "Captain".
   components:
@@ -55,7 +55,7 @@
 
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtBlueshieldTurtleneck
+  id: ClothingUniformJumpskirtBlueShieldTurtleneck
   name: blueshield officer's turtleneck jumpskirt
   description: It's a blue jumpskirt with some gold markings denoting the rank of "Captain".
   components:
