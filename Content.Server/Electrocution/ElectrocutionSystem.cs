@@ -165,7 +165,7 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
     private void OnElectrifiedAttacked(EntityUid uid, ElectrifiedComponent electrified, AttackedEvent args)
     {
         if (!electrified.OnAttacked ||
-            !_random.Prob(electrified.ChanceOfShock))
+            !_random.Prob(electrified.Probability))
             return;
         //Dont shock if the attacker used a toy
         if (EntityManager.TryGetComponent<MeleeWeaponComponent>(args.Used, out var meleeWeaponComponent))
@@ -215,6 +215,9 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
             return false;
 
         if (!IsPowered(uid, electrified, transform))
+            return false;
+
+        if (!_random.Prob(electrified.Probability))
             return false;
 
         EnsureComp<ActivatedElectrifiedComponent>(uid);

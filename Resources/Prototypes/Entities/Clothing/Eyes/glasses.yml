@@ -233,7 +233,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingEyesGlassesSunglasses
+  parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons]
   id: ClothingEyesGlassesSunglassesBlueShield
   name: sun glasses
   description: Useful both for security and cargonia.
@@ -247,10 +247,9 @@
     - Clothing
     - HamsterWearable
     - WhitelistChameleon
-  - type: ShowSecurityIcons
 
 - type: entity
-  parent: ClothingEyesBase
+  parent: [ClothingEyesBase, ShowSecurityIcons]
   id: ClothingEyesGlassesSecurity
   name: security glasses
   description: Upgraded sunglasses that provide flash immunity and a security HUD.
@@ -273,7 +272,6 @@
   - type: GuideHelp
     guides:
     - Security
-  - type: ShowSecurityIcons
   - type: IdentityBlocker
     coverage: EYES
 
