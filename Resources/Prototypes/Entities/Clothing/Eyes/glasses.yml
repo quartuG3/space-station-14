@@ -38,7 +38,7 @@
         Blunt: 7
 
 - type: entity
-  parent: ClothingEyesBase
+  parent: [ClothingEyesBase, , ShowSecurityIcons]
   id: ClothingEyesGlassesGarSec
   name: security gar glasses
   description: All of my machinations have been devised with your interests in mind.
@@ -47,7 +47,6 @@
     sprite: Clothing/Eyes/Glasses/garsec.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Glasses/garsec.rsi
-  - type: ShowSecurityIcons
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
