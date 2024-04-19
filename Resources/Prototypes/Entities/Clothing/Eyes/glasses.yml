@@ -38,7 +38,7 @@
         Blunt: 7
 
 - type: entity
-  parent: [ClothingEyesBase, , ShowSecurityIcons]
+  parent: [ClothingEyesBase, ShowSecurityIcons]
   id: ClothingEyesGlassesGarSec
   name: security gar glasses
   description: All of my machinations have been devised with your interests in mind.
