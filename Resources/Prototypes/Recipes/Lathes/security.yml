@@ -773,6 +773,17 @@
   materials:
     Steel: 600
 
+# Starshine-start
+- type: latheRecipe
+  id: MagazineBoxPistolRubber
+  result: MagazineBoxPistolRubber
+  category: Ammo
+  completetime: 5
+  materials:
+    Steel: 350
+    Plastic: 300
+# # Starshine-end
+
 - type: latheRecipe
   id: MagazineBoxMagnum
   result: MagazineBoxMagnum
@@ -788,6 +799,17 @@
   completetime: 5
   materials:
     Steel: 25
+
+# Starshine-start
+- type: latheRecipe
+  id: MagazineBoxMagnumRubber
+  result: MagazineBoxMagnumRubber
+  category: Ammo
+  completetime: 5
+  materials:
+    Steel: 350
+    Plastic: 300
+# Starshine-end
 
 - type: latheRecipe
   id: MagazineRifle
@@ -884,6 +906,17 @@
   materials:
     Steel: 3000
 
+# Starshine-start
+- type: latheRecipe
+  id: MagazineBoxRifleRubber
+  result: MagazineBoxRifleRubber
+  category: Ammo
+  completetime: 5
+  materials:
+    Steel: 350
+    Plastic: 600
+# Starshine-end
+
 - type: latheRecipe
   id: MagazineBoxLightRifle
   result: MagazineBoxLightRifle
@@ -926,6 +959,7 @@
   materials:
     Steel: 50
 
+# Starshine-start
 - type: latheRecipe
   id: MagazineBoxUniversalPT1
   result: MagazineBoxUniversalPT1
@@ -967,6 +1001,15 @@
   completetime: 5
   materials:
     Steel: 200
+
+  id: MagazineBoxLightRifleRubber
+  result: MagazineBoxLightRifleRubber
+  category: Ammo
+  completetime: 5
+  materials:
+    Steel: 350
+    Plastic: 600
+# Starshine-end
 
 - type: latheRecipe
   id: SpeedLoaderMagnum

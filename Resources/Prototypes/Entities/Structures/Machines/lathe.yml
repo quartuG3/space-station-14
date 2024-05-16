@@ -814,6 +814,12 @@
       - MagazineRifleUranium
       - MagazineShotgunBeanbag
       - MagazineShotgunIncendiary
+# Starshine-start
+      - MagazineBoxLightRifleRubber
+      - MagazineBoxMagnumRubber
+      - MagazineBoxPistolRubber
+      - MagazineBoxRifleRubber
+# Starshine-end
       - PortableRecharger
       - PowerCageHigh
       - PowerCageMedium
