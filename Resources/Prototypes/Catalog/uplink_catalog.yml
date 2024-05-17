@@ -524,22 +524,6 @@
           - NukeOpsUplink
 
 - type: listing
-  id: UplinkMagazineCaselessRifle
-  name: uplink-magazine-caseless-rifle-name
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag.rsi, state: red }
-  description: uplink-magazine-caseless-rifle-desc
-  productEntity: MagazineCaselessRifle
-  cost:
-    Telecrystal: 3
-  categories:
-    - UplinkAmmo
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - NukeOpsUplink
-
-- type: listing
   id: UplinkMagazineCaselessRifleBundle
   name: uplink-magazine-caseless-rifle-bundle-name
   description: uplink-magazine-caseless-rifle-bundle-desc
