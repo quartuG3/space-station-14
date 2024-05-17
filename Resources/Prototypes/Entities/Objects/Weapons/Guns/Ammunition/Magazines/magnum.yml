@@ -88,6 +88,22 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
 
+# Starshine-start
+- type: entity
+  id: MagazineMagnumRubber
+  name: pistol magazine (.45 magnum rubber)
+  parent: BaseMagazineMagnum
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnumRubber
+  - type: Sprite
+    layers:
+    - state: rubber
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+# Starshine-end
+
 - type: entity
   id: MagazineMagnumUranium
   name: pistol magazine (.45 magnum uranium)
@@ -156,6 +172,22 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
+# Starshine-start
+- type: entity
+  id: MagazineMagnumSubMachineGunRubber
+  name: "Vector magazine (.45 magnum rubber)"
+  parent: BaseMagazineMagnumSubMachineGun
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeMagnumRubber
+  - type: Sprite
+    layers:
+    - state: rubber
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+# Starshine-end
 
 - type: entity
   id: MagazineMagnumSubMachineGunUranium

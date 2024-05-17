@@ -41,6 +41,23 @@
         map: [ "enum.AmmoVisualLayers.Tip" ]
         color: "#dbdbdb"
 
+# Starshine-start
+- type: entity
+  id: CartridgePistolRubber
+  name: cartridge (.35 auto rubber)
+  parent: BaseCartridgePistol
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistolRubber
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#43c4f7"
+# Starshine-end
+
 - type: entity
   id: CartridgePistolIncendiary
   name: cartridge (.35 auto incendiary)

@@ -20,6 +20,19 @@
       types:
         Blunt: 2
 
+# Starshine-start
+- type: entity
+  id: BulletRifleRubber
+  name: bullet (0.20 rifle rubber)
+  parent: BaseBulletRubber
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+# Starshine-end
+
 - type: entity
   id: BulletRifleIncendiary
   parent: BaseBulletIncendiary
@@ -43,4 +56,3 @@
       types:
         Radiation: 7
         Piercing: 8
-
