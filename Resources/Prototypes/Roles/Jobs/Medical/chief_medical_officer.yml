@@ -22,7 +22,6 @@
   icon: "JobIconChiefMedicalOfficer"
   requireAdminNotify: true
   supervisors: job-supervisors-captain
-  whitelistRequired: true
   access:
   - Medical
   - Command

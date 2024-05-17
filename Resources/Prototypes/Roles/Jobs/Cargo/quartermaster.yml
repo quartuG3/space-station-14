@@ -19,7 +19,6 @@
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"
   supervisors: job-supervisors-captain
-  whitelistRequired: true
   access:
   - Cargo
   - Salvage

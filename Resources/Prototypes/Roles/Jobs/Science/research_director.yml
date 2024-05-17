@@ -14,7 +14,6 @@
   icon: "JobIconResearchDirector"
   requireAdminNotify: true
   supervisors: job-supervisors-captain
-  whitelistRequired: true
   access:
   - Research
   - Command
