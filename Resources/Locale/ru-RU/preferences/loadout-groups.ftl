@@ -1,5 +1,6 @@
 # Miscellaneous
 loadout-group-trinkets = Безделушки
+loadout-group-glasses = Очки
 # Command
 loadout-group-captain-head = Голова капитана
 loadout-group-captain-jumpsuit = Комбинезон капитана
@@ -26,8 +27,9 @@ loadout-group-chef-mask = Маска шеф-повара
 loadout-group-chef-jumpsuit = Комбинезон шеф-повара
 loadout-group-chef-outerclothing = Верхняя одежда шеф-повара
 loadout-group-librarian-jumpsuit = Комбинезон библиотекаря
-loadout-group-lawyer-jumpsuit = Комбинезон юриста
-loadout-group-lawyer-neck = Шея юриста
+loadout-group-lawyer-jumpsuit = Комбинезон адвоката
+loadout-group-lawyer-neck = Шея адвоката
+loadout-group-lawyer-backpack = Рюкзак адвоката
 loadout-group-chaplain-head = Голова священника
 loadout-group-chaplain-mask = Маска священника
 loadout-group-chaplain-jumpsuit = Комбинезон священника
@@ -99,8 +101,9 @@ loadout-group-scientist-neck = Шея ученого
 loadout-group-scientist-jumpsuit = Комбинезон ученого
 loadout-group-scientist-backpack = Рюкзак ученого
 loadout-group-scientist-outerclothing = Верхняя одежда ученого
-loadout-group-scientist-shoes = Обувь ученого
-loadout-group-scientist-id = ID ученого
+loadout-group-scientist-gloves = Перчатки учёного
+loadout-group-scientist-shoes = Обувь учёного
+loadout-group-scientist-id = ID учёного
 loadout-group-research-assistant-jumpsuit = Комбинезон научного ассистента
 # Security
 loadout-group-head-of-security-head = Голова главы службы безопасности
@@ -113,6 +116,7 @@ loadout-group-warden-outerclothing = Верхняя одежда смотрит�
 loadout-group-security-head = Голова офицера СБ
 loadout-group-security-jumpsuit = Комбинезон офицера СБ
 loadout-group-security-backpack = Рюкзак офицера СБ
+loadout-group-security-belt = Пояс СБ
 loadout-group-security-outerclothing = Верхняя одежда офицера СБ
 loadout-group-security-shoes = Обувь офицера СБ
 loadout-group-security-id = ID офицера СБ
@@ -122,6 +126,9 @@ loadout-group-detective-jumpsuit = Комбинезон детектива
 loadout-group-detective-backpack = Рюкзак детектива
 loadout-group-detective-outerclothing = Верхняя одежда детектива
 loadout-group-security-cadet-jumpsuit = Комбинезон кадета СБ
+# Medical
+loadout-group-medical-gloves = Медицинские перчатки
+loadout-group-medical-mask = Медицинская маска
 # Medical
 loadout-group-chief-medical-officer-head = Голова главного врача
 loadout-group-chief-medical-officer-jumpsuit = Комбинезон главного врача

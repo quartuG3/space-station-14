@@ -165,6 +165,7 @@ marking-HumanHairProtagonist = Слегка длинная
 marking-HumanHairSpikey = Колючая
 marking-HumanHairSpiky = Колючая 2
 marking-HumanHairSpiky2 = Колючая 3
+marking-HumanHairSpookyLong = Длинная (Зловещая)
 marking-HumanHairSwept = Зачёс назад
 marking-HumanHairSwept2 = Зачёс назад 2
 marking-HumanHairTailed = Хвостатый
