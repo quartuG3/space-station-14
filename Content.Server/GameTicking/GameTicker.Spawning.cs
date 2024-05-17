@@ -190,6 +190,9 @@ namespace Content.Server.GameTicking
             if (jobBans != null)
                 restrictedRoles.UnionWith(jobBans);
 
+            if (jobId != null && !_playTimeTrackings.IsAllowed(player, jobId))
+                return;
+
             // Pick best job best on prefs.
             jobId ??= _stationJobs.PickBestAvailableJobWithPriority(station,
                 character.JobPriorities,

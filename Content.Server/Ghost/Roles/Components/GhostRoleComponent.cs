@@ -14,6 +14,9 @@ namespace Content.Server.Ghost.Roles.Components
 
         [DataField("rules")] private string _roleRules = "ghost-role-component-default-rules";
 
+        [DataField("whitelistRequired")]
+        public bool WhitelistRequired = false;
+
         [DataField("requirements")]
         public HashSet<JobRequirement>? Requirements;
 

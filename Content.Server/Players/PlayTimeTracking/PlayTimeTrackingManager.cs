@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Database;
 using Content.Shared.CCVar;
+using Content.Shared.Players;
 using Content.Shared.Players.PlayTimeTracking;
 using Robust.Shared.Asynchronous;
 using Robust.Shared.Collections;
@@ -85,6 +86,7 @@ public sealed class PlayTimeTrackingManager : ISharedPlaytimeManager
         _sawmill = Logger.GetSawmill("play_time");
 
         _net.RegisterNetMessage<MsgPlayTime>();
+        _net.RegisterNetMessage<MsgWhitelist>();
 
         _cfg.OnValueChanged(CCVars.PlayTimeSaveInterval, f => _saveInterval = TimeSpan.FromSeconds(f), true);
     }
@@ -130,6 +132,10 @@ public sealed class PlayTimeTrackingManager : ISharedPlaytimeManager
             if (data.NeedSendTimers)
             {
                 SendPlayTimes(player);
+
+                if (_cfg.GetCVar(CCVars.WhitelistEnabled))
+                    SendWhitelist(player);
+
                 data.NeedSendTimers = false;
             }
 
@@ -216,6 +222,31 @@ public sealed class PlayTimeTrackingManager : ISharedPlaytimeManager
         };
 
         _net.ServerSendMessage(msg, pSession.Channel);
+    }
+
+    // needs to be async because this can get called before we cache whitelist I think...
+    public async void SendWhitelist(ICommonSession playerSession)
+    {
+        var whitelist = await _db.GetWhitelistStatusAsync(playerSession.UserId);
+
+        var msg = new MsgWhitelist
+        {
+            Whitelisted = whitelist
+        };
+
+        _net.ServerSendMessage(msg, playerSession.ConnectedClient);
+    }
+
+    public void SendWhitelistCached(ICommonSession playerSession)
+    {
+        var whitelist = playerSession.ContentData()?.Whitelisted ?? false;
+
+        var msg = new MsgWhitelist
+        {
+            Whitelisted = whitelist
+        };
+
+        _net.ServerSendMessage(msg, playerSession.ConnectedClient);
     }
 
     /// <summary>
