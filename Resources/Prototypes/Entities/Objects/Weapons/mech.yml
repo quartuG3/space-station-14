@@ -611,23 +611,23 @@
     soundHit:
       path: /Audio/Effects/saw.ogg
 
-# - type: entity
-  # name: Mining Scanner
-  # parent: BaseItem
-  # id: MechaAnalyzer9000
-  # description: Device that scans nearby rocks for the presence of valuable minerals.
-  # components:
-  # - type: Sprite
-    # netsync: false
-    # sprite: Objects/Specific/Mech/mecha_equipment.rsi
-    # state: mecha_analyzer
-  # - type: RadarConsole
-  # - type: ActivatableUI
-    # key: enum.RadarConsoleUiKey.Key
-  # - type: UserInterface
-    # interfaces:
-      # - key: enum.RadarConsoleUiKey.Key
-        # type: RadarConsoleBoundUserInterface
+- type: entity
+  name: Mining Scanner
+  parent: BaseItem
+  id: MechaAnalyzer9000
+  description: Device that scans nearby rocks for the presence of valuable minerals.
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: Objects/Specific/Mech/mecha_equipment.rsi
+    state: mecha_analyzer
+  - type: RadarConsole
+  - type: ActivatableUI
+    key: enum.RadarConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
 
 - type: entity
   name: WeaponCutterAdvr

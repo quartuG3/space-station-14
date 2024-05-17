@@ -265,7 +265,6 @@
     runningState: building
     staticRecipes:
     - LargeBeaker
-    - LargeBottle
     - Dropper
     - ClothingEyesGlassesChemical
     dynamicRecipes:
@@ -285,7 +284,6 @@
       - CryostasisBeaker
       - SyringeCryostasis
       - Syringe
-      - MiningDrill
       - Implanter
       - PillCanister
       - ChemistryEmptyBottle01
@@ -317,8 +315,6 @@
       - WeaponForceGun
       - WeaponLaserSvalinn
       - WeaponProtoKineticAccelerator
-      - WeaponCutter
-      - WeaponCutterAdv
       - WeaponTetherGun
       - WeaponGrapplingGun
       - ClothingBackpackHolding
@@ -407,7 +403,6 @@
     board: CircuitImprinterMachineCircuitboard
   - type: Lathe
     producingSound: /Audio/Machines/circuitprinter.ogg
-    errorSound: /Audio/Machines/custom_deny.ogg
     idleState: icon
     runningState: building
     staticRecipes:
@@ -611,25 +606,12 @@
     - BorgModuleDiagnosis
     - BorgModuleDefibrillator
     - BorgModuleAdvancedTreatment
-    - ModsuitHelmet
-    - ModsuitGauntlets
-    - ModsuitChestplate
-    - ModsuitBoots
-    - ModsuitPlateAtmospheric
-    - ModsuitPlateCosmohonk
-    - ModsuitPlateEngineering
-    - ModsuitPlateMedical
-    - ModsuitPlateSecurity
-    - ModsuitPlateStandard
-    - ModsuitPlateMining
-    - ModsuitAssembly
     - RipleyHarness
     - RipleyLArm
     - RipleyRArm
     - RipleyLLeg
     - RipleyRLeg
     - MechEquipmentGrabber
-    - MechEquipmentDrill
     - HonkerHarness
     - HonkerLArm
     - HonkerRArm
@@ -643,35 +625,12 @@
     - HamtrLLeg
     - HamtrRLeg
     - VimHarness
-    - ClarkHarness
-    - ClarkLArm
-    - ClarkLLeg
-    - ClarkRLeg
-    - ClarkRArm
-    - OdysseusHarness
-    - OdysseusLArm
-    - OdysseusLLeg
-    - OdysseusRLeg
-    - OdysseusRArm
-    - DurandHarness
-    - DurandLArm
-    - DurandLLeg
-    - DurandRLeg
-    - DurandRArm
-    - DurandArmor
-    - GygaxHarness
-    - GygaxLArm
-    - GygaxLLeg
-    - GygaxRLeg
-    - GygaxRArm
-    - GygaxArmor
   - type: MaterialStorage
     whitelist:
       tags:
       - Sheet
       - RawMaterial
       - Ingot
-      - Uranium
   - type: GuideHelp
     guides:
     - Robotics
@@ -725,8 +684,6 @@
   name: security techfab
   description: Prints equipment for use by security crew.
   components:
-  - type: AccessReader
-    access: [["Brig"]]
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
     layers:
@@ -743,8 +700,6 @@
   - type: Machine
     board: SecurityTechFabCircuitboard
   - type: Lathe
-    producingSound: /Audio/Machines/circuitprinter.ogg
-    soundError: /Audio/Machines/custom_deny.ogg
     idleState: icon
     runningState: icon
     staticRecipes:
@@ -850,71 +805,12 @@
         - RawMaterial
         - Ingot
 
-# Machine which makes weapons and ammunition
-- type: entity
-  parent: Protolathe
-  id: WeaponTechFab
-  name: Weapon techfab
-  description: Prints weapons for use by security crew.
-  components:
-  - type: AccessReader
-    access: [["Armory"]]
-  - type: Sprite
-    netsync: false
-    sprite: Structures/Machines/techfab.rsi
-    layers:
-    - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: weapon
-    - state: unlit
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: inserting
-      map: ["enum.MaterialStorageVisualLayers.Inserting"]
-    - state: panel
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: Machine
-    board: WeaponTechFabCircuitboard
-  - type: Lathe
-    producingSound: /Audio/Machines/circuitprinter.ogg
-    soundError: /Audio/Machines/custom_deny.ogg
-    idleState: icon
-    runningState: icon
-    staticRecipes:
-      - WeaponDisablerPractice
-    dynamicRecipes:
-      # Weapons kinetic
-      - WeaponPistolMk58
-      - WeaponPistolMk68
-      - WeaponRevolverInspector
-      - WeaponLaserGun
-      - WeaponAdvancedLaser
-      - WeaponSubMachineGunWt550
-      - WeaponSubMachineGunVector
-      - WeaponSubMachineGunDrozd
-      - WeaponRifleLecter
-      - WeaponLaserCarbine
-      - WeaponLaserCannon
-      - WeaponXrayCannon
-      - WeaponShotgunKammerer
-      - WeaponShotgunEnforcer
-  - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
-        - Wood
-        - Uranium
-
 - type: entity
   id: AmmoTechFab
   parent: BaseLatheLube
   name: ammo techfab
   description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
   components:
-    - type: AccessReader
-      access: [["Armory"]]
     - type: Sprite
       sprite: Structures/Machines/techfab.rsi
       layers:
@@ -995,7 +891,6 @@
       - DiseaseSwab
       - Beaker
       - LargeBeaker
-      - LargeBottle
       - Dropper
       - Jug
       - Syringe
@@ -1014,7 +909,6 @@
       - MedkitAdvanced
       - MedkitRadiation
       - MedkitCombat
-      - InjectorCase
       - Scalpel
       - Retractor
       - Cautery
@@ -1061,7 +955,6 @@
       - ClothingHeadHatCapcap
       - ClothingHeadHatCaptain
       - ClothingUniformJumpsuitCaptain
-      - ClothingUniformJumpsuitBlueShield
       - ClothingUniformJumpskirtCaptain
       - ClothingUniformJumpsuitCapFormal
       - ClothingUniformJumpskirtCapFormalDress

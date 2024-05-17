@@ -686,6 +686,14 @@
     Steel: 30
 
 - type: latheRecipe
+  id: MagazinePistolSubMachineGunRubber
+  result: MagazinePistolSubMachineGunRubber
+  completetime: 5
+  materials:
+    Steel: 250
+    Plastic: 100
+
+- type: latheRecipe
   id: MagazinePistolSubMachineGunTopMounted
   result: MagazinePistolSubMachineGunTopMounted
   category: Ammo
