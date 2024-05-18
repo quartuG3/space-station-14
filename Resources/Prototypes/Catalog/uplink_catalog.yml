@@ -405,16 +405,16 @@
   categories:
   - UplinkAmmo
 
-# - type: listing
-  # id: UplinkQuiverCompositFilled
-  # name: uplink-quiver-composit-filled-name
-  # description: uplink-quiver-composit-filled-desc
-  # icon: { sprite: Clothing/Belt/quiver.rsi, state: icon }
-  # productEntity: ClothingBeltQuiverCompositFilled
-  # cost:
-    # Telecrystal: 10
-  # categories:
-  # - UplinkAmmo
+- type: listing
+  id: UplinkQuiverCompositFilled
+  name: uplink-quiver-composit-filled-name
+  description: uplink-quiver-composit-filled-desc
+  icon: { sprite: Clothing/Belt/quiver.rsi, state: icon }
+  productEntity: ClothingBeltQuiverCompositFilled
+  cost:
+    Telecrystal: 10
+  categories:
+  - UplinkAmmo
 
 - type: listing
   id: UplinkPistol9mmMagazineBundle

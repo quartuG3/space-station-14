@@ -1058,13 +1058,13 @@
     Steel: 150
     Plastic: 50
 
-# - type: latheRecipe
-  # id: ClothingBeltQuiverComposit
-  # result: ClothingBeltQuiverComposit
-  # completetime: 5
-  # materials:
-    # Steel: 350
-    # Plastic: 350
+- type: latheRecipe
+  id: ClothingBeltQuiverComposit
+  result: ClothingBeltQuiverComposit
+  completetime: 5
+  materials:
+    Steel: 350
+    Plastic: 350
 
 - type: latheRecipe
   id: MagazineBoxLightRifleIncendiary

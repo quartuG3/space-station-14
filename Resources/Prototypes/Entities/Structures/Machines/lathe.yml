@@ -265,6 +265,9 @@
     runningState: building
     staticRecipes:
     - LargeBeaker
+# Starshine-start
+    - LargeBottle
+# Starshine-end
     - Dropper
     - ClothingEyesGlassesChemical
     dynamicRecipes:
@@ -315,7 +318,11 @@
       - WeaponForceGun
       - WeaponLaserSvalinn
       - WeaponProtoKineticAccelerator
+      - WeaponCutter
+# Starshine-start
+      - WeaponCutterAdv
       - WeaponTetherGun
+# Starshine-end
       - WeaponGrapplingGun
       - ClothingBackpackHolding
       - ClothingBackpackSatchelHolding
@@ -403,6 +410,7 @@
     board: CircuitImprinterMachineCircuitboard
   - type: Lathe
     producingSound: /Audio/Machines/circuitprinter.ogg
+    errorSound: /Audio/Machines/custom_deny.ogg
     idleState: icon
     runningState: building
     staticRecipes:
@@ -606,6 +614,20 @@
     - BorgModuleDiagnosis
     - BorgModuleDefibrillator
     - BorgModuleAdvancedTreatment
+# Starshine-start
+    - ModsuitHelmet
+    - ModsuitGauntlets
+    - ModsuitChestplate
+    - ModsuitBoots
+    - ModsuitPlateAtmospheric
+    - ModsuitPlateCosmohonk
+    - ModsuitPlateEngineering
+    - ModsuitPlateMedical
+    - ModsuitPlateSecurity
+    - ModsuitPlateStandard
+    - ModsuitPlateMining
+    - ModsuitAssembly
+# Starshine-end
     - RipleyHarness
     - RipleyLArm
     - RipleyRArm
@@ -625,12 +647,37 @@
     - HamtrLLeg
     - HamtrRLeg
     - VimHarness
+# Starshine-start
+    - ClarkHarness
+    - ClarkLArm
+    - ClarkLLeg
+    - ClarkRLeg
+    - ClarkRArm
+    - OdysseusHarness
+    - OdysseusLArm
+    - OdysseusLLeg
+    - OdysseusRLeg
+    - OdysseusRArm
+    - DurandHarness
+    - DurandLArm
+    - DurandLLeg
+    - DurandRLeg
+    - DurandRArm
+    - DurandArmor
+    - GygaxHarness
+    - GygaxLArm
+    - GygaxLLeg
+    - GygaxRLeg
+    - GygaxRArm
+    - GygaxArmor
+# Starshine-end
   - type: MaterialStorage
     whitelist:
       tags:
       - Sheet
       - RawMaterial
       - Ingot
+      - Uranium
   - type: GuideHelp
     guides:
     - Robotics
@@ -684,6 +731,8 @@
   name: security techfab
   description: Prints equipment for use by security crew.
   components:
+  - type: AccessReader
+    access: [["Brig"]]
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
     layers:
@@ -700,6 +749,8 @@
   - type: Machine
     board: SecurityTechFabCircuitboard
   - type: Lathe
+    producingSound: /Audio/Machines/circuitprinter.ogg
+    soundError: /Audio/Machines/custom_deny.ogg
     idleState: icon
     runningState: icon
     staticRecipes:
@@ -742,6 +793,14 @@
       - WeaponDisablerPractice
       - WeaponLaserCarbinePractice
       - Zipties
+# Starshine-start
+      - MagazinePistolPractice
+      - MagazinePistolSubMachineGunPractice
+      - MagazineVectorPistolSmallPractice
+      - MagazineRiflePractice
+      - MagazineVectorRifleSmallPractice
+      - SpeedLoaderMagnumPractice
+# Starshine-end
     dynamicRecipes:
       - BoxBeanbag
       - BoxShotgunIncendiary
@@ -798,6 +857,20 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
+# Starshine-start
+      - BowCompound
+      - ArrowCompound
+      - ClothingBeltQuiverComposit
+      - ClothingHeadHelmetRiot
+      - ClothingHeadHelmetBasic
+      - ClothingHeadHelmetSwat
+      - ClothingOuterArmorRiot
+      - ClothingOuterArmorBasicSlim
+      - ClothingOuterArmorBasic
+      - ClothingOuterArmorBulletproof
+      - ClothingBeltSecurityWebbing
+      - ClothingBeltSecurity
+# Starshine-end
   - type: MaterialStorage
     whitelist:
       tags:
@@ -805,12 +878,73 @@
         - RawMaterial
         - Ingot
 
+## Starshine-start
+# Machine which makes weapons and ammunition
+- type: entity
+  parent: Protolathe
+  id: WeaponTechFab
+  name: Weapon techfab
+  description: Prints weapons for use by security crew.
+  components:
+  - type: AccessReader
+    access: [["Armory"]]
+  - type: Sprite
+    netsync: false
+    sprite: Structures/Machines/techfab.rsi
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: weapon
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: WeaponTechFabCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/circuitprinter.ogg
+    soundError: /Audio/Machines/custom_deny.ogg
+    idleState: icon
+    runningState: icon
+    staticRecipes:
+      - WeaponDisablerPractice
+    dynamicRecipes:
+      # Weapons kinetic
+      - WeaponPistolMk58
+      - WeaponPistolMk68
+      - WeaponRevolverInspector
+      - WeaponLaserGun
+      - WeaponAdvancedLaser
+      - WeaponSubMachineGunWt550
+      - WeaponSubMachineGunVector
+      - WeaponSubMachineGunDrozd
+      - WeaponRifleLecter
+      - WeaponLaserCarbine
+      - WeaponLaserCannon
+      - WeaponXrayCannon
+      - WeaponShotgunKammerer
+      - WeaponShotgunEnforcer
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+        - Wood
+        - Uranium
+## Starshine-end
+
 - type: entity
   id: AmmoTechFab
   parent: BaseLatheLube
   name: ammo techfab
   description: Prints the bare minimum of bullets that any budget military or armory could need. Nothing fancy.
   components:
+    - type: AccessReader
+      access: [["Armory"]]
     - type: Sprite
       sprite: Structures/Machines/techfab.rsi
       layers:
@@ -830,25 +964,58 @@
       idleState: icon
       runningState: icon
       staticRecipes:
-        - BoxLethalshot
         - BoxShotgunFlare
-        - BoxShotgunSlug
-        - MagazineBoxLightRifle
-        - MagazineBoxMagnum
-        - MagazineBoxPistol
-        - MagazineBoxRifle
-        - MagazineLightRifle
-        - MagazineLightRifleEmpty
-        - MagazinePistol 
+      dynamicRecipes:
+        # Weapons kinetic
+        - MagazinePistol
         - MagazinePistolEmpty 
+        - MagazinePistolRubber
+        - MagazinePistolHighCapacity
+        - MagazinePistolHighCapacityRubber
+        - ShellTranquilizer
+        - MagazineVectorPistolSmall
+        - MagazineVectorPistolSmallRubber
+        - MagazineVectorPistol
+        - MagazineVectorPistolRubber
+        - MagazinePistolSubMachineGun
+        - MagazinePistolSubMachineGunRubber
+        - MagazinePistolSubMachineGunTopMounted
+        - MagazineVectorRifle    
+        - MagazineVectorRifleRubber            
         - MagazineRifle
+        - MagazineRifleRubber
         - MagazineRifleEmpty
+        - MagazineRifleExt
+        - MagazineRifleExtRubber
+        - MagazineLightRifle
+        - MagazineLightRifleRubber
+        - MagazineLightRifleEmpty
         - MagazineShotgun
         - MagazineShotgunEmpty
         - MagazineShotgunSlug
-        - ShellTranquilizer
+        - MagazineUniversalShort
+        - MagazineUniversal
         - SpeedLoaderMagnum
         - SpeedLoaderMagnumEmpty
+        - SpeedLoaderUniversal
+        - MagazineShotgunSaiga
+        - MagazineBoxPistol
+        - MagazineBoxMagnum
+        - MagazineBoxPistolIncendiary
+        - MagazineBoxPistolRubber
+        - MagazineBoxRifle
+        - MagazineBoxLightRifle
+        - MagazineBoxRifleBig
+        - MagazineBoxUniversalVPS
+        - MagazineBoxRifleIncendiary
+        - MagazineBoxRifleRubber
+        - MagazineBoxUniversalPT1
+        - MagazineBoxUniversalVPS
+        - BoxLethalshot
+        - BoxShotgunIncendiary
+        - BoxBeanbag        
+        - BoxShotgunSlug
+        - BoxShellTranquilizer
     - type: MaterialStorage
       whitelist:
         tags:
@@ -891,6 +1058,10 @@
       - DiseaseSwab
       - Beaker
       - LargeBeaker
+# Starshine-start
+      - LargeBottle
+      - InjectorCase
+# Starshine-end
       - Dropper
       - Jug
       - Syringe
@@ -955,6 +1126,7 @@
       - ClothingHeadHatCapcap
       - ClothingHeadHatCaptain
       - ClothingUniformJumpsuitCaptain
+      - ClothingUniformJumpsuitBlueShield
       - ClothingUniformJumpskirtCaptain
       - ClothingUniformJumpsuitCapFormal
       - ClothingUniformJumpskirtCapFormalDress
