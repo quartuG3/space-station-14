@@ -19,4 +19,4 @@
 - type: startingGear
   id: HeadofSecurityHonoraryTrench
   equipment:
-    id: ClothingOuterCoatHoSHonoraryTrench
+    outerClothing: ClothingOuterCoatHoSHonoraryTrench
