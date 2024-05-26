@@ -24,6 +24,7 @@ using Content.Shared.DeviceNetwork;
 using Content.Shared.Emag.Components;
 using Content.Shared.Popups;
 using Robust.Server.GameObjects;
+using Robust.Shared.Audio;
 using Robust.Shared.Configuration;
 
 namespace Content.Server.Communications
@@ -239,6 +240,7 @@ namespace Content.Server.Communications
             var maxLength = _cfg.GetCVar(CCVars.ChatMaxAnnouncementLength);
             var msg = SharedChatSystem.SanitizeAnnouncement(message.Message, maxLength);
             var author = Loc.GetString("comms-console-announcement-unknown-sender");
+            SoundSpecifier specificAnnouncement = new SoundPathSpecifier("/Audio/Starshine/Announcements/Console/command.ogg");
             if (message.Actor is { Valid: true } mob)
             {
                 if (!CanAnnounce(comp))
@@ -255,6 +257,14 @@ namespace Content.Server.Communications
                 if (_idCardSystem.TryFindIdCard(mob, out var id))
                 {
                     author = $"{id.Comp.FullName} ({CultureInfo.CurrentCulture.TextInfo.ToTitleCase(id.Comp.JobTitle ?? string.Empty)})".Trim();
+
+                    // Starshine-Announcements-start
+                    comp.JobSpecialAnnounceDictionary.TryGetValue(id.Comp.JobTitle!, out var jobIdName);
+                    if (TryComp<AccessComponent>(id, out var accessComponent) && accessComponent.Tags.Contains(jobIdName!))
+                    {
+                        specificAnnouncement = new SoundPathSpecifier($"/Audio/Starshine/Announcements/Console/{jobIdName?.ToLower()}.ogg");
+                    }
+                    // Starshine-Announcements-end
                 }
             }
 
@@ -277,7 +287,7 @@ namespace Content.Server.Communications
                 return;
             }
 
-            _chatSystem.DispatchStationAnnouncement(uid, msg, title, colorOverride: comp.Color);
+            _chatSystem.DispatchStationAnnouncement(uid, msg, title, announcementSound: specificAnnouncement, colorOverride: comp.Color);
 
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"{ToPrettyString(message.Actor):player} has sent the following station announcement: {msg}");
 
