@@ -295,22 +295,6 @@
         Heat: 0.8
         Radiation: 0.5
 
-- type: entity
-  parent: ClothingHeadHelmetHardsuitCentcom
-  id: ClothingHeadHelmetHardsuitCentcomConsultant
-  noSpawn: true
-  name: CentCom hardsuit helmet
-  suffix: Consultant
-  components:
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.8
-        Heat: 0.95
-        Radiation: 0.6
-
 #Captain's Hardsuit
 - type: entity
   parent: ClothingHeadHardsuitWithLightBase
@@ -740,19 +724,6 @@
 #ERT Security Hardsuit
 - type: entity
   parent: ClothingHeadHelmetHardsuitSyndie
-  id: ClothingHeadHelmetHardsuitERTBlueShield
-  noSpawn: true
-  name: ERT security hardsuit helmet
-  components:
-  - type: Sprite
-    sprite: Clothing/Head/Hardsuits/ERThelmets/ertblueshield.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Hardsuits/ERThelmets/ertblueshield.rsi
-  - type: PointLight
-    color: "#6088FF"
-
-- type: entity
-  parent: ClothingHeadHelmetHardsuitSyndie
   id: ClothingHeadHelmetHardsuitERTSecurity
   name: ERT security hardsuit helmet
   description: A special hardsuit helmet worn by members of an emergency response team.
@@ -853,27 +824,6 @@
         Radiation: 0.80
         Caustic: 0.95
 
-#Deathsquad Ian Hardsuit
-- type: entity
-  parent: ClothingHeadHardsuitWithLightBase
-  id: ClothingHeadHelmetHardsuitDeathsquadDog
-  noSpawn: true
-  name: deathsquad hardsuit helmet
-  description: A robust helmet for special operations.
-  components:
-  - type: Sprite
-    sprite: Clothing/Head/Hardsuits/deathsquaddog.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Hardsuits/deathsquaddog.rsi
-  - type: PointLight
-    color: "#87CEFA"
-  - type: PressureProtection
-    highPressureMultiplier: 0.08
-    lowPressureMultiplier: 1000
-  - type: Tag
-    tags:
-      - DogWearable
-
 #MISC. HARDSUITS
 #Clown Hardsuit
 - type: entity
@@ -919,47 +869,3 @@
     color: "#f4ffad"
     radius: 5
     energy: 2  
-
-# Chrono Legionnaire Hardsuit
-- type: entity
-  parent: ClothingHeadHardsuitWithLightBase
-  id: ClothingHeadHelmetHardsuitChronoLegionnaire
-  noSpawn: true
-  name: chrono legionnaire hardsuit helmet
-  description: An advanced and stylish helmet right from the future. Or from the past?
-  components:
-  - type: Sprite
-    sprite: Clothing/Head/Hardsuits/chronolegionnaire.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Hardsuits/chronolegionnaire.rsi
-  - type: PointLight
-    color: "#3385ff"
-  - type: PressureProtection
-    highPressureMultiplier: 0.08
-    lowPressureMultiplier: 1000
-    energy: 2
-
-#Shuttle Pilot Hardsuit
-- type: entity
-  parent: ClothingHeadHardsuitWithLightBase
-  id: ClothingHeadHelmetHardsuitShuttlePilot
-  name: shuttle pilot hardsuit helmet
-  description: Armored hardsuit helmet for security needs.
-  components:
-  - type: BreathMask
-  - type: Sprite
-    sprite: Clothing/Head/Hardsuits/pilot.rsi
-  - type: Clothing
-    sprite: Clothing/Head/Hardsuits/pilot.rsi
-  - type: PointLight
-    color: "#6088FF"
-  - type: PressureProtection
-    highPressureMultiplier: 0.525
-    lowPressureMultiplier: 1000
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
