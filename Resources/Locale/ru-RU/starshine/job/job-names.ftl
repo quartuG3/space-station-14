@@ -1,3 +1,4 @@
+job-name-brigmedic = Бригмедик
 job-name-blueshield = Офицер синего щита
 job-name-consultant = Консультант Центком
 job-name-miner = Шахтер
