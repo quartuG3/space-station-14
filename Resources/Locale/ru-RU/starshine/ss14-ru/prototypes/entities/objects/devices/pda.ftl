@@ -1,0 +1,10 @@
+ent-MinerPDA = КПК шахтера
+    .desc = Пахнет пеплом.
+ent-BlueShieldPDA = КПК офицера синего щита
+    .desc = Покрыт кровью прошлых глав.
+ent-CentcomConsultantPDA = КПК консультанта Центкома
+    .desc = Светло-зелёный знак ходячей бюрократии.
+ent-CentcomInternPDA = КПК интерна ЦентКома
+    .desc = Очень вкусного цвета.
+ent-ShuttlePilotPDA = КПК пилота шаттла
+    .desc = Пахнет машинным маслом.

@@ -16,8 +16,6 @@ ent-CaptainIDCard = ID карта капитана
     .desc = { ent-IDCardStandard.desc }
 ent-SecurityIDCard = ID карта службы безопасности
     .desc = { ent-IDCardStandard.desc }
-ent-BlueShieldIDCard = ID карта офицера синего щита
-    .desc = { ent-IDCardStandard.desc }
 ent-WardenIDCard = ID карта смотрителя
     .desc = { ent-IDCardStandard.desc }
 ent-EngineeringIDCard = ID карта инженера
@@ -87,8 +85,6 @@ ent-ERTSecurityIDCard = ID карта офицера ОБР
 ent-CentcomIDCardSyndie = ID карта представителя ЦентКом
     .desc = { ent-IDCardStandard.desc }
     .suffix = Фальшивая
-ent-CentcomInternIDCard = ID карта интерна ЦентКома
-    .desc = { ent-IDCardStandard.desc }
 ent-MusicianIDCard = ID карта музыканта
     .desc = { ent-IDCardStandard.desc }
 ent-CentcomIDCardDeathsquad = ID карта эскадрона смерти
@@ -132,10 +128,3 @@ ent-SeniorOfficerIDCard = ID карта офицера-инструктора
 ent-UniversalIDCard = универсальная ID карта
     .desc = ID карта, которая открывает доступ к самым смелым мечтам.
     .suffix = Админ
-
-## Starshine
-
-ent-CentcomConsultantIDCard = ID карта консультанта ЦентКома
-    .desc = { ent-IDCardStandard.desc }
-ent-ShuttlePilotIDCard = карта пилота шаттла ID card
-    .desc = { ent-IDCardStandard.desc }

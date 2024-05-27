@@ -1,0 +1,9 @@
+ent-SuitStorageCentcomConsultant = { ent-SuitStorageBase }
+    .suffix = Консультант Центком
+    .desc = { ent-SuitStorageBase.desc }
+ent-SuitStorageBrigmedic = { ent-SuitStorageBase }
+    .suffix = Бригмедик
+    .desc = { ent-SuitStorageBase.desc }
+ent-SuitStoragePilot = { ent-SuitStorageBase }
+    .suffix = Пилот шаттла
+    .desc = { ent-SuitStorageBase.desc }

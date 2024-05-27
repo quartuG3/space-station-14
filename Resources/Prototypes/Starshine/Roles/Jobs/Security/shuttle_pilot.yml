@@ -9,7 +9,10 @@
       time: 10800 #5 hrs
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 36000 #10 hrs
+      time: 10800 #5 hrs
+    - !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 18000 #5 hrs
   startingGear: ShuttlePilotGear
   icon: "JobIconShuttlePilot"
   supervisors: job-supervisors-hos
@@ -20,6 +23,8 @@
   - Maintenance
   - Service
   - External
+  - Cryogenics
+  extendedAccess:
   - Engineering
   special:
   - !type:AddImplantSpecial
