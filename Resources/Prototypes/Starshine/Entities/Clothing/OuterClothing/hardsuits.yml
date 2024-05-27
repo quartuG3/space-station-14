@@ -8,9 +8,9 @@
   description: An advanced hardsuit favored by commandos for use in special operations.
   components:
   - type: Sprite
-    sprite: Starshine/Clothing/OuterClothing/Hardsuits/deathsquad.rsi
+    sprite: Clothing/OuterClothing/Hardsuits/deathsquad.rsi
   - type: Clothing
-    sprite: Starshine/Clothing/OuterClothing/Hardsuits/deathsquad.rsi
+    sprite: Clothing/OuterClothing/Hardsuits/deathsquad.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000

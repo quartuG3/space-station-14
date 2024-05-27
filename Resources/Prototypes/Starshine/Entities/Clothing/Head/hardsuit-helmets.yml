@@ -42,9 +42,9 @@
   description: A robust helmet for special operations.
   components:
   - type: Sprite
-    sprite: Clothing/Head/Hardsuits/deathsquaddog.rsi
+    sprite: Starshine/Clothing/Head/Hardsuits/deathsquaddog.rsi
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/deathsquaddog.rsi
+    sprite: Starshine/Clothing/Head/Hardsuits/deathsquaddog.rsi
   - type: PointLight
     color: "#87CEFA"
   - type: PressureProtection
