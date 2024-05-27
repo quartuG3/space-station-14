@@ -192,6 +192,9 @@
             "name": "Visitor"
         },
         {
+            "name": "ShuttlePilot"
+        },
+        {
             "name": "InitialInfected"
         },
         {

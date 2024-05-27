@@ -49,6 +49,7 @@ job-name-ertjanitor = Уборщик ОБР
 job-name-boxer = Боксёр
 job-name-zookeeper = Работник зоопарка
 job-name-visitor = Посетитель
+job-name-shuttle-pilot = Пилот шаттла
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = Атмосферный техник
 JobBartender = Бармен
@@ -99,3 +100,4 @@ JobWarden = Смотритель
 JobVisitor = Посетитель
 JobBoxer = Боксёр
 JobZookeeper = Работник зоопарка
+JobShuttlePilot = Пилот шаттла

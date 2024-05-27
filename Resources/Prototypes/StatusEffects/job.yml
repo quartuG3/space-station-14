@@ -403,3 +403,10 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Admin
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconShuttlePilot
+  icon:
+    sprite: Interface/Misc/job_icons.rsi
+    state: ShuttlePilot
