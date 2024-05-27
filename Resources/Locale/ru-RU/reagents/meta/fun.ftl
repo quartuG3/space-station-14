@@ -1,4 +1,4 @@
-reagent-name-carpetium = ковриний
+﻿reagent-name-carpetium = ковриний
 reagent-desc-carpetium = Таинственный химикат, обычно поставляемый с планеты клоунов, который покрывает ковром все, на что попадёт.
 reagent-name-fiber = волокно
 reagent-desc-fiber = Сырье, обычно извлекаемое из шерсти или других тканых изделий.
