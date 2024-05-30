@@ -813,7 +813,7 @@
     - RandomHumanoidDisasterVictimRD
     - RandomHumanoidDisasterVictimCMO
     - RandomHumanoidDisasterVictimCaptain
-    - MobSkeletonCloset
+    # - MobSkeletonCloset
 
 - type: entity
   id: RandomHumanoidDisasterVictimRD
