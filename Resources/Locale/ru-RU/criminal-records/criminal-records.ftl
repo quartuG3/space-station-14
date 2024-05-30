@@ -31,12 +31,12 @@ criminal-records-permission-denied = Отказано в доступе
 
 criminal-records-console-wanted = { $name } разыскивается по решению { $officer }, причина: { $reason }.
 criminal-records-console-suspected = { $name } теперь подозревается { $officer }, причина: { $reason }
-criminal-records-console-not-suspected = { $name } больше не подозревается.
+criminal-records-console-not-suspected = { $name } больше не подозревается по решению { $officer }.
 criminal-records-console-detained = { $name } арестовали, арестовал: { $officer }.
 criminal-records-console-released = { $name } отпустили, отпустил: { $officer }.
-criminal-records-console-not-wanted = { $name } больше не разыскивается.
+criminal-records-console-not-wanted = { $name } больше не разыскивается по решению { $officer }.
 criminal-records-console-paroled = { $name } освободили по УДО, освободил: { $officer }.
-criminal-records-console-not-parole = { $name } больше не является освобождённым по УДО.
+criminal-records-console-not-parole = { $name } больше не является освобождённым по УДО по решению { $officer }.
 criminal-records-console-unknown-officer = <неизвестный офицер>
 
 ## Filters

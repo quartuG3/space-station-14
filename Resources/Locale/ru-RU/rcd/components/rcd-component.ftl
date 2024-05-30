@@ -1,11 +1,11 @@
 ### UI
 
 rcd-component-examine-mode-details = Установлен режим '{ $mode }'.
-rcd-component-examine-build-details = РСУ настроен на сборку { MAKEPLURAL($name) }.
+rcd-component-examine-build-details = РСУ настроен на сборку { $name }.
 
 ### Interaction Messages
 
-rcd-component-change-build-mode = Теперь РСУ настроен на сборку { MAKEPLURAL($name) }.
+rcd-component-change-build-mode = Теперь РСУ настроен на сборку { $name }.
 # Shown when changing RCD Mode
 rcd-component-change-mode = РСУ переключён в режим { $mode }.
 rcd-component-insufficient-ammo-message = В РСУ недостаточно зарядов!

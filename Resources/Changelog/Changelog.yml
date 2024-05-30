@@ -1,38 +1,4 @@
 ﻿Entries:
-- author: Slava0135
-  changes:
-  - message: Fixed pie bomb not detonating when eaten or sliced (remember to keep
-      hungry mice away from it)!
-    type: Fix
-  - message: Pie bomb now cannot be ejected or swapped (just hope there is no bomb
-      inside)
-    type: Tweak
-  id: 6137
-  time: '2024-03-13T08:36:08.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/25928
-- author: Cojoke-dot
-  changes:
-  - message: Senior uniforms have been added to the Uniform Printer, visit your local
-      hop today!
-    type: Add
-  id: 6138
-  time: '2024-03-13T08:45:33.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/25668
-- author: Plykiya
-  changes:
-  - message: Additional syringe doafter delay is now based on syringe contents rather
-      than transfer amount setting.
-    type: Tweak
-  id: 6139
-  time: '2024-03-13T09:35:48.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/25890
-- author: SlamBamActionman
-  changes:
-  - message: Renamed Uplink categories and moved items to fit new category names.
-    type: Tweak
-  id: 6140
-  time: '2024-03-13T09:47:17.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/25079
 - author: veprolet
   changes:
   - message: Injectors like the syringe can now toggle their transfer amount using
@@ -3868,3 +3834,34 @@
   id: 6636
   time: '2024-05-29T00:16:43.0000000+00:00'
   url: https://github.com/space-wizards/space-station-14/pull/27875
+- author: ShadowCommander
+  changes:
+  - message: Popups with the same message now stack together and append a x# to the
+      end.
+    type: Tweak
+  id: 6637
+  time: '2024-05-29T04:05:40.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/27978
+- author: notafet
+  changes:
+  - message: Slightly increase spacing speed to fix under-pressure lockout.
+    type: Tweak
+  - message: Fix vent under-pressure lockout.
+    type: Fix
+  id: 6638
+  time: '2024-05-29T05:21:48.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/28370
+- author: lzk228
+  changes:
+  - message: Salvage access has been replaced with Cargo for the artifact container.
+    type: Tweak
+  id: 6639
+  time: '2024-05-29T16:46:23.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/28386
+- author: notafet
+  changes:
+  - message: Fix passive gate flow rate display.
+    type: Fix
+  id: 6640
+  time: '2024-05-30T00:34:41.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/28372
