@@ -4958,7 +4958,7 @@ entities:
       pos: -58.5,60.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -10712.559
+      secondsUntilStateChange: -10893.894
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -21782,6 +21782,11 @@ entities:
     - type: Transform
       pos: -51.5,74.5
       parent: 2
+  - uid: 16141
+    components:
+    - type: Transform
+      pos: -14.5,49.5
+      parent: 2
   - uid: 16264
     components:
     - type: Transform
@@ -21926,6 +21931,11 @@ entities:
     components:
     - type: Transform
       pos: -72.5,64.5
+      parent: 2
+  - uid: 17665
+    components:
+    - type: Transform
+      pos: -65.5,63.5
       parent: 2
 - proto: CableApcStack1
   entities:
@@ -54319,11 +54329,15 @@ entities:
   - uid: 4058
     components:
     - type: Transform
+      anchored: False
       rot: 3.141592653589793 rad
       pos: -34.5,-1.5
       parent: 2
     - type: AtmosPipeColor
       color: '#0000FFFF'
+    - type: Physics
+      canCollide: True
+      bodyType: Dynamic
   - uid: 4059
     components:
     - type: Transform
@@ -64063,13 +64077,6 @@ entities:
     - type: AtmosPipeColor
       color: '#0000FFFF'
   - uid: 16140
-    components:
-    - type: Transform
-      pos: -51.5,71.5
-      parent: 2
-    - type: AtmosPipeColor
-      color: '#FF0000FF'
-  - uid: 16141
     components:
     - type: Transform
       pos: -51.5,71.5
