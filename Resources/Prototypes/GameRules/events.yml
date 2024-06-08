@@ -268,6 +268,21 @@
       prob: 0.001
 
 - type: entity
+  id: RatMigration
+  parent: MouseMigration
+  noSpawn: true
+  components:
+  - type: StationEvent
+    earliestStart: 20
+    weight: 6
+    minimumPlayers: 15
+    duration: 50
+  - type: VentCrittersRule
+    specialEntries:
+    - id: SpawnPointGhostRatKing
+      prob: 0.001
+
+- type: entity
   id: CockroachMigration
   parent: BaseGameRule
   noSpawn: true
