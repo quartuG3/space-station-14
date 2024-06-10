@@ -1955,12 +1955,6 @@ namespace Content.Shared.CCVar
             CVarDef.Create("infolinks.wiki", "", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
-        /// Link to wiki rules to show in the launcher.
-        /// </summary>
-        public static readonly CVarDef<string> InfoLinksWikiRules =
-          CVarDef.Create("infolinks.wikirules", "", CVar.SERVER | CVar.REPLICATED);
-
-        /// <summary>
         /// Link to Patreon. Not shown in the launcher currently.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksPatreon =
