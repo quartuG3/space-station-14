@@ -20,7 +20,6 @@
   joinNotifyCrew: true
   supervisors: job-supervisors-centcom-consultant
   canBeAntag: false
-  whitelistRequired: true
   access:
   - Captain
   - Command

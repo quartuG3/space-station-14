@@ -1,12 +1,9 @@
 using System.Linq;
-using System.Threading.Tasks;
 using Content.Server.Administration;
 using Content.Server.Administration.Managers;
 using Content.Server.Afk;
 using Content.Server.Afk.Events;
 using Content.Server.GameTicking;
-using Content.Server.Roles;
-using Content.Server.Database;
 using Content.Server.Mind;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
@@ -37,7 +34,6 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     [Dependency] private readonly MindSystem _minds = default!;
     [Dependency] private readonly PlayTimeTrackingManager _tracking = default!;
     [Dependency] private readonly IAdminManager _adminManager = default!;
-    [Dependency] private readonly IServerDbManager _db = default!;
 
     public override void Initialize()
     {
@@ -184,13 +180,6 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
             job.Requirements == null ||
             !_cfg.GetCVar(CCVars.GameRoleTimers))
             return true;
-
-        if (_cfg.GetCVar(CCVars.WhitelistEnabled) &&
-            job.WhitelistRequired &&
-            !player.ContentData()!.Whitelisted)
-        {
-            return false;
-        }
 
         if (!_tracking.TryGetTrackerTimes(player, out var playTimes))
         {

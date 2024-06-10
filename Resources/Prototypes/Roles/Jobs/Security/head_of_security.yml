@@ -21,7 +21,6 @@
   requireAdminNotify: true
   supervisors: job-supervisors-captain
   canBeAntag: false
-  whitelistRequired: true
   access:
   - HeadOfSecurity
   - Command
