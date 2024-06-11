@@ -30,7 +30,7 @@ namespace Content.Client.Info
 
             rootContainer.AddChild(rulesList);
             var rulesLinksSection = new RulesLinksSection();
-            rulesList.InfoContainer.AddChild(rulesLinksSection);
+            rulesList.LinksContainer.AddChild(rulesLinksSection);
 
             rootContainer.AddChild(tutorialList);
 
