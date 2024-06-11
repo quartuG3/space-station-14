@@ -43,11 +43,6 @@ discord-jobban-msg = Player { $username } has banned for role { $role } { $expir
 discord-departmentban-msg = Player { $username } has banned for department { $department } { $expires } for reason: { $reason }
 
 soft-player-cap-full = The server is full!
-panic-bunker-account-denied = This server is in panic bunker mode. New connections are not being accepted at this time. Try again later
-panic-bunker-account-denied-reason = This server is in panic bunker mode and you were rejected. Reason: "{$reason}"
-panic-bunker-account-reason-account = The account's age must be older than {$minutes} minutes
-panic-bunker-account-reason-overall = The account's overall playtime must be greater than {$hours} hours
-
 panic-bunker-account-denied = This server is in panic bunker mode, often enabled as a precaution against raids. New connections by accounts not meeting certain requirements are temporarily not accepted. Try again later
 panic-bunker-account-denied-reason = This server is in panic bunker mode, often enabled as a precaution against raids. New connections by accounts not meeting certain requirements are temporarily not accepted. Try again later. Reason: "{$reason}"
 panic-bunker-account-reason-account = Your Space Station 14 account is too new. It must be older than {$minutes} minutes

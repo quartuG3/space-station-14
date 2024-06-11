@@ -52,8 +52,6 @@
             Lawyer: [ 1, 1 ]
             SecurityCadet: [ 1, 1 ]
             Detective: [ 1, 1 ]
-            Brigmedic: [ 1, 1 ]
-            ShuttlePilot: [1, 1]
             #supply
             CargoTechnician: [ 3, 3 ]
             Quartermaster: [ 1, 1 ]
@@ -65,6 +63,3 @@
             Musician: [ 1, 1 ]
             Boxer: [ 2, 2 ]
             Reporter: [ 2, 2 ]
-            #centcom      
-            BlueShield: [ 1, 1 ]
-            CentComConsultant: [ 0, 1 ] 

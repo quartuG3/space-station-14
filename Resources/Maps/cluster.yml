@@ -3576,7 +3576,8 @@ entities:
           5,0:
             0: 65520
           5,1:
-            0: 65524
+            0: 65492
+            2: 32
           5,2:
             0: 16383
           5,3:
@@ -4100,32 +4101,32 @@ entities:
             0: 65520
           10,-4:
             1: 8738
-            2: 8
-            3: 2048
+            3: 8
+            4: 2048
           10,-3:
             1: 8738
-            3: 2056
+            4: 2056
           10,-2:
             1: 8738
-            4: 8
-            5: 2048
+            5: 8
+            6: 2048
           10,-5:
             1: 8750
-            3: 2048
+            4: 2048
           11,-4:
-            2: 3
-            3: 768
+            3: 3
+            4: 768
             1: 34952
           11,-3:
-            3: 771
+            4: 771
             1: 34952
           11,-2:
-            4: 3
-            5: 768
+            5: 3
+            6: 768
             1: 34952
           11,-5:
             1: 34959
-            3: 768
+            4: 768
           12,-4:
             1: 12834
           12,-3:
@@ -4160,11 +4161,11 @@ entities:
             1: 7983
           8,-6:
             1: 61713
-            3: 204
+            4: 204
           9,-7:
             1: 20263
           9,-6:
-            3: 17
+            4: 17
             1: 62660
           10,-7:
             1: 4369
@@ -4359,7 +4360,7 @@ entities:
             0: 4352
           -1,16:
             1: 1
-            2: 128
+            3: 128
           -2,17:
             1: 8
           -1,17:
@@ -4372,6 +4373,14 @@ entities:
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -4397,6 +4406,37 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.14975
+          moles:
+          - 21.824879
+          - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
@@ -4412,9 +4452,25 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -4442,11 +4498,27 @@ entities:
           - 0
           - 0
           - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
         - volume: 2500
           temperature: 293.15
           moles:
           - 0
           - 6666.982
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -6683,11 +6755,6 @@ entities:
     - type: Transform
       pos: -23.5,19.5
       parent: 1
-  - uid: 734
-    components:
-    - type: Transform
-      pos: 22.5,4.5
-      parent: 1
   - uid: 1890
     components:
     - type: Transform
@@ -6857,6 +6924,11 @@ entities:
       parent: 1
 - proto: AirlockSecurityLocked
   entities:
+  - uid: 734
+    components:
+    - type: Transform
+      pos: 22.5,4.5
+      parent: 1
   - uid: 2351
     components:
     - type: Transform
@@ -8073,6 +8145,14 @@ entities:
         immutable: False
         temperature: 75.31249
         moles:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -27064,6 +27144,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: ClosetL3JanitorFilled
   entities:
   - uid: 7662
@@ -27079,6 +27167,14 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -27292,6 +27388,14 @@ entities:
         moles:
         - 1.8856695
         - 7.0937095
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -28464,6 +28568,14 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -32471,52 +32583,42 @@ entities:
     - type: Transform
       pos: -1.5,19.5
       parent: 1
-  - uid: 4971
+  - uid: 7547
     components:
     - type: Transform
-      pos: 5.5,29.5
+      pos: 3.5,30.5
       parent: 1
-- proto: DresserCaptainFilled
-  entities:
-  - uid: 7445
-    components:
-    - type: Transform
-      pos: 4.5,31.5
-      parent: 1
-- proto: DresserChiefEngineerFilled
-  entities:
-  - uid: 5659
-    components:
-    - type: Transform
-      pos: 20.5,-14.5
-      parent: 1
-- proto: DresserChiefMedicalOfficerFilled
-  entities:
-  - uid: 5657
-    components:
-    - type: Transform
-      pos: -19.5,16.5
-      parent: 1
-- proto: DresserHeadOfSecurityFilled
-  entities:
-  - uid: 6044
-    components:
-    - type: Transform
-      pos: 25.5,13.5
-      parent: 1
-- proto: DresserQuarterMasterFilled
+- proto: Dresser
   entities:
   - uid: 5373
     components:
     - type: Transform
       pos: 5.5,-14.5
       parent: 1
-- proto: DresserResearchDirectorFilled
-  entities:
+  - uid: 5657
+    components:
+    - type: Transform
+      pos: -19.5,16.5
+      parent: 1
+  - uid: 5659
+    components:
+    - type: Transform
+      pos: 20.5,-14.5
+      parent: 1
+  - uid: 6044
+    components:
+    - type: Transform
+      pos: 25.5,13.5
+      parent: 1
   - uid: 7442
     components:
     - type: Transform
       pos: -21.5,-3.5
+      parent: 1
+  - uid: 7445
+    components:
+    - type: Transform
+      pos: 4.5,31.5
       parent: 1
 - proto: Drill
   entities:
@@ -55653,6 +55755,13 @@ entities:
     - type: Transform
       pos: 32.5,-16.5
       parent: 1
+- proto: LockerBlueShieldFilled
+  entities:
+  - uid: 4084
+    components:
+    - type: Transform
+      pos: 5.5,29.5
+      parent: 1
 - proto: LockerBooze
   entities:
   - uid: 8297
@@ -55668,6 +55777,14 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -55697,6 +55814,13 @@ entities:
     - type: Transform
       pos: -0.5,-1.5
       parent: 1
+- proto: LockerBrigmedicFilledHardsuit
+  entities:
+  - uid: 4971
+    components:
+    - type: Transform
+      pos: 21.5,5.5
+      parent: 1
 - proto: LockerCaptainFilled
   entities:
   - uid: 4090
@@ -55712,6 +55836,14 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -55772,6 +55904,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -55798,6 +55938,14 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -55915,6 +56063,14 @@ entities:
         - 0
         - 0
         - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: LockerHeadOfPersonnelFilled
   entities:
   - uid: 4965
@@ -55930,6 +56086,14 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -55975,11 +56139,6 @@ entities:
     components:
     - type: Transform
       pos: -23.5,9.5
-      parent: 1
-  - uid: 12608
-    components:
-    - type: Transform
-      pos: 21.5,5.5
       parent: 1
 - proto: LockerMedicineFilled
   entities:
@@ -56056,6 +56215,14 @@ entities:
         moles:
         - 1.7459903
         - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
         - 0
         - 0
         - 0
@@ -66692,10 +66859,10 @@ entities:
       parent: 1
 - proto: SpawnMobFoxRenault
   entities:
-  - uid: 4084
+  - uid: 8256
     components:
     - type: Transform
-      pos: 5.5,29.5
+      pos: 3.5,30.5
       parent: 1
 - proto: SpawnMobMcGriff
   entities:
@@ -66823,6 +66990,13 @@ entities:
     - type: Transform
       pos: 2.5,6.5
       parent: 1
+- proto: SpawnPointBlueShield
+  entities:
+  - uid: 8235
+    components:
+    - type: Transform
+      pos: 4.5,28.5
+      parent: 1
 - proto: SpawnPointBorg
   entities:
   - uid: 5913
@@ -66841,6 +67015,13 @@ entities:
     components:
     - type: Transform
       pos: 3.5,-3.5
+      parent: 1
+- proto: SpawnPointBrigmedic
+  entities:
+  - uid: 8232
+    components:
+    - type: Transform
+      pos: 22.5,6.5
       parent: 1
 - proto: SpawnPointCaptain
   entities:

@@ -22,25 +22,36 @@
   id: CentcomInternGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitCentcomIntern
-    back: ClothingBackpackSatchelCentcomInternFilled
+    back: ClothingBackpackSatchelCentcom
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetAltCentCom
     shoes: ClothingShoesColorBlack
     id: CentcomInternPDA
     belt: Baton
+  storage:
+    back:
+    - BoxSurvival
+    - Handcuffs
 
 - type: startingGear
   id: CentcomInternLeaderGear
   equipment:
     head: ClothingHeadHatCentcomintern
     jumpsuit: ClothingUniformJumpsuitCentcomIntern
-    back: ClothingBackpackSatchelCentcomInternFilled
+    back: ClothingBackpackSatchelCentcom
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetAltCentCom
     outerClothing: ClothingOuterArmorBasicSlim
     shoes: ClothingShoesColorBlack
     id: CentcomInternPDA
     belt: Stunbaton
+    suitstorage: WeaponSniperMosin
+  storage:
+    back:
+    - BoxSurvival
+    - Handcuffs
+    - SpeedLoaderLightRifle
+    - MagazineBoxLightRifle
 
 #Deathsquad Outfit
 - type: startingGear

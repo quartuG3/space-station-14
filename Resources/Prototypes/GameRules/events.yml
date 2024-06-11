@@ -52,14 +52,12 @@
       max:  30
   - type: StationEvent
     startAnnouncementColor: "#18abf5"
-    startAudio:
-      path: /Audio/Announcements/announce.ogg
-    weight: 8
-    duration: 35
     startAudio: # Starshine
       path: /Audio/Starshine/Announcements/flux.ogg
       params:
         volume: -4
+    weight: 8
+    duration: 35
   - type: BluespaceArtifactRule
 
 - type: entity
