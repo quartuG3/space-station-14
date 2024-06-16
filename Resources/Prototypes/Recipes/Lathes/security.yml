@@ -604,18 +604,6 @@
     Plastic: 400
     Steel: 1200
 
-- type: latheRecipe
-  id: BoxShellTranquilizer
-  icon:
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi
-    state: shellflash
-  result: BoxShellTranquilizer
-  completetime: 10
-  materials:
-    Plastic: 250
-    Steel: 150
-    Glass: 90
-
 # Weapons energy
 
 - type: latheRecipe

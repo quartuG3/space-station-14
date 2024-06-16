@@ -31,8 +31,6 @@
   - MagazineVectorPistolSmall # Маленький
   - MagazinePistolSubMachineGun
   - MagazineRifle
-  - MagazineUniversalShort
-  - SpeedLoaderUniversal
   - SpeedLoaderMagnum
 
 - type: technology
@@ -241,7 +239,6 @@
   - MagazineBoxRifleBig
   - BoxLethalshot
   - MagazineBoxMagnum
-  - MagazineBoxUniversalPT1
 
 - type: technology
   id: AdvancedMagazines
@@ -256,7 +253,6 @@
   - MagazineVectorPistol
   - MagazineVectorRifle # 24 пт .20
   - MagazineRifleExt # 45 пт
-  - MagazineUniversal
   - MagazineShotgunSaiga
   - MagazinePistolHighCapacity
 
@@ -274,7 +270,6 @@
   - MagazineBoxRifleIncendiary
   - BoxShotgunIncendiary
   - BoxShotgunSlug
-  - MagazineBoxUniversalVPS
 
 - type: technology
   id: durandbmp

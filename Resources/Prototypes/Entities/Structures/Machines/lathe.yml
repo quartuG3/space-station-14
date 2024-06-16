@@ -969,6 +969,7 @@
       runningState: icon
       staticRecipes:
         - BoxShotgunFlare
+      dynamicRecipes:
         - BoxShotgunSlug
         - BoxShellTranquilizer
         - MagazineBoxLightRifle
@@ -977,14 +978,12 @@
         - MagazineLightRifle
         - MagazineLightRifleEmpty
         - MagazinePistolEmpty
-## Starshine
-      dynamicRecipes:
         # Weapons kinetic
+## Starshine
         - MagazinePistol
         - MagazinePistolRubber
         - MagazinePistolHighCapacity
         - MagazinePistolHighCapacityRubber
-        - ShellTranquilizer
         - MagazineVectorPistolSmall
         - MagazineVectorPistolSmallRubber
         - MagazineVectorPistol
@@ -1005,17 +1004,13 @@
         - MagazineShotgunSlug
         - SpeedLoaderMagnum
         - SpeedLoaderMagnumEmpty
-        - SpeedLoaderUniversal
         - MagazineShotgunSaiga
         - MagazineBoxMagnum
         - MagazineBoxPistolIncendiary
         - MagazineBoxPistolRubber
         - MagazineBoxRifleBig
-        - MagazineBoxUniversalVPS
         - MagazineBoxRifleIncendiary
         - MagazineBoxRifleRubber
-        - MagazineBoxUniversalPT1
-        - MagazineBoxUniversalVPS
         - BoxLethalshot
         - BoxShotgunIncendiary
         - BoxBeanbag        
