@@ -117,6 +117,8 @@
   - MagazineBoxMagnumRubber
   - MagazineBoxLightRifleRubber
   - MagazineBoxRifleRubber
+  - MagazineShotgunBeanbag
+  - BoxShellTranquilizer 
   - BoxBeanbag 
   - WeaponDisabler
 
@@ -272,7 +274,6 @@
   - MagazineBoxRifleIncendiary
   - BoxShotgunIncendiary
   - BoxShotgunSlug
-  - BoxShellTranquilizer
   - MagazineBoxUniversalVPS
 
 - type: technology
