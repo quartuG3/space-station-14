@@ -33416,12 +33416,6 @@ entities:
       linkedPorts:
         8666:
         - ArtifactAnalyzerSender: ArtifactAnalyzerReceiver
-  - uid: 10667
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 61.5,8.5
-      parent: 2
 - proto: computerBodyScanner
   entities:
   - uid: 31
@@ -33658,6 +33652,14 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 62.5,8.5
+      parent: 2
+- proto: ComputerRoboticsControl
+  entities:
+  - uid: 5652
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 61.5,8.5
       parent: 2
 - proto: ComputerSalvageExpedition
   entities:
