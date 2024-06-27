@@ -1,13 +1,14 @@
 using System.Linq;
-using Content.Server.Chat.Systems;
 using Content.Server.Fax;
+using Content.Server.GameTicking.Events;
+using Content.Server.Station.Components;
+using Content.Server.Station.Systems;
 using Content.Shared.Fax.Components;
 using Content.Shared.GameTicking;
 using Content.Shared.Paper;
 using Robust.Server.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-
 namespace Content.Server.AruMoon.StationGoal
 {
     /// <summary>
@@ -15,69 +16,101 @@ namespace Content.Server.AruMoon.StationGoal
     /// </summary>
     public sealed class StationGoalPaperSystem : EntitySystem
     {
-        [Dependency] private readonly ChatSystem _chatSystem = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private readonly IPrototypeManager _proto = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
-        [Dependency] private readonly FaxSystem _faxSystem = default!;
+        [Dependency] private readonly FaxSystem _fax = default!;
         [Dependency] private readonly IPlayerManager _playerManager = default!;
+        [Dependency] private readonly StationSystem _station = default!;
 
         public override void Initialize()
         {
             base.Initialize();
-            SubscribeLocalEvent<RoundStartedEvent>(OnRoundStarted);
+            SubscribeLocalEvent<RoundStartingEvent>(OnRoundStarting);
         }
 
-        private void OnRoundStarted(RoundStartedEvent ev)
+        private void OnRoundStarting(RoundStartingEvent ev)
         {
-            SendRandomGoal();
-        }
-
-        public bool SendRandomGoal()
-        {
-            var availableGoals = _prototypeManager.EnumeratePrototypes<StationGoalPrototype>().ToList();
             var playerCount = _playerManager.PlayerCount;
 
-            var validGoals = availableGoals.Where(goal =>
-                    (!goal.MinPlayers.HasValue || playerCount >= goal.MinPlayers.Value) &&
-                    (!goal.MaxPlayers.HasValue || playerCount <= goal.MaxPlayers.Value)).ToList();
-
-            if (!validGoals.Any())
+            var query = EntityQueryEnumerator<StationGoalComponent>();
+            while (query.MoveNext(out var uid, out var station))
             {
-                return false;
-            }
+                var tempGoals = new List<ProtoId<StationGoalPrototype>>(station.Goals);
+                StationGoalPrototype? selGoal = null;
+                while (tempGoals.Count > 0)
+                {
+                    var goalId = _random.Pick(tempGoals);
+                    var goalProto = _proto.Index(goalId);
 
-            var goal = _random.Pick(validGoals);
-            return SendStationGoal(goal);
+                    if (playerCount > goalProto.MaxPlayers ||
+                        playerCount < goalProto.MinPlayers)
+                    {
+                        tempGoals.Remove(goalId);
+                        continue;
+                    }
+
+                    selGoal = goalProto;
+                    break;
+                }
+
+                if (selGoal is null)
+                    return;
+
+                if (SendStationGoal(uid, selGoal))
+                {
+                    Log.Info($"Goal {selGoal.ID} has been sent to station {MetaData(uid).EntityName}");
+                }
+            }
+        }
+
+        public bool SendStationGoal(EntityUid? ent, ProtoId<StationGoalPrototype> goal)
+        {
+            return SendStationGoal(ent, _proto.Index(goal));
         }
 
         /// <summary>
-        ///     Send a station goal to all faxes which are authorized to receive it.
+        ///     Send a station goal on selected station to all faxes which are authorized to receive it.
         /// </summary>
         /// <returns>True if at least one fax received paper</returns>
-        public bool SendStationGoal(StationGoalPrototype goal)
+        public bool SendStationGoal(EntityUid? ent, StationGoalPrototype goal)
         {
-            var faxes = EntityQueryEnumerator<FaxMachineComponent>();
+            if (ent is null)
+                return false;
+
+            if (!TryComp<StationDataComponent>(ent, out var stationData))
+                return false;
+
+            var stationName = MetaData(ent.Value).EntityName;
+
+            var printout = new FaxPrintout(
+                Loc.GetString(goal.Text, ("station", stationName)),
+                Loc.GetString("station-goal-fax-paper-name", ("station", stationName)),
+                null,
+                "StationGoalPaper",
+                "paper_stamp-centcom",
+                new List<StampDisplayInfo>
+                {
+                    new() { StampedName = Loc.GetString("stamp-component-stamped-name-centcom"), StampedColor = Color.FromHex("#006600") },
+                });
+
             var wasSent = false;
-            while (faxes.MoveNext(out var faxEnt, out var fax))
+            var query = EntityQueryEnumerator<FaxMachineComponent>();
+            while (query.MoveNext(out var faxUid, out var fax))
             {
                 if (!fax.ReceiveStationGoal)
                     continue;
 
-                var printout = new FaxPrintout(
-                    Loc.GetString(goal.Text),
-                    Loc.GetString("station-goal-fax-paper-name"),
-                    null,
-                    null,
-                    "paper_stamp-centcom",
-                    new List<StampDisplayInfo>
-                    {
-                        new() { StampedName = Loc.GetString("stamp-component-stamped-name-centcom"), StampedColor = Color.FromHex("#006600") },
-                    });
-                _faxSystem.Receive(faxEnt, printout, null, fax);
-
+                var largestGrid = _station.GetLargestGrid(stationData);
+                var grid = Transform(faxUid).GridUid;
+                if (grid is null || largestGrid != grid.Value)
+                    continue;
+                _fax.Receive(faxUid, printout, null, fax);
+                foreach (var spawnEnt in goal.Spawns)
+                {
+                    SpawnAtPosition(spawnEnt, Transform(faxUid).Coordinates);
+                }
                 wasSent = true;
             }
-
             return wasSent;
         }
     }
