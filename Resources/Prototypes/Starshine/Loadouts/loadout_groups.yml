@@ -75,6 +75,16 @@
   - BlueShieldOuterClothing
   - BlueShieldWintercoat
 
+- type: loadoutGroup
+  id: SurvivalBlueShield
+  name: loadout-group-survival-blueshield
+  minLimit: 2
+  maxLimit: 2
+  hidden: true
+  loadouts:
+  - EmergencyNitrogenExtended
+  - EmergencyOxygenExtended
+
 # Brigmedic
 - type: loadoutGroup
   id: BrigmedicHead
@@ -114,6 +124,16 @@
   loadouts:
   - BrigmedicOuterClothing
   - BrigmedicWindbreaker
+
+- type: loadoutGroup
+  id: SurvivalBrigmedic
+  name: loadout-group-survival-brigmedic
+  minLimit: 2
+  maxLimit: 2
+  hidden: true
+  loadouts:
+  - EmergencyNitrogenExtended
+  - EmergencyOxygenExtended
 
 #ShuttlePilot
 - type: loadoutGroup
