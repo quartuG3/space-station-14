@@ -30,3 +30,12 @@
     - Clothing
     - ClothMade
     - WhitelistChameleon
+
+- type: entity
+  abstract: true
+  parent: ClothingNeckBase
+  id: ClothingScarfBase
+  components:
+  - type: Tag
+    tags:
+    - Scarf
