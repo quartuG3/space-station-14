@@ -70,7 +70,7 @@
   - Космическая вентиляция
   - Массив скрубберов
 
-  Вот один слой из примера: (трубы можно и нужно прокладывать под скрубберами, чтобы соединить их!)
+  Вот один слой из примера:
   <Box>
     <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
     <GuideEntityEmbed Entity="WallReinforced" Rotation="0" Caption="" Margin="0"/>
@@ -81,15 +81,15 @@
   <Box>
     <GuideEntityEmbed Entity="ReinforcedPlasmaWindow" Rotation="0" Caption="" Margin="0"/>
     <GuideEntityEmbed Entity="GasVentScrubber" Rotation="90" Caption="" Margin="0"/>
-    <GuideEntityEmbed Entity="GasVentScrubber" Rotation="90" Caption="" Margin="0"/>
-    <GuideEntityEmbed Entity="GasVentScrubber" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="GasPipeTJunction" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="GasVentScrubber" Rotation="-90" Caption="" Margin="0"/>
     <GuideEntityEmbed Entity="ReinforcedPlasmaWindow" Rotation="0" Caption="" Margin="0"/>
   </Box>
   <Box>
     <GuideEntityEmbed Entity="ReinforcedPlasmaWindow" Rotation="0" Caption="" Margin="0"/>
     <GuideEntityEmbed Entity="GasPassiveVent" Rotation="0" Caption="" Margin="0"/>
-    <GuideEntityEmbed Entity="GasVentScrubber" Rotation="90" Caption="" Margin="0"/>
-    <GuideEntityEmbed Entity="GasVentScrubber" Rotation="0" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="GasPipeTJunction" Rotation="90" Caption="" Margin="0"/>
+    <GuideEntityEmbed Entity="GasVentScrubber" Rotation="-90" Caption="" Margin="0"/>
     <GuideEntityEmbed Entity="ReinforcedPlasmaWindow" Rotation="0" Caption="" Margin="0"/>
   </Box>
   <Box>
