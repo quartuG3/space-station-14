@@ -1,5 +1,6 @@
 ent-ClothingShoesBootsCombatFilled = { ent-ClothingShoesBootsCombat }
     .desc = { ent-ClothingShoesBootsCombat.desc }
+    .suffix = Filled, Combat Knife
 ent-ClothingShoesBootsJackFilled = { ent-ClothingShoesBootsJack }
     .desc = { ent-ClothingShoesBootsJack.desc }
 ent-ClothingShoesBootsWinterSecFilled = { ent-ClothingShoesBootsWinterSec }
@@ -11,3 +12,6 @@ ent-ClothingShoesHighheelBootsFilled = { ent-ClothingShoesHighheelBoots }
 ent-ClothingShoesBootsMercFilled = { ent-ClothingShoesBootsMerc }
     .suffix = Заполненный
     .desc = { ent-ClothingShoesBootsMerc.desc }
+ent-ClothingShoesBootsSyndieFilled = { ent-ClothingShoesBootsCombat }
+    .suffix = Filled, Throwing Knife
+    .desc = { ent-ClothingShoesBootsCombat.desc }

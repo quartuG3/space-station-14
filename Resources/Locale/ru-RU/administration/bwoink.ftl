@@ -9,3 +9,6 @@ bwoink-system-typing-indicator =
 admin-bwoink-play-sound = Бвоиньк?
 bwoink-title-none-selected = Не выбрано
 bwoink-system-rate-limited = Система: вы отправляете сообщения слишком быстро.
+bwoink-system-player-disconnecting = has disconnected.
+bwoink-system-player-reconnecting = has reconnected.
+bwoink-system-player-banned = has been banned for: { $banReason }

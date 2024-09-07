@@ -1,5 +1,9 @@
+ent-BaseMeleeWeaponEnergy = { ent-BaseItem }
+    .desc = { ent-BaseItem.desc }
 ent-EnergySword = энергетический меч
     .desc = Очень громкий и опасный меч с лучом из чистой, концентрированной плазмы. Рассекает небронированные цели как масло.
+ent-EnergyDaggerLoud = energy dagger
+    .desc = A not as loud and dangerous dagger with a beam made of pure, concentrated plasma. This one is completely undisguised.
 ent-EnergyDagger = ручка
     .desc = Ручка с чёрными чернилами.
     .suffix = Энергокинжал
@@ -10,3 +14,6 @@ ent-EnergyCutlass = энергетический катлас
     .desc = Экзотическое энергетическое оружие.
 ent-EnergySwordDouble = сдвоенный энергетический меч
     .desc = Стажёры командования Синдиката решили, что иметь только одно лезвие на энергетических мечах недостаточно. Можно поместить в карман.
+ent-CyborgEnergySwordDouble = { ent-EnergySwordDouble }
+    .desc = Syndicate Command Interns thought that having one blade on the energy sword was not enough. Specially designed for syndicate cyborgs.
+    .suffix = One-Handed, For Borgs

@@ -13,6 +13,8 @@ loadout-group-survival-security = Аварийный запас СБ
 loadout-group-survival-syndicate = Github заставляет меня писать текст, который буквально дважды невозможно увидеть игроку, отправьте помощь
 loadout-group-breath-tool = Расозависимые дыхательные инструменты
 loadout-group-tank-harness = Расоспецифичное снаряжение для выживания
+loadout-group-EVA-tank = Species-specific gas tank
+loadout-group-survival-mime = Mime Survival Box
 # Command
 loadout-group-captain-head = Голова капитана
 loadout-group-captain-jumpsuit = Комбинезон капитана
@@ -30,6 +32,7 @@ loadout-group-passenger-mask = Маска ассистента
 loadout-group-passenger-gloves = Перчатки ассистента
 loadout-group-passenger-outerclothing = Верхняя одежда ассистента
 loadout-group-passenger-shoes = Обувь ассистента
+loadout-group-passenger-neck = Passenger neck
 loadout-group-bartender-head = Голова бармена
 loadout-group-bartender-jumpsuit = Комбинезон бармена
 loadout-group-bartender-outerclothing = Верхняя одежда бармена
@@ -64,6 +67,7 @@ loadout-group-mime-mask = Маска мима
 loadout-group-mime-jumpsuit = Комбинезон мима
 loadout-group-mime-backpack = Рюкзак мима
 loadout-group-mime-outerclothing = Верхняя одежда мима
+loadout-group-mime-belt = Mime belt
 loadout-group-musician-jumpsuit = Комбинезон музыканта
 loadout-group-musician-outerclothing = Верхняя одежда музыканта
 # Cargo
@@ -132,6 +136,7 @@ loadout-group-detective-neck = Шея детектива
 loadout-group-detective-jumpsuit = Комбинезон детектива
 loadout-group-detective-outerclothing = Верхняя одежда детектива
 loadout-group-security-cadet-jumpsuit = Комбинезон кадета СБ
+loadout-group-security-star = Security Star
 # Medical
 loadout-group-medical-gloves = Медицинские перчатки
 loadout-group-medical-mask = Медицинская маска
@@ -157,5 +162,6 @@ loadout-group-paramedic-outerclothing = Верхняя одежда параме
 loadout-group-paramedic-shoes = Обувь парамедика
 # Wildcards
 loadout-group-reporter-jumpsuit = Комбинезон репортёра
+loadout-group-psychologist-jumpsuit = Psychologist jumpsuit
 loadout-group-boxer-jumpsuit = Комбинезон боксёра
 loadout-group-boxer-gloves = Перчатки боксёра

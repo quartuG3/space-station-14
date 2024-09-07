@@ -70,5 +70,7 @@ ent-ComputerMassMediaCircuitboard = консоль менеджера новос
     .desc = Напишите свое послание миру!
 ent-SensorConsoleCircuitboard = консоль мониторинга датчиков (машинная плата)
     .desc = Машинная плата для консоли мониторинга датчиков.
+ent-StationAiUploadCircuitboard = AI upload console board
+    .desc = A computer printed circuit board for a AI upload console.
 ent-RoboticsConsoleCircuitboard = консоль управления робототехникой (консольная плата)
     .desc = Консольная плата для консоли управления робототехникой.

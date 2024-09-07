@@ -5,4 +5,5 @@ department-Engineering-description = Поддерживайте энергопи
 department-Medical-description = Поддерживайте здоровье экипажа.
 department-Security-description = Поддерживайте порядок на станции.
 department-Science-description = Исследуйте артефакты и аномалии, чтобы изобрести новое оборудование для станции.
+department-Silicon-description = Obey your laws and serve the crew.
 department-Specific-description = Рабочие места, которые есть не на всех станциях.

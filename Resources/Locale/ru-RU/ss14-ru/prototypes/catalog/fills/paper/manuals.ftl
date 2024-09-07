@@ -3,3 +3,7 @@ ent-PaperWrittenAMEScribbles = { ent-PaperWritten }
     .desc = { ent-PaperWritten.desc }
 ent-HoloparasiteInfo = условия пользования голопаразитом
     .desc = Крошечный объемный экран для просмотра документов заставляет задуматься, не слишком ли большой бюджет у юридического отдела Cybersun.
+ent-PaperAgrichemManual = NT "AgriChem Is Fun" manual
+    .desc = The single sheet of instructions that came in the kit.
+ent-PaperWrittenCombatBakeryKit = combat bakery kit instructions
+    .desc = Eat note after reading.

@@ -7,3 +7,5 @@ ent-ThrowingKnivesKit = набор метательных ножей
     .desc = Набор из 4 фирменных метательных ножей Синдиката, идеально подходящих для вонзания в тело вашей жертвы.
 ent-BoxDeathRattleImplants = коробка имплантов предсмертнохрип
     .desc = Шесть имплантов предсмертнохрип для всего отряда.
+ent-CombatBakeryKit = combat bakery kit
+    .desc = A kit of clandestine baked weapons.

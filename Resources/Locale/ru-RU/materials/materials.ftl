@@ -23,6 +23,7 @@ materials-meat = мясо
 materials-web = шёлк
 materials-bones = кость
 materials-coal = уголь
+materials-diamond = diamond
 materials-gunpowder = порох
 # Ores
 materials-raw-iron = сталь
@@ -33,3 +34,4 @@ materials-raw-plasma = плазма
 materials-raw-uranium = уран
 materials-raw-bananium = бананиум
 materials-raw-salt = каменная соль
+materials-raw-diamond = raw diamond
