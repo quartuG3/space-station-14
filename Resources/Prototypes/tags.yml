@@ -88,6 +88,9 @@
   id: Bloodpack
 
 - type: Tag
+  id: BlueprintAutolathe
+
+- type: Tag
   id: BodyBag
 
 - type: Tag
@@ -247,6 +250,9 @@
   id: BoxHug
 
 - type: Tag
+  id: Brain
+
+- type: Tag
   id: BrassInstrument
 
 - type: Tag
@@ -268,10 +274,16 @@
   id: Bucket
 
 - type: Tag
+  id: Burger
+
+- type: Tag
   id: BulletFoam
 
 - type: Tag
   id: Burnt
+
+- type: Tag
+  id: Bun
 
 - type: Tag
   id: BypassDropChecks
@@ -394,6 +406,9 @@
 - type: Tag
   id: Chicken
 
+- type: Tag
+  id: Cheese
+
 # Allowed to control someone wearing a Chef's hat if inside their hat.
 - type: Tag
   id: ChefPilot
@@ -471,6 +486,9 @@
   id: Cow
 
 - type: Tag
+  id: Crab
+
+- type: Tag
   id: Crayon
 
 - type: Tag
@@ -540,6 +558,9 @@
   id: DiscreteHealthAnalyzer #So construction recipes don't eat medical PDAs
 
 - type: Tag
+  id: DNASolutionScannable
+
+- type: Tag
   id: DockArrivals
 
 - type: Tag
@@ -576,9 +597,15 @@
   id: DrinkCan
 
 - type: Tag
+  id: DrinkCup
+
+- type: Tag
+  id: DrinkGlass
+
+- type: Tag
   id: DrinkSpaceGlue
 
-- type: Tag 
+- type: Tag
   id: Dropper
 
 - type: Tag
@@ -679,6 +706,9 @@
 
 - type: Tag
   id: Goat
+
+- type: Tag
+  id: Goliath
 
 - type: Tag
   id: GPS
@@ -837,6 +867,9 @@
 - type: Tag
   id: Igniter
 
+- type: Tag
+  id: Ingredient
+
 - type: Tag #Drop this innate tool instead of deleting it.
   id: InnateDontDelete
 
@@ -881,6 +914,9 @@
 
 - type: Tag
   id: Lemon
+
+- type: Tag
+  id: LightBulb
 
 - type: Tag
   id: Lime
@@ -1164,6 +1200,9 @@
   id: RifleStock
 
 - type: Tag
+  id: Ring
+
+- type: Tag
   id: RipleyCentralControlModule
 
 - type: Tag
@@ -1204,6 +1243,9 @@
 
 - type: Tag
   id: SecBeltEquip
+
+- type: Tag
+  id: SecurityHelmet
 
 - type: Tag
   id: SecwayKeys
@@ -1255,6 +1297,7 @@
 
 - type: Tag
   id: Soup
+
 - type: Tag
   id: Spear
 
@@ -1284,6 +1327,9 @@
 
 - type: Tag
   id: SpreaderIgnore
+
+- type: Tag
+  id: StationAi
 
 - type: Tag
   id: StationMapElectronics
@@ -1346,6 +1392,9 @@
   id: TabletopBoard
 
 - type: Tag
+  id: Taco
+
+- type: Tag
   id: TabletopPiece
 
 - type: Tag
@@ -1362,6 +1411,12 @@
 
 - type: Tag
   id: Toolbox
+
+- type: Tag
+  id: ToothSharkminnow
+
+- type: Tag
+  id: ToothSpaceCarp
 
 - type: Tag
   id: Torch

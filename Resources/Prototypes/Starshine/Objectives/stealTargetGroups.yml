@@ -1,0 +1,13 @@
+- type: stealTargetGroup
+  id: WeaponLaserHos
+  name: X-01 multiphase laser gun
+  sprite: 
+    sprite: Objects/Weapons/Guns/Battery/hoslasergun.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: ClothingNeckBlueShieldMedal
+  name: blueshield medal
+  sprite: 
+    sprite: Clothing/Neck/Medals/shieldblue.rsi
+    state: icon

@@ -44,7 +44,7 @@
   id: BlueShieldGear
   equipment:
     shoes: ClothingShoesBootsCombatFilled
-    eyes: ClothingEyesGlassesSunglassesBlueShield
+    eyes: ClothingEyesGlassesCommand
     belt: ClothingBeltMedSec
     gloves: ClothingHandsTacticalBlueShield
     id: BlueShieldPDA

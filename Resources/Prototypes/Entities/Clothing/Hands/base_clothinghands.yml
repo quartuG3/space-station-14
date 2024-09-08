@@ -24,6 +24,10 @@
     - Clothing
     - ClothMade
     - WhitelistChameleon
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 5 # the average lightbulb only does around four damage!
 
 - type: entity
   abstract: true
@@ -45,3 +49,19 @@
   - type: Fiber
     fiberMaterial: fibers-synthetic
   - type: FingerprintMask
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: RingBase
+  components:
+  - type: Clothing
+    slots: [ gloves, neck ]
+  - type: Sprite
+    sprite: Clothing/Hands/Rings/basic.rsi
+  - type: Appearance
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - Ring

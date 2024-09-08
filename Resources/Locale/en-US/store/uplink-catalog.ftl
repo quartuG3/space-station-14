@@ -80,7 +80,7 @@ uplink-shrapnel-grenade-desc = Launches a spray of sharp fragments dealing great
 
 # Ammo
 uplink-pistol-magazine-name = Pistol Magazine (.35 auto)
-uplink-pistol-magazine-desc = Пистолетый магазин с 15 патронами. Подходит для Гадюки.
+uplink-pistol-magazine-desc = Pistol magazine with 10 catridges. Compatible with the Viper.
 
 uplink-pistol-magazine-c20r-name = SMG magazine (.35 auto)
 uplink-pistol-magazine-c20r-desc = Rifle magazine with 30 catridges. Compatible with C-20r.
@@ -96,9 +96,6 @@ uplink-mosin-ammo-desc = A box of 60 cartridges for the surplus rifle.
 
 uplink-sniper-ammo-name = Ammunition box (.60 antimateriel)
 uplink-sniper-ammo-desc = A box of 10 cartridges for the Hristov sniper rifle.
-
-uplink-syringe-cartridge-name = Box of Syringe cartridges
-uplink-syringe-cartridge-desc = A box of syringe cartridges for the syringe pistol.
 
 # Utility
 uplink-holopara-kit-name = Holoparasite Kit
@@ -128,7 +125,10 @@ uplink-reinforcement-radio-ancestor-name = Genetic Ancestor Reinforcement Telepo
 uplink-reinforcement-radio-ancestor-desc =  Call in a trained ancestor of your choosing to assist you. Comes with a single syndicate cigarette.
 
 uplink-reinforcement-radio-name = Reinforcement Teleporter
-uplink-reinforcement-radio-desc =  Radio in a reinforcement agent of extremely questionable quality. No off button, buy this if you're ready to party. They have a pistol with no reserve ammo, and a knife. That's it.
+uplink-reinforcement-radio-traitor-desc =  Radio in a reinforcement agent of extremely questionable quality. No off button, buy this if you're ready to party. Call in a medic or spy or thief to help you out. Good luck.
+
+uplink-reinforcement-radio-nukeops-name = Nuclear Operative Teleporter
+uplink-reinforcement-radio-nukeops-desc =  Radio in a nuclear operative of extremely questionable quality. No off button, buy this if you're ready to party. They have basic nuclear operative gear.
 
 uplink-reinforcement-radio-cyborg-assault-name = Syndicate Assault Cyborg Teleporter
 uplink-reinforcement-radio-cyborg-assault-desc =  A lean, mean killing machine with access to an Energy Sword, LMG, Cryptographic Sequencer, and a Pinpointer.
@@ -225,9 +225,6 @@ uplink-sniper-bundle-desc = An inconspicuous briefcase that contains a Hristov, 
 uplink-c20r-bundle-name = C-20r Bundle
 uplink-c20r-bundle-desc = Old faithful: The classic C-20r Submachine Gun, bundled with three magazines.
 
-uplink-kr51-bundle-name = KR51 Bundle
-uplink-kr51-bundle-desc = Hidden threat: The classic KR51 automatic rifle, bundled with three magazines.
-
 uplink-buldog-bundle-name = Bulldog Bundle
 uplink-buldog-bundle-desc = Lean and mean: Contains the popular Bulldog Shotgun, a 12g beanbag drum and three 12g buckshot drums.
 
@@ -248,7 +245,7 @@ uplink-super-surplus-bundle-desc = Contains 125 telecrystals worth of completely
 
 # Tools
 uplink-toolbox-name = Toolbox
-uplink-toolbox-desc = A full compliment of tools for the mechanically inclined traitor. Includes a pair of insulated combat gloves, syndicate gas mask and a utility belt.
+uplink-toolbox-desc = A full compliment of tools for the mechanically inclined traitor. Includes a pair of insulated combat gloves and a syndicate gas mask as well.
 
 uplink-syndicate-jaws-of-life-name = Jaws Of Life
 uplink-syndicate-jaws-of-life-desc = A combined prying and cutting tool. Useful for entering the station or its departments.
@@ -323,6 +320,9 @@ uplink-hardsuit-carp-desc = Looks like an ordinary carp suit, except fully space
 
 uplink-hardsuit-syndie-name = Syndicate Hardsuit
 uplink-hardsuit-syndie-desc = The Syndicate's well known armored blood red hardsuit, capable of space walks and bullet resistant.
+
+uplink-syndie-raid-name = Syndicate Raid Suit
+uplink-syndie-raid-desc = A very durable and reasonably flexible suit of blood-red armor, reinforced against all common forms of damage but not capable of space walks. Comes with a sick helmet.
 
 uplink-hardsuit-syndieelite-name = Syndicate Elite Hardsuit
 uplink-hardsuit-syndieelite-desc = An elite version of the blood-red hardsuit, with improved mobility and fireproofing. Property of Gorlex Marauders.
@@ -438,45 +438,7 @@ uplink-barber-scissors-name = Barber Scissors
 uplink-barber-scissors-desc = A good tool to give your fellow agent a nice haircut, unless you want to give it to yourself.
 
 uplink-backpack-syndicate-name = Syndicate backpack
-uplink-backpack-syndicate-desc = Lightweight explosion-proof а backpack for holding various traitor goods
+uplink-backpack-syndicate-desc = Lightweight explosion-proof a backpack for holding various traitor goods
 
-## Starshine
-
-uplink-syndie-miner-armor-name = Syndie miner armor
-uplink-syndie-miner-armor-desc = Syndie version of the miner's armor. We hope you bought it, the main thing you do.
-
-uplink-pistol-magazine-HV-name = Pistol magazine (.35 high-velocity)
-uplink-pistol-magazine-HV-desc = Pistol magazine with 15 high-velocity rounds. Suitable for Viper.
-
-uplink-pistol-magazine-bundle-name = Bundle with pistol magazines (.35)
-uplink-pistol-magazine-bundle-desc = A bundle containing extended pistol magazines. 2 standard and 2 HV. Suitable for Viper.
-
-uplink-pistol-magazine-c20r-hv-name = SMG magazine (.35 high-velocity)
-uplink-pistol-magazine-c20r-hv-desc = Rifle magazine with 30 high-velocity rounds. Compatible with C-20r.
-
-uplink-pistol-magazine-c20r-bundle-name = Set with SMG magazines (.35)
-uplink-pistol-magazine-c20r-bundle-desc = A set containing magazines for PP. 2 standard and 2 high-rate. Compatible with C-20r.
-
-uplink-magazine-shotgun-pellets-name = Magazine drum (.50 shot)
-uplink-magazine-shotgun-pellets-desc = Shotgun magazine with 8 shotgun shells. Compatible with Bulldog.
-
-uplink-magazine-shotgun-slug-name = Magazine drum (.50 bullet)
-uplink-magazine-shotgun-slug-desc = Shotgun magazine with 8 bullet shells. Compatible with Bulldog.
-
-uplink-magazine-shotgun-incendiary-name = Magazine drum (.50 incendiary)
-uplink-magazine-shotgun-incendiary-desc = Shotgun magazine with 8 incendiary shells. Compatible with Bulldog.
-
-uplink-magazine-shotgun-bundle-name = Bundle with shotgun magazines (.50)
-uplink-magazine-shotgun-bundle-desc = A bundle containing magazines for a shotgun. 2 standard, 2 bullet and 1 incendiary. Compatible with Bulldog.
-
-uplink-magazine-caseless-rifle-name = Rifle magazine (.25 caseless)
-uplink-magazine-caseless-rifle-desc = Rifle magazine with 30 caseless cartridges. Compatible with KR51.
-
-uplink-magazine-caseless-rifle-hv-name = Rifle magazine (.25 caseless high-velocity)
-uplink-magazine-caseless-rifle-hv-desc = Rifle magazine with 30 caseless high-velocity rounds. Compatible with KR51.
-
-uplink-magazine-caseless-rifle-bundle-name = Bundle with rifle magazines (.25)
-uplink-magazine-caseless-rifle-bundle-desc = A bundle containing magazines for a rifle. 2 standard and 2 high-rate. Compatible with KR51.
-
-uplink-miniature-energy-crossbow-syndie-green-name = Miniature Energy Crossbow
-uplink-miniature-energy-crossbow-syndie-green-desc = The syndicate's energy crossbow, small, silent and deadly.
+uplink-combat-bakery-name = Combat Bakery Kit
+uplink-combat-bakery-desc = A kit of clandestine baked weapons. Contains a baguette sword, a pair of throwing croissants, and a syndicate microwave board for making more. Once the job is done, eat the evidence.

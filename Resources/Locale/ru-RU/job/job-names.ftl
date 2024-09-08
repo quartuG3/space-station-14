@@ -32,6 +32,7 @@ job-name-botanist = Ботаник
 job-name-bartender = Бармен
 job-name-passenger = Ассистент
 job-name-salvagespec = Утилизатор
+job-name-station-ai = Станционный ИИ
 job-name-qm = Квартирмейстер
 job-name-cargotech = Грузчик
 job-name-chef = Шеф-повар
@@ -45,6 +46,17 @@ job-name-ertjanitor = Уборщик ОБР
 job-name-boxer = Боксёр
 job-name-zookeeper = Работник зоопарка
 job-name-visitor = Посетитель
+# unused jobs
+# these are required for the agent ID job icon tooltips
+# I am keeping them for roleplaying opportunities
+job-name-geneticist = Генетик
+job-name-no-id = Нет ID
+job-name-prisoner = Заключённый
+job-name-roboticist = Робототехник
+job-name-syndicate = Синдикат
+job-name-unknown = Неизвестно
+job-name-virologist = Вирусолог
+job-name-zombie = Зомби
 # Role timers - Make these alphabetical or I cut you
 JobAtmosphericTechnician = Атмосферный техник
 JobBartender = Бармен
@@ -88,6 +100,7 @@ JobSecurityCadet = Кадет СБ
 JobSecurityOfficer = Офицер СБ
 JobServiceWorker = Сервисный работник
 JobStationEngineer = Инженер
+JobStationAi = Станционный ИИ
 JobTechnicalAssistant = Технический ассистент
 JobWarden = Смотритель
 JobVisitor = Посетитель

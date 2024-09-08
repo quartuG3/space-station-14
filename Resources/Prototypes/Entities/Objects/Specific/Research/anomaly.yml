@@ -82,6 +82,7 @@
   - type: PowerCellDraw
     drawRate: 1
     useRate: 0
+  - type: ToggleCellDraw
 
 - type: entity
   id: AnomalyLocatorEmpty
@@ -115,6 +116,7 @@
   - type: PowerCellDraw
     drawRate: 1
     useRate: 0
+  - type: ToggleCellDraw
 
 - type: entity
   id: AnomalyLocatorWideEmpty
@@ -161,3 +163,10 @@
   - type: ContainerContainer
     containers:
       core_slot: !type:ContainerSlot
+  - type: DamageOnAttackedProtection
+    damageProtection:
+      flatReductions:
+        Heat: 100
+        Cold: 100
+        Radiation: 100
+    slots: NONE
