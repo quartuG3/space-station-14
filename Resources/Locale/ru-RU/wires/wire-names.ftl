@@ -39,7 +39,7 @@ wires-board-name-mech = Меха
 wires-board-name-fatextractor = ЛипидныйЭкстрактор
 wires-board-name-flatpacker = Плоскоупаковщик
 wires-board-name-spaceheater = Космический Обогреватель
-wires-board-name-jukebox = Jukebox
+wires-board-name-jukebox = Музыкальный автомат
 
 # names that get displayed in the wire hacking hud & admin logs.
 

@@ -1,15 +1,4 @@
-whitelist-not-whitelisted = Вас нет в белом списке.
 # proper handling for having a min/max or not
-whitelist-playercount-invalid =
-    { $min ->
-        [0] Белый список для этого сервера применяется только при количестве игроков меньше { $max }.
-       *[other]
-            Белый список для этого сервера применяется только при количестве игроков больше { $min } { $max ->
-                [2147483647] -> так что, возможно, Вы сможете присоединиться позже.
-               *[other] -> и меньше { $max }, так что ,возможно, Вы сможете присоединиться позже.
-            }
-    }
-whitelist-not-whitelisted-rp = Вас нет в белом списке. Чтобы попасть в белый список, посетите наш Discord.
 cmd-whitelistadd-desc = Добавляет игрока с указанным именем в белый список.
 cmd-whitelistadd-help = Использование: whitelistadd <username>
 cmd-whitelistadd-existing = { $username } уже в белом списке!

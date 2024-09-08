@@ -1,4 +1,4 @@
-ent-BaseFoldable = складывающийся
+ent-BaseFoldable = складной
     .desc = { "" }
-ent-BaseDeployFoldable = deploy foldable
+ent-BaseDeployFoldable = разложить складной
     .desc = { ent-BaseFoldable.desc }
