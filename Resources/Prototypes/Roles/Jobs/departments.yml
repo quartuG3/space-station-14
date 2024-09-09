@@ -36,7 +36,7 @@
 
 - type: department
   id: CentcomSpecialists
-  name: department-CentComm
+  name: department-CentcomSpecialists
   description: department-Centcom-description
   color: "#35a41e"
   roles:

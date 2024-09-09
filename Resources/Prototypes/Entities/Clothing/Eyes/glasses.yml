@@ -276,6 +276,7 @@
     protectionTime: 5
   - type: Tag
     tags:
+    - Clothing
     - HamsterWearable
     - WhitelistChameleon
   - type: IdentityBlocker

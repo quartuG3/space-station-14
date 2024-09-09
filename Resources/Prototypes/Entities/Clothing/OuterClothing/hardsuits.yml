@@ -525,16 +525,6 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSecurityRed
-  - type: ItemSlots
-    slots:
-      weapon_slot:
-        name: Оружейная кобура
-        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
-        priority: 1
-        whitelist:
-          tags:
-            - HeavyWeapon
 
 #Luxury Mining Hardsuit
 - type: entity
