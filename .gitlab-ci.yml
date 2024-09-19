@@ -8,6 +8,7 @@ test-debug:
   stage: test
   tags:
     - arm64
+    - x86_64
   script:
     - mkdir .git/hooks -p
     - python3 RUN_THIS.py
@@ -21,6 +22,7 @@ publish:
   stage: publish
   tags:
     - arm64
+    - x86_64
   interruptible: true
   only:
     - schedules
@@ -48,6 +50,7 @@ publish-artifact:
   stage: publish
   tags:
     - arm64
+    - x86_64
   interruptible: true
   except:
     - schedules
