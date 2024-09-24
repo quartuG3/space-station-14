@@ -8,5 +8,5 @@ ent-NetProbeCartridge = картридж Зонд сетей
     .desc = Программа для получения адресов и частот сетевых устройств.
 ent-LogProbeCartridge = картридж Зонд логов
     .desc = Программа для получения логов доступа с устройств.
-ent-WantedListCartridge = Wanted list cartridge
-    .desc = A program to get a list of wanted persons.
+ent-WantedListCartridge = картридж Список разыскиваемых
+    .desc = Программа для получения списка разыскиваемых лиц.
