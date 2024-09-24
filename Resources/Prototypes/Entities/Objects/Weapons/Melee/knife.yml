@@ -184,7 +184,7 @@
     malus: 0.225
 
 - type: entity
-  parent: [ClothingHeadHatGreyFlatcap, BaseSyndicateContraband]
+  parent: ClothingHeadHatGreyFlatcap
   id: BladedFlatcapGrey
   name: grey flatcap
   description: Fashionable for both the working class and old man Jenkins. It has glass shards hidden in the brim.

@@ -121,7 +121,8 @@
   - type: Grammar
     attributes:
       gender: male
-  - type: NightVision
+  - type: Sharp
+  - type: NightVision # Starshine-Night-Vision
     isToggle: true
     color: "#ff6161"
     playSoundOn: false

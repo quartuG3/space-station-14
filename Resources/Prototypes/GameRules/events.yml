@@ -16,8 +16,10 @@
     - id: MimicVendorRule
     - id: MouseMigration
     - id: PowerGridCheck
+    - id: RandomSentience
     - id: SlimesSpawn
     - id: SolarFlare
+    - id: SnakeSpawn
     - id: SpiderClownSpawn
     - id: SpiderSpawn
     - id: VentClog
@@ -34,36 +36,35 @@
     - id: SleeperAgents
     - id: ZombieOutbreak
 
-
 - type: entity
   id: BaseStationEvent
   parent: BaseGameRule
   abstract: true
   components:
-    - type: GameRule
-      delay:
-        min:  10
-        max:  20
+  - type: GameRule
+    delay:
+      min:  10
+      max:  20
 
 - type: entity
   id: BaseStationEventShortDelay
   parent: BaseGameRule
   abstract: true
   components:
-    - type: GameRule
-      delay:
-        min:  10
-        max:  20
+  - type: GameRule
+    delay:
+      min:  10
+      max:  20
 
 - type: entity
   id: BaseStationEventLongDelay
   parent: BaseGameRule
   abstract: true
   components:
-    - type: GameRule
-      delay:
-        min:  40
-        max:  60
+  - type: GameRule
+    delay:
+      min:  40
+      max:  60
 
 - type: entity
   id: AnomalySpawn
@@ -130,6 +131,8 @@
     weight: 3
     duration: 1
   - type: BureaucraticErrorRule
+    ignoredJobs:
+    - StationAi
 
 - type: entity
   id: ClericalError
@@ -162,9 +165,12 @@
     earliestStart: 40
     reoccurrenceDelay: 20
     minimumPlayers: 20
-  - type: AntagRandomSpawn
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 0
   - type: AntagSpawner
     prototype: MobDragon
+  - type: DragonRule
   - type: AntagObjectives
     objectives:
     - CarpRiftsObjective
@@ -179,8 +185,6 @@
       mindComponents:
       - type: DragonRole
         prototype: Dragon
-      - type: RoleBriefing
-        briefing: dragon-role-briefing
 
 - type: entity
   parent: BaseGameRule
@@ -297,7 +301,7 @@
     startAudio:
       path: /Audio/Announcements/power_off.ogg
       params:
-       volume: -4
+        volume: -4
     duration: 60
     maxDuration: 120
   - type: PowerGridCheckRule
@@ -369,6 +373,27 @@
     - id: MobAdultSlimesGreenAngry
       prob: 0.02
     - id: MobAdultSlimesYellowAngry
+      prob: 0.02
+
+- type: entity
+  id: SnakeSpawn
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-vent-creatures-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    earliestStart: 20
+    minimumPlayers: 15
+    weight: 5
+    duration: 60
+  - type: VentCrittersRule
+    entries:
+    - id: MobPurpleSnake
+      prob: 0.02
+    - id: MobSmallPurpleSnake
+      prob: 0.02
+    - id: MobCobraSpace
       prob: 0.02
 
 - type: entity
@@ -464,6 +489,9 @@
       max: 1
       pickPlayer: false
       startingGear: SyndicateLoneOperativeGearFull
+      roleLoadout:
+      - RoleSurvivalNukie
+
       components:
       - type: NukeOperative
       - type: RandomMetadata
@@ -536,28 +564,9 @@
   id: MimicVendorRule
   parent: BaseGameRule
   components:
-    - type: StationEvent
-      earliestStart: 0
-      minimumPlayers: 20
-      maxOccurrences: 1 # this event has diminishing returns on interesting-ness, so we cap it
-      weight: 5
-    - type: MobReplacementRule
-
-- type: entity
-  id: XenomorphMigration
-  parent: BaseStationEventShortDelay
-  components:
   - type: StationEvent
-    earliestStart: 30
-    startAnnouncement: station-event-vent-creatures-start-announcement
-    startAudio: # Starshine
-      path: /Audio/Starshine/Announcements/lifesigns.ogg
-      params:
-        volume: -4
-    weight: 6
-    minimumPlayers: 15
-    duration: 60
-  - type: VentCrittersRule
-    specialEntries:
-    - id: SpawnPointGhostXenoHunter
-      prob: 0.00001
+    earliestStart: 0
+    minimumPlayers: 20
+    maxOccurrences: 1 # this event has diminishing returns on interesting-ness, so we cap it
+    weight: 5
+  - type: MobReplacementRule

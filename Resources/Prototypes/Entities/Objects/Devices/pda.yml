@@ -116,12 +116,23 @@
 
 - type: entity
   parent: BasePDA
+  id: BaseSecurityPDA
+  abstract: true
+  components:
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NewsReaderCartridge
+    - WantedListCartridge
+
+- type: entity
+  parent: BasePDA
   id: BaseMedicalPDA
   abstract: true
   components:
   - type: ItemToggle
     onUse: false
-  - type: ItemTogglePointLight
   - type: HealthAnalyzer
     scanDelay: 1
     scanningEndSound:
@@ -173,7 +184,7 @@
     - Medical Doctor
 
 - type: entity
-  parent: BasePDA
+  parent: BaseSecurityPDA
   id: SecurityCadetPDA
   name: security cadet PDA
   description: Why isn't it red?
@@ -260,6 +271,7 @@
     penSlot:
       startingItem: CrayonOrange # no pink crayon?!?
       # ^ Still unacceptable.
+      # ^ I would have to concur.
       ejectSound: /Audio/Items/bikehorn.ogg
       priority: -1
       whitelist:
@@ -291,6 +303,15 @@
         density: 5
         mask:
         - ItemMask
+
+- type: entity
+  parent: ClownPDA
+  id: VisitorClownPDA
+  suffix: Visitor
+  components:
+  - type: Pda
+    id: VisitorIDCard
+    state: pda-clown
 
 - type: entity
   parent: BasePDA
@@ -328,6 +349,15 @@
     state: pda-chaplain
 
 - type: entity
+  parent: ChaplainPDA
+  id: VisitorChaplainPDA
+  suffix: Visitor
+  components:
+  - type: Pda
+    id: VisitorIDCard
+    state: pda-chaplain
+
+- type: entity
   name: quartermaster PDA
   parent: BasePDA
   id: QuartermasterPDA
@@ -355,22 +385,6 @@
     borderColor: "#e39751"
   - type: Icon
     state: pda-cargo
-
-
-- type: entity
-  parent: BasePDA
-  id: MinerPDA
-  name: salvage PDA
-  description: Smells like ash.
-  components:
-  - type: Pda
-    id: MinerIDCard
-    state: pda-mining
-  - type: PdaBorderColor
-    borderColor: "#af9366"
-    accentVColor: "#8900c9"
-  - type: Icon
-    state: pda-mining
 
 - type: entity
   parent: BasePDA
@@ -422,7 +436,16 @@
     state: pda-library
 
 - type: entity
-  parent: BasePDA
+  parent: LibrarianPDA
+  id: VisitorLibrarianPDA
+  suffix: Visitor
+  components:
+  - type: Pda
+    id: VisitorIDCard
+    state: pda-library
+
+- type: entity
+  parent: BaseSecurityPDA
   id: LawyerPDA
   name: lawyer PDA
   description: For lawyers to poach dubious clients.
@@ -442,6 +465,15 @@
     state: pda-lawyer
 
 - type: entity
+  parent: LawyerPDA
+  id: VisitorLawyerPDA
+  suffix: Visitor
+  components:
+  - type: Pda
+    id: VisitorIDCard
+    state: pda-lawyer
+
+- type: entity
   parent: BasePDA
   id: JanitorPDA
   name: janitor PDA
@@ -456,7 +488,7 @@
     state: pda-janitor
 
 - type: entity
-  parent: BasePDA
+  parent: BaseSecurityPDA
   id: CaptainPDA
   name: captain PDA
   description: Surprisingly no different from your PDA.
@@ -474,28 +506,6 @@
     borderColor: "#7C5D00"
   - type: Icon
     state: pda-captain
-
-- type: entity
-  parent: BasePDA
-  id: BlueShieldPDA
-  name: captain PDA
-  description: Surprisingly no different from your PDA.
-  components:
-  - type: Pda
-    id: BlueShieldIDCard
-    state: pda-blueshield
-    penSlot:
-      startingItem: PenCentcom
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-  - type: PdaBorderColor
-    borderColor: "#323248"
-    accentHColor: "#2851a4"
-    accentVColor: "#eeeeee"
-  - type: Icon
-    state: pda-blueshield
 
 - type: entity
   parent: BasePDA
@@ -583,6 +593,15 @@
     - Medical Doctor
 
 - type: entity
+  parent: MedicalPDA
+  id: VisitorMedicalPDA
+  suffix: Visitor
+  components:
+  - type: Pda
+    id: VisitorIDCard
+    state: pda-medical
+
+- type: entity
   parent: BaseMedicalPDA
   id: ParamedicPDA
   name: paramedic PDA
@@ -644,7 +663,7 @@
     state: pda-science
 
 - type: entity
-  parent: BasePDA
+  parent: BaseSecurityPDA
   id: HoSPDA
   name: head of security PDA
   description: Whosoever bears this PDA is the law.
@@ -659,7 +678,7 @@
     state: pda-hos
 
 - type: entity
-  parent: BasePDA
+  parent: BaseSecurityPDA
   id: WardenPDA
   name: warden PDA
   description: The OS appears to have been jailbroken.
@@ -674,7 +693,7 @@
     state: pda-warden
 
 - type: entity
-  parent: BasePDA
+  parent: BaseSecurityPDA
   id: SecurityPDA
   name: security PDA
   description: Red to hide the stains of assistant blood.
@@ -688,7 +707,7 @@
     state: pda-security
 
 - type: entity
-  parent: BasePDA
+  parent: BaseSecurityPDA
   id: CentcomPDA
   name: CentComm PDA
   description: Light green sign of walking bureaucracy.
@@ -706,48 +725,6 @@
     borderColor: "#15b115"
     accentHColor: "#dfc910"
     accentVColor: "#dfc910"
-  - type: Icon
-    state: pda-centcom
-
-- type: entity
-  parent: BasePDA
-  id: CentcomConsultantPDA
-  name: CentCom consultant PDA
-  description: Light green sign of walking bureaucracy.
-  components:
-  - type: Pda
-    id: CentcomConsultantIDCard
-    state: pda-centcom
-    penSlot:
-      startingItem: PenCentcom
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-  - type: PdaBorderColor
-    borderColor: "#15b115"
-    accentHColor: "#dfc910"
-    accentVColor: "#dfc910"
-  - type: Icon
-    state: pda-centcom
-
-- type: entity
-  parent: BasePDA
-  id: CentcomInternPDA
-  name: CentCom Intern PDA
-  description: Light green sign of walking bureaucracy.
-  components:
-  - type: Pda
-    id: CentcomInternIDCard
-    state: pda-centcom
-    penSlot:
-      startingItem: PenCentcom
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-  - type: PdaBorderColor
-    borderColor: "#00b62e"
   - type: Icon
     state: pda-centcom
 
@@ -771,6 +748,7 @@
       - NotekeeperCartridge
       - NewsReaderCartridge
       - LogProbeCartridge
+      - WantedListCartridge
 
 - type: entity
   parent: CentcomPDA
@@ -798,6 +776,15 @@
     handheld: true
     bank: 1
     program: 2
+
+- type: entity
+  parent: MusicianPDA
+  id: VisitorMusicianPDA
+  suffix: Visitor
+  components:
+  - type: Pda
+    id: VisitorIDCard
+    state: pda-musician
 
 - type: entity
   parent: BasePDA
@@ -829,6 +816,14 @@
     state: pda-clear
 
 - type: entity
+  parent: ClearPDA
+  id: VisitorPDA
+  components:
+  - type: Pda
+    id: VisitorIDCard
+    state: pda
+
+- type: entity
   parent: BasePDA
   id: SyndiPDA
   name: syndicate PDA
@@ -855,7 +850,7 @@
           - Cartridge
 
 - type: entity
-  parent: BasePDA
+  parent: BaseSecurityPDA
   id: ERTLeaderPDA
   name: ERT Leader PDA
   suffix: Leader
@@ -1003,7 +998,7 @@
     state: pda-boxer
 
 - type: entity
-  parent: BasePDA
+  parent: BaseSecurityPDA
   id: DetectivePDA
   name: detective PDA
   description: Smells like rain... pouring down the rooftops...
@@ -1103,7 +1098,7 @@
     state: pda-seniorphysician
 
 - type: entity
-  parent: BasePDA
+  parent: BaseSecurityPDA
   id: SeniorOfficerPDA
   name: senior officer PDA
   description: Beaten, battered and broken, but just barely useable.
@@ -1154,17 +1149,3 @@
       whitelist:
         components:
           - Cartridge
-
-- type: entity
-  parent: BasePDA
-  id: ShuttlePilotPDA
-  name: Pilot PDA
-  description: Red to hide the stains of assistant blood.
-  components:
-  - type: Pda
-    id: ShuttlePilotIDCard
-    state: pda-security
-  - type: PdaBorderColor
-    borderColor: "#A32D26"
-  - type: Icon
-    state: pda-security
