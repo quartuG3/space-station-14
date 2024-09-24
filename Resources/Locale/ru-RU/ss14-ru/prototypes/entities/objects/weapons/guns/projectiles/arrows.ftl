@@ -4,3 +4,7 @@ ent-ArrowRegular = стрела
     .desc = Вы чувствуете в себе силу степи.
 ent-ArrowImprovised = стрела с осколками стекла
     .desc = Любимый снаряд грейтайдов.
+ent-ArrowImprovisedPlasma = plasma glass shard arrow
+    .desc = The greyshirt's preferred projectile. Now with extra lethality!
+ent-ArrowImprovisedUranium = uranium glass shard arrow
+    .desc = The greyshirt's preferred projectile. Now with added radiation!

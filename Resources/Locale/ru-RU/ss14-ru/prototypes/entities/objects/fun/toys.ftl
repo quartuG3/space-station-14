@@ -125,3 +125,5 @@ ent-CrazyGlue = безумный клей
     .desc = Бутылка безумного клея производства компании Хонк! Корпорейтед.
 ent-NewtonCradle = колыбель ньютона
     .desc = Устройство, которое скучающие бумагомаратели используют, чтобы напомнить себе, что время ещё не остановилось. Содержит гравитацию.
+ent-RubberChicken = rubber chicken
+    .desc = A stress inducing parody of nature's most delectable avian.
