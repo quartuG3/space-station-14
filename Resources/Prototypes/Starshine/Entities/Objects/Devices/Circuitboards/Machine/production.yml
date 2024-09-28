@@ -15,3 +15,18 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+
+- type: entity
+  id: CargoCryptominerCircuitboard
+  parent: BaseMachineCircuitboard
+  name: cryptominer machine board
+  description: A machine printed circuit board for a cryptominer.
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: CargoCryptominer
+    stackRequirements:
+      Steel: 5
+      Capacitor: 1
+      Cable: 5
