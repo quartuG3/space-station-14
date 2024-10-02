@@ -114,8 +114,8 @@ uplink-syndicate-martyr-module-name = Модуль киборга Мученик
 uplink-syndicate-martyr-module-desc = Превратите с помощью этого модуля своего емагнутого друга-борга в ходячую бомбу. Убедитесь, что они верны вашему делу, результаты могут варьироваться.
 uplink-singularity-beacon-name = Маяк сингулярности
 uplink-singularity-beacon-desc = Устройство, притягивающее сингулярность. Должно быть закреплено и запитано. Будучи поглощённым, заставляет сингулярность расти.
-uplink-antimov-law-name = Antimov Law Circuit
-uplink-antimov-law-desc = A very dangerous Lawset to use when you want to cause the A.I. to go haywire, use with caution.
+uplink-antimov-law-name = Плата законов Антимов
+uplink-antimov-law-desc = Очень опасный набор законов, который следует использовать с осторожностью, если вы хотите настроить И.И. против станции.
 # Implants
 uplink-storage-implanter-name = Имплантер Хранилище
 uplink-storage-implanter-desc = Прячьте предметы внутри себя благодаря новой блюспейс-технологии!

@@ -1,2 +1,2 @@
-ent-CameraBug = camera bug
-    .desc = An illegal syndicate device that allows you to hack into the station's camera network.
+ent-CameraBug = камерный жучок
+    .desc = Нелегальное устройство синдиката, позволяющее взломать сеть камер станции.
