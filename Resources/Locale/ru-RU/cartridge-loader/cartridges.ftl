@@ -15,6 +15,7 @@ log-probe-scan = Загружены логи устройства { $device }!
 log-probe-label-time = Время
 log-probe-label-accessor = Использовано:
 log-probe-label-number = #
+astro-nav-program-name = AstroNav
 # Wanted list cartridge
 wanted-list-program-name = Список разыскиваемых
 wanted-list-label-no-records = Всё в порядке, ковбой.

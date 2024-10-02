@@ -10,3 +10,5 @@ ent-LogProbeCartridge = картридж Зонд логов
     .desc = Программа для получения логов доступа с устройств.
 ent-WantedListCartridge = картридж Список разыскиваемых
     .desc = Программа для получения списка разыскиваемых лиц.
+ent-AstroNavCartridge = AstroNav cartridge
+    .desc = A program for navigation that provides GPS coordinates.
