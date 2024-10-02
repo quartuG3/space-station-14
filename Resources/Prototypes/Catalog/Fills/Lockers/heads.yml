@@ -321,7 +321,7 @@
     - !type:GroupSelector
       children:
       - id: WeaponEnergyShotgun
-      - id: WeaponLaserHos
+      - id: WeaponLaserHos # Starshine
     - id: BookSpaceLaw
     - id: BoxEncryptionKeySecurity
     - id: CigarGoldCase
@@ -338,6 +338,7 @@
     - id: SecurityTechFabCircuitboard
     - id: WeaponDisabler
     - id: WantedListCartridge
+    - id: WeaponTechFabCircuitboard # Starshine
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
