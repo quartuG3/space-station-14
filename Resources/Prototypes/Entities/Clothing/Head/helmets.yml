@@ -297,6 +297,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FireHelmet
   - type: HideLayerClothing
     slots:
     - Hair
@@ -329,6 +330,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FireHelmet
   - type: HideLayerClothing
     slots:
     - Hair
