@@ -4,7 +4,6 @@ using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Server.Popups;
 using Content.Shared.DoAfter;
-using Content.Shared.Felinid;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Actions;
 using Content.Shared.Mobs.Components;
@@ -12,6 +11,8 @@ using Content.Shared.Mobs;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using System.Linq;
+using WoundLickingActionEvent = Content.Shared.Starshine.WoundLicking.WoundLickingActionEvent;
+using WoundLickingDoAfterEvent = Content.Shared.Starshine.WoundLicking.WoundLickingDoAfterEvent;
 
 namespace Content.Server.Felinid
 {
