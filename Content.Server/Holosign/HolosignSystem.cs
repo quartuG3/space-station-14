@@ -3,17 +3,12 @@ using Content.Server.DoAfter;
 using Content.Server.Popups;
 using Content.Shared.Destructible;
 using Content.Shared.Coordinates.Helpers;
-using Content.Server.Power.Components;
 using Content.Server.PowerCell;
 using Content.Shared.Interaction;
 using Content.Shared.Storage;
-using Content.Shared.PowerCell.Components;
 using Content.Shared.Interaction.Events;
 using Content.Shared.PowerCell;
-using Robust.Shared.Timing;
 using Content.Shared.Verbs;
-using Robust.Shared.Prototypes;
-using Robust.Shared.Player;
 using Robust.Shared.Utility;
 
 
@@ -150,10 +145,11 @@ namespace Content.Server.Holosign
                 return;
 
             // Holoprojector without Holoprojector component. BRUH
-            if(EntityManager.TryGetComponent(component.Holoprojector, out HolosignProjectorComponent? holoprojector))
-            {
-                holoprojector.Childs.Remove(uid);
-            }
+            if (!EntityManager.TryGetComponent(component.Holoprojector, out HolosignProjectorComponent? holoprojector))
+                return;
+
+            holoprojector.Childs.Remove(uid);
+            SetCellDrawState(component.Holoprojector, holoprojector, holoprojector.Childs.Count != 0);
         }
 
         private void OnChildDestroyed(EntityUid uid, HolosignBarrierComponent component, DestructionEventArgs args)
@@ -162,10 +158,11 @@ namespace Content.Server.Holosign
                 return;
 
             // Holoprojector without Holoprojector component. BRUH
-            if(EntityManager.TryGetComponent(component.Holoprojector, out HolosignProjectorComponent? holoprojector))
-            {
-                holoprojector.Childs.Remove(uid);
-            }
+            if (!EntityManager.TryGetComponent(component.Holoprojector, out HolosignProjectorComponent? holoprojector))
+                return;
+
+            holoprojector.Childs.Remove(uid);
+            SetCellDrawState(component.Holoprojector, holoprojector, holoprojector.Childs.Count != 0);
         }
         private void OnBeforeInteract(EntityUid uid, HolosignProjectorComponent component, BeforeRangedInteractEvent args)
         {
