@@ -13,6 +13,7 @@
     containers:
       cell_slot: !type:ContainerSlot {}
   - type: PowerCellDraw
+    enabled: false
   - type: PowerCellSlot
     cellSlotId: cell_slot
   - type: ItemSlots
