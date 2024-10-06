@@ -133,7 +133,7 @@ namespace Content.Server.Holosign
             _popupSystem.PopupPredicted(Loc.GetString("holoprojector-component-oop"),
                 entity.Owner,
                 null,
-                PopupType.MediumCaution);
+                PopupType.SmallCaution);
         }
 
         private void OnRemove(EntityUid uid, HolosignProjectorComponent component, ComponentRemove args)
