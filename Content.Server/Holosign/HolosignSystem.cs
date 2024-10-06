@@ -1,6 +1,7 @@
 using Content.Shared.Examine;
 using Content.Server.DoAfter;
 using Content.Server.Popups;
+using Content.Server.Power.EntitySystems;
 using Content.Shared.Destructible;
 using Content.Shared.Coordinates.Helpers;
 using Content.Server.PowerCell;
@@ -23,6 +24,7 @@ namespace Content.Server.Holosign
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly IEntityManager _entManager = default!;
         [Dependency] private readonly PowerCellSystem _powerCell = default!;
+        [Dependency] private readonly BatterySystem _battery = default!;
         [Dependency] private readonly SharedTransformSystem _transform = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
 
@@ -118,6 +120,13 @@ namespace Content.Server.Holosign
         {
             if (entity.Comp.Childs.Count == 0)
                 return;
+
+            if (_powerCell.TryGetBatteryFromSlot(entity.Owner, out var battery))
+            {
+                var drawComp = Comp<PowerCellDrawComponent>(entity.Owner);
+                if (!_powerCell.TryUseCharge(entity.Owner, drawComp.DrawRate))
+                    _battery.SetCharge(entity.Owner, 0, battery);
+            }
 
             ClearHolosignsVerb(entity.Owner, entity.Comp);
             _audio.PlayPvs(_audio.GetSound(new SoundPathSpecifier("/Audio/Machines/buzz-two.ogg")), entity.Owner);
