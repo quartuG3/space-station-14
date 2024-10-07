@@ -160,6 +160,9 @@
       Steel: 300
   - type: StaticPrice
     price: 75
+  - type: Tag
+    tags:
+    - TreasureCoin ## Starshine
 
 - type: entity
   parent: TreasureCoinIron

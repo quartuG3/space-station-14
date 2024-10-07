@@ -1558,6 +1558,9 @@
   id: EmitterCircuitBoard
 
 - type: Tag
+  id: TreasureCoin
+
+- type: Tag
   id: ClarkLArm
 
 - type: Tag
