@@ -154,7 +154,9 @@
     tags:
     - CannotSuicide
     - DoorBumpOpener
-
+  - type: Puller
+    needsHands: false
+    
 - type: entity
   parent: BaseMobDragon
   id: MobDragon
