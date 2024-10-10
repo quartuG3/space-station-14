@@ -17,7 +17,7 @@
   - type: Item
     size: Small
     shape:
-    - 0,0,1,1 ## Starshine
+    - 0,0,2,2 ## Starshine
   - type: Storage
     maxItemSize: Normal
     grid:

@@ -912,7 +912,7 @@
 ## Starshine-start
 # Machine which makes weapons and ammunition
 - type: entity
-  parent: Protolathe
+  parent: BaseLatheLube
   id: WeaponTechFab
   name: Weapon techfab
   description: Prints weapons for use by security crew.
