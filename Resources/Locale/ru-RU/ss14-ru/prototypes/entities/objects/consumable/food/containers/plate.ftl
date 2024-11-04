@@ -12,5 +12,5 @@ ent-FoodPlateSmallPlastic = пластиковая тарелка
     .desc = Синяя пластиковая тарелка, отлично подходит для кусков праздничного торта.
 ent-FoodPlateTin = формочка для пирога
     .desc = Дешевая формочка из фольги для пирогов.
-ent-FoodPlateMuffinTin = muffin tin
-    .desc = A cheap foil tin for muffins.
+ent-FoodPlateMuffinTin = форма для маффинов
+    .desc = Дешевая форма из фольги для маффинов.

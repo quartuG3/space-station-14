@@ -33,9 +33,9 @@ reagent-effect-guidebook-explosion-reaction-effect =
     } взрыв
 reagent-effect-guidebook-flash-reaction-effect =
     { $chance ->
-        [1] Causes
-       *[other] cause
-    } a blinding flash
+        [1] Вызывает
+       *[other] вызвать
+    } ослепительную вспышку
 reagent-effect-guidebook-smoke-area-reaction-effect =
     { $chance ->
         [1] Создаёт
