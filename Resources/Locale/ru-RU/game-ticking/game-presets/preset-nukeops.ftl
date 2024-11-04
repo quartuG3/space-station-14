@@ -3,6 +3,7 @@ nukeops-description = Ядерные Оперативники нацелилис
 nukeops-welcome =
     Вы Ядерный Оперативник. Ваша задача - взорвать { $station } и убедиться, что от неё осталась лишь груда обломков. Ваше руководство, Синдикат, снабдило Вас всем необходимым для выполнения этой задачи.
     Смерть NanoTrasen!
+nukeops-briefing = Your objectives are simple. Deliver the payload and make sure it detonates. Begin mission.
 nukeops-opsmajor = [color=crimson]Крупная победа Синдиката![/color]
 nukeops-opsminor = [color=crimson]Скромная победа Синдиката![/color]
 nukeops-neutral = [color=yellow]Ничейный исход![/color]
