@@ -75,9 +75,3 @@
 - type: Tag
   id: SpeedLoaderAntiMaterial
   
-- type: Tag
-  id: SyringeCartridge
-
-- type: Tag
-  id: SyringeGunMagazine
-  
