@@ -128,11 +128,6 @@ public abstract partial class SharedProjectileSystem : EntitySystem
                 xform);
         }
 
-        if (component.Angle != Angle.Zero)
-        {
-            _transform.SetLocalRotation(uid, xform.LocalRotation + component.Angle);
-        }
-
         _audio.PlayPredicted(component.Sound, uid, null);
         component.EmbeddedIntoUid = target;
         var ev = new EmbedEvent(user, target);

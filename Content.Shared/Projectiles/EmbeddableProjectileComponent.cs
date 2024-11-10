@@ -42,12 +42,6 @@ public sealed partial class EmbeddableProjectileComponent : Component
     public Vector2 Offset = Vector2.Zero;
 
     /// <summary>
-    /// Angle of the embed projectile on the entity.
-    /// </summary>
-    [DataField, AutoNetworkedField]
-    public Angle Angle = Angle.Zero;
-
-    /// <summary>
     /// Sound to play after embedding into a hit target.
     /// </summary>
     [DataField, AutoNetworkedField]
