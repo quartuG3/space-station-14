@@ -9,7 +9,7 @@ namespace Content.Shared.Projectiles;
 public sealed partial class ProjectileComponent : Component
 {
     /// <summary>
-    ///     The angle of the shot projectile.
+    ///     The angle of the fired projectile.
     /// </summary>
     [DataField, AutoNetworkedField]
     public Angle Angle;
