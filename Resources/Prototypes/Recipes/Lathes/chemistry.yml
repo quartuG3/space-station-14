@@ -13,14 +13,6 @@
     Glass: 200
 
 - type: latheRecipe
-  id: MiniSyringe
-  result: MiniSyringe
-  completetime: 2
-  materials:
-    Plastic: 125
-    Steel: 50
-
-- type: latheRecipe
   id: CryostasisBeaker
   result: CryostasisBeaker
   completetime: 2
