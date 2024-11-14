@@ -11,6 +11,8 @@ spellbook-polymorph-rod-name = Полиморф жезла
 spellbook-polymorph-rod-desc = Превращается в неподвижный жезл с ограниченным движением.
 spellbook-charge-name = Зарядка
 spellbook-charge-desc = Добавляет заряд вашей волшебной палочке!
+spellbook-ethereal-jaunt-name = Эфирная прогулка
+spellbook-ethereal-jaunt-description = Проскользните в эфирный мир, чтобы ускользнуть от своих врагов!
 
 # Equipment
 
@@ -26,3 +28,5 @@ spellbook-event-summon-ghosts-description = Кому вы позвоните?
 # Upgrades
 spellbook-upgrade-fireball-name = Улучшение огненного шара
 spellbook-upgrade-fireball-description = Улучшает Огненный шар до максимального 3-го уровня!
+spellbook-upgrade-jaunt-name = Улучшение эфирной прогулки
+spellbook-upgrade-jaunt-description = Улучшает Прогулку до максимального 3-го уровня!
