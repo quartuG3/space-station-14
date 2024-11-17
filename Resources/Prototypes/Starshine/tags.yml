@@ -1,6 +1,18 @@
 # РАСПОЛОЖИТЕ СВОИ ТЕГИ В АЛФАВИТНОМ ПОРЯДКЕ
 
 - type: Tag
+  id: ChainSwordBlade
+
+- type: Tag
+  id: ChainSwordEngine
+
+- type: Tag
+  id: ChainSwordChain
+
+- type: Tag
+  id: ChainSwordHandle
+
+- type: Tag
   id: Clothing
 
 - type: Tag
