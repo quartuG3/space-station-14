@@ -1,6 +1,6 @@
 ent-ActionSummonGhosts = Призвать призраков
     .desc = Делает всех текущих призраков навсегда невидимыми
-ent-ActionSummonGuns = Summon Guns
-    .desc = AK47s for everyone! Places a random gun in front of everybody.
-ent-ActionSummonMagic = Summon Magic
-    .desc = Places a random magical item in front of everybody. Nothing could go wrong!
+ent-ActionSummonGuns = Призвать оружия
+    .desc = AK47 - всем! Кладёт перед каждым случайное оружие.
+ent-ActionSummonMagic = Призывать магию
+    .desc = Кладёт случайный магический предмет перед каждым. Ничто не может пойти не так!
