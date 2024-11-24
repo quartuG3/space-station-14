@@ -26,3 +26,7 @@ ent-SpaceHeaterFlatpack = плоскоблок космического обог
     .desc = Плоскоблок, используемый для сборки космического обогревателя.
 ent-FaxMachineFlatpack = плоскоблок факса
     .desc = Плоскоблок, используемый для сборки факса.
+ent-CrewMonitoringServerFlatpack = crew monitoring server flatpack
+    .desc = A flatpack used for constructing a crew monitoring server.
+ent-CrewMonitoringComputerFlatpack = crew monitoring computer flatpack
+    .desc = A flatpack used for constructing a crew monitoring console.
