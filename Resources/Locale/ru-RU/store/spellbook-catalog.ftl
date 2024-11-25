@@ -25,6 +25,10 @@ spellbook-wand-polymorph-carp-description = На случай, когда вам
 
 spellbook-event-summon-ghosts-name = Призвать призраков
 spellbook-event-summon-ghosts-description = Кому вы позвоните?
+spellbook-event-summon-guns-name = Призвать оружия
+spellbook-event-summon-guns-description = AK47 - всем! Кладёт перед каждым случайное оружие. Отключает возврат при покупке!
+spellbook-event-summon-magic-name = Призывать магию
+spellbook-event-summon-magic-description = Кладёт случайный магический предмет перед каждым. Ничто не может пойти не так! Отключает возврат при покупке!
 # Upgrades
 spellbook-upgrade-fireball-name = Улучшение огненного шара
 spellbook-upgrade-fireball-description = Улучшает Огненный шар до максимального 3-го уровня!
