@@ -64,7 +64,8 @@ namespace Content.IntegrationTests.Tests
             "Lighthouse", //Starshine
             "Elstation", //Strshine
             "Oasis",
-            "Cog"
+            "Cog",
+            "Amber"
         };
 
         /// <summary>
