@@ -20,6 +20,8 @@ spellbook-wand-polymorph-door-name = Палочка входа
 spellbook-wand-polymorph-door-description = На случай, когда нужен маршрут для побега.
 spellbook-wand-polymorph-carp-name = Палочка полиморфа карпа
 spellbook-wand-polymorph-carp-description = На случай, когда вам срочно нужно филе карпа, а клоун выглядит уж очень аппетитно.
+spellbook-wand-locker-name = Wand of the Locker
+spellbook-wand-locker-description = Shoot cursed lockers at your enemies and lock em away!
 
 # Events
 
