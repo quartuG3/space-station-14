@@ -235,9 +235,3 @@ ghost-role-information-gingerbread-description =
     Распространяйте вкус патоки и поднимайте всем настроение!
 ghost-role-information-tomatokiller-name = Томат-убийца
 ghost-role-information-tomatokiller-description = Этот маленький помидор будет служить ботанику до конца своей жизни... то есть пару минут.
-ghost-role-information-disaster-victim-name = Жертва катастрофы
-ghost-role-information-disaster-victim-description = Вы спаслись на спасательной капсуле с другой станции, которую постигла ужасная участь. Возможно, вас найдут и спасут.
-ghost-role-information-syndie-disaster-victim-name = Жертва катастрофы из Синдиката
-ghost-role-information-syndie-disaster-victim-description = Вы - обычный пассажир со станции Синдиката. К несчастью, спасательная капсула закинула вас во вражеский сектор...
-ghost-role-information-artifact-name = Разумный артефакт
-ghost-role-information-artifact-description = Осуществляйте свои инопланетные прихоти. Принудительно активируйте свои узлы во благо или во зло.
