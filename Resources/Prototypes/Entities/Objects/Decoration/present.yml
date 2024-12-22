@@ -94,6 +94,18 @@
         orGroup: GiftPool
       - id: PlushieSharkGrey
         orGroup: GiftPool
+      - id: PlushieSharkGreen  #starshine start.
+        orGroup: GiftPool
+      - id: PlushieSharkGold
+        orGroup: GiftPool
+      - id: PlushieSharkPurple
+        orGroup: GiftPool
+      - id: PlushieSharkOrange
+        orGroup: GiftPool
+      - id: PlushieSharkBlack
+        orGroup: GiftPool
+      - id: PlushieSharkBrown
+        orGroup: GiftPool     #starshine end.
       - id: ToyAmongPequeno
         orGroup: GiftPool
       - id: PlushieDiona

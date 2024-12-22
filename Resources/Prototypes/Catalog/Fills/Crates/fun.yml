@@ -29,6 +29,14 @@
     - id: PlushieRouny
     - !type:GroupSelector
       children:
+      - id: PlushieSharkGold   #starshine start.
+        weight: 0.15
+      - id: PlushieSharkBurn
+      - id: PlushieSharkGreen
+      - id: PlushieSharkOrange
+      - id: PlushieSharkBlack
+      - id: PlushieSharkPurple
+      - id: PlushieSharkBrown   #starshine end.
       - id: PlushieSharkBlue
       - id: PlushieSharkGrey
       - id: PlushieSharkPink

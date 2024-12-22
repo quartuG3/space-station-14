@@ -5,6 +5,16 @@
   minLimit: 0
   maxLimit: 3
   loadouts:
+  - ClothingNeckSharkPinkPin    #starshine start.
+  - ClothingNeckSharkBrownPin
+  - ClothingNeckSharkBlackPin
+  - ClothingNeckSharkGoldPin
+  - ClothingNeckSharkPurplePin
+  - ClothingNeckSharkOrangePin
+  - ClothingNeckSharkGreenPin
+  - ClothingNeckSharkBluePin
+  - ClothingNeckSharkGreyPin
+  - ClothingNeckSharkBurnPin    #starshine end.
   - FlowerWreath
   - Hairflower
   - Headphones
