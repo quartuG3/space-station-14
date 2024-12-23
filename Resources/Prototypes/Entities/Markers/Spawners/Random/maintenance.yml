@@ -140,7 +140,7 @@
       # Pins
       - !type:GroupSelector
         children:
-        - id: ClothingNeckSharkBrownPin #starshine start.
+        - id: ClothingNeckSharkBrownPin # Starshine-start
         - id: ClothingNeckSharkBluePin
         - id: ClothingNeckSharkGreyPin
         - id: ClothingNeckSharkBlackPin
@@ -149,7 +149,7 @@
         - id: ClothingNeckSharkPinkPin
         - id: ClothingNeckSharkBurnPin
         - id: ClothingNeckSharkOrangePin
-        - id: ClothingNeckSharkGoldPin   #starshine end.
+        - id: ClothingNeckSharkGoldPin   # Starshine-end
         - id: ClothingNeckLGBTPin
         - id: ClothingNeckAromanticPin
         - id: ClothingNeckAsexualPin
