@@ -1,5 +1,7 @@
 ent-ComputerAlert = консоль атмосферных оповещений
     .desc = Используется для доступа к автоматизированной атмосферной системе оповещения станции.
+ent-ComputerAtmosMonitoring = atmospheric network monitor
+    .desc = Used to monitor the station's atmospheric networks.
 ent-ComputerEmergencyShuttle = консоль аварийного шаттла
     .desc = Выдает разрешение на досрочный запуск шаттла.
 ent-BaseComputerShuttle = консоль управления шаттлом
