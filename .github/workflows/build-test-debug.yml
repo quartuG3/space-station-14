@@ -2,11 +2,11 @@ name: Build & Test Debug
 
 on:
   push:
-    branches: [ master, staging, trying, master-ru ]
+    branches: [ master, staging, stable, master-ru ]
   merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master, master-ru, arumoon-server ]
+    branches: [ master, staging, stable, master-ru, arumoon-server ]
 
 jobs:
   build:
