@@ -65,7 +65,11 @@ namespace Content.IntegrationTests.Tests
             "Elstation", //Strshine
             "Oasis",
             "Cog",
-            "Amber"
+            "Gate",
+            "Amber",
+            "Loop"
+
+           
         };
 
         /// <summary>

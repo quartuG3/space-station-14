@@ -1,6 +1,5 @@
 ## Actions Commands loc
 
-
 ## Upgradeaction command loc
 
 upgradeaction-command-need-one-argument = upgradeaction требует как минимум один аргумент - uid действующей сущности. Вторым необязательным аргументом является указанный уровень.
