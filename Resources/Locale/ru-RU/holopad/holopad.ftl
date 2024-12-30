@@ -1,43 +1,43 @@
 # Window headers
 holopad-window-title = { CAPITALIZE($title) }
-holopad-window-subtitle = [color=white][bold]Holographic communication system[/bold][/color]
-holopad-window-options = [color=darkgray][font size=10][italic]Please select an option from the list below[/italic][/font][/color]
+holopad-window-subtitle = [color=white][bold]Голографическая система связи[/bold][/color]
+holopad-window-options = [color=darkgray][font size=10][italic]Пожалуйста, выберите вариант из списка ниже[/italic][/font][/color]
 # Call status
-holopad-window-no-calls-in-progress = No holo-calls in progress
-holopad-window-incoming-call = Incoming holo-call from:
-holopad-window-outgoing-call = Attempting to establish a connection...
-holopad-window-call-in-progress = Holo-call in progress
-holopad-window-call-ending = Disconnecting...
-holopad-window-call-rejected = Unable to establish a connection
-holopad-window-ai-request = Your presence is requested by:
-holopad-window-emergency-broadcast-in-progress = [color=#cf2f2f][bold]Emergency broadcast in progress[/bold][/color]
-holopad-window-controls-locked-out = Control of this device has been locked to:
-holopad-window-controls-unlock-countdown = It will automatically unlock in: { $countdown }
+holopad-window-no-calls-in-progress = Голозвонки не ведутся
+holopad-window-incoming-call = Входящий голозвонок от:
+holopad-window-outgoing-call = Попытка установить связь...
+holopad-window-call-in-progress = Ведётся голозвонок
+holopad-window-call-ending = Разъединение...
+holopad-window-call-rejected = Невозможно установить связь
+holopad-window-ai-request = Вашего присутствия требует:
+holopad-window-emergency-broadcast-in-progress = [color=#cf2f2f][bold]Ведётся экстренная трансляция[/bold][/color]
+holopad-window-controls-locked-out = Управление этим устройством было заблокировано для:
+holopad-window-controls-unlock-countdown = Автоматическая разблокировка будет через: { $countdown }
 # Buttons
-holopad-window-answer-call = Answer call
-holopad-window-end-call = End call
-holopad-window-request-station-ai = Request station AI
-holopad-window-activate-projector = Activate projector
-holopad-window-emergency-broadcast = Emergency broadcast
-holopad-window-emergency-broadcast-with-countdown = Emergency broadcast ({ $countdown })
-holopad-window-access-denied = Access denied
+holopad-window-answer-call = Ответить на звонок
+holopad-window-end-call = Завершите звонок
+holopad-window-request-station-ai = Запросить СИИ
+holopad-window-activate-projector = Активирровать проектор
+holopad-window-emergency-broadcast = Экстренная трансляция
+holopad-window-emergency-broadcast-with-countdown = Экстренная трансляция ({ $countdown })
+holopad-window-access-denied = Доступ запрещён
 # Contact list
-holopad-window-select-contact-from-list = Select a contact to initiate a holo-call
-holopad-window-fetching-contacts-list = No holopads are currently contactable
+holopad-window-select-contact-from-list = Выберите контакт для инициирования голозвонка
+holopad-window-fetching-contacts-list = В настоящее время ни с одним голопадом нельзя связаться
 holopad-window-contact-label = { CAPITALIZE($label) }
 # Flavor
-holopad-window-flavor-left = ⚠ Do not enter while projector is active
+holopad-window-flavor-left = ⚠ Не входите, пока проектор активен
 holopad-window-flavor-right = v3.0.9
 # Holograms
-holopad-hologram-name = hologram of { THE($name) }
+holopad-hologram-name = голограмма { THE($name) }
 # Holopad actions
-holopad-activate-projector-verb = Activate holopad projector
-holopad-ai-is-unable-to-reach-holopad = You are unable to interface with the source of the call, it is too far from your core.
-holopad-ai-is-unable-to-activate-projector = You are unable to activate the holopad's projector, it is too far from your core.
+holopad-activate-projector-verb = Активировать голопад проектор
+holopad-ai-is-unable-to-reach-holopad = Вы не можете подключиться к источнику вызова, он находится слишком далеко от вашего ядра.
+holopad-ai-is-unable-to-activate-projector = Вы не можете активировать проектор голопада, он находится слишком далеко от вашего ядра.
 # Mapping prototypes
 # General
-holopad-general-tools = General - Tools
-holopad-general-cryosleep = General - Cryosleep
+holopad-general-tools = Общие - Инструменты
+holopad-general-cryosleep = Общий - Криосон
 holopad-general-theater = General - Theater
 holopad-general-disposals = General - Disposals
 holopad-general-eva = General - EVA Storage
