@@ -655,6 +655,7 @@
     access: [[ "Command" ]]
   - type: CommunicationsConsole
     title: comms-console-announcement-title-station
+  - type: CommunicationsConsoleAnnounce # Starshine-Announcements
   - type: DeviceNetwork
     transmitFrequencyId: ShuttleTimer
   - type: ActivatableUI
