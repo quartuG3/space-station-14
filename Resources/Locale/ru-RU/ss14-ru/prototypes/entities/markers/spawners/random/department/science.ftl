@@ -1,8 +1,8 @@
-ent-LootSpawnerScienceMinor = science supplies spawner
-    .suffix = Minor, 80%
+ent-LootSpawnerScienceMinor = спавнер научных припасов
+    .suffix = Мало, 80%
     .desc = { ent-MarkerBase.desc }
-ent-LootSpawnerScienceMajor = science supplies spawner
-    .suffix = Major
+ent-LootSpawnerScienceMajor = спавнер научных припасов
+    .suffix = Много
     .desc = { ent-MarkerBase.desc }
-ent-LootSpawnerRoboticsBorgModule = robotics board spawner
+ent-LootSpawnerRoboticsBorgModule = спавнер платы робототехники
     .desc = { ent-MarkerBase.desc }
