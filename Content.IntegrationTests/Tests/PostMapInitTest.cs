@@ -67,7 +67,8 @@ namespace Content.IntegrationTests.Tests
             "Cog",
             "Gate",
             "Amber",
-            "Loop"
+            "Loop",
+            "Elkridge"
 
            
         };

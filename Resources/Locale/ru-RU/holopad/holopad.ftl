@@ -5,6 +5,7 @@ holopad-window-options = [color=darkgray][font size=10][italic]Пожалуйс�
 # Call status
 holopad-window-no-calls-in-progress = Голозвонки не ведутся
 holopad-window-incoming-call = Входящий голозвонок от:
+holopad-window-relay-label = Originating at:
 holopad-window-outgoing-call = Попытка установить связь...
 holopad-window-call-in-progress = Ведётся голозвонок
 holopad-window-call-ending = Разъединение...
@@ -25,6 +26,7 @@ holopad-window-access-denied = Доступ запрещён
 holopad-window-select-contact-from-list = Выберите контакт для инициирования голозвонка
 holopad-window-fetching-contacts-list = В настоящее время ни с одним голопадом нельзя связаться
 holopad-window-contact-label = { CAPITALIZE($label) }
+holopad-window-filter-line-placeholder = Search for a contact
 # Flavor
 holopad-window-flavor-left = ⚠ Не входите, пока проектор активен
 holopad-window-flavor-right = v3.0.9
@@ -77,6 +79,7 @@ holopad-medical-paramedic = Medical - Paramedic
 holopad-medical-virology = Medical - Virology
 holopad-medical-front = Medical - Front
 holopad-medical-breakroom = Medical - Breakroom
+holopad-medical-clinic = Medical - Clinic
 # Cargo
 holopad-cargo-front = Cargo - Front
 holopad-cargo-bay = Cargo - Cargo Bay
