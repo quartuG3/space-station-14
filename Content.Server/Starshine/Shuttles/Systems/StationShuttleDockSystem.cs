@@ -3,6 +3,7 @@ using Content.Server.Shuttles.Systems;
 using Content.Server.Starshine.Shuttles.Components;
 using Content.Server.Station.Components;
 using Content.Server.Station.Events;
+using Content.Server.Station.Systems;
 using Robust.Server.GameObjects;
 using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
 
@@ -16,6 +17,7 @@ public sealed class StationShuttleDock : EntitySystem
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly MapLoaderSystem _loader = default!;
     [Dependency] private readonly ShuttleSystem _shuttles = default!;
+    [Dependency] private readonly StationSystem _station = default!;
 
     /// <summary>
     ///     The first arrival is a little early, to save everyone 10s
@@ -60,6 +62,7 @@ public sealed class StationShuttleDock : EntitySystem
             component.Shuttle = shuttleUids[0];
             var shuttleComp = Comp<ShuttleComponent>(component.Shuttle);
             _shuttles.FTLToDock(component.Shuttle, shuttleComp, station, hyperspaceTime: RoundStartFTLDuration, priorityTag: component.TargetTag);
+            _station.AddGridToStation(uid, component.Shuttle);
         }
 
         // Don't start the arrivals shuttle immediately docked so power has a time to stabilise?
