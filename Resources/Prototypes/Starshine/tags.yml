@@ -133,6 +133,9 @@
   id: PlushieSharkBlack
 
 - type: Tag
+  id: SalvageShuttle
+
+- type: Tag
   id: Slime
 
 - type: Tag
