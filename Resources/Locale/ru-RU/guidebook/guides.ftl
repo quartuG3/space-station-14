@@ -47,19 +47,16 @@ guide-entry-defusal = Обезвреживание Больших Бомб
 guide-entry-criminal-records = Криминальные Записи
 guide-entry-command = Командование
 guide-entry-service = Сервис
-
 guide-entry-newplayer = Новичок? Начните здесь!
 guide-entry-charactercreation = Создание персонажей
 guide-entry-species = Расы
 guide-entry-yourfirstcharacter = Ваш первый персонаж
 guide-entry-controls = Управление
 guide-entry-radio = Радиосвязь
-
 guide-entry-references = Таблицы и примеры
 guide-entry-chemicals = Химикаты
 guide-entry-drinks = Напитки
 guide-entry-foodrecipes = Рецепты еды
-
 guide-entry-elements = Элементы
 guide-entry-medicine = Медицинские
 guide-entry-narcotics = Наркотики
@@ -70,7 +67,6 @@ guide-entry-biological = Биологические
 guide-entry-botanical = Ботаническое
 guide-entry-special = Специфические
 guide-entry-others = Другое
-
 guide-entry-antagonists = Антагонисты
 guide-entry-nuclear-operatives = Ядерные Оперативники
 guide-entry-traitors = Предатели
@@ -79,7 +75,6 @@ guide-entry-revolutionaries = Революционеры
 guide-entry-minor-antagonists = Малые антагонисты
 guide-entry-space-ninja = Космический ниндзя
 guide-entry-thieves = Воры
-
 guide-entry-rules = Правила сервера
 guide-entry-rules-core-only = Только Основные правила
 guide-entry-rules-lrp = Стандартный набор правил
@@ -138,6 +133,5 @@ guide-entry-rules-sl-restricted-gear = Контрабандная экипиро
 guide-entry-rules-sl-restricted-weapons = Контрабандное оружие
 guide-entry-rules-ban-types = Типы банов
 guide-entry-rules-ban-durations = Длительности банов
-
 guide-entry-writing = Разметка письма
 guide-entry-glossary = Словарь терминов
