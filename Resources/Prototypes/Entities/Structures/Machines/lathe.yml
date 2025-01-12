@@ -342,9 +342,9 @@
       - WeaponForceGun
       - WeaponLaserSvalinn
       - WeaponProtoKineticAccelerator
-      - WeaponCutter
+      - WeaponCutterEmpty
 # Starshine-start
-      - WeaponCutterAdv
+      - WeaponCutterAdvEmpty
       - WeaponTetherGun
       - ClothingEyesVision
 # Starshine-end

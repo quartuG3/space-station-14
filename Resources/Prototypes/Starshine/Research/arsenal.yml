@@ -158,7 +158,7 @@
   tier: 2
   cost: 10000
   recipeUnlocks:
-    - WeaponCutterAdv
+    - WeaponCutterAdvEmpty
   technologyPrerequisites:
     - SalvageWeapons
 
