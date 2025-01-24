@@ -285,9 +285,3 @@
   values:
     prefix: advertisement-medibot-
     count: 17
-
-- type: localizedDataset
-  id: PrideDrobeAds
-  values:
-    prefix: advertisement-pride-
-    count: 4
