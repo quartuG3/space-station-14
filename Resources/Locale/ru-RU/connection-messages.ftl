@@ -51,6 +51,10 @@ panic-bunker-account-reason-overall =
 baby-jail-account-denied = Этот сервер - сервер для новичков, предназначенный для новых игроков и тех, кто хочет им помочь. Новые подключения слишком старых или не внесенных в белый список аккаунтов не принимаются. Загляните на другие серверы и посмотрите все, что может предложить Space Station 14. Веселитесь!
 baby-jail-account-denied-reason = Этот сервер - сервер для новичков, предназначенный для новых игроков и тех, кто хочет им помочь. Новые подключения слишком старых или не внесенных в белый список аккаунтов не принимаются. Загляните на другие серверы и посмотрите все, что может предложить Space Station 14. Веселитесь! Причина: "{ $reason }"
 baby-jail-account-reason-account = Ваша учетная запись Space Station 14 слишком старая. Она должен быть моложе { $minutes } минут
+generic-misconfigured = The server is misconfigured and is not accepting players. Please contact the server owner and try again later.
+ipintel-server-ratelimited = This server uses a security system with external verification, which has reached its maximum verification limit. Please contact the administration team of the server for assistance and try again later.
+ipintel-unknown = This server uses a security system with external verification, but it encountered an error. Please contact the administration team of the server for assistance and try again later.
+ipintel-suspicious = You seem to be connecting through a datacenter or VPN. For administrative reasons we do not allow VPN connections to play. Please contact the administration team of the server for assistance if you believe this is false.
 baby-jail-account-reason-overall =
     Ваше общее игровое время на сервере должно быть меньше { $minutes } { $minutes ->
         [one] минуты
