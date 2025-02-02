@@ -19,3 +19,4 @@ research-technology-gygax = АБНТ Гайгэкс
 research-technology-durand = БМП Дюранд
 
 research-technology-nvd = Прибор ночного видения
+research-technology-advanced-thrusters = Продвинутые двигатели

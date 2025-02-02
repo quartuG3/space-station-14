@@ -141,3 +141,9 @@
 - type: Tag
   id: SpeedLoaderAntiMaterial
   
+- type: Tag
+  id: ThrusterHugeElectronics
+  
+- type: Tag
+  id: ThrusterLargeElectronics
+  

@@ -18,3 +18,4 @@ research-technology-gygax = Gygax
 research-technology-durand = Durand
 
 research-technology-nvd = Night Vision Device
+research-technology-advanced-thrusters = Advanced Thrusters

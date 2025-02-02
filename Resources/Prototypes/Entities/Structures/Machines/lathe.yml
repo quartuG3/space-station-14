@@ -359,6 +359,11 @@
       - FauxTileAstroSnow
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
+# Starshine-start
+      - ThrusterLargeAssemblyFlatpack
+      - ThrusterHugeAssemblyFlatpack
+# Starshine-end
+
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - BoxBeanbag
@@ -530,6 +535,10 @@
       - JukeboxCircuitBoard
       - SMESAdvancedMachineCircuitboard
       - HolopadMachineCircuitboard
+      # Starshine-start
+      - ThrusterLargeElectronics
+      - ThrusterHugeElectronics
+      # Starshine-end
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ShuttleGunDusterCircuitboard
