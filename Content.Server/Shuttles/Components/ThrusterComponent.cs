@@ -41,6 +41,9 @@ namespace Content.Server.Shuttles.Components
         /// </summary>
         [DataField("damage")] public DamageSpecifier? Damage = new();
 
+        [DataField]
+        public float HeatValue = 100f;
+
         [DataField("requireSpace")]
         public bool RequireSpace = true;
 

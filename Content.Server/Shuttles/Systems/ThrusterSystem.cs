@@ -1,8 +1,10 @@
 using System.Numerics;
+using Content.Server.Atmos.EntitySystems;
 using Content.Server.Audio;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Shuttles.Components;
+using Content.Server.Temperature.Systems;
 using Content.Shared.Damage;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
@@ -27,6 +29,9 @@ public sealed class ThrusterSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly ITileDefinitionManager _tileDefManager = default!;
+    [Dependency] private readonly TemperatureSystem _temperature = default!;
+    [Dependency] private readonly FlammableSystem _flammable = default!;
+    [Dependency] private readonly CollisionWakeSystem _wake = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly AmbientSoundSystem _ambient = default!;
     [Dependency] private readonly FixtureSystem _fixtureSystem = default!;
@@ -456,18 +461,30 @@ public sealed class ThrusterSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<ThrusterComponent>();
+        var query = EntityQueryEnumerator<ThrusterComponent, ApcPowerReceiverComponent>();
         var curTime = _timing.CurTime;
 
-        while (query.MoveNext(out var comp))
+        while (query.MoveNext(out var comp, out var power))
         {
-            if (!comp.Firing || comp.Colliding.Count == 0 || comp.Damage == null || comp.NextFire < curTime)
+            if (!comp.Firing || comp.Damage == null)
+                continue;
+
+            if (comp.Colliding.Count == 0)
+                continue;
+
+            if (comp.NextFire < curTime)
                 continue;
 
             comp.NextFire += TimeSpan.FromSeconds(1);
 
+            var energy = power.PowerReceived * frameTime * comp.HeatValue;
+            var stackAmount = 1 + (int) (comp.Thrust / 100f);
+
             foreach (var uid in comp.Colliding.ToArray())
             {
+                _flammable.AdjustFireStacks(uid, stackAmount);
+                _flammable.Ignite(uid, uid);
+                _temperature.ChangeHeat(uid, energy);
                 _damageable.TryChangeDamage(uid, comp.Damage);
             }
         }
@@ -478,6 +495,9 @@ public sealed class ThrusterSystem : EntitySystem
         if (args.OurFixtureId != BurnFixture)
             return;
 
+        if (TryComp<CollisionWakeComponent>(args.OtherEntity, out var wakeComp))
+            _wake.SetEnabled(args.OtherEntity, false, wakeComp);
+
         component.Colliding.Add(args.OtherEntity);
     }
 
@@ -485,6 +505,9 @@ public sealed class ThrusterSystem : EntitySystem
     {
         if (args.OurFixtureId != BurnFixture)
             return;
+
+        if (TryComp<CollisionWakeComponent>(args.OtherEntity, out var wakeComp))
+            _wake.SetEnabled(args.OtherEntity, true, wakeComp);
 
         component.Colliding.Remove(args.OtherEntity);
     }
@@ -509,6 +532,7 @@ public sealed class ThrusterSystem : EntitySystem
                 continue;
 
             comp.Firing = true;
+            comp.NextFire = _timing.CurTime + TimeSpan.FromSeconds(1);
             appearanceQuery.TryGetComponent(uid, out var appearance);
             _appearance.SetData(uid, ThrusterVisualState.Thrusting, true, appearance);
         }
