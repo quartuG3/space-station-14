@@ -16,19 +16,23 @@ namespace Content.Server.Starshine.PlasmaCutter
         public override void Initialize()
         {
             base.Initialize();
-            
-            SubscribeLocalEvent<MaterialStorageComponent, MaterialEntityInsertedEvent>(OnMaterialAmountChanged);
+
+            SubscribeLocalEvent<BatteryRechargeComponent, MaterialEntityInsertedEvent>(OnMaterialAmountChanged);
             SubscribeLocalEvent<BatteryRechargeComponent, ChargeChangedEvent>(OnChargeChanged);
         }
 
-        private void OnMaterialAmountChanged(EntityUid uid,
-            MaterialStorageComponent component,
+        private void OnMaterialAmountChanged(
+            EntityUid uid,
+            BatteryRechargeComponent component,
             MaterialEntityInsertedEvent args)
         {
-            if (component.MaterialWhiteList == null)
+            if (!TryComp<MaterialStorageComponent>(uid, out var materialStorage))
                 return;
 
-            foreach (var fuelType in component.MaterialWhiteList)
+            if (materialStorage.MaterialWhiteList == null)
+                return;
+
+            foreach (var fuelType in materialStorage.MaterialWhiteList)
             {
                 FuelAddCharge(uid, fuelType);
             }

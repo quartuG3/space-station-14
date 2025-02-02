@@ -1,5 +1,3 @@
-## Starshine
-
 research-technology-modsuitscraft = МОД-Костюмы
 research-technology-comp-bows = Композитные луки
 research-technology-standard-ammunition = Стандартные боеприпасы
