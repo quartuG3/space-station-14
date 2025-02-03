@@ -22,6 +22,7 @@ using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Shared.Localizations;
 using Content.Shared.Power;
+using Robust.Shared.Physics;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -38,6 +39,7 @@ public sealed class ThrusterSystem : EntitySystem
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly SharedPointLightSystem _light = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
 
     // Essentially whenever thruster enables we update the shuttle's available impulses which are used for movement.
     // This is done for each direction available.
@@ -301,6 +303,7 @@ public sealed class ThrusterSystem : EntitySystem
                     var shape = new PolygonShape();
                     shape.Set(component.BurnPoly);
                     _fixtureSystem.TryCreateFixture(uid, shape, BurnFixture, hard: false, collisionLayer: (int)CollisionGroup.FullTileMask, body: physicsComponent);
+                    _physics.SetBodyType(uid, BodyType.Dynamic, body: physicsComponent);
                 }
 
                 break;
@@ -472,13 +475,13 @@ public sealed class ThrusterSystem : EntitySystem
             if (comp.Colliding.Count == 0)
                 continue;
 
-            if (comp.NextFire < curTime)
+            if (curTime < comp.NextFire)
                 continue;
 
-            comp.NextFire += TimeSpan.FromSeconds(1);
+            comp.NextFire += comp.UpdateInterval;
 
-            var energy = power.PowerReceived * frameTime * comp.HeatValue;
-            var stackAmount = 1 + (int) (comp.Thrust / 100f);
+            var energy = power.PowerReceived * frameTime * comp.HeatValue / ((float)comp.UpdateInterval.TotalSeconds + 0.1f);
+            var stackAmount = Math.Clamp((int)MathF.Floor(comp.Thrust / (comp.HeatValue * ((float)comp.UpdateInterval.TotalSeconds + 0.1f))), 1, 3);
 
             foreach (var uid in comp.Colliding.ToArray())
             {
@@ -532,7 +535,7 @@ public sealed class ThrusterSystem : EntitySystem
                 continue;
 
             comp.Firing = true;
-            comp.NextFire = _timing.CurTime + TimeSpan.FromSeconds(1);
+            comp.NextFire = _timing.CurTime + comp.UpdateInterval;
             appearanceQuery.TryGetComponent(uid, out var appearance);
             _appearance.SetData(uid, ThrusterVisualState.Thrusting, true, appearance);
         }
