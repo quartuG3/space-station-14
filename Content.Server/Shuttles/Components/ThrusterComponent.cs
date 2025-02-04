@@ -41,6 +41,9 @@ namespace Content.Server.Shuttles.Components
         /// </summary>
         [DataField("damage")] public DamageSpecifier? Damage = new();
 
+        [DataField]
+        public float HeatValue = 250f;
+
         [DataField("requireSpace")]
         public bool RequireSpace = true;
 
@@ -55,6 +58,12 @@ namespace Content.Server.Shuttles.Components
         /// </summary>
         [ViewVariables(VVAccess.ReadWrite), DataField("nextFire", customTypeSerializer:typeof(TimeOffsetSerializer))]
         public TimeSpan NextFire;
+
+        /// <summary>
+        /// The interval at which thruster will make damage.
+        /// </summary>
+        [DataField]
+        public TimeSpan UpdateInterval = TimeSpan.FromSeconds(0.25);
     }
 
     public enum ThrusterType

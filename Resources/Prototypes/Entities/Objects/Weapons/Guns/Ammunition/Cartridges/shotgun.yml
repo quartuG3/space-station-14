@@ -1,7 +1,7 @@
 - type: entity
   id: BaseShellShotgun
   name: shell (.50)
-  parent: BaseCartridge
+  parent: [ BaseCartridge, BaseRestrictedContraband ]
   abstract: true
   components:
   - type: Tag
@@ -24,8 +24,13 @@
 - type: entity
   id: ShellShotgunBeanbag
   name: shell (.50 beanbag)
-  parent: BaseShellShotgun
+  parent: [ BaseShellShotgun, BaseSecurityBartenderContraband ]
   components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun
+    - ShellShotgunLight
   - type: Sprite
     layers:
       - state: beanbag
@@ -52,8 +57,13 @@
 - type: entity
   id: ShellShotgunFlare
   name: shell (.50 flare)
-  parent: BaseShellShotgun
+  parent: [ BaseShellShotgun, BaseSecurityBartenderContraband ]
   components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun
+    - ShellShotgunLight
   - type: Sprite
     layers:
       - state: flare
@@ -108,6 +118,11 @@
   name: shell (.50 tranquilizer)
   parent: BaseShellShotgun
   components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun
+    - ShellShotgunLight
   - type: Sprite
     layers:
       - state: tranquilizer
@@ -125,13 +140,18 @@
     maxTransferAmount: 7
   - type: SpentAmmoVisuals
     state: "tranquilizer"
-    
+
 - type: entity
   id: ShellShotgunImprovised
   name: improvised shotgun shell
   description: A homemade shotgun shell that shoots painful glass shrapnel. The spread is so wide that it couldn't hit the broad side of a barn.
   parent: BaseShellShotgun
   components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun
+    - ShellShotgunLight
   - type: Sprite
     layers:
       - state: improvised

@@ -19,6 +19,7 @@
     minAngle: 2
     maxAngle: 16
     fireRate: 8
+    burstFireRate: 8
     angleIncrease: 3
     angleDecay: 16
     selectedMode: FullAuto
@@ -27,6 +28,7 @@
     - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/smg.ogg
+    defaultDirection: 1, 0
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/smg_cock.ogg
@@ -80,7 +82,7 @@
   - type: Appearance
 
 - type: entity
-  name: C-20r sub machine gun
+  name: C-20r submachine gun
   parent: [BaseWeaponSubMachineGun, BaseSyndicateContraband]
   id: WeaponSubMachineGunC20r
   description: A firearm that is often used by the infamous nuclear operatives. Uses .35 auto ammo.
@@ -107,9 +109,9 @@
     maxAngle: 32
     shotsPerBurst: 5
     availableModes:
-    - SemiAuto
     - Burst
     - FullAuto
+    - SemiAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
   - type: ChamberMagazineAmmoProvider
@@ -147,11 +149,15 @@
       minAngle: 21
       maxAngle: 32
       fireRate: 6
-      selectedMode: FullAuto
+      burstFireRate: 12
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
       availableModes:
-        - FullAuto
+      - Burst
+      - FullAuto
+      - SemiAuto
+      shotsPerBurst: 3
+      burstCooldown: 0.25
     - type: ItemSlots
       slots:
         gun_magazine:
@@ -261,10 +267,12 @@
     angleDecay: 6
     selectedMode: FullAuto
     shotsPerBurst: 5
+    burstCooldown: 0.2
+    burstFireRate: 7
     availableModes:
-    - SemiAuto
     - Burst
     - FullAuto
+    - SemiAuto
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -342,90 +350,3 @@
         whitelist:
           tags:
             - CartridgeMagnum
-
-- type: entity
-  name: Syringe pistol
-  parent: BaseWeaponSubMachineGun
-  id: SyringeGun
-  description: A syringe pistol developed by the Syndicate organization. Uses syringe cartridges.
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/SMGs/dartgun.rsi
-    layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
-  - type: Clothing
-    sprite: Objects/Weapons/Guns/SMGs/dartgun.rsi
-  - type: Gun
-    fireRate: 2
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/syringeproj.ogg
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: SyringeGunMagazine
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-            - SyringeGunMagazine
-      gun_chamber:
-        name: Chamber
-        startingItem: SyringeCartridge
-        priority: 1
-        whitelist:
-          tags:
-            - SyringeCartridge
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: null
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
-
-- type: entity
-  name: Syringe gun
-  parent: BaseWeaponSubMachineGun
-  id: DnaSyringeGun
-  description: Syringe gun provided by NT specifically for medics. Can store two cartridges. Uses syringe cartridges
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/SMGs/dnasyringegun.rsi
-    layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
-      - state: mag-0
-        map: ["enum.GunVisualLayers.Mag"]
-  - type: Clothing
-    sprite: Objects/Weapons/Guns/SMGs/dnasyringegun.rsi
-  - type: Gun
-    fireRate: 2
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/syringeproj.ogg
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: null
-  - type: ItemSlots
-    slots:
-      gun_chamber:
-        name: Chamber
-        startingItem: SyringeCartridge
-        priority: 1
-        whitelist:
-          tags:
-            - SyringeCartridge
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance

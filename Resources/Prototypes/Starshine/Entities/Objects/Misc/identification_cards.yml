@@ -52,7 +52,7 @@
 - type: entity
   parent: IDCardStandard
   id: CentcomInternIDCard
-  name: centcom intern ID card
+  name: centcomm intern ID card
   components:
   - type: Sprite
     layers:
@@ -60,10 +60,19 @@
     - state: idpassenger
   - type: Item
     heldPrefix: blue
-  - type: IdCard
-    jobTitle: Centcom Intern
-  - type: Access
-    groups:
-    - AllAccess
-    tags:
-    - CentralCommand
+  - type: PresetIdCard
+    job: CentralCommandIntern
+
+- type: entity
+  parent: IDCardStandard
+  id: CentcomInternLeaderIDCard
+  name: centcom intern leader ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idpassenger
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: CentralCommandInternLeader

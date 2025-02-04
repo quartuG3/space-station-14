@@ -66,6 +66,7 @@
       components:
       - Anomaly
   - type: Beeper
+    isMuted: true
     minBeepInterval: 0.15
     maxBeepInterval: 1.00
     beepSound:
@@ -139,6 +140,9 @@
     state: icon
   - type: Item
     size: Large
+    storedSprite:
+      state: storage
+      sprite: Objects/Weapons/Melee/gorilla.rsi
   - type: MeleeWeapon
     attackRate: 0.5
     angle: 0
@@ -147,6 +151,8 @@
     damage:
       types:
         Blunt: 20
+    soundHit:
+      path: "/Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg"
   - type: CorePoweredThrower
   - type: MeleeThrowOnHit
     unanchorOnHit: true

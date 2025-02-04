@@ -91,6 +91,8 @@
     name: ghost-role-information-rat-king-name
     description: ghost-role-information-rat-king-description
     rules: ghost-role-information-freeagent-rules
+    mindRoles:
+    - MindRoleGhostRoleFreeAgent
     raffle:
       settings: default
   - type: GhostTakeoverAvailable
@@ -121,7 +123,8 @@
   - type: Grammar
     attributes:
       gender: male
-  - type: NightVision
+  - type: Sharp
+  - type: NightVision # Starshine-Night-Vision
     isToggle: true
     color: "#ff6161"
     playSoundOn: false

@@ -1,8 +1,10 @@
 using System.Numerics;
+using Content.Server.Atmos.EntitySystems;
 using Content.Server.Audio;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Shuttles.Components;
+using Content.Server.Temperature.Systems;
 using Content.Shared.Damage;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
@@ -20,6 +22,7 @@ using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Shared.Localizations;
 using Content.Shared.Power;
+using Robust.Shared.Physics;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -27,12 +30,16 @@ public sealed class ThrusterSystem : EntitySystem
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly ITileDefinitionManager _tileDefManager = default!;
+    [Dependency] private readonly TemperatureSystem _temperature = default!;
+    [Dependency] private readonly FlammableSystem _flammable = default!;
+    [Dependency] private readonly CollisionWakeSystem _wake = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly AmbientSoundSystem _ambient = default!;
     [Dependency] private readonly FixtureSystem _fixtureSystem = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly SharedPointLightSystem _light = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
 
     // Essentially whenever thruster enables we update the shuttle's available impulses which are used for movement.
     // This is done for each direction available.
@@ -296,6 +303,7 @@ public sealed class ThrusterSystem : EntitySystem
                     var shape = new PolygonShape();
                     shape.Set(component.BurnPoly);
                     _fixtureSystem.TryCreateFixture(uid, shape, BurnFixture, hard: false, collisionLayer: (int)CollisionGroup.FullTileMask, body: physicsComponent);
+                    _physics.SetBodyType(uid, BodyType.Dynamic, body: physicsComponent);
                 }
 
                 break;
@@ -456,18 +464,30 @@ public sealed class ThrusterSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<ThrusterComponent>();
+        var query = EntityQueryEnumerator<ThrusterComponent, ApcPowerReceiverComponent>();
         var curTime = _timing.CurTime;
 
-        while (query.MoveNext(out var comp))
+        while (query.MoveNext(out var comp, out var power))
         {
-            if (!comp.Firing || comp.Colliding.Count == 0 || comp.Damage == null || comp.NextFire < curTime)
+            if (!comp.Firing || comp.Damage == null)
                 continue;
 
-            comp.NextFire += TimeSpan.FromSeconds(1);
+            if (comp.Colliding.Count == 0)
+                continue;
+
+            if (curTime < comp.NextFire)
+                continue;
+
+            comp.NextFire += comp.UpdateInterval;
+
+            var energy = power.PowerReceived * frameTime * comp.HeatValue / ((float)comp.UpdateInterval.TotalSeconds + 0.1f);
+            var stackAmount = Math.Clamp((int)MathF.Floor(comp.Thrust / (comp.HeatValue * ((float)comp.UpdateInterval.TotalSeconds + 0.1f))), 1, 3);
 
             foreach (var uid in comp.Colliding.ToArray())
             {
+                _flammable.AdjustFireStacks(uid, stackAmount);
+                _flammable.Ignite(uid, uid);
+                _temperature.ChangeHeat(uid, energy);
                 _damageable.TryChangeDamage(uid, comp.Damage);
             }
         }
@@ -478,6 +498,9 @@ public sealed class ThrusterSystem : EntitySystem
         if (args.OurFixtureId != BurnFixture)
             return;
 
+        if (TryComp<CollisionWakeComponent>(args.OtherEntity, out var wakeComp))
+            _wake.SetEnabled(args.OtherEntity, false, wakeComp);
+
         component.Colliding.Add(args.OtherEntity);
     }
 
@@ -485,6 +508,9 @@ public sealed class ThrusterSystem : EntitySystem
     {
         if (args.OurFixtureId != BurnFixture)
             return;
+
+        if (TryComp<CollisionWakeComponent>(args.OtherEntity, out var wakeComp))
+            _wake.SetEnabled(args.OtherEntity, true, wakeComp);
 
         component.Colliding.Remove(args.OtherEntity);
     }
@@ -509,6 +535,7 @@ public sealed class ThrusterSystem : EntitySystem
                 continue;
 
             comp.Firing = true;
+            comp.NextFire = _timing.CurTime + comp.UpdateInterval;
             appearanceQuery.TryGetComponent(uid, out var appearance);
             _appearance.SetData(uid, ThrusterVisualState.Thrusting, true, appearance);
         }

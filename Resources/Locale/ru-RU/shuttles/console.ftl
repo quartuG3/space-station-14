@@ -26,6 +26,7 @@ shuttle-console-ftl-state-Starting = Запуск
 shuttle-console-ftl-state-Travelling = В пути
 shuttle-console-ftl-state-Arriving = Прибытие
 shuttle-console-ftl-state-Cooldown = Перезарядка
+shuttle-console-ftl-state-Invalid = Ошибка
 shuttle-console-map-settings = Настройки
 shuttle-console-ftl-button = БСС
 shuttle-console-map-rebuild =

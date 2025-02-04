@@ -64,6 +64,8 @@
         orGroup: GiftPool
       - id: PlushieLizard #Weh!
         orGroup: GiftPool
+      - id: PlushieRainbowLizard
+        orGroup: GiftPool
       - id: PlushieNar
         orGroup: GiftPool
       - id: PlushieCarp
@@ -92,6 +94,18 @@
         orGroup: GiftPool
       - id: PlushieSharkGrey
         orGroup: GiftPool
+      - id: PlushieSharkGreen  #starshine start.
+        orGroup: GiftPool
+      - id: PlushieSharkGold
+        orGroup: GiftPool
+      - id: PlushieSharkPurple
+        orGroup: GiftPool
+      - id: PlushieSharkOrange
+        orGroup: GiftPool
+      - id: PlushieSharkBlack
+        orGroup: GiftPool
+      - id: PlushieSharkBrown
+        orGroup: GiftPool     #starshine end.
       - id: ToyAmongPequeno
         orGroup: GiftPool
       - id: PlushieDiona
@@ -193,8 +207,6 @@
       - id: MusicBoxInstrument
         orGroup: GiftPool
       - id: ViolaInstrument
-        orGroup: GiftPool
-      - id: ClothingNeckCloakTrans
         orGroup: GiftPool
       - id: ClothingNeckCloakAdmin
         orGroup: GiftPool
@@ -375,14 +387,23 @@
       path: /Audio/Effects/unwrap.ogg
 
 - type: entity
-  id: PresentRandomAsh
+  id: PresentRandomCoal
   parent: [PresentBase, BaseItem]
-  suffix: Filled Ash
+  suffix: Filled Coal
   components:
   - type: SpawnItemsOnUse
     items:
       - id: PresentTrash
-      - id: Ash # No coal yet!
+      - id: Coal1
+        orGroup: GiftPool
+      - id: Coal5
+        prob: .4
+        orGroup: GiftPool
+      - id: Coal10
+        prob: .2
+        orGroup: GiftPool
+      - id: Coal15
+        prob: .1
         orGroup: GiftPool
     sound:
       path: /Audio/Effects/unwrap.ogg

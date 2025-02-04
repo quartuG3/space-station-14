@@ -122,7 +122,12 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-
+## Starshine-start  
+  - type: FlashableModifier
+    durationMultiplier: 2
+    slowdownMultiplier: 0.5
+    stunDurationMultiplier: 2
+## Starshine-end
 
 - type: entity
   parent: BaseSpeciesDummy

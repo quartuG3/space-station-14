@@ -18,6 +18,8 @@ alerts-weightless-name = Невесомость
 alerts-weightless-desc =
     Гравитация перестала воздействовать на Вас, и Вы бесцельно парите. Найдите что-нибудь крепкое, за что можно ухватиться, или бросьте или выстрелите чем-нибудь в направлении, противоположном Вам.
     Магнитные ботинки или реактивные ранцы помогут Вам двигаться с большим контролем.
+alerts-walking-name = Ходьба
+alerts-walking-desc = Вы идёте, двигаясь в медленном темпе.
 alerts-stunned-name = [color=yellow]Оглушены[/color]
 alerts-stunned-desc = Вы [color=yellow]оглушены[/color]! Что-то мешает Вашей способности двигаться или взаимодействовать с объектами.
 alerts-handcuffed-name = [color=yellow]В наручниках[/color]
@@ -64,6 +66,8 @@ alerts-suit-power-name = Энергия костюма
 alerts-suit-power-desc = Сколько энергии у Вашего костюма космического ниндзя.
 alerts-bleed-name = [color=red]Кровотечение[/color]
 alerts-bleed-desc = Вы [color=red]истекаете кровью[/color].
+alerts-adrenaline-name = [color=red]Адреналин[/color]
+alerts-adrenaline-desc = Вас переполняет адреналин: боль не будет замедлять вас.
 alerts-pacified-name = [color=green]Пацифизм[/color]
 alerts-pacified-desc = Вы чувствуете себя умиротворенно и не можете вредить живым существам.
 alerts-magboots-name = Магнитные ботинки

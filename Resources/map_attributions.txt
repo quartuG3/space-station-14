@@ -16,6 +16,9 @@
 - files: ["cluster.yml"]
   authors: Scribbles0
 
+- files: ["elkridge.yml"]
+  authors: Deerstop
+
 - files: ["fland.yml"]
   authors: Emisse
 
@@ -62,9 +65,6 @@
 
 - files: ["driller.yml", "lighthouse.yml"]
   authors: Tenteratus
-
-- files: ["tehtra.yml"]
-  authors: Astr0naut
 
 - files: ["elstation.yml"]
   authors: Elst28

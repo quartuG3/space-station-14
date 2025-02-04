@@ -35,14 +35,26 @@
   - ServiceWorker
 
 - type: department
-  id: CentcomSpecialists
-  name: department-CentcomSpecialists
-  description: department-Centcom-description
-  color: "#35a41e"
+  id: CentralCommand
+  name: department-CentralCommand
+  description: department-CentralCommand-description
+  color: "#0c344d"
   roles:
-  - CentComConsultant
-  - BlueShield
   - CentralCommandOfficial
+  - CBURN
+  - ERTLeader
+  - ERTChaplain
+  - ERTJanitor
+  - ERTMedical
+  - ERTSecurity
+  - ERTEngineer
+  - DeathSquad
+  # Starshine-start
+  - CentralCommandIntern
+  - CentralCommandInternLeader
+  # Starshine-end
+  editorHidden: true
+  weight: 120
 
 - type: department
   id: Command
@@ -57,6 +69,15 @@
   - HeadOfSecurity
   - ResearchDirector
   - Quartermaster
+  - CentralCommandOfficial
+  - CBURN
+  - ERTLeader
+  - ERTChaplain
+  - ERTJanitor
+  - ERTMedical
+  - ERTSecurity
+  - ERTEngineer
+  - DeathSquad
   primary: false
   weight: 100
 

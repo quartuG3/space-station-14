@@ -256,17 +256,30 @@ namespace Content.Server.Communications
                 author = tryGetIdentityShortInfoEvent.Title;
 
                 // Starshine-Announcements-start
-                if (_idCardSystem.TryFindIdCard(mob, out var id))
+                const string aiNameLocId = "job-name-station-ai";
+
+                if (_idCardSystem.TryFindIdCard(mob, out var id) &&
+                    TryComp<CommunicationsConsoleAnnounceComponent>(uid, out var announceComp))
                 {
-                    comp.JobSpecialAnnounceDictionary.TryGetValue(id.Comp.JobTitle!, out var jobIdName);
-                    if (TryComp<AccessComponent>(id, out var accessComponent) &&
-                        accessComponent.Tags.Contains(jobIdName!))
+                    var jobIcon = id.Comp.JobIcon.Id;
+                    const string prefix = "JobIcon";
+
+                    var jobName = jobIcon.StartsWith(prefix) ? jobIcon[prefix.Length..] : jobIcon;
+
+                    if (announceComp.JobSpecialAnnounceList.Contains(jobName) &&
+                        TryComp<AccessComponent>(id, out var accessComponent) &&
+                        accessComponent.Tags.Contains(jobName))
                     {
                         specificAnnouncement =
-                            new SoundPathSpecifier(
-                                $"/Audio/Starshine/Announcements/Console/{jobIdName?.ToLower()}.ogg");
+                            new SoundPathSpecifier($"/Audio/Starshine/Announcements/Console/{jobName.ToLower()}.ogg");
                     }
-                } // Starshine-Announcements-end
+                }
+                else if (author != null && author.Contains(Loc.GetString(aiNameLocId)))
+                {
+                    specificAnnouncement =
+                        new SoundPathSpecifier("/Audio/Starshine/Announcements/Console/ai.ogg");
+                }
+                // Starshine-Announcements-end
             }
 
             comp.AnnouncementCooldownRemaining = comp.Delay;
